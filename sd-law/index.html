@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SD Law | Simon Dippenaar &amp; Associates Inc. | Cape Town Attorneys</title>
+<meta name="description" content="SD Law (Simon Dippenaar &amp; Associates Inc.) is a Cape Town law firm handling divorce, evictions, wills, criminal defence, litigation and immigration. Speak to a real lawyer within 24 hours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --brand:#14264a;
+    --brand-deep:#0d1a36;
+    --accent:#3c6df0;
+    --accent-dark:#2a55c9;
+    --wa:#25D366;
+    --wa-dark:#1da851;
+    --ink:#1a2438;
+    --muted:#5a6577;
+    --line:#e4e8f0;
+    --bg:#ffffff;
+    --bg-soft:#f6f8fc;
+    --bg-tint:#eef3fc;
+    --white:#ffffff;
+    --radius:16px;
+    --radius-sm:10px;
+    --shadow-sm:0 1px 3px rgba(20,38,74,.08), 0 1px 2px rgba(20,38,74,.04);
+    --shadow:0 12px 30px rgba(20,38,74,.10);
+    --shadow-lg:0 24px 60px rgba(20,38,74,.16);
+    --maxw:1180px;
+    --head:'Fraunces', Georgia, serif;
+    --body:'Inter', system-ui, -apple-system, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--body);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;font-size:16px}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-family:var(--head);line-height:1.12;font-weight:600;letter-spacing:-.01em;color:var(--brand)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .eyebrow{font-family:var(--body);font-weight:600;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+
+  /* Concept banner */
+  .concept{background:var(--brand-deep);color:#cdd7ec;text-align:center;font-size:.8rem;padding:9px 16px;letter-spacing:.01em}
+  .concept b{color:#fff;font-weight:600}
+
+  /* Buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--body);font-weight:600;font-size:.98rem;padding:14px 24px;border-radius:999px;cursor:pointer;border:none;transition:transform .15s ease, box-shadow .2s ease, background .2s ease;white-space:nowrap}
+  .btn svg{width:18px;height:18px;flex:none}
+  .btn-wa{background:var(--wa);color:#fff;box-shadow:0 8px 22px rgba(37,211,102,.32)}
+  .btn-wa:hover{background:var(--wa-dark);transform:translateY(-2px);box-shadow:0 12px 28px rgba(37,211,102,.40)}
+  .btn-accent{background:var(--accent);color:#fff;box-shadow:0 8px 22px rgba(60,109,240,.30)}
+  .btn-accent:hover{background:var(--accent-dark);transform:translateY(-2px)}
+  .btn-ghost{background:transparent;color:var(--brand);border:1.5px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+  .btn-ghost-light{background:rgba(255,255,255,.06);color:#fff;border:1.5px solid rgba(255,255,255,.28)}
+  .btn-ghost-light:hover{background:rgba(255,255,255,.14);border-color:#fff}
+  .btn-lg{padding:16px 30px;font-size:1.04rem}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .brand-mark{display:flex;align-items:baseline;gap:9px;font-family:var(--head);font-weight:600;font-size:1.45rem;color:var(--brand);letter-spacing:-.02em}
+  .brand-mark .sd{background:var(--brand);color:#fff;font-size:1rem;font-weight:700;padding:5px 9px;border-radius:8px;letter-spacing:.02em;line-height:1}
+  .brand-mark small{display:none;font-family:var(--body);font-weight:500;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .nav-links{display:none;gap:30px;align-items:center}
+  .nav-links a{font-size:.94rem;font-weight:500;color:var(--ink);transition:color .15s}
+  .nav-links a:hover{color:var(--accent)}
+  .nav-cta{display:flex;align-items:center;gap:12px}
+  .nav-phone{display:none;font-weight:600;font-size:.92rem;color:var(--brand)}
+  @media(min-width:900px){
+    .nav-links{display:flex}
+    .brand-mark small{display:block}
+    .nav-phone{display:inline-flex;align-items:center;gap:7px}
+  }
+
+  /* Hero */
+  .hero{position:relative;background:
+      radial-gradient(900px 500px at 85% -10%, rgba(60,109,240,.22), transparent 60%),
+      linear-gradient(160deg, var(--brand) 0%, var(--brand-deep) 100%);
+    color:#fff;overflow:hidden}
+  .hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:46px 46px;mask-image:radial-gradient(70% 70% at 60% 20%,#000,transparent);pointer-events:none}
+  .hero-inner{position:relative;padding:64px 0 72px;display:grid;gap:42px}
+  .hero h1{color:#fff;font-size:2.5rem;font-weight:600;line-height:1.06}
+  .hero h1 em{font-style:italic;color:#9db8ff}
+  .hero p.lead{color:#c6d2ec;font-size:1.12rem;max-width:560px;margin-top:18px}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+  .hero-sub{margin-top:16px;font-size:.86rem;color:#9fb0d0}
+  .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px;align-self:start}
+  .stat{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:20px 16px}
+  .stat b{display:block;font-family:var(--head);font-size:1.7rem;color:#fff;line-height:1}
+  .stat span{display:block;margin-top:7px;font-size:.78rem;color:#a9b8d6;line-height:1.35}
+  @media(min-width:900px){
+    .hero-inner{grid-template-columns:1.3fr .85fr;align-items:center;padding:88px 0 96px}
+    .hero h1{font-size:3.4rem}
+    .stat-row{grid-template-columns:1fr;gap:14px}
+  }
+
+  /* Trust strip */
+  .trust{background:var(--bg-soft);border-bottom:1px solid var(--line)}
+  .trust-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px 34px;padding:22px 0;text-align:center}
+  .trust-item{display:flex;align-items:center;gap:10px;font-size:.9rem;font-weight:500;color:var(--brand)}
+  .trust-item svg{width:20px;height:20px;color:var(--accent);flex:none}
+
+  /* Section base */
+  section.pad{padding:74px 0}
+  .sec-head{max-width:640px;margin-bottom:42px}
+  .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+  .sec-head h2{font-size:2.05rem;margin-top:12px}
+  .sec-head p{color:var(--muted);font-size:1.06rem;margin-top:14px}
+
+  /* Services */
+  .cards{display:grid;gap:20px;grid-template-columns:1fr}
+  @media(min-width:640px){.cards{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:960px){.cards{grid-template-columns:repeat(3,1fr)}}
+  .card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;transition:transform .18s ease, box-shadow .22s ease, border-color .2s;box-shadow:var(--shadow-sm)}
+  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#cdd9f3}
+  .card .ico{width:50px;height:50px;border-radius:13px;background:var(--bg-tint);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+  .card .ico svg{width:25px;height:25px;color:var(--accent)}
+  .card h3{font-size:1.22rem}
+  .card p{color:var(--muted);font-size:.95rem;margin-top:9px}
+  .card a.more{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-weight:600;font-size:.9rem;color:var(--accent)}
+  .card a.more svg{width:15px;height:15px;transition:transform .15s}
+  .card:hover a.more svg{transform:translateX(3px)}
+
+  /* Why us band */
+  .why{background:var(--brand);color:#fff}
+  .why-grid{display:grid;gap:42px;align-items:center}
+  .why h2{color:#fff;font-size:2.05rem}
+  .why .lead{color:#c6d2ec;font-size:1.08rem;margin-top:16px}
+  .why-list{display:grid;gap:18px;margin-top:6px}
+  .why-pt{display:flex;gap:15px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius-sm);padding:18px 20px}
+  .why-pt .pi{width:42px;height:42px;border-radius:11px;background:rgba(60,109,240,.22);display:flex;align-items:center;justify-content:center;flex:none}
+  .why-pt .pi svg{width:21px;height:21px;color:#9db8ff}
+  .why-pt h4{font-family:var(--body);font-weight:600;font-size:1.02rem;color:#fff}
+  .why-pt p{color:#aebdd9;font-size:.9rem;margin-top:4px}
+  @media(min-width:900px){.why-grid{grid-template-columns:1fr 1.05fr}}
+
+  /* Testimonials */
+  .quotes{display:grid;gap:22px;grid-template-columns:1fr}
+  @media(min-width:860px){.quotes{grid-template-columns:repeat(3,1fr)}}
+  .quote{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;display:flex;flex-direction:column}
+  .stars{display:flex;gap:3px;margin-bottom:14px;color:#f0a93c}
+  .stars svg{width:18px;height:18px}
+  .quote p{font-size:1rem;color:var(--ink);font-style:italic;flex:1}
+  .quote .who{margin-top:18px;font-weight:600;font-size:.9rem;color:var(--brand)}
+  .quote .who span{display:block;font-weight:400;color:var(--muted);font-size:.82rem;font-style:normal}
+  .ph-note{text-align:center;color:var(--muted);font-size:.82rem;margin-top:22px}
+
+  /* Gallery */
+  .gallery{display:grid;gap:16px;grid-template-columns:repeat(2,1fr)}
+  @media(min-width:760px){.gallery{grid-template-columns:repeat(4,1fr)}}
+  .frame{aspect-ratio:4/5;border-radius:var(--radius);background:linear-gradient(150deg,var(--bg-tint),#dde7f9);border:1px dashed #b9c8e8;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--accent);text-align:center;padding:14px}
+  .frame.tall{grid-row:span 1}
+  .frame svg{width:30px;height:30px;opacity:.7}
+  .frame span{font-size:.82rem;font-weight:500;color:#5a73ad}
+  .frame.wide{grid-column:span 2}
+
+  /* CTA band */
+  .cta-band{background:linear-gradient(160deg,var(--brand) 0%, var(--brand-deep) 100%);color:#fff;position:relative;overflow:hidden}
+  .cta-band:before{content:"";position:absolute;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(60,109,240,.30),transparent 70%);top:-180px;right:-120px}
+  .cta-grid{position:relative;display:grid;gap:38px;align-items:center}
+  .cta-grid h2{color:#fff;font-size:2.1rem}
+  .cta-grid .lead{color:#c6d2ec;font-size:1.06rem;margin-top:14px}
+  .cta-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+  .cta-note{margin-top:18px;font-size:.84rem;color:#9fb0d0;display:flex;align-items:center;gap:8px}
+  .cta-note svg{width:16px;height:16px;color:#9db8ff}
+  /* form */
+  .enq{background:#fff;border-radius:var(--radius);padding:30px 28px;box-shadow:var(--shadow-lg)}
+  .enq h3{color:var(--brand);font-size:1.3rem}
+  .enq p.s{color:var(--muted);font-size:.9rem;margin-top:6px;margin-bottom:20px}
+  .field{margin-bottom:14px}
+  .field label{display:block;font-size:.82rem;font-weight:600;color:var(--ink);margin-bottom:6px}
+  .field input,.field select,.field textarea{width:100%;font-family:var(--body);font-size:.95rem;padding:12px 14px;border:1.5px solid var(--line);border-radius:var(--radius-sm);background:var(--bg-soft);color:var(--ink);transition:border-color .15s, background .15s}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent);background:#fff}
+  .field textarea{resize:vertical;min-height:84px}
+  .enq .btn{width:100%}
+  .enq .priv{font-size:.74rem;color:var(--muted);text-align:center;margin-top:12px}
+  @media(min-width:900px){.cta-grid{grid-template-columns:1fr 1fr}}
+
+  /* Footer */
+  footer{background:var(--brand-deep);color:#aebdd9;padding:60px 0 30px}
+  .foot-grid{display:grid;gap:34px;grid-template-columns:1fr}
+  @media(min-width:760px){.foot-grid{grid-template-columns:1.4fr 1fr 1fr}}
+  .foot-brand .brand-mark{color:#fff}
+  .foot-brand .brand-mark .sd{background:var(--accent)}
+  .foot-brand p{margin-top:16px;font-size:.92rem;max-width:340px;color:#94a4c4}
+  footer h5{color:#fff;font-family:var(--body);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px;font-weight:600}
+  .foot-list{display:grid;gap:11px;font-size:.92rem}
+  .foot-list a:hover{color:#fff}
+  .foot-contact a{display:flex;gap:10px;align-items:flex-start}
+  .foot-contact svg{width:17px;height:17px;color:var(--accent);flex:none;margin-top:3px}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.10);margin-top:40px;padding-top:22px;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:.8rem;color:#7c8cae}
+
+  /* Floating WhatsApp */
+  .float-wa{position:fixed;right:18px;bottom:18px;z-index:60;width:60px;height:60px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 28px rgba(37,211,102,.45);transition:transform .18s ease}
+  .float-wa:hover{transform:scale(1.08)}
+  .float-wa svg{width:32px;height:32px;color:#fff}
+  .float-wa:after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--wa);animation:pulse 2.2s infinite;opacity:0}
+  @keyframes pulse{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.7);opacity:0}}
+  @media(min-width:900px){.float-wa{width:64px;height:64px;right:26px;bottom:26px}}
+</style>
+</head>
+<body>
+
+<div class="concept">Concept preview built by <b>Searchly Web</b> for SD Law (Simon Dippenaar &amp; Associates Inc.). A draft of what your new website could look like.</div>
+
+<!-- HEADER -->
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand-mark"><span class="sd">SD</span>Law <small>Simon Dippenaar &amp; Associates</small></a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why SD Law</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:0860995146" class="nav-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        086 099 5146
+      </a>
+      <a class="btn btn-wa" href="https://wa.me/27761160623?text=Hi%20SD%20Law%2C%20I'd%20like%20to%20speak%20to%20a%20lawyer%20about%20a%20legal%20matter.">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        WhatsApp us
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap hero-inner">
+    <div>
+      <span class="eyebrow" style="color:#9db8ff">Cape Town Attorneys &middot; Established &amp; Trusted</span>
+      <h1>When life gets <em>legal</em>, speak to a real lawyer fast.</h1>
+      <p class="lead">SD Law guides Cape Town families and businesses through divorce, evictions, wills, criminal matters, litigation and immigration. Clear advice, no jargon, and a reply within 24 hours.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-wa btn-lg" href="https://wa.me/27761160623?text=Hi%20SD%20Law%2C%20I'd%20like%20to%20speak%20to%20a%20lawyer.%20My%20matter%20is%3A%20">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          Chat on WhatsApp
+        </a>
+        <a class="btn btn-ghost-light btn-lg" href="tel:0860995146">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call 086 099 5146
+        </a>
+      </div>
+      <p class="hero-sub">Confidential consultation &middot; Loop Street, Cape Town &middot; Offices in Rosebank &amp; Stellenbosch</p>
+    </div>
+    <div class="stat-row">
+      <div class="stat"><b>24h</b><span>Reply to every query, guaranteed</span></div>
+      <div class="stat"><b>6</b><span>Areas of law under one roof</span></div>
+      <div class="stat"><b>3</b><span>Offices: Cape Town, Joburg, Stellenbosch</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust">
+  <div class="wrap trust-inner">
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Member of the Legal Practice Council</div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>24-hour query response</div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4L12 17l-6.3 4.4L8 14 2 9.4h7.6z"/></svg>SAPS Certificate of Appreciation</div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Serving Sea Point &amp; Greater Cape Town</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="pad" id="services">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">How we help</span>
+      <h2>Six areas of law, one trusted team</h2>
+      <p>Whether it is a personal crossroads or a business dispute, you deal with experienced attorneys who explain your options plainly and act decisively.</p>
+    </div>
+    <div class="cards">
+
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <h3>Divorce &amp; Family Law</h3>
+        <p>Compassionate, firm guidance on divorce, maintenance, custody and parenting plans, protecting you and your children.</p>
+        <a class="more" href="https://wa.me/27761160623?text=Hi%20SD%20Law%2C%20I%20need%20help%20with%20a%20family%20law%20matter.">Discuss your matter <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3>Evictions &amp; Property Law</h3>
+        <p>Lawful, efficient eviction and property advice for landlords and tenants, fully compliant with the PIE Act and your rights.</p>
+        <a class="more" href="https://wa.me/27761160623?text=Hi%20SD%20Law%2C%20I%20have%20an%20evictions%20or%20property%20question.">Discuss your matter <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg></div>
+        <h3>Wills &amp; Estates</h3>
+        <p>Drafting wills, winding up estates and protecting your legacy, so your family is cared for exactly as you intend.</p>
+        <a class="more" href="https://wa.me/27761160623?text=Hi%20SD%20Law%2C%20I'd%20like%20help%20with%20a%20will%20or%20estate.">Discuss your matter <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1l9 4v6c0 5-3.8 9.4-9 11-5.2-1.6-9-6-9-11V5z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Criminal Law &amp; Bail</h3>
+        <p>Urgent bail applications and a robust defence when it matters most. We move quickly to protect your rights and freedom.</p>
+        <a class="more" href="https://wa.me/27761160623?text=Hi%20SD%20Law%2C%20I%20need%20urgent%20help%20with%20a%20criminal%20or%20bail%20matter.">Discuss your matter <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M12 3l8 4-8 4-8-4z"/><line x1="7" y1="11" x2="7" y2="18"/><line x1="12" y1="11" x2="12" y2="18"/><line x1="17" y1="11" x2="17" y2="18"/></svg></div>
+        <h3>Commercial Litigation</h3>
+        <p>Strategic dispute resolution for businesses, from contract claims to debt recovery, focused on the best commercial outcome.</p>
+        <a class="more" href="https://wa.me/27761160623?text=Hi%20SD%20Law%2C%20I%20have%20a%20commercial%20litigation%20matter.">Discuss your matter <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+        <h3>Immigration</h3>
+        <p>Visas, permits and residency, handled with care so you and your family can live and work in South Africa with confidence.</p>
+        <a class="more" href="https://wa.me/27761160623?text=Hi%20SD%20Law%2C%20I%20need%20help%20with%20an%20immigration%20matter.">Discuss your matter <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why pad" id="why">
+  <div class="wrap why-grid">
+    <div>
+      <span class="eyebrow" style="color:#9db8ff">Why people choose SD Law</span>
+      <h2>An established firm that still answers the phone.</h2>
+      <p class="lead">Simon Dippenaar &amp; Associates Inc. has built its name on accessible, honest legal help. You are not a file number here. You get a real lawyer who listens, responds quickly, and stands with the community we serve.</p>
+    </div>
+    <div class="why-list">
+      <div class="why-pt">
+        <div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <div><h4>Recognised &amp; regulated</h4><p>A proud member of the Legal Practice Council, holding to the highest professional standards.</p></div>
+      </div>
+      <div class="why-pt">
+        <div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div><h4>We reply within 24 hours</h4><p>Legal worries do not wait. Every query gets a response within a day, often far sooner.</p></div>
+      </div>
+      <div class="why-pt">
+        <div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4L12 17l-6.3 4.4L8 14 2 9.4h7.6z"/></svg></div>
+        <div><h4>Recognised by the community</h4><p>Awarded a SAPS Certificate of Appreciation for service to the Sea Point community.</p></div>
+      </div>
+      <div class="why-pt">
+        <div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><h4>Three offices, one team</h4><p>Loop Street in Cape Town, plus Rosebank in Johannesburg and Stellenbosch, close wherever you are.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MID CTA BAND (simple) -->
+<section style="background:var(--accent);color:#fff;padding:46px 0">
+  <div class="wrap" style="display:flex;flex-wrap:wrap;gap:22px;align-items:center;justify-content:space-between">
+    <div>
+      <h2 style="color:#fff;font-size:1.55rem">Not sure where to start? Just ask.</h2>
+      <p style="color:#e3ecff;margin-top:6px">Send a quick message and a lawyer will guide you on your next step. No obligation.</p>
+    </div>
+    <a class="btn btn-lg" style="background:#fff;color:var(--accent)" href="https://wa.me/27761160623?text=Hi%20SD%20Law%2C%20I'm%20not%20sure%20where%20to%20start.%20Can%20you%20help%3F">
+      <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      Message a lawyer now
+    </a>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="pad" id="reviews">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Client reviews</span>
+      <h2>Trusted by the people we serve</h2>
+      <p>Real clients, real outcomes. Here is what working with SD Law feels like.</p>
+    </div>
+    <div class="quotes">
+      <div class="quote">
+        <div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4L12 17l-6.3 4.4L8 14 2 9.4h7.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4L12 17l-6.3 4.4L8 14 2 9.4h7.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4L12 17l-6.3 4.4L8 14 2 9.4h7.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4L12 17l-6.3 4.4L8 14 2 9.4h7.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4L12 17l-6.3 4.4L8 14 2 9.4h7.6z"/></svg></div>
+        <p>"Simon and his team made an incredibly stressful divorce feel manageable. They explained every step and always responded quickly. I never felt alone in the process."</p>
+        <div class="who">Family law client<span>Cape Town</span></div>
+      </div>
+      <div class="quote">
+        <div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4L12 17l-6.3 4.4L8 14 2 9.4h7.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4L12 17l-6.3 4.4L8 14 2 9.4h7.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4L12 17l-6.3 4.4L8 14 2 9.4h7.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4L12 17l-6.3 4.4L8 14 2 9.4h7.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4L12 17l-6.3 4.4L8 14 2 9.4h7.6z"/></svg></div>
+        <p>"As a landlord I needed a lawful eviction handled properly. SD Law was professional, clear about the process, and got it done without drama. Highly recommended."</p>
+        <div class="who">Property law client<span>Sea Point</span></div>
+      </div>
+      <div class="quote">
+        <div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4L12 17l-6.3 4.4L8 14 2 9.4h7.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4L12 17l-6.3 4.4L8 14 2 9.4h7.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4L12 17l-6.3 4.4L8 14 2 9.4h7.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4L12 17l-6.3 4.4L8 14 2 9.4h7.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4L12 17l-6.3 4.4L8 14 2 9.4h7.6z"/></svg></div>
+        <p>"They drafted our wills and gave us real peace of mind. Patient, thorough and genuinely caring. It is rare to find lawyers who treat you like a person."</p>
+        <div class="who">Wills &amp; estates client<span>Stellenbosch</span></div>
+      </div>
+    </div>
+    <p class="ph-note">Placeholder reviews shown for layout. On the live site we display your real, verified Google and client testimonials.</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="pad" style="background:var(--bg-soft)">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Inside SD Law</span>
+      <h2>The team and the offices</h2>
+      <p>A warm, professional space and the faces behind your matter. We will style this gallery with your own photographs.</p>
+    </div>
+    <div class="gallery">
+      <div class="frame"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Your photos here</span></div>
+      <div class="frame"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg><span>Meet the team</span></div>
+      <div class="frame"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg><span>Loop Street office</span></div>
+      <div class="frame"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Your photos here</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND + FORM -->
+<section class="cta-band pad" id="contact">
+  <div class="wrap cta-grid">
+    <div>
+      <span class="eyebrow" style="color:#9db8ff">Speak to a lawyer today</span>
+      <h2>Your first conversation is the hardest step. Take it now.</h2>
+      <p class="lead">Tell us what is going on, in confidence. A member of the SD Law team will come back to you within 24 hours with clear next steps.</p>
+      <div class="cta-ctas">
+        <a class="btn btn-wa btn-lg" href="https://wa.me/27761160623?text=Hi%20SD%20Law%2C%20I'd%20like%20to%20arrange%20a%20consultation.%20My%20matter%20is%3A%20">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          WhatsApp 076 116 0623
+        </a>
+        <a class="btn btn-ghost-light btn-lg" href="tel:0860995146">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call 086 099 5146
+        </a>
+      </div>
+      <p class="cta-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Confidential. Your details are never shared.</p>
+    </div>
+
+    <form class="enq" onsubmit="return false">
+      <h3>Request a callback</h3>
+      <p class="s">Prefer we call you? Leave your details and we will reach out within 24 hours.</p>
+      <div class="field">
+        <label for="name">Full name</label>
+        <input id="name" type="text" placeholder="Your name" autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="phone">Phone number</label>
+        <input id="phone" type="tel" placeholder="072 000 0000" autocomplete="tel">
+      </div>
+      <div class="field">
+        <label for="matter">Type of matter</label>
+        <select id="matter">
+          <option>Divorce &amp; family law</option>
+          <option>Evictions &amp; property law</option>
+          <option>Wills &amp; estates</option>
+          <option>Criminal law &amp; bail</option>
+          <option>Commercial litigation</option>
+          <option>Immigration</option>
+          <option>Something else</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="msg">Brief description</label>
+        <textarea id="msg" placeholder="A sentence or two about how we can help."></textarea>
+      </div>
+      <button type="submit" class="btn btn-accent btn-lg">Request my callback</button>
+      <p class="priv">By submitting you agree to be contacted about your enquiry. We respect your privacy under POPIA.</p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a href="#top" class="brand-mark"><span class="sd">SD</span>Law</a>
+      <p>Simon Dippenaar &amp; Associates Inc. Approachable, responsive attorneys serving Cape Town and beyond, in family, property, criminal and commercial law.</p>
+    </div>
+    <div>
+      <h5>Areas of law</h5>
+      <div class="foot-list">
+        <a href="#services">Divorce &amp; family law</a>
+        <a href="#services">Evictions &amp; property law</a>
+        <a href="#services">Wills &amp; estates</a>
+        <a href="#services">Criminal law &amp; bail</a>
+        <a href="#services">Commercial litigation</a>
+        <a href="#services">Immigration</a>
+      </div>
+    </div>
+    <div>
+      <h5>Contact</h5>
+      <div class="foot-list foot-contact">
+        <a href="tel:0860995146"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>086 099 5146</a>
+        <a href="https://wa.me/27761160623?text=Hi%20SD%20Law%2C%20I'd%20like%20to%20speak%20to%20a%20lawyer."><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.978-1.607z"/></svg>WhatsApp 076 116 0623</a>
+        <a href="mailto:simon@sdlaw.co.za"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>simon@sdlaw.co.za</a>
+        <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Loop Street, Cape Town &middot; Rosebank, Johannesburg &middot; Stellenbosch</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>&copy; 2026 Simon Dippenaar &amp; Associates Inc. Member of the Legal Practice Council.</span>
+    <span>Concept design by Searchly Web</span>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a class="float-wa" href="https://wa.me/27761160623?text=Hi%20SD%20Law%2C%20I'd%20like%20to%20speak%20to%20a%20lawyer%20about%20a%20legal%20matter." aria-label="Chat with SD Law on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+</a>
+
+</body>
+</html>

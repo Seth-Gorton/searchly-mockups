@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cape Physio | Physiotherapy &amp; Occupational Therapy in Sea Point, Cape Town</title>
+<meta name="description" content="Expert physiotherapy and occupational therapy in Sea Point, Cape Town. Postural management, back and neck care, post-operative rehab and ergonomic office assessments. Book on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --brand:#15689e;
+    --brand-dark:#0f4f79;
+    --brand-soft:#e7f1f8;
+    --accent:#2bb3a3;
+    --accent-dark:#229588;
+    --wa:#25D366;
+    --wa-dark:#1eb558;
+    --ink:#1b2733;
+    --ink-soft:#48586a;
+    --line:#e4ebf1;
+    --bg:#ffffff;
+    --bg-soft:#f5f8fb;
+    --bg-tint:#eef4f9;
+    --white:#ffffff;
+    --shadow-sm:0 1px 3px rgba(21,104,158,.08), 0 1px 2px rgba(21,104,158,.06);
+    --shadow-md:0 8px 24px rgba(21,104,158,.10);
+    --shadow-lg:0 18px 50px rgba(15,79,121,.16);
+    --radius:16px;
+    --radius-sm:10px;
+    --maxw:1140px;
+    --space:clamp(1.25rem,5vw,2rem);
+    --head:"Fraunces",Georgia,serif;
+    --body:"Inter",system-ui,-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:var(--body);
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.65;
+    font-size:17px;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3{font-family:var(--head);font-weight:500;line-height:1.12;letter-spacing:-.01em;color:var(--ink)}
+  h1{font-size:clamp(2.3rem,6vw,3.7rem)}
+  h2{font-size:clamp(1.8rem,4.5vw,2.7rem)}
+  h3{font-size:1.25rem;font-weight:600}
+  p{color:var(--ink-soft)}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--space)}
+  section{padding:clamp(3.5rem,8vw,6rem) 0}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:.5rem;
+    font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--brand);margin-bottom:1rem;
+  }
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--accent);border-radius:2px;display:inline-block}
+
+  /* ---------- Concept banner ---------- */
+  .concept-banner{
+    background:var(--ink);color:#cbd6e0;
+    font-size:.8rem;text-align:center;padding:.6rem 1rem;
+    letter-spacing:.01em;line-height:1.4;
+  }
+  .concept-banner strong{color:#fff;font-weight:600}
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+    font-family:var(--body);font-weight:600;font-size:.97rem;
+    padding:.85rem 1.5rem;border-radius:999px;border:1.5px solid transparent;
+    cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,background .18s ease;
+    white-space:nowrap;
+  }
+  .btn svg{width:18px;height:18px;flex:none}
+  .btn-wa{background:var(--wa);color:#fff;box-shadow:0 6px 18px rgba(37,211,102,.32)}
+  .btn-wa:hover{background:var(--wa-dark);transform:translateY(-2px);box-shadow:0 10px 24px rgba(37,211,102,.4)}
+  .btn-call{background:var(--white);color:var(--brand);border-color:var(--line)}
+  .btn-call:hover{border-color:var(--brand);transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+  .btn-ghost{background:transparent;color:var(--brand);border-color:rgba(21,104,158,.3)}
+  .btn-ghost:hover{background:var(--brand-soft)}
+  .btn-lg{padding:1rem 1.9rem;font-size:1.02rem}
+
+  /* ---------- Header ---------- */
+  header.site{
+    position:sticky;top:0;z-index:60;
+    background:rgba(255,255,255,.88);
+    backdrop-filter:saturate(150%) blur(12px);
+    -webkit-backdrop-filter:saturate(150%) blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:1rem}
+  .wordmark{display:flex;align-items:center;gap:.6rem;font-family:var(--head);font-size:1.4rem;font-weight:600;color:var(--ink);letter-spacing:-.02em}
+  .wordmark .mark{
+    width:38px;height:38px;border-radius:11px;flex:none;
+    background:linear-gradient(135deg,var(--brand),var(--accent));
+    display:grid;place-items:center;box-shadow:var(--shadow-sm);
+  }
+  .wordmark .mark svg{width:22px;height:22px}
+  .wordmark span.cape{color:var(--brand)}
+  .nav-links{display:none;align-items:center;gap:2rem;font-size:.95rem;font-weight:500}
+  .nav-links a{color:var(--ink-soft);transition:color .15s}
+  .nav-links a:hover{color:var(--brand)}
+  .nav-cta{display:flex;align-items:center;gap:.6rem}
+  .nav-cta .btn-call{display:none}
+  @media(min-width:880px){
+    .nav-links{display:flex}
+    .nav-cta .btn-call{display:inline-flex}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    background:
+      radial-gradient(1100px 500px at 78% -10%, rgba(43,179,163,.14), transparent 60%),
+      radial-gradient(900px 600px at 0% 0%, rgba(21,104,158,.10), transparent 55%),
+      var(--bg-soft);
+    padding-top:clamp(2.8rem,7vw,4.5rem);
+    overflow:hidden;
+  }
+  .hero-grid{display:grid;gap:clamp(2rem,5vw,3.5rem);align-items:center}
+  @media(min-width:920px){.hero-grid{grid-template-columns:1.05fr .95fr}}
+  .hero-pill{
+    display:inline-flex;align-items:center;gap:.5rem;
+    background:var(--white);border:1px solid var(--line);
+    padding:.4rem .85rem .4rem .55rem;border-radius:999px;
+    font-size:.82rem;font-weight:600;color:var(--brand-dark);margin-bottom:1.4rem;
+    box-shadow:var(--shadow-sm);
+  }
+  .hero-pill .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(43,179,163,.18)}
+  .hero h1{margin-bottom:1.1rem}
+  .hero h1 em{font-style:normal;color:var(--brand);position:relative}
+  .hero p.lead{font-size:1.12rem;max-width:34ch;margin-bottom:1.9rem}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:2rem}
+  .trust-row{display:flex;flex-wrap:wrap;gap:1.4rem 2rem;align-items:center;padding-top:1.4rem;border-top:1px solid var(--line)}
+  .trust-item{display:flex;align-items:center;gap:.6rem;font-size:.86rem;font-weight:500;color:var(--ink-soft)}
+  .trust-item svg{width:20px;height:20px;color:var(--accent);flex:none}
+  /* hero visual */
+  .hero-visual{position:relative}
+  .hero-card{
+    background:var(--white);border:1px solid var(--line);border-radius:22px;
+    box-shadow:var(--shadow-lg);padding:1.6rem;position:relative;overflow:hidden;
+  }
+  .hero-photo{
+    aspect-ratio:4/3;border-radius:14px;
+    background:
+      linear-gradient(135deg,rgba(21,104,158,.92),rgba(43,179,163,.85));
+    display:grid;place-items:center;text-align:center;color:#fff;position:relative;
+  }
+  .hero-photo .ico{width:54px;height:54px;opacity:.95;margin-bottom:.6rem}
+  .hero-photo small{display:block;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;opacity:.85;font-weight:600}
+  .hero-statline{display:flex;gap:1rem;margin-top:1.4rem}
+  .stat{flex:1;background:var(--bg-soft);border-radius:12px;padding:.9rem 1rem;text-align:center}
+  .stat b{display:block;font-family:var(--head);font-size:1.5rem;color:var(--brand);font-weight:600}
+  .stat span{font-size:.74rem;color:var(--ink-soft);letter-spacing:.02em}
+  .float-badge{
+    position:absolute;right:-12px;bottom:-14px;background:var(--white);
+    border:1px solid var(--line);border-radius:14px;padding:.7rem .9rem;
+    box-shadow:var(--shadow-md);display:flex;align-items:center;gap:.6rem;font-size:.8rem;font-weight:600;color:var(--ink);
+  }
+  .float-badge svg{width:30px;height:30px;color:#f5a623}
+
+  /* ---------- Trust strip ---------- */
+  .strip{background:var(--brand-dark);color:#dfeaf3}
+  .strip .wrap{display:grid;gap:1.6rem;grid-template-columns:repeat(2,1fr);padding-top:2.6rem;padding-bottom:2.6rem}
+  @media(min-width:780px){.strip .wrap{grid-template-columns:repeat(4,1fr)}}
+  .strip-item{display:flex;flex-direction:column;gap:.4rem}
+  .strip-item svg{width:26px;height:26px;color:var(--accent)}
+  .strip-item b{font-family:var(--head);font-size:1.05rem;color:#fff;font-weight:600;letter-spacing:-.01em}
+  .strip-item span{font-size:.85rem;color:#b7cbdc;line-height:1.45}
+
+  /* ---------- Services ---------- */
+  .sec-head{max-width:46ch;margin-bottom:2.6rem}
+  .sec-head p{margin-top:.7rem}
+  .cards{display:grid;gap:1.3rem;grid-template-columns:1fr}
+  @media(min-width:640px){.cards{grid-template-columns:repeat(2,1fr)}}
+  .card{
+    background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+    padding:1.7rem;transition:transform .2s ease,box-shadow .2s ease,border-color .2s;
+    position:relative;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:rgba(43,179,163,.45)}
+  .card .icon{
+    width:52px;height:52px;border-radius:14px;display:grid;place-items:center;
+    background:var(--brand-soft);color:var(--brand);margin-bottom:1.1rem;transition:background .2s,color .2s;
+  }
+  .card:hover .icon{background:var(--accent);color:#fff}
+  .card .icon svg{width:26px;height:26px}
+  .card h3{margin-bottom:.55rem}
+  .card p{font-size:.95rem}
+  .card .conditions{margin-top:.9rem;display:flex;flex-wrap:wrap;gap:.4rem}
+  .tag{font-size:.74rem;font-weight:500;background:var(--bg-soft);color:var(--ink-soft);padding:.25rem .6rem;border-radius:999px;border:1px solid var(--line)}
+
+  /* ---------- About band ---------- */
+  .about{background:var(--bg-tint)}
+  .about-grid{display:grid;gap:clamp(2rem,5vw,3.5rem);align-items:center}
+  @media(min-width:900px){.about-grid{grid-template-columns:.85fr 1.15fr}}
+  .about-portrait{
+    aspect-ratio:1/1.05;border-radius:20px;position:relative;overflow:hidden;
+    background:linear-gradient(160deg,var(--brand) 0%,var(--brand-dark) 60%,var(--accent) 130%);
+    display:grid;place-items:center;text-align:center;color:#fff;box-shadow:var(--shadow-lg);
+  }
+  .about-portrait .ph-label{
+    position:absolute;bottom:1rem;left:1rem;right:1rem;
+    background:rgba(255,255,255,.14);backdrop-filter:blur(4px);
+    border:1px solid rgba(255,255,255,.22);border-radius:10px;
+    padding:.5rem;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;
+  }
+  .about-portrait svg{width:64px;height:64px;opacity:.92}
+  .creds{list-style:none;display:grid;gap:.9rem;margin:1.6rem 0 1.9rem}
+  .creds li{display:flex;gap:.8rem;align-items:flex-start;font-size:.97rem;color:var(--ink-soft)}
+  .creds li svg{width:22px;height:22px;color:var(--accent);flex:none;margin-top:.15rem}
+  .creds li b{color:var(--ink);font-weight:600}
+  .sig{font-family:var(--head);font-size:1.4rem;color:var(--brand);font-weight:500;margin-top:.4rem}
+
+  /* ---------- Mid CTA band ---------- */
+  .cta-band{
+    background:linear-gradient(120deg,var(--brand-dark),var(--brand) 70%);
+    color:#fff;position:relative;overflow:hidden;
+  }
+  .cta-band::after{content:"";position:absolute;right:-80px;top:-80px;width:320px;height:320px;border-radius:50%;background:rgba(43,179,163,.25);filter:blur(10px)}
+  .cta-band .wrap{position:relative;z-index:1;text-align:center;max-width:680px}
+  .cta-band h2{color:#fff;margin-bottom:.8rem}
+  .cta-band p{color:#d4e6f3;margin-bottom:1.8rem;font-size:1.08rem}
+  .cta-band .hero-cta{justify-content:center}
+  .cta-band .btn-call{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+  .cta-band .btn-call:hover{background:rgba(255,255,255,.12);border-color:#fff}
+
+  /* ---------- Testimonials ---------- */
+  .testi-grid{display:grid;gap:1.3rem;grid-template-columns:1fr}
+  @media(min-width:780px){.testi-grid{grid-template-columns:repeat(3,1fr)}}
+  .testi{
+    background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+    padding:1.6rem;position:relative;
+  }
+  .testi .stars{display:flex;gap:.15rem;margin-bottom:.8rem;color:#f5a623}
+  .testi .stars svg{width:17px;height:17px}
+  .testi p{font-size:.96rem;color:var(--ink);line-height:1.6;margin-bottom:1.1rem}
+  .testi .who{display:flex;align-items:center;gap:.7rem}
+  .testi .av{width:38px;height:38px;border-radius:50%;background:var(--brand-soft);display:grid;place-items:center;color:var(--brand);font-weight:700;font-size:.85rem}
+  .testi .who b{display:block;font-size:.88rem;color:var(--ink)}
+  .testi .who span{font-size:.78rem;color:var(--ink-soft)}
+  .placeholder-note{
+    text-align:center;font-size:.82rem;color:var(--ink-soft);margin-top:1.5rem;
+    background:var(--bg-soft);border:1px dashed var(--line);border-radius:10px;padding:.7rem 1rem;display:inline-block;
+  }
+  .center{text-align:center}
+
+  /* ---------- Gallery ---------- */
+  .gallery{background:var(--bg-soft)}
+  .frames{display:grid;gap:1rem;grid-template-columns:repeat(2,1fr)}
+  @media(min-width:780px){.frames{grid-template-columns:repeat(4,1fr)}}
+  .frame{
+    aspect-ratio:1/1;border-radius:14px;border:1.5px dashed rgba(21,104,158,.3);
+    background:linear-gradient(135deg,var(--brand-soft),#fff);
+    display:grid;place-items:center;text-align:center;color:var(--brand);
+    transition:border-color .2s,background .2s;
+  }
+  .frame:hover{border-color:var(--accent);background:linear-gradient(135deg,#fff,var(--brand-soft))}
+  .frame svg{width:30px;height:30px;opacity:.7;margin-bottom:.4rem}
+  .frame small{font-size:.72rem;font-weight:600;letter-spacing:.04em}
+  .frames .frame:nth-child(1){aspect-ratio:auto}
+  @media(min-width:780px){.frame.tall{grid-row:span 1}}
+
+  /* ---------- Booking section ---------- */
+  .booking{background:var(--white)}
+  .booking-grid{display:grid;gap:clamp(2rem,5vw,3rem);align-items:start}
+  @media(min-width:900px){.booking-grid{grid-template-columns:1fr 1.05fr}}
+  .booking-left h2{margin-bottom:.8rem}
+  .booking-left .lead{margin-bottom:1.6rem}
+  .booking-left .hero-cta{margin-bottom:1.8rem}
+  .contact-list{list-style:none;display:grid;gap:1rem}
+  .contact-list li{display:flex;gap:.85rem;align-items:flex-start}
+  .contact-list svg{width:22px;height:22px;color:var(--brand);flex:none;margin-top:.2rem}
+  .contact-list b{display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-soft);font-weight:600}
+  .contact-list a,.contact-list span.v{font-size:1.02rem;color:var(--ink);font-weight:500}
+  .contact-list a:hover{color:var(--brand)}
+  .form-card{
+    background:var(--bg-soft);border:1px solid var(--line);border-radius:20px;
+    padding:clamp(1.5rem,4vw,2.2rem);box-shadow:var(--shadow-sm);
+  }
+  .form-card h3{font-family:var(--head);font-weight:600;margin-bottom:.3rem;font-size:1.35rem}
+  .form-card .sub{font-size:.9rem;color:var(--ink-soft);margin-bottom:1.4rem}
+  .field{margin-bottom:1rem}
+  .field label{display:block;font-size:.82rem;font-weight:600;color:var(--ink);margin-bottom:.4rem}
+  .field input,.field select,.field textarea{
+    width:100%;font-family:var(--body);font-size:.97rem;color:var(--ink);
+    background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:.75rem .9rem;transition:border-color .15s,box-shadow .15s;
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px rgba(21,104,158,.12)}
+  .field textarea{resize:vertical;min-height:92px}
+  .form-row{display:grid;gap:1rem;grid-template-columns:1fr 1fr}
+  .form-card .btn{width:100%;margin-top:.4rem}
+  .form-note{font-size:.78rem;color:var(--ink-soft);margin-top:.9rem;text-align:center}
+  .form-note a{color:var(--wa-dark);font-weight:600}
+
+  /* ---------- Footer ---------- */
+  footer.site{background:var(--ink);color:#aebccb;padding:clamp(3rem,7vw,4rem) 0 0}
+  .foot-grid{display:grid;gap:2.2rem;grid-template-columns:1fr}
+  @media(min-width:720px){.foot-grid{grid-template-columns:1.4fr 1fr 1fr}}
+  .foot-brand .wordmark{color:#fff;margin-bottom:1rem}
+  .foot-brand .wordmark span.cape{color:#7cc6ee}
+  .foot-brand p{font-size:.92rem;color:#94a6b6;max-width:34ch}
+  .foot-col h4{font-family:var(--body);font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:#7c8ea0;margin-bottom:1rem;font-weight:700}
+  .foot-col ul{list-style:none;display:grid;gap:.7rem}
+  .foot-col li{font-size:.92rem;color:#aebccb}
+  .foot-col a:hover{color:#fff}
+  .branch{display:flex;gap:.6rem;align-items:flex-start;font-size:.92rem;margin-bottom:1rem}
+  .branch svg{width:18px;height:18px;color:var(--accent);flex:none;margin-top:.2rem}
+  .branch b{color:#fff;font-weight:600;display:block;font-size:.85rem}
+  .foot-cta{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.2rem}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:2.5rem;padding:1.4rem 0;font-size:.8rem;color:#788a9b;display:flex;flex-wrap:wrap;gap:.6rem;justify-content:space-between}
+  .foot-bottom a{color:#9fb0c0}
+
+  /* ---------- Floating WhatsApp ---------- */
+  .float-wa{
+    position:fixed;right:18px;bottom:18px;z-index:80;
+    display:flex;align-items:center;gap:.6rem;
+    background:var(--wa);color:#fff;font-weight:600;font-size:.95rem;
+    padding:.8rem 1.2rem;border-radius:999px;
+    box-shadow:0 10px 30px rgba(37,211,102,.45);
+    transition:transform .18s ease,box-shadow .18s ease;
+  }
+  .float-wa:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 14px 36px rgba(37,211,102,.55)}
+  .float-wa svg{width:24px;height:24px;flex:none}
+  .float-wa .label{display:none}
+  @media(min-width:520px){.float-wa .label{display:inline}}
+  @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto !important;transition:none !important}}
+</style>
+</head>
+<body>
+
+<!-- Concept banner -->
+<div class="concept-banner">
+  Concept preview built by <strong>Searchly Web</strong> for <strong>Cape Physio</strong>. A draft of what your new website could look like.
+</div>
+
+<!-- Header -->
+<header class="site">
+  <div class="wrap nav">
+    <a class="wordmark" href="#top" aria-label="Cape Physio home">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </span>
+      <span><span class="cape">Cape</span> Physio</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#book">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-call" href="tel:+27732697313">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call
+      </a>
+      <a class="btn btn-wa" href="https://wa.me/27732697313?text=Hi%20Cape%20Physio%2C%20I%27d%20like%20to%20book%20a%20physiotherapy%20appointment.%20What%20times%20do%20you%20have%20available%3F">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.739-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        Book on WhatsApp
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="hero-pill"><span class="dot"></span> Sea Point &amp; The Point Mall, Cape Town</span>
+        <h1>Move freely again with <em>expert physiotherapy</em> in Sea Point.</h1>
+        <p class="lead">Personal, hands-on care for pain, posture and recovery. Book your appointment in seconds on WhatsApp, no waiting on hold.</p>
+        <div class="hero-cta">
+          <a class="btn btn-wa btn-lg" href="https://wa.me/27732697313?text=Hi%20Cape%20Physio%2C%20I%27d%20like%20to%20book%20a%20physiotherapy%20appointment.%20What%20times%20do%20you%20have%20available%3F">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.739-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            Book on WhatsApp
+          </a>
+          <a class="btn btn-call btn-lg" href="tel:+27732697313">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            073 269 7313
+          </a>
+        </div>
+        <div class="trust-row">
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            UCT-qualified practitioner
+          </div>
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            WhatClinic Service Award
+          </div>
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Caring for Cape Town since 2010
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="hero-photo">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            <small>Your treatment room photo</small>
+          </div>
+          <div class="hero-statline">
+            <div class="stat"><b>14+</b><span>Years in practice</span></div>
+            <div class="stat"><b>2</b><span>Sea Point branches</span></div>
+            <div class="stat"><b>1:1</b><span>Personal care</span></div>
+          </div>
+          <div class="float-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.783 1.401 8.166L12 18.896l-7.335 3.864 1.401-8.166L.132 9.211l8.2-1.193z"/></svg>
+            <span>Award-rated<br>patient care</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust strip -->
+  <section class="strip" style="padding-top:0;padding-bottom:0">
+    <div class="wrap">
+      <div class="strip-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        <b>BSc Physiotherapy</b>
+        <span>University of Cape Town</span>
+      </div>
+      <div class="strip-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        <b>BSc Occupational Therapy</b>
+        <span>University of Cape Town</span>
+      </div>
+      <div class="strip-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+        <b>WhatClinic Service Award</b>
+        <span>Recognised for patient care</span>
+      </div>
+      <div class="strip-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <b>Established 2010</b>
+        <span>Trusted in Sea Point</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">What we treat</span>
+        <h2>Focused care for pain, posture and recovery</h2>
+        <p>Every treatment plan is built around you, combining physiotherapy and occupational therapy to get you back to comfortable, confident movement.</p>
+      </div>
+      <div class="cards">
+
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v6M9 21l3-5 3 5M6 11h12"/></svg></div>
+          <h3>Postural management</h3>
+          <p>Detailed assessment and correction to ease the strain that poor posture places on your spine, shoulders and neck.</p>
+          <div class="conditions"><span class="tag">Assessment</span><span class="tag">Correction</span><span class="tag">Daily habits</span></div>
+        </article>
+
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v6M15 3v6M12 9v9M8 18c0 2 1.5 3 4 3s4-1 4-3"/><path d="M6 9h12"/></svg></div>
+          <h3>Back &amp; neck management</h3>
+          <p>Relief and lasting strategies for lower back pain, mid-back fatigue, and shoulder, arm and neck strain.</p>
+          <div class="conditions"><span class="tag">Lower back pain</span><span class="tag">Mid-back fatigue</span><span class="tag">Neck &amp; shoulder strain</span></div>
+        </article>
+
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div>
+          <h3>Post-operative rehabilitation</h3>
+          <p>Guided recovery after surgery and injury, helping you regain strength, mobility and confidence at a safe pace.</p>
+          <div class="conditions"><span class="tag">Hip &amp; knee replacement</span><span class="tag">Pinched nerves</span><span class="tag">Ligament repair</span><span class="tag">Fractures</span><span class="tag">Caesarean recovery</span></div>
+        </article>
+
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <h3>In-house ergonomic office management</h3>
+          <p>On-site assessments that set up your workstation to prevent strain and keep your team comfortable and productive.</p>
+          <div class="conditions"><span class="tag">Workstation setup</span><span class="tag">On-site visits</span><span class="tag">Team wellbeing</span></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About band -->
+  <section id="about" class="about">
+    <div class="wrap about-grid">
+      <div class="about-portrait">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span class="ph-label">Your photo of Fatima here</span>
+      </div>
+      <div class="about-copy">
+        <span class="eyebrow">Meet your therapist</span>
+        <h2>Personal, expert care from someone who knows your story</h2>
+        <p>Cape Physio is led by Fatima Hartley, who has been treating patients in Sea Point since 2010. With a dual qualification in physiotherapy and occupational therapy, Fatima treats not just the symptom but the way you move, work and live, so the results last.</p>
+        <ul class="creds">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            <span><b>BSc Physiotherapy</b> and <b>BSc Occupational Therapy</b>, both from the University of Cape Town.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            <span>Recognised with a <b>WhatClinic Service Award</b> for outstanding patient care.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span><b>Over 14 years</b> of one-to-one care for the Sea Point community.</span>
+          </li>
+        </ul>
+        <a class="btn btn-wa" href="https://wa.me/27732697313?text=Hi%20Fatima%2C%20I%27d%20like%20to%20book%20an%20appointment%20at%20Cape%20Physio.%20What%20times%20are%20available%3F">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.739-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          Book with Fatima
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mid CTA band -->
+  <section class="cta-band">
+    <div class="wrap">
+      <h2>Pain shouldn't wait for a callback</h2>
+      <p>Send a quick WhatsApp and we will find a time that suits you. Most enquiries are answered the same day.</p>
+      <div class="hero-cta">
+        <a class="btn btn-wa btn-lg" href="https://wa.me/27732697313?text=Hi%20Cape%20Physio%2C%20I%27d%20like%20to%20book%20a%20physiotherapy%20appointment.%20Please%20let%20me%20know%20your%20next%20available%20time.">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.739-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          Message us now
+        </a>
+        <a class="btn btn-call btn-lg" href="tel:+27732697313">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call 073 269 7313
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="reviews">
+    <div class="wrap">
+      <div class="sec-head center" style="margin-left:auto;margin-right:auto">
+        <span class="eyebrow" style="display:inline-flex">In their words</span>
+        <h2>Trusted by patients across Cape Town</h2>
+      </div>
+      <div class="testi-grid">
+        <article class="testi">
+          <div class="stars" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.783 1.401 8.166L12 18.896l-7.335 3.864 1.401-8.166L.132 9.211l8.2-1.193z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.783 1.401 8.166L12 18.896l-7.335 3.864 1.401-8.166L.132 9.211l8.2-1.193z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.783 1.401 8.166L12 18.896l-7.335 3.864 1.401-8.166L.132 9.211l8.2-1.193z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.783 1.401 8.166L12 18.896l-7.335 3.864 1.401-8.166L.132 9.211l8.2-1.193z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.783 1.401 8.166L12 18.896l-7.335 3.864 1.401-8.166L.132 9.211l8.2-1.193z"/></svg>
+          </div>
+          <p>Your real Google or WhatClinic review will appear here once we add them, showing the words of a genuine patient.</p>
+          <div class="who"><span class="av">A</span><div><b>Patient name</b><span>Verified review</span></div></div>
+        </article>
+        <article class="testi">
+          <div class="stars" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.783 1.401 8.166L12 18.896l-7.335 3.864 1.401-8.166L.132 9.211l8.2-1.193z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.783 1.401 8.166L12 18.896l-7.335 3.864 1.401-8.166L.132 9.211l8.2-1.193z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.783 1.401 8.166L12 18.896l-7.335 3.864 1.401-8.166L.132 9.211l8.2-1.193z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.783 1.401 8.166L12 18.896l-7.335 3.864 1.401-8.166L.132 9.211l8.2-1.193z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.783 1.401 8.166L12 18.896l-7.335 3.864 1.401-8.166L.132 9.211l8.2-1.193z"/></svg>
+          </div>
+          <p>We recommend showcasing three to five recent reviews here, ideally pulled live so they refresh themselves over time.</p>
+          <div class="who"><span class="av">B</span><div><b>Patient name</b><span>Verified review</span></div></div>
+        </article>
+        <article class="testi">
+          <div class="stars" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.783 1.401 8.166L12 18.896l-7.335 3.864 1.401-8.166L.132 9.211l8.2-1.193z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.783 1.401 8.166L12 18.896l-7.335 3.864 1.401-8.166L.132 9.211l8.2-1.193z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.783 1.401 8.166L12 18.896l-7.335 3.864 1.401-8.166L.132 9.211l8.2-1.193z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.783 1.401 8.166L12 18.896l-7.335 3.864 1.401-8.166L.132 9.211l8.2-1.193z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.783 1.401 8.166L12 18.896l-7.335 3.864 1.401-8.166L.132 9.211l8.2-1.193z"/></svg>
+          </div>
+          <p>Real testimonials are one of the strongest trust signals for a health practice, so this section is built and ready for yours.</p>
+          <div class="who"><span class="av">C</span><div><b>Patient name</b><span>Verified review</span></div></div>
+        </article>
+      </div>
+      <div class="center"><div class="placeholder-note">Placeholder reviews shown for layout. We will replace these with your genuine patient testimonials before launch.</div></div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">A look inside</span>
+        <h2>Calm, welcoming spaces in Sea Point</h2>
+        <p>Photographs of your practice, treatment rooms and equipment help new patients feel at ease before they arrive.</p>
+      </div>
+      <div class="frames">
+        <div class="frame"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.6-3.6a2 2 0 0 0-2.8 0L3 21"/></svg><small>Your photos here</small></div>
+        <div class="frame"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.6-3.6a2 2 0 0 0-2.8 0L3 21"/></svg><small>Your photos here</small></div>
+        <div class="frame"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.6-3.6a2 2 0 0 0-2.8 0L3 21"/></svg><small>Your photos here</small></div>
+        <div class="frame"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.6-3.6a2 2 0 0 0-2.8 0L3 21"/></svg><small>Your photos here</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking + contact -->
+  <section id="book" class="booking">
+    <div class="wrap booking-grid">
+      <div class="booking-left">
+        <span class="eyebrow">Book your appointment</span>
+        <h2>Let's get you moving again</h2>
+        <p class="lead">The fastest way to book is WhatsApp, we usually reply the same day. Prefer to call or send a message? Use the form and we will get back to you.</p>
+        <div class="hero-cta">
+          <a class="btn btn-wa btn-lg" href="https://wa.me/27732697313?text=Hi%20Cape%20Physio%2C%20I%27d%20like%20to%20book%20a%20physiotherapy%20appointment.%20What%20times%20do%20you%20have%20available%3F">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.739-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            Book on WhatsApp
+          </a>
+        </div>
+        <ul class="contact-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <div><b>Phone</b><a href="tel:+27732697313">073 269 7313</a></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+            <div><b>Email</b><a href="mailto:fatima@capephysio.co.za">fatima@capephysio.co.za</a></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><b>Where to find us</b><span class="v">Sea Point, plus The Point Mall, Regent Road, Cape Town</span></div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="form-card">
+        <h3>Request a callback</h3>
+        <p class="sub">Fill in your details and we will be in touch to confirm your appointment.</p>
+        <form onsubmit="return false">
+          <div class="form-row">
+            <div class="field">
+              <label for="fname">First name</label>
+              <input id="fname" type="text" placeholder="Your name" autocomplete="given-name">
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" type="tel" placeholder="073 000 0000" autocomplete="tel">
+            </div>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="you@email.co.za" autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="service">What can we help with?</label>
+            <select id="service">
+              <option>Postural management</option>
+              <option>Back &amp; neck management</option>
+              <option>Post-operative rehabilitation</option>
+              <option>Ergonomic office assessment</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="msg">Message</label>
+            <textarea id="msg" placeholder="Tell us briefly what's bothering you and your preferred times."></textarea>
+          </div>
+          <button type="submit" class="btn btn-wa btn-lg">Send enquiry</button>
+          <p class="form-note">Prefer it now? <a href="https://wa.me/27732697313?text=Hi%20Cape%20Physio%2C%20I%27d%20like%20to%20book%20a%20physiotherapy%20appointment.">Message us on WhatsApp instead</a></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="wordmark" href="#top">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </span>
+          <span><span class="cape">Cape</span> Physio</span>
+        </a>
+        <p>Physiotherapy and occupational therapy in Sea Point, Cape Town. Caring, expert treatment for pain, posture and recovery since 2010.</p>
+        <div class="foot-cta">
+          <a class="btn btn-wa" href="https://wa.me/27732697313?text=Hi%20Cape%20Physio%2C%20I%27d%20like%20to%20book%20a%20physiotherapy%20appointment.">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.739-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            WhatsApp
+          </a>
+          <a class="btn btn-ghost" style="border-color:rgba(255,255,255,.25);color:#cbd6e0" href="tel:+27732697313">Call us</a>
+        </div>
+      </div>
+
+      <div class="foot-col">
+        <h4>Visit us</h4>
+        <div class="branch">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><b>Sea Point (main)</b>Sea Point, Cape Town</div>
+        </div>
+        <div class="branch">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><b>The Point Mall</b>Regent Road, Sea Point, Cape Town</div>
+        </div>
+      </div>
+
+      <div class="foot-col">
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="tel:+27732697313">073 269 7313</a></li>
+          <li><a href="mailto:fatima@capephysio.co.za">fatima@capephysio.co.za</a></li>
+          <li><a href="#services">Our services</a></li>
+          <li><a href="#about">About Fatima</a></li>
+          <li><a href="#book">Book an appointment</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <span>&copy; 2026 Cape Physio. Practitioner: Fatima Hartley, BSc Physiotherapy &amp; BSc Occupational Therapy (UCT).</span>
+      <span>Concept design by Searchly Web</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a class="float-wa" href="https://wa.me/27732697313?text=Hi%20Cape%20Physio%2C%20I%27d%20like%20to%20book%20a%20physiotherapy%20appointment.%20What%20times%20do%20you%20have%20available%3F" aria-label="Book on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.739-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  <span class="label">Book on WhatsApp</span>
+</a>
+
+</body>
+</html>

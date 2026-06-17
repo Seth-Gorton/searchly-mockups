@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leeuwenzee Guest House | Sea Point, Cape Town</title>
+<meta name="description" content="Leeuwenzee Guest House in Sea Point, Cape Town. 17 en-suite rooms with kitchenettes, splash pool, braai facilities and co-working desks. Booking.com Traveller Award 2026. Check availability on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brand: #16314f;
+    --brand-soft: #234a6f;
+    --accent: #e8853a;
+    --accent-deep: #cf6f29;
+    --wa: #25d366;
+    --wa-deep: #1da851;
+    --cream: #f6f1e9;
+    --sand: #ece2d3;
+    --white: #ffffff;
+    --ink: #1c2630;
+    --muted: #5d6b78;
+    --line: rgba(22, 49, 79, 0.12);
+    --shadow-sm: 0 2px 10px rgba(22, 49, 79, 0.08);
+    --shadow-md: 0 12px 34px rgba(22, 49, 79, 0.14);
+    --shadow-lg: 0 24px 60px rgba(22, 49, 79, 0.20);
+    --radius: 16px;
+    --radius-lg: 22px;
+    --maxw: 1180px;
+    --head: "Fraunces", Georgia, serif;
+    --body: "Inter", system-ui, -apple-system, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--body);
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 { font-family: var(--head); font-weight: 600; line-height: 1.12; color: var(--brand); letter-spacing: -0.01em; }
+
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+
+  .wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+
+  .eyebrow {
+    font-size: 0.78rem; font-weight: 600; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--accent-deep);
+  }
+
+  /* Concept banner */
+  .concept-banner {
+    background: var(--brand);
+    color: rgba(255,255,255,0.92);
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 9px 16px;
+    letter-spacing: 0.01em;
+  }
+  .concept-banner strong { color: var(--white); font-weight: 600; }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex; align-items: center; gap: 9px;
+    font-family: var(--body); font-weight: 600; font-size: 0.95rem;
+    padding: 13px 22px; border-radius: 999px; border: 0; cursor: pointer;
+    transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    white-space: nowrap;
+  }
+  .btn svg { width: 18px; height: 18px; flex: none; }
+  .btn-wa { background: var(--wa); color: #fff; box-shadow: 0 6px 18px rgba(37,211,102,0.35); }
+  .btn-wa:hover { background: var(--wa-deep); transform: translateY(-2px); box-shadow: 0 10px 24px rgba(37,211,102,0.42); }
+  .btn-book { background: var(--accent); color: #fff; box-shadow: 0 6px 18px rgba(232,133,58,0.34); }
+  .btn-book:hover { background: var(--accent-deep); transform: translateY(-2px); }
+  .btn-ghost { background: transparent; color: var(--brand); border: 1.5px solid var(--line); }
+  .btn-ghost:hover { border-color: var(--brand); transform: translateY(-2px); }
+  .btn-ghost-light { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.4); }
+  .btn-ghost-light:hover { border-color: #fff; background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+
+  /* Header */
+  header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(246,241,233,0.88);
+    backdrop-filter: saturate(160%) blur(12px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; max-width: var(--maxw); margin: 0 auto; }
+  .wordmark { display: flex; align-items: baseline; gap: 8px; font-family: var(--head); font-size: 1.5rem; font-weight: 600; color: var(--brand); letter-spacing: -0.015em; }
+  .wordmark .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); display: inline-block; transform: translateY(-2px); }
+  .wordmark small { font-family: var(--body); font-size: 0.62rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); }
+  .nav-links { display: none; gap: 28px; font-size: 0.92rem; font-weight: 500; color: var(--brand); }
+  .nav-links a { position: relative; padding: 4px 0; }
+  .nav-links a::after { content: ""; position: absolute; left: 0; bottom: -2px; width: 0; height: 2px; background: var(--accent); transition: width .22s ease; }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta { display: flex; align-items: center; gap: 10px; }
+  .nav-cta .btn { padding: 10px 18px; font-size: 0.88rem; }
+
+  @media (min-width: 920px) { .nav-links { display: flex; } }
+
+  /* Hero */
+  .hero {
+    position: relative;
+    background:
+      linear-gradient(180deg, rgba(22,49,79,0.62) 0%, rgba(22,49,79,0.78) 100%),
+      radial-gradient(circle at 75% 18%, rgba(232,133,58,0.30), transparent 55%),
+      linear-gradient(135deg, #1d3c5e 0%, #16314f 60%, #0f2238 100%);
+    color: #fff;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: ""; position: absolute; inset: 0;
+    background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 22px 22px; opacity: 0.5; pointer-events: none;
+  }
+  .hero-inner { position: relative; z-index: 2; padding: 64px 0 76px; }
+  .hero .eyebrow { color: #f4b27e; }
+  .hero h1 { color: #fff; font-size: clamp(2.3rem, 7vw, 4.1rem); margin: 14px 0 18px; max-width: 14ch; }
+  .hero h1 em { font-style: italic; color: #f6c08a; }
+  .hero p.lead { font-size: clamp(1.02rem, 2.4vw, 1.22rem); color: rgba(255,255,255,0.88); max-width: 52ch; margin-bottom: 30px; }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+  .hero-note { display: flex; align-items: center; gap: 8px; margin-top: 22px; font-size: 0.86rem; color: rgba(255,255,255,0.78); }
+  .hero-note svg { width: 16px; height: 16px; color: #f6c08a; }
+
+  /* Trust strip */
+  .trust { background: var(--brand); color: #fff; }
+  .trust-grid { display: grid; grid-template-columns: 1fr; gap: 18px; padding: 26px 0; }
+  .trust-item { display: flex; align-items: center; gap: 14px; }
+  .trust-item .ti-ic { width: 44px; height: 44px; border-radius: 12px; background: rgba(255,255,255,0.10); display: grid; place-items: center; flex: none; }
+  .trust-item svg { width: 22px; height: 22px; color: #f6c08a; }
+  .trust-item b { display: block; font-size: 0.98rem; }
+  .trust-item span { font-size: 0.82rem; color: rgba(255,255,255,0.72); }
+  @media (min-width: 760px) { .trust-grid { grid-template-columns: repeat(3, 1fr); gap: 30px; } }
+
+  /* Section base */
+  section.pad { padding: 72px 0; }
+  .sec-head { max-width: 60ch; margin-bottom: 38px; }
+  .sec-head h2 { font-size: clamp(1.8rem, 4.6vw, 2.7rem); margin: 10px 0 12px; }
+  .sec-head p { color: var(--muted); font-size: 1.05rem; }
+
+  /* Rooms */
+  .rooms-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+  @media (min-width: 680px) { .rooms-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1000px) { .rooms-grid { grid-template-columns: repeat(3, 1fr); } }
+  .room-card {
+    background: var(--white); border-radius: var(--radius-lg); overflow: hidden;
+    box-shadow: var(--shadow-sm); border: 1px solid var(--line);
+    transition: transform .22s ease, box-shadow .22s ease;
+    display: flex; flex-direction: column;
+  }
+  .room-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+  .room-photo {
+    height: 188px; position: relative;
+    background: linear-gradient(135deg, var(--sand), var(--cream));
+    display: grid; place-items: center; color: var(--brand-soft);
+    border-bottom: 1px solid var(--line);
+  }
+  .room-photo span { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.05em; opacity: 0.7; }
+  .room-photo svg { width: 30px; height: 30px; opacity: 0.45; margin-bottom: 6px; }
+  .room-tag { position: absolute; top: 14px; left: 14px; background: var(--accent); color: #fff; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 5px 11px; border-radius: 999px; }
+  .room-body { padding: 22px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+  .room-body h3 { font-size: 1.28rem; }
+  .room-body p { color: var(--muted); font-size: 0.92rem; }
+  .room-feats { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
+  .room-feats li { list-style: none; font-size: 0.78rem; color: var(--brand); background: var(--cream); border: 1px solid var(--line); padding: 5px 11px; border-radius: 999px; }
+  .room-card .btn { margin-top: 6px; align-self: flex-start; }
+
+  /* Amenities */
+  .amen { background: var(--white); }
+  .amen-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+  @media (min-width: 620px) { .amen-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 940px) { .amen-grid { grid-template-columns: repeat(3, 1fr); } }
+  .amen-card {
+    background: var(--cream); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 26px 22px; transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+  }
+  .amen-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-sm); background: var(--white); }
+  .amen-ic { width: 50px; height: 50px; border-radius: 14px; background: rgba(232,133,58,0.14); display: grid; place-items: center; margin-bottom: 16px; }
+  .amen-ic svg { width: 26px; height: 26px; color: var(--accent-deep); }
+  .amen-card h3 { font-size: 1.16rem; margin-bottom: 7px; }
+  .amen-card p { color: var(--muted); font-size: 0.9rem; }
+
+  /* Mid CTA band */
+  .midband {
+    background:
+      linear-gradient(135deg, rgba(22,49,79,0.92), rgba(15,34,56,0.92)),
+      radial-gradient(circle at 85% 30%, rgba(232,133,58,0.4), transparent 50%);
+    color: #fff; text-align: center;
+  }
+  .midband-inner { padding: 64px 0; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .midband h2 { color: #fff; font-size: clamp(1.7rem, 4.5vw, 2.5rem); max-width: 20ch; }
+  .midband p { color: rgba(255,255,255,0.85); max-width: 50ch; margin-bottom: 14px; }
+  .midband-cta { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+
+  /* Gallery */
+  .gallery { background: var(--cream); }
+  .gal-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  @media (min-width: 560px) { .gal-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 920px) { .gal-grid { grid-template-columns: repeat(4, 1fr); grid-auto-rows: 200px; } }
+  .gal-frame {
+    border-radius: var(--radius); overflow: hidden; position: relative;
+    background: linear-gradient(135deg, var(--sand), #dfd2bd);
+    display: grid; place-items: center; text-align: center; color: var(--brand-soft);
+    min-height: 180px; border: 1px solid var(--line);
+  }
+  .gal-frame.real { background: #ddd; }
+  .gal-frame img { width: 100%; height: 100%; object-fit: cover; }
+  .gal-frame .gph { padding: 18px; }
+  .gal-frame .gph svg { width: 28px; height: 28px; opacity: 0.5; margin-bottom: 8px; }
+  .gal-frame .gph span { display: block; font-size: 0.8rem; font-weight: 600; opacity: 0.75; }
+  @media (min-width: 920px) {
+    .gal-frame.tall { grid-row: span 2; }
+    .gal-frame.wide { grid-column: span 2; }
+  }
+
+  /* Booking form */
+  .booking { background: var(--white); }
+  .booking-inner { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: start; }
+  @media (min-width: 900px) { .booking-inner { grid-template-columns: 0.9fr 1.1fr; gap: 56px; } }
+  .booking-copy h2 { font-size: clamp(1.8rem, 4.5vw, 2.6rem); margin: 10px 0 14px; }
+  .booking-copy p { color: var(--muted); margin-bottom: 22px; }
+  .booking-points { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .booking-points li { display: flex; gap: 11px; align-items: flex-start; font-size: 0.95rem; }
+  .booking-points svg { width: 20px; height: 20px; color: var(--wa); flex: none; margin-top: 2px; }
+  .form-card {
+    background: var(--cream); border: 1px solid var(--line);
+    border-radius: var(--radius-lg); padding: 30px; box-shadow: var(--shadow-md);
+  }
+  .form-card h3 { font-size: 1.4rem; margin-bottom: 6px; }
+  .form-card .fc-sub { color: var(--muted); font-size: 0.88rem; margin-bottom: 22px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .field.full { grid-column: 1 / -1; }
+  .field label { font-size: 0.78rem; font-weight: 600; color: var(--brand); letter-spacing: 0.02em; }
+  .field input, .field select {
+    font-family: var(--body); font-size: 0.95rem; padding: 12px 14px;
+    border: 1px solid var(--line); border-radius: 11px; background: var(--white); color: var(--ink);
+    transition: border-color .18s ease, box-shadow .18s ease;
+  }
+  .field input:focus, .field select:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(232,133,58,0.18); }
+  .form-card .btn { width: 100%; justify-content: center; margin-top: 6px; }
+  .form-card .or { text-align: center; font-size: 0.82rem; color: var(--muted); margin: 14px 0 10px; }
+  .form-card .wa-line { width: 100%; justify-content: center; }
+
+  /* Footer */
+  footer { background: var(--brand); color: rgba(255,255,255,0.82); }
+  .foot-grid { display: grid; grid-template-columns: 1fr; gap: 34px; padding: 56px 0 30px; }
+  @media (min-width: 760px) { .foot-grid { grid-template-columns: 1.4fr 1fr 1fr; gap: 44px; } }
+  .foot-brand .wordmark { color: #fff; margin-bottom: 14px; }
+  .foot-brand .wordmark .dot { background: var(--accent); }
+  .foot-brand p { font-size: 0.92rem; max-width: 38ch; }
+  footer h4 { font-family: var(--body); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #f6c08a; margin-bottom: 16px; }
+  .foot-col ul { list-style: none; display: flex; flex-direction: column; gap: 11px; font-size: 0.93rem; }
+  .foot-col a { display: flex; gap: 10px; align-items: flex-start; transition: color .18s ease; }
+  .foot-col a:hover { color: #fff; }
+  .foot-col svg { width: 17px; height: 17px; color: #f6c08a; flex: none; margin-top: 2px; }
+  .foot-bottom { border-top: 1px solid rgba(255,255,255,0.12); padding: 20px 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.8rem; color: rgba(255,255,255,0.6); text-align: center; }
+  @media (min-width: 620px) { .foot-bottom { flex-direction: row; justify-content: space-between; text-align: left; } }
+
+  /* Floating WhatsApp */
+  .float-wa {
+    position: fixed; right: 18px; bottom: 18px; z-index: 80;
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--wa); color: #fff; font-weight: 600; font-size: 0.92rem;
+    padding: 13px 18px; border-radius: 999px;
+    box-shadow: 0 10px 30px rgba(37,211,102,0.45);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .float-wa:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 14px 34px rgba(37,211,102,0.55); }
+  .float-wa svg { width: 22px; height: 22px; }
+  .float-wa .fw-text { display: none; }
+  @media (min-width: 560px) { .float-wa .fw-text { display: inline; } }
+</style>
+</head>
+<body>
+
+<!-- Concept banner -->
+<div class="concept-banner">
+  Concept preview built by <strong>Searchly Web</strong> for Leeuwenzee Guest House. A draft of what your new website could look like.
+</div>
+
+<!-- Header -->
+<header>
+  <nav class="nav">
+    <a href="#top" class="wordmark">Leeuwenzee<span class="dot"></span></a>
+    <div class="nav-links">
+      <a href="#rooms">Rooms</a>
+      <a href="#amenities">Amenities</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#book">Availability</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a class="btn btn-wa" href="https://wa.me/27823037872?text=Hi%20Leeuwenzee%2C%20I%27d%20like%20to%20check%20availability%20for%20a%20stay%20in%20Sea%20Point.%20Could%20you%20help%20me%20with%20dates%20and%20rates%3F" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.97L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.11.82.83-3.03-.2-.31a8.18 8.18 0 0 1-1.26-4.4c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.39.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.42-.14-.01-.31-.01-.48-.01-.16 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
+        WhatsApp
+      </a>
+      <a class="btn btn-book" href="#book">Book your stay</a>
+    </div>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="top">
+  <div class="hero-inner wrap">
+    <p class="eyebrow">Sea Point &middot; Cape Town</p>
+    <h1>Your easy, sunlit base on the <em>Atlantic Seaboard</em>.</h1>
+    <p class="lead">Seventeen calm en-suite rooms with kitchenettes, a splash pool to cool off in, and braai evenings under Cape Town skies. Walk to the Promenade, the sea, and Sea Point's best cafes. Stay your way, for a night or a season.</p>
+    <div class="hero-cta">
+      <a class="btn btn-wa" href="https://wa.me/27823037872?text=Hi%20Leeuwenzee%2C%20I%27d%20like%20to%20check%20availability%20for%20a%20stay%20in%20Sea%20Point.%20Could%20you%20help%20me%20with%20dates%20and%20rates%3F" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.97L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.11.82.83-3.03-.2-.31a8.18 8.18 0 0 1-1.26-4.4c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.39.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.42-.14-.01-.31-.01-.48-.01-.16 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
+        Check availability on WhatsApp
+      </a>
+      <a class="btn btn-ghost-light" href="#book">Book your stay</a>
+    </div>
+    <p class="hero-note">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.2H22l-6 4.4 2.3 7.2L12 16.5 5.7 20.8 8 13.6 2 9.2h7.6z"/></svg>
+      Winner, Booking.com Traveller Review Award 2026
+    </p>
+  </div>
+</section>
+
+<!-- Trust strip -->
+<section class="trust">
+  <div class="wrap">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <div class="ti-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.2H22l-6 4.4 2.3 7.2L12 16.5 5.7 20.8 8 13.6 2 9.2h7.6z"/></svg></div>
+        <div><b>Booking.com Traveller Award 2026</b><span>Recognised by guests for service</span></div>
+      </div>
+      <div class="trust-item">
+        <div class="ti-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27l5.18 3.13-1.37-5.9 4.58-3.96-6.03-.52L12 4.5 9.64 10.02l-6.03.52 4.58 3.96-1.37 5.9z"/></svg></div>
+        <div><b>Loved on TripAdvisor</b><span>Consistently glowing guest reviews</span></div>
+      </div>
+      <div class="trust-item">
+        <div class="ti-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13"/><path d="M3 21h18"/><path d="M9 21v-6h6v6"/></svg></div>
+        <div><b>17 en-suite rooms</b><span>Self-catering with kitchenettes</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Rooms -->
+<section class="pad" id="rooms">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Where you'll stay</p>
+      <h2>Rooms made for an easy stay</h2>
+      <p>Seventeen private en-suite rooms, each with its own kitchenette so you can self-cater at your own pace. Choose the space that fits your trip, from a quiet double to a family-friendly room.</p>
+    </div>
+    <div class="rooms-grid">
+
+      <div class="room-card">
+        <div class="room-photo">
+          <span class="room-tag">Popular</span>
+          <div style="text-align:center">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5"/><path d="M3 12h18v6"/><path d="M7 12V9h4v3"/><path d="M5 18v2M19 18v2"/></svg>
+            <span>Your room photo here</span>
+          </div>
+        </div>
+        <div class="room-body">
+          <h3>Double En-Suite</h3>
+          <p>A bright, restful double with private bathroom and kitchenette. Ideal for couples and solo travellers.</p>
+          <ul class="room-feats"><li>Kitchenette</li><li>En-suite</li><li>Free Wi-Fi</li></ul>
+          <a class="btn btn-wa" href="https://wa.me/27823037872?text=Hi%20Leeuwenzee%2C%20I%27d%20like%20to%20check%20availability%20for%20a%20Double%20En-Suite%20room.%20What%20dates%20do%20you%20have%20open%3F" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="room-card">
+        <div class="room-photo">
+          <div style="text-align:center">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5"/><path d="M3 12h18v6"/><path d="M7 12V9h4v3"/><path d="M5 18v2M19 18v2"/></svg>
+            <span>Your room photo here</span>
+          </div>
+        </div>
+        <div class="room-body">
+          <h3>Twin En-Suite</h3>
+          <p>Two comfortable beds, full kitchenette and private bathroom. Perfect for friends or colleagues travelling together.</p>
+          <ul class="room-feats"><li>Kitchenette</li><li>Twin beds</li><li>Free Wi-Fi</li></ul>
+          <a class="btn btn-wa" href="https://wa.me/27823037872?text=Hi%20Leeuwenzee%2C%20I%27d%20like%20to%20check%20availability%20for%20a%20Twin%20En-Suite%20room.%20What%20dates%20do%20you%20have%20open%3F" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="room-card">
+        <div class="room-photo">
+          <span class="room-tag">For families</span>
+          <div style="text-align:center">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5"/><path d="M3 12h18v6"/><path d="M7 12V9h4v3"/><path d="M5 18v2M19 18v2"/></svg>
+            <span>Your room photo here</span>
+          </div>
+        </div>
+        <div class="room-body">
+          <h3>Family Room</h3>
+          <p>More space for longer stays and family trips, with a kitchenette to keep everyone fed and happy.</p>
+          <ul class="room-feats"><li>Kitchenette</li><li>Sleeps 3 to 4</li><li>Free Wi-Fi</li></ul>
+          <a class="btn btn-wa" href="https://wa.me/27823037872?text=Hi%20Leeuwenzee%2C%20I%27d%20like%20to%20check%20availability%20for%20a%20Family%20Room.%20What%20dates%20do%20you%20have%20open%3F" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Amenities -->
+<section class="pad amen" id="amenities">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Everything you need</p>
+      <h2>Comforts that make it feel like home</h2>
+      <p>From self-catering kitchenettes to a splash pool and braai nights, Leeuwenzee is built for relaxed, independent stays in the heart of Sea Point.</p>
+    </div>
+    <div class="amen-grid">
+
+      <div class="amen-card">
+        <div class="amen-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v6H3z"/><path d="M6 9v12M18 9v12"/><path d="M3 15h18"/></svg></div>
+        <h3>In-room kitchenettes</h3>
+        <p>Cook, brew and store your own way. Every room is self-catering so you stay on your own schedule.</p>
+      </div>
+
+      <div class="amen-card">
+        <div class="amen-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16c2 0 2-1.5 4-1.5S9 16 11 16s2-1.5 4-1.5S17 16 19 16s2-1.5 3-1.5"/><path d="M2 20c2 0 2-1.5 4-1.5S9 20 11 20s2-1.5 4-1.5S17 20 19 20s2-1.5 3-1.5"/><path d="M8 11l4-7 4 7"/></svg></div>
+        <h3>Outdoor splash pool</h3>
+        <p>Cool off after a day on the Promenade in our sunny outdoor splash pool.</p>
+      </div>
+
+      <div class="amen-card">
+        <div class="amen-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 14h14a2 2 0 0 1 2 2 3 3 0 0 1-3 3H6a3 3 0 0 1-3-3 2 2 0 0 1 2-2z"/><path d="M8 11c0-1.5-1-1.5-1-3s1-1.5 1-3M12 11c0-1.5-1-1.5-1-3s1-1.5 1-3M16 11c0-1.5-1-1.5-1-3s1-1.5 1-3"/></svg></div>
+        <h3>Braai facilities</h3>
+        <p>Fire up a proper Cape braai in the evenings and enjoy a true South African welcome.</p>
+      </div>
+
+      <div class="amen-card">
+        <div class="amen-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><path d="M12 20h.01"/></svg></div>
+        <h3>Co-working desks &amp; Wi-Fi</h3>
+        <p>Dedicated desks and fast, free Wi-Fi throughout, ideal for remote work and longer stays.</p>
+      </div>
+
+      <div class="amen-card">
+        <div class="amen-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/><path d="M6 1v3M10 1v3M14 1v3"/></svg></div>
+        <h3>Cape-style breakfast</h3>
+        <p>Add a hearty Cape breakfast to your stay and start the day right before exploring the city.</p>
+      </div>
+
+      <div class="amen-card">
+        <div class="amen-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>Flexible check-in &amp; cleaning</h3>
+        <p>Late check-in and check-out by arrangement, plus daily room cleaning so your stay stays effortless.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Mid CTA band -->
+<section class="midband">
+  <div class="midband-inner wrap">
+    <p class="eyebrow" style="color:#f4b27e">Ready when you are</p>
+    <h2>Have dates in mind? Let's get you booked.</h2>
+    <p>Send us a quick WhatsApp with your dates and number of guests. We'll come back with availability and our best rate, usually within the hour.</p>
+    <div class="midband-cta">
+      <a class="btn btn-wa" href="https://wa.me/27823037872?text=Hi%20Leeuwenzee%2C%20I%27d%20like%20to%20check%20availability%20for%20a%20stay%20in%20Sea%20Point.%20Here%20are%20my%20dates%20and%20number%20of%20guests%3A" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.97L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.11.82.83-3.03-.2-.31a8.18 8.18 0 0 1-1.26-4.4c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.39.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.42-.14-.01-.31-.01-.48-.01-.16 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
+        Check availability now
+      </a>
+      <a class="btn btn-ghost-light" href="tel:+27214399516">Call +27 21 439 9516</a>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="pad gallery" id="gallery">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">A look around</p>
+      <h2>Calm, coastal and close to it all</h2>
+      <p>A glimpse of the rooms, the pool and the easy Sea Point setting. Your own photography will sit beautifully in this gallery.</p>
+    </div>
+    <div class="gal-grid">
+      <div class="gal-frame tall">
+        <div class="gph">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 17l-5-5L5 19"/></svg>
+          <span>Your rooms &amp; pool photos here</span>
+        </div>
+      </div>
+      <div class="gal-frame">
+        <div class="gph">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 17l-5-5L5 19"/></svg>
+          <span>Your rooms &amp; pool photos here</span>
+        </div>
+      </div>
+      <div class="gal-frame">
+        <div class="gph">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 17l-5-5L5 19"/></svg>
+          <span>Your rooms &amp; pool photos here</span>
+        </div>
+      </div>
+      <div class="gal-frame wide">
+        <div class="gph">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 17l-5-5L5 19"/></svg>
+          <span>Your rooms &amp; pool photos here</span>
+        </div>
+      </div>
+      <div class="gal-frame">
+        <div class="gph">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 17l-5-5L5 19"/></svg>
+          <span>Your rooms &amp; pool photos here</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Booking -->
+<section class="pad booking" id="book">
+  <div class="wrap">
+    <div class="booking-inner">
+      <div class="booking-copy">
+        <p class="eyebrow">Check availability</p>
+        <h2>Tell us your dates</h2>
+        <p>Pop in your details and we'll confirm availability and rates. Prefer to chat? WhatsApp is the fastest way to lock in your stay.</p>
+        <ul class="booking-points">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Quick replies, usually within the hour</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Flexible, late check-in and check-out by arrangement</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Self-catering rooms, breakfast on request</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> A short walk from the sea and the Promenade</li>
+        </ul>
+      </div>
+
+      <div class="form-card">
+        <h3>Availability &amp; enquiry</h3>
+        <p class="fc-sub">This is a concept preview. The live form will send straight to Leeuwenzee.</p>
+        <form onsubmit="return false">
+          <div class="form-row">
+            <div class="field">
+              <label for="ci">Check-in</label>
+              <input type="date" id="ci" name="checkin">
+            </div>
+            <div class="field">
+              <label for="co">Check-out</label>
+              <input type="date" id="co" name="checkout">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="guests">Guests</label>
+              <select id="guests" name="guests">
+                <option>1 guest</option>
+                <option>2 guests</option>
+                <option>3 guests</option>
+                <option>4 guests</option>
+                <option>5+ guests</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="room">Room type</label>
+              <select id="room" name="room">
+                <option>Any room</option>
+                <option>Double En-Suite</option>
+                <option>Twin En-Suite</option>
+                <option>Family Room</option>
+              </select>
+            </div>
+          </div>
+          <div class="field full" style="margin-bottom:14px">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" placeholder="Full name">
+          </div>
+          <button type="submit" class="btn btn-book">Request availability</button>
+          <p class="or">or get an instant reply</p>
+          <a class="btn btn-wa wa-line" href="https://wa.me/27823037872?text=Hi%20Leeuwenzee%2C%20I%27d%20like%20to%20check%20availability%20for%20a%20stay%20in%20Sea%20Point.%20Here%20are%20my%20dates%20and%20number%20of%20guests%3A" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.97L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.11.82.83-3.03-.2-.31a8.18 8.18 0 0 1-1.26-4.4c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.39.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.42-.14-.01-.31-.01-.48-.01-.16 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
+            Message us on WhatsApp
+          </a>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="wordmark">Leeuwenzee<span class="dot"></span></div>
+        <p>A warm, good-value guest house in Sea Point, Cape Town. Seventeen self-catering en-suite rooms, a splash pool, braai facilities and an easy walk to the Atlantic Seaboard Promenade.</p>
+      </div>
+
+      <div class="foot-col">
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="https://wa.me/27823037872?text=Hi%20Leeuwenzee%2C%20I%27d%20like%20to%20check%20availability%20for%20a%20stay%20in%20Sea%20Point." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.97L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2z"/></svg> WhatsApp +27 82 303 7872</a></li>
+          <li><a href="tel:+27823037872"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +27 82 303 7872</a></li>
+          <li><a href="tel:+27214399516"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +27 21 439 9516</a></li>
+          <li><a href="mailto:leeuwenzee@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> leeuwenzee@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Find us</h4>
+        <ul>
+          <li><a href="https://maps.google.com/?q=199+High+Level+Road+Sea+Point+Cape+Town" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> 199 High Level Road, Sea Point, Cape Town</a></li>
+          <li><a href="#rooms"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13"/><path d="M3 21h18"/></svg> 17 en-suite self-catering rooms</a></li>
+          <li><a href="#book"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Check availability</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Leeuwenzee Guest House, Sea Point, Cape Town. All rights reserved.</span>
+      <span>Concept preview by Searchly Web.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a class="float-wa" href="https://wa.me/27823037872?text=Hi%20Leeuwenzee%2C%20I%27d%20like%20to%20check%20availability%20for%20a%20stay%20in%20Sea%20Point.%20Could%20you%20help%20me%20with%20dates%20and%20rates%3F" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.97L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.11.82.83-3.03-.2-.31a8.18 8.18 0 0 1-1.26-4.4c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.39.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.42-.14-.01-.31-.01-.48-.01-.16 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
+  <span class="fw-text">Chat on WhatsApp</span>
+</a>
+
+</body>
+</html>
