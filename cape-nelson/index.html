@@ -3,491 +3,557 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cape Nelson Guest House | 4-Star Stays in Sea Point, Cape Town</title>
-<meta name="description" content="A warm 4-star guesthouse in quiet, safe Sea Point, moments from the beaches and Promenade. En-suite rooms and studios, garden breakfast, pool, fibre wifi and solar-backed power. Check availability today.">
+<title>Cape Nelson Guest House | 4-Star Guesthouse in Sea Point, Cape Town</title>
+<meta name="description" content="A charming 4-star urban guesthouse in Sea Point, Cape Town. Studios, en-suite rooms, garden breakfast, pool, fibre wifi and solar power. Book direct and save.">
+<meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
+  /* ===== Cape Nelson real brand (sampled from their live site): warm terracotta + saffron amber + garden green on cream ===== */
   :root{
-    --brand:#1f6f8b;
-    --brand-deep:#185a72;
-    --accent:#e0a44a;
-    --accent-deep:#c98a31;
-    --green:#6b9b6b;
-    --white:#ffffff;
-    --cream:#faf6ef;
-    --cream-2:#f3ede2;
-    --ink:#1d2a30;
-    --muted:#5b6b70;
-    --line:#e6ddce;
-    --shadow:0 10px 30px rgba(24,42,50,.10);
-    --shadow-sm:0 4px 14px rgba(24,42,50,.08);
-    --radius:16px;
-    --radius-sm:10px;
-    --maxw:1140px;
+    --terra:#c5662f; --terra-dark:#a04e22; --terra-deep:#7d3b1a;
+    --amber:#e3922d; --amber-soft:#f3b95a;
+    --ink:#3a2417; --ink-2:#5b4636; --body:#5c4d40; --muted:#9a8978;
+    --green:#5f6b3a; --green-deep:#43502a;
+    --line:#ece2d4; --bg:#fffaf3; --bg-soft:#faf2e6; --bg-warm:#f7ecdb; --cream:#fdf6ec;
+    --radius:16px; --maxw:1180px;
+    --shadow:0 22px 50px -24px rgba(58,36,23,.42);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{
-    font-family:'Inter',system-ui,sans-serif;
-    color:var(--ink);
-    background:var(--cream);
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
-  h1,h2,h3,.wordmark{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.12;letter-spacing:-.01em}
-  img{max-width:100%;display:block}
+  body{font-family:"Inter",system-ui,sans-serif;color:var(--body);background:var(--bg);line-height:1.68;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:"Cormorant Garamond",Georgia,serif;color:var(--ink);line-height:1.12;font-weight:700;letter-spacing:.005em}
   a{color:inherit;text-decoration:none}
-  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 22px}
-  section{position:relative}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  section{padding:88px 0}
+  .eyebrow{font-family:"Inter";font-weight:700;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);margin-bottom:14px}
 
   /* Concept banner */
-  .concept-banner{
-    background:var(--ink);
-    color:#e9eef0;
-    font-size:.78rem;
-    text-align:center;
-    padding:9px 16px;
-    letter-spacing:.01em;
-  }
-  .concept-banner strong{color:var(--accent);font-weight:600}
+  .concept{background:var(--ink);color:#f0e3d3;text-align:center;font-size:.82rem;padding:9px 16px}
+  .concept b{color:#fff}
 
   /* Buttons */
-  .btn{
-    display:inline-flex;align-items:center;justify-content:center;gap:.5em;
-    font-family:'Inter',sans-serif;font-weight:600;font-size:.95rem;
-    padding:13px 22px;border-radius:999px;border:1.5px solid transparent;
-    cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,background .18s ease,color .18s ease;
-    white-space:nowrap;
-  }
-  .btn-primary{background:var(--accent);color:#3a2a0e;box-shadow:0 6px 18px rgba(224,164,74,.35)}
-  .btn-primary:hover{background:var(--accent-deep);transform:translateY(-2px);box-shadow:0 10px 24px rgba(224,164,74,.45)}
-  .btn-ghost{background:transparent;color:var(--white);border-color:rgba(255,255,255,.6)}
-  .btn-ghost:hover{background:rgba(255,255,255,.14);transform:translateY(-2px)}
-  .btn-outline{background:transparent;color:var(--brand);border-color:var(--brand)}
-  .btn-outline:hover{background:var(--brand);color:#fff;transform:translateY(-2px)}
-  .btn svg{width:17px;height:17px}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-family:"Inter";font-weight:600;font-size:.97rem;padding:14px 26px;border-radius:999px;transition:transform .15s,box-shadow .15s,background .15s;white-space:nowrap;cursor:pointer;border:none}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:var(--terra);color:#fff;box-shadow:0 14px 30px -12px rgba(197,102,47,.7)}
+  .btn-primary:hover{background:var(--terra-dark)}
+  .btn-amber{background:var(--amber);color:#3a2417;box-shadow:0 14px 30px -12px rgba(227,146,45,.65)}
+  .btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55)}
+  .btn-outline{background:transparent;color:var(--terra);border:1.5px solid var(--terra)}
+  .btn svg{width:18px;height:18px;fill:currentColor}
+
+  /* Top bar */
+  .topbar{background:var(--ink);color:#d8c7b4;font-size:.82rem}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:42px;gap:18px}
+  .topbar a{color:#d8c7b4}
+  .topbar .tb-l{display:flex;gap:20px;align-items:center}
+  .topbar .tb-l span{display:inline-flex;align-items:center;gap:7px}
+  .topbar svg{width:14px;height:14px;fill:var(--amber-soft)}
+  .topbar .tb-r{display:flex;align-items:center;gap:8px;color:#f0e3d3}
+  .topbar .pill{background:rgba(243,185,90,.16);border:1px solid rgba(243,185,90,.42);color:#f3cf94;padding:3px 11px;border-radius:999px;font-weight:600;font-size:.76rem}
 
   /* Header */
-  header.site{
-    position:sticky;top:0;z-index:50;
-    background:rgba(250,246,239,.88);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--line);
-  }
-  .nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:18px}
-  .wordmark{font-size:1.45rem;color:var(--brand-deep);display:flex;align-items:baseline;gap:.4ch}
-  .wordmark span{color:var(--accent-deep);font-size:.7em}
-  .wordmark .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);display:inline-block;margin-left:2px}
-  .nav-links{display:none;align-items:center;gap:28px;font-size:.92rem;font-weight:500;color:var(--muted)}
-  .nav-links a:hover{color:var(--brand)}
+  header{position:sticky;top:0;z-index:50;background:rgba(255,250,243,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+  .brand{display:flex;align-items:center;gap:13px}
+  .brand .mk{width:46px;height:46px;border-radius:50%;background:var(--terra);color:#fff;display:grid;place-items:center;font-family:"Cormorant Garamond";font-weight:700;font-size:1.35rem;border:2px solid var(--amber-soft)}
+  .brand .bt{font-family:"Cormorant Garamond";font-weight:700;font-size:1.5rem;color:var(--ink);line-height:1}
+  .brand .bt small{display:block;font-family:"Inter";font-weight:500;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+  .nav-links{display:flex;gap:26px;font-weight:500;font-size:.93rem;color:var(--ink)}
+  .nav-links a:hover{color:var(--terra)}
   .nav-cta{display:flex;align-items:center;gap:10px}
-  .nav-tel{display:none;font-weight:600;color:var(--brand-deep);font-size:.9rem}
-  .nav-tel:hover{color:var(--accent-deep)}
-  @media(min-width:860px){
-    .nav-links{display:flex}
-    .nav-tel{display:inline-flex;align-items:center;gap:6px}
-  }
+  .nav-cta .btn{padding:11px 20px;font-size:.88rem}
 
   /* Hero */
-  .hero{
-    position:relative;color:#fff;overflow:hidden;
-    background:
-      linear-gradient(180deg,rgba(20,40,48,.55) 0%,rgba(20,40,48,.40) 40%,rgba(20,40,48,.70) 100%),
-      url('https://images.squarespace-cdn.com/content/v1/63fc7af783834f2e09df57d1/1678060233994-818N4P00SU0SRTYOE473/capenelson-entrance-pool-2-web.jpg') center/cover no-repeat;
-  }
-  .hero-inner{padding:96px 0 104px;max-width:680px}
-  .eyebrow{
-    display:inline-flex;align-items:center;gap:8px;
-    font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
-    color:#ffe9c9;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.25);
-    padding:7px 14px;border-radius:999px;margin-bottom:20px;
-  }
-  .hero h1{font-size:clamp(2.3rem,6vw,3.7rem);margin-bottom:18px;color:#fff}
-  .hero p{font-size:clamp(1.02rem,2.4vw,1.2rem);max-width:540px;margin-bottom:30px;color:#f1ece3}
-  .hero-cta{display:flex;flex-wrap:wrap;gap:14px}
-  .stars{color:var(--accent);letter-spacing:2px}
+  .hero{position:relative;color:#fff;overflow:hidden;background:var(--ink)}
+  .hero-bg{position:absolute;inset:0}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 42%}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(46,26,14,.86) 0%,rgba(58,36,23,.66) 46%,rgba(58,36,23,.25) 100%)}
+  .hero-inner{position:relative;z-index:1;padding:100px 0 108px;max-width:660px}
+  .hero h1{color:#fff;font-size:clamp(2.8rem,6vw,4.6rem);font-weight:700;letter-spacing:-.01em}
+  .hero h1 .u{color:var(--amber-soft);font-style:italic;font-weight:600}
+  .hero p.lead{font-size:1.18rem;margin:22px 0 16px;color:#f1e7da;max-width:540px;line-height:1.6}
+  .hero .stars{display:inline-flex;align-items:center;gap:9px;font-size:.92rem;color:#f1e7da;margin-bottom:28px}
+  .hero .stars .s{color:var(--amber-soft);letter-spacing:2px;font-size:1.05rem}
+  .hero-cta{display:flex;gap:13px;flex-wrap:wrap}
+  .hero-foot{margin-top:26px;font-size:.86rem;color:#d9cab9}
 
-  /* Trust strip */
-  .trust{background:var(--brand-deep);color:#eaf3f6}
-  .trust .wrap{display:grid;grid-template-columns:1fr;gap:18px;padding:26px 22px}
-  .trust-item{display:flex;align-items:center;gap:12px;font-size:.95rem}
-  .trust-item svg{width:24px;height:24px;flex:0 0 24px;color:var(--accent)}
-  .trust-item b{font-weight:600;color:#fff}
-  @media(min-width:760px){.trust .wrap{grid-template-columns:repeat(3,1fr)}}
+  /* Booking bar */
+  .bookbar{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);max-width:var(--maxw);margin:-44px auto 0;position:relative;z-index:5;padding:22px 26px;display:grid;grid-template-columns:repeat(3,1fr) auto;gap:16px;align-items:end}
+  .bookbar .fld{display:flex;flex-direction:column;gap:6px}
+  .bookbar label{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .bookbar input,.bookbar select{font-family:"Inter";font-size:.95rem;color:var(--ink);padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--cream);width:100%}
+  .bookbar .btn{height:46px;justify-content:center}
+  .bookbar-note{max-width:var(--maxw);margin:12px auto 0;padding:0 24px;font-size:.83rem;color:var(--muted);text-align:center}
+  .bookbar-note b{color:var(--terra)}
 
-  /* Section heading */
-  .sec{padding:74px 0}
-  .sec-head{max-width:620px;margin-bottom:42px}
-  .sec-head .kick{font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:12px}
-  .sec-head h2{font-size:clamp(1.8rem,4.2vw,2.6rem);color:var(--ink);margin-bottom:14px}
-  .sec-head p{color:var(--muted);font-size:1.05rem}
+  /* Section heads */
+  .shead{max-width:660px;margin-bottom:48px}
+  .shead.center{margin-left:auto;margin-right:auto;text-align:center}
+  .shead h2{font-size:clamp(2.3rem,4.4vw,3.2rem)}
+  .shead p{color:var(--muted);font-size:1.08rem;margin-top:12px}
+
+  /* Welcome split */
+  .welcome .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
+  .welcome .ph{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:5/4}
+  .welcome .ph img{width:100%;height:100%;object-fit:cover}
+  .welcome h2{font-size:clamp(2.1rem,3.8vw,2.9rem)}
+  .welcome p{margin-top:16px;font-size:1.04rem}
+  .welcome .sig{margin-top:22px;font-family:"Cormorant Garamond";font-style:italic;font-size:1.3rem;color:var(--terra)}
+
+  /* Pillars */
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .pillar{padding:4px 4px 0}
+  .pillar .ic{width:56px;height:56px;border-radius:50%;background:var(--bg-warm);border:2px solid var(--amber);display:grid;place-items:center;margin-bottom:18px}
+  .pillar .ic svg{width:26px;height:26px;fill:var(--terra)}
+  .pillar h3{font-size:1.5rem;margin-bottom:6px}
+  .pillar p{font-size:.97rem}
 
   /* Rooms */
-  .rooms{display:grid;grid-template-columns:1fr;gap:24px}
-  @media(min-width:720px){.rooms{grid-template-columns:repeat(2,1fr)}}
-  .room{
-    background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
-    box-shadow:var(--shadow-sm);transition:transform .2s ease,box-shadow .2s ease;display:flex;flex-direction:column;
-  }
-  .room:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-  .room-img{height:210px;background-size:cover;background-position:center}
-  .room-body{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1}
-  .room-body h3{font-size:1.35rem;margin-bottom:8px;color:var(--brand-deep)}
-  .room-body p{color:var(--muted);font-size:.96rem;margin-bottom:16px;flex:1}
-  .room-feats{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
-  .chip{font-size:.78rem;font-weight:500;color:var(--brand-deep);background:#eaf2f5;border:1px solid #d7e7ec;padding:5px 11px;border-radius:999px}
-  .room a.book{font-weight:600;color:var(--accent-deep);display:inline-flex;align-items:center;gap:6px}
-  .room a.book svg{width:15px;height:15px;transition:transform .18s ease}
-  .room a.book:hover svg{transform:translateX(4px)}
+  .rooms{background:var(--bg-soft)}
+  .rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .roomcard{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column}
+  .roomcard:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .roomcard .rim{aspect-ratio:4/3;overflow:hidden;position:relative}
+  .roomcard .rim img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+  .roomcard:hover .rim img{transform:scale(1.06)}
+  .roomcard .rtag{position:absolute;top:14px;left:14px;background:rgba(58,36,23,.82);color:#fff;font-size:.72rem;font-weight:600;padding:5px 12px;border-radius:999px;letter-spacing:.04em}
+  .roomcard .rb{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1}
+  .roomcard h3{font-size:1.6rem;margin-bottom:6px}
+  .roomcard p{font-size:.94rem;color:var(--body);flex:1}
+  .roomcard .amen{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 18px}
+  .roomcard .amen span{font-size:.78rem;color:var(--ink-2);background:var(--bg-warm);padding:4px 11px;border-radius:999px}
+  .roomcard .rfoot{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .roomcard .rfoot .from{font-size:.82rem;color:var(--muted)}
+  .roomcard .rfoot .from b{display:block;font-family:"Cormorant Garamond";font-size:1.5rem;color:var(--ink)}
+  .roomcard .btn{padding:10px 18px;font-size:.86rem}
 
   /* Amenities band */
-  .amen{background:var(--cream-2);background:#f4eee2}
-  .amen-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-  @media(min-width:760px){.amen-grid{grid-template-columns:repeat(5,1fr)}}
-  .amen-card{
-    background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);
-    padding:24px 16px;text-align:center;box-shadow:var(--shadow-sm);transition:transform .2s ease;
-  }
-  .amen-card:hover{transform:translateY(-3px)}
-  .amen-ic{width:48px;height:48px;margin:0 auto 14px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#eaf2f5;color:var(--brand)}
-  .amen-ic svg{width:24px;height:24px}
-  .amen-card h3{font-size:1.02rem;margin-bottom:5px;color:var(--ink);font-family:'Inter',sans-serif;font-weight:600}
-  .amen-card p{font-size:.84rem;color:var(--muted)}
+  .amenities{background:var(--ink);color:#f1e7da}
+  .amenities .shead h2{color:#fff}
+  .amenities .shead p{color:#cdbba6}
+  .agrid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .acard{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:26px 22px;text-align:center}
+  .acard .ic{width:50px;height:50px;border-radius:50%;background:rgba(243,185,90,.16);display:grid;place-items:center;margin:0 auto 14px}
+  .acard .ic svg{width:24px;height:24px;fill:var(--amber-soft)}
+  .acard h4{color:#fff;font-family:"Inter";font-weight:700;font-size:1rem;margin-bottom:5px}
+  .acard p{font-size:.88rem;color:#cdbba6}
 
-  /* Gallery */
-  .gal{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-  @media(min-width:820px){.gal{grid-template-columns:repeat(3,1fr)}}
-  .gal-frame{
-    border-radius:var(--radius-sm);overflow:hidden;background:#ece3d3;
-    border:1px dashed #cdbfa3;min-height:170px;display:flex;align-items:center;justify-content:center;
-    text-align:center;color:#9a8a6c;font-size:.84rem;padding:18px;position:relative;
-  }
-  .gal-frame.has-img{border-style:solid;border-color:var(--line);background-size:cover;background-position:center}
-  .gal-frame.tall{grid-row:span 2;min-height:220px}
-  .gal-frame .ph{display:flex;flex-direction:column;align-items:center;gap:8px}
-  .gal-frame .ph svg{width:30px;height:30px;color:#bfae8d}
+  /* Gallery / location split */
+  .place .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:54px;align-items:center}
+  .place .ph{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/3}
+  .place .ph img{width:100%;height:100%;object-fit:cover}
+  .place ul{list-style:none;margin-top:20px;display:flex;flex-direction:column;gap:12px}
+  .place li{display:flex;gap:12px;align-items:flex-start;font-size:1rem}
+  .place li svg{width:20px;height:20px;fill:var(--terra);flex:none;margin-top:4px}
+  .place li b{color:var(--ink)}
 
-  /* Location band */
-  .loc{background:var(--brand);color:#eaf3f6}
-  .loc .wrap{display:grid;grid-template-columns:1fr;gap:36px;padding:74px 22px}
-  @media(min-width:840px){.loc .wrap{grid-template-columns:1.1fr .9fr;align-items:center}}
-  .loc h2{color:#fff;font-size:clamp(1.8rem,4.2vw,2.5rem);margin-bottom:16px}
-  .loc p{color:#dceaef;margin-bottom:14px;max-width:520px}
-  .loc-list{list-style:none;display:grid;gap:12px;margin-top:22px}
-  .loc-list li{display:flex;align-items:center;gap:11px;font-size:.97rem}
-  .loc-list svg{width:20px;height:20px;color:var(--accent);flex:0 0 20px}
-  .loc-map{
-    background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:var(--radius);
-    padding:30px;min-height:240px;display:flex;flex-direction:column;justify-content:center;gap:14px;
-  }
-  .loc-map .pin{width:54px;height:54px;border-radius:50%;background:var(--accent);color:#3a2a0e;display:flex;align-items:center;justify-content:center}
-  .loc-map .pin svg{width:28px;height:28px}
-  .loc-map b{color:#fff;font-size:1.1rem;font-family:'Fraunces',serif}
-  .loc-map span{color:#dceaef;font-size:.94rem}
+  /* Reviews */
+  .reviews{background:var(--bg-soft)}
+  .reviews .rg{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .review{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px}
+  .review .stars{color:var(--amber);letter-spacing:2px;font-size:1.05rem}
+  .review p{font-size:1rem;color:var(--body);margin:12px 0 16px;font-style:italic;font-family:"Cormorant Garamond";font-weight:600;line-height:1.5}
+  .review .who{display:flex;align-items:center;gap:11px}
+  .review .av{width:40px;height:40px;border-radius:50%;background:var(--terra);color:#fff;display:grid;place-items:center;font-weight:700;font-family:"Inter"}
+  .review .who b{font-family:"Inter";color:var(--ink);font-size:.92rem;display:block}
+  .review .who span{font-size:.78rem;color:var(--muted)}
+  .rev-note{text-align:center;font-size:.84rem;color:var(--muted);margin-top:24px}
 
-  /* Booking band */
-  .book-band{background:linear-gradient(160deg,#1d2a30 0%,#16323d 100%);color:#fff}
-  .book-band .wrap{padding:74px 22px}
-  .book-head{text-align:center;max-width:620px;margin:0 auto 34px}
-  .book-head h2{font-size:clamp(1.9rem,4.4vw,2.7rem);color:#fff;margin-bottom:14px}
-  .book-head p{color:#cfd9dc}
-  form.booking{
-    background:#fff;color:var(--ink);border-radius:var(--radius);box-shadow:var(--shadow);
-    max-width:840px;margin:0 auto;padding:26px;
-  }
-  .bk-grid{display:grid;grid-template-columns:1fr;gap:16px}
-  @media(min-width:680px){.bk-grid{grid-template-columns:1fr 1fr}}
-  .field{display:flex;flex-direction:column;gap:6px}
-  .field.full{grid-column:1/-1}
-  .field label{font-size:.82rem;font-weight:600;color:var(--muted)}
-  .field input,.field select{
-    font-family:'Inter',sans-serif;font-size:.95rem;color:var(--ink);
-    padding:12px 14px;border:1.5px solid var(--line);border-radius:var(--radius-sm);background:var(--cream);
-    transition:border .18s ease,box-shadow .18s ease;
-  }
-  .field input:focus,.field select:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px rgba(31,111,139,.15);background:#fff}
-  form.booking .btn-primary{width:100%;margin-top:8px;padding:15px}
-  .bk-note{text-align:center;font-size:.82rem;color:var(--muted);margin-top:14px}
+  /* Booking / enquiry CTA */
+  .cta{background:linear-gradient(135deg,var(--terra),var(--terra-deep));color:#fff;text-align:center;position:relative;overflow:hidden}
+  .cta::after{content:"";position:absolute;left:-120px;bottom:-140px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(243,185,90,.32),transparent 64%)}
+  .cta .wrap{position:relative;z-index:1}
+  .cta h2{color:#fff;font-size:clamp(2.3rem,4.4vw,3.1rem)}
+  .cta p{color:#ffe9d3;font-size:1.12rem;margin:14px auto 28px;max-width:560px}
+  .cta .hero-cta{justify-content:center}
+  .cta .btn-amber{box-shadow:0 14px 30px -12px rgba(0,0,0,.4)}
+
+  /* Enquiry form */
+  .enquiry{background:var(--bg-warm)}
+  .enquiry .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:54px;align-items:start}
+  .enquiry h2{font-size:clamp(2rem,3.6vw,2.7rem)}
+  .enquiry .lead{margin-top:14px;font-size:1.04rem}
+  .enquiry .contact{margin-top:24px;display:flex;flex-direction:column;gap:14px}
+  .enquiry .contact a,.enquiry .contact div{display:flex;gap:12px;align-items:center;font-size:1rem;color:var(--ink-2)}
+  .enquiry .contact svg{width:20px;height:20px;fill:var(--terra);flex:none}
+  .form{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow)}
+  .form .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .form .fld{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+  .form label{font-size:.78rem;font-weight:600;color:var(--ink-2)}
+  .form input,.form select,.form textarea{font-family:"Inter";font-size:.95rem;color:var(--ink);padding:12px 13px;border:1px solid var(--line);border-radius:10px;background:var(--cream);width:100%}
+  .form textarea{resize:vertical;min-height:90px}
+  .form .btn{width:100%;justify-content:center;margin-top:4px}
+  .form .fine{font-size:.78rem;color:var(--muted);margin-top:12px;text-align:center}
 
   /* Footer */
-  footer.site{background:var(--ink);color:#cdd6d9;padding:56px 0 30px}
-  .foot-grid{display:grid;grid-template-columns:1fr;gap:30px}
-  @media(min-width:760px){.foot-grid{grid-template-columns:1.4fr 1fr 1fr}}
-  footer .wordmark{color:#fff;margin-bottom:14px}
-  footer p{font-size:.92rem;color:#aeb9bc;max-width:320px}
-  footer h4{font-family:'Inter',sans-serif;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;font-weight:600}
-  .foot-list{list-style:none;display:grid;gap:10px;font-size:.93rem}
-  .foot-list a:hover,.foot-list li:hover{color:#fff}
-  .foot-list li{display:flex;align-items:center;gap:9px;color:#cdd6d9}
-  .foot-list svg{width:16px;height:16px;color:var(--accent);flex:0 0 16px}
-  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:38px;padding-top:22px;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:.8rem;color:#8b979a}
+  footer{background:var(--ink);color:#bda88f;padding:62px 0 28px}
+  .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.1fr;gap:34px}
+  footer h4{color:#fff;font-family:"Inter";font-weight:700;font-size:1rem;margin-bottom:16px}
+  footer a:hover{color:#fff}
+  .foot-links a{display:block;color:#bda88f;padding:4px 0;font-size:.92rem}
+  .foot-brand .bt{color:#fff}
+  .foot-contact div{display:flex;gap:11px;align-items:flex-start;margin-bottom:12px;font-size:.92rem}
+  .foot-contact svg{width:17px;height:17px;fill:var(--amber-soft);flex:none;margin-top:3px}
+  .copyright{border-top:1px solid rgba(255,255,255,.1);margin-top:44px;padding-top:22px;text-align:center;font-size:.83rem;color:#8a7560}
 
-  /* Floating book */
-  .float-book{
-    position:fixed;right:18px;bottom:18px;z-index:60;
-    box-shadow:0 8px 26px rgba(224,164,74,.5);
+  /* Floating book button */
+  .float-book{position:fixed;right:20px;bottom:20px;z-index:60;background:var(--terra);color:#fff;display:flex;align-items:center;gap:10px;padding:15px 22px;border-radius:999px;font-family:"Inter";font-weight:600;box-shadow:0 18px 34px -8px rgba(197,102,47,.7);transition:transform .15s}
+  .float-book:hover{transform:scale(1.05)}
+  .float-book svg{width:22px;height:22px;fill:#fff}
+
+  @media(max-width:980px){
+    .welcome .wrap,.place .wrap,.enquiry .wrap{grid-template-columns:1fr;gap:34px}
+    .agrid{grid-template-columns:1fr 1fr}
+    .rgrid,.reviews .rg{grid-template-columns:1fr 1fr}
+    .bookbar{grid-template-columns:1fr 1fr;margin-top:-30px}
   }
-  @media(min-width:860px){.float-book{right:26px;bottom:26px}}
+  @media(max-width:900px){
+    .nav-links{display:none}
+    .pillars{grid-template-columns:1fr}
+  }
+  @media(max-width:600px){
+    section{padding:60px 0}
+    .topbar{display:none}
+    .rgrid,.reviews .rg,.agrid,.foot-grid,.bookbar,.form .row{grid-template-columns:1fr}
+    .nav-cta .btn-outline{display:none}
+    .float-book span{display:none}.float-book{padding:16px}
+  }
 </style>
 </head>
 <body>
 
-<div class="concept-banner">Concept preview built by <strong>Searchly Web</strong> for Cape Nelson Guest House. A draft of what your new website could look like.</div>
+<svg style="display:none" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 11h-5v-2h3V6h2z"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V6a2 2 0 00-2-2zm0 16H5V9h14zM5 7V6h14v1z"/></symbol>
+  <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3a4.24 4.24 0 00-6 0zm-4-4l2 2a7.07 7.07 0 0110 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></symbol>
+  <symbol id="i-pool" viewBox="0 0 24 24"><path d="M2 15c1.1 0 2 .6 2 1.3.9 0 1.4-.5 2.3-.5s1.4.5 2.3.5 1.4-.5 2.3-.5 1.4.5 2.3.5 1.4-.5 2.3-.5 1.4.5 2.3.5c.6 0 1.1-.5 2-.5v2c-.9 0-1.4.5-2 .5-.9 0-1.4-.5-2.3-.5s-1.4.5-2.3.5-1.4-.5-2.3-.5-1.4.5-2.3.5-1.4-.5-2.3-.5c-.6 0-1.1.5-2 .5v-2zm6-3.5V6.7c0-1 .3-1.6 1-2.2.6-.6 1.4-.9 2.4-.9 1.9 0 3.1 1.2 3.6 2.6l-1.9.7c-.2-.7-.7-1.3-1.7-1.3-.6 0-1 .2-1.2.5-.2.2-.2.5-.2.9v4.5h-2zm6 .5V6.7c0-1 .3-1.6 1-2.2.6-.6 1.4-.9 2.4-.9 1.9 0 3.1 1.2 3.6 2.6l-1.9.7c-.2-.7-.7-1.3-1.7-1.3-.6 0-1 .2-1.2.5-.2.2-.2.5-.2.9V12h-2z"/></symbol>
+  <symbol id="i-coffee" viewBox="0 0 24 24"><path d="M2 21h18v-2H2zM20 8h-2V5h2zm0-5H4v10a4 4 0 004 4h6a4 4 0 004-4v-1h2a2 2 0 002-2V5a2 2 0 00-2-2z"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M18.9 6c-.2-.6-.8-1-1.4-1H6.5c-.6 0-1.2.4-1.4 1L3 12v8a1 1 0 001 1h1a1 1 0 001-1v-1h12v1a1 1 0 001 1h1a1 1 0 001-1v-8zM6.5 16a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm11 0a1.5 1.5 0 110-3 1.5 1.5 0 010 3zM5 11l1.5-4.5h11L19 11z"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L4.5 13.5H11l-1 8.5L19.5 10H13z"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><path d="M12.65 10A6 6 0 105 14a6 6 0 005.65-4H14v4h4v-4h2v-4zM7 14a2 2 0 110-4 2 2 0 010 4z"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M6 21c0-9 6-15 15-15 0 9-6 15-15 15zm0 0c0-3 1-6 3-8M3 21c0-2 .5-3.5 1.5-5"/></symbol>
+  <symbol id="i-desk" viewBox="0 0 24 24"><path d="M3 4h18v2H3zM4 7h16v3H4zm0 5h16v8h-2v-6H6v6H4z"/></symbol>
+  <symbol id="i-beach" viewBox="0 0 24 24"><path d="M11.5 2.5C8 2.5 5 5.5 5 9h13c0-3.5-3-6.5-6.5-6.5zM3 20h18v2H3zm9-9l-1 9h2z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0-5l2 3h-4zM10 22l2-3 2 3zM2 12l3-2v4zM19 12l3-2v4zM4 4l4 2-2 2zM20 4l-2 4-2-2zM4 20l2-4 2 2zM20 20l-4-2 2-2z"/></symbol>
+</svg>
 
-<header class="site">
+<div class="concept">Concept redesign by <b>Searchly Web</b> for Cape Nelson Guest House. Your existing site, made warmer, easier to browse, and easier to book direct.</div>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="tb-l">
+      <span><svg><use href="#i-phone"/></svg> +27 21 439 0288</span>
+      <span><svg><use href="#i-mail"/></svg> info@capenelsonguesthouse.co.za</span>
+      <span><svg><use href="#i-pin"/></svg> 18 Mount Nelson Road, Sea Point</span>
+    </div>
+    <div class="tb-r"><span class="pill">4-Star Graded Guesthouse</span></div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
   <div class="wrap nav">
-    <a class="wordmark" href="#top">Cape Nelson <span>Guest House</span><i class="dot"></i></a>
+    <a href="#" class="brand">
+      <span class="mk">CN</span>
+      <span class="bt">Cape Nelson<small>Guest House &middot; Sea Point</small></span>
+    </a>
     <nav class="nav-links">
-      <a href="#rooms">Rooms &amp; Studios</a>
+      <a href="#welcome">Our House</a>
+      <a href="#rooms">Rooms</a>
       <a href="#amenities">Amenities</a>
-      <a href="#location">Location</a>
-      <a href="#gallery">Gallery</a>
+      <a href="#place">Sea Point</a>
+      <a href="#reviews">Reviews</a>
     </nav>
     <div class="nav-cta">
-      <a class="nav-tel" href="tel:+27214390288">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        021 439 0288
-      </a>
-      <a class="btn btn-primary" href="#book">Check availability</a>
+      <a class="btn btn-outline" href="tel:+27214390288"><svg><use href="#i-phone"/></svg>Call us</a>
+      <a class="btn btn-primary" href="#book"><svg><use href="#i-cal"/></svg>Check availability</a>
     </div>
   </div>
 </header>
 
-<main id="top">
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="wrap hero-inner">
-      <span class="eyebrow"><span class="stars">&#9733;&#9733;&#9733;&#9733;</span> 4-Star Guesthouse &middot; Sea Point</span>
-      <h1>Wake to the sea breeze, steps from the Sea Point Promenade.</h1>
-      <p>A warm, quiet retreat in one of Cape Town's safest coastal pockets. En-suite rooms and studios, a leafy garden breakfast, a pool to come home to, and solar-backed power so your stay never skips a beat.</p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="#book">Book your stay</a>
-        <a class="btn btn-ghost" href="tel:+27214390288">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          Call 021 439 0288
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Trust strip -->
-  <section class="trust">
-    <div class="wrap">
-      <div class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        <span><b>Graded 4-star</b> guesthouse, in a charming, quiet and safe Sea Point street.</span>
-      </div>
-      <div class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <span><b>Minutes from the beaches</b> and the famous Promenade on the Atlantic Seaboard.</span>
-      </div>
-      <div class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-        <span><b>Solar-backed power</b>, so loadshedding never interrupts your stay.</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Rooms -->
-  <section class="sec" id="rooms">
-    <div class="wrap">
-      <div class="sec-head">
-        <div class="kick">Rooms &amp; Studios</div>
-        <h2>Four en-suite rooms and two studios, each its own calm corner</h2>
-        <p>Every room is en-suite and styled for rest, with two self-catering studios offering kitchenettes for longer stays and slower mornings.</p>
-      </div>
-      <div class="rooms">
-        <article class="room">
-          <div class="room-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/63fc7af783834f2e09df57d1/1678060697058-GHTYH8PS3GLPG1Y8Y63P/capenelson-room1-bed-out-web.jpg')"></div>
-          <div class="room-body">
-            <h3>En-Suite Rooms</h3>
-            <p>Four light, restful en-suite rooms with garden or street outlooks, made for couples and solo travellers who want quiet and comfort close to the sea.</p>
-            <div class="room-feats"><span class="chip">En-suite</span><span class="chip">Fibre wifi</span><span class="chip">Workspace</span></div>
-            <a class="book" href="#book">Check availability <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          </div>
-        </article>
-        <article class="room">
-          <div class="room-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/63fc7af783834f2e09df57d1/1678264117340-X6PHEIRDTIB87MZLC7OH/capenelson-kitchenliv-1500x1335-web.jpg')"></div>
-          <div class="room-body">
-            <h3>Self-Catering Studios</h3>
-            <p>Two private studios with their own kitchenettes, ideal for longer stays, remote work or anyone who likes to settle in and make breakfast their own way.</p>
-            <div class="room-feats"><span class="chip">Kitchenette</span><span class="chip">Workspace</span><span class="chip">Longer stays</span></div>
-            <a class="book" href="#book">Check availability <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Amenities -->
-  <section class="sec amen" id="amenities">
-    <div class="wrap">
-      <div class="sec-head">
-        <div class="kick">Everything for an easy stay</div>
-        <h2>Thoughtful comforts, the moment you arrive</h2>
-        <p>The small things that make a guesthouse feel like a home by the sea.</p>
-      </div>
-      <div class="amen-grid">
-        <div class="amen-card">
-          <div class="amen-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s2-3 5-3 5 3 5 3 2-3 5-3 5 3 5 3"/><path d="M2 17s2-3 5-3 5 3 5 3 2-3 5-3 5 3 5 3"/></svg></div>
-          <h3>Swimming Pool</h3>
-          <p>A quiet pool to cool off after the beach.</p>
-        </div>
-        <div class="amen-card">
-          <div class="amen-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/><path d="M6 1v3M10 1v3M14 1v3"/></svg></div>
-          <h3>Garden Breakfast</h3>
-          <p>A fresh breakfast served in the garden.</p>
-        </div>
-        <div class="amen-card">
-          <div class="amen-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg></div>
-          <h3>Fibre Wifi &amp; Workspaces</h3>
-          <p>High-speed fibre and private desks.</p>
-        </div>
-        <div class="amen-card">
-          <div class="amen-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14l-1.5-7H6.5z"/><path d="M5 17l-1 4M19 17l1 4"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg></div>
-          <h3>Parking</h3>
-          <p>On-site parking for your stay.</p>
-        </div>
-        <div class="amen-card">
-          <div class="amen-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg></div>
-          <h3>Solar-Backed Power</h3>
-          <p>Reliable power through loadshedding.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Mid-page CTA band -->
-  <section class="loc" style="background:var(--green)">
-    <div class="wrap" style="grid-template-columns:1fr;text-align:center;padding:58px 22px;display:block">
-      <h2 style="margin-bottom:10px">Ready when you are. Flexible check-in and check-out.</h2>
-      <p style="margin:0 auto 24px;color:#eef4ee">Tell us your dates and we will hold the right room for you. A warm Sea Point welcome awaits.</p>
-      <a class="btn btn-primary" href="#book" style="margin-right:10px">Check availability</a>
-      <a class="btn btn-ghost" href="tel:+27214390288">Call 021 439 0288</a>
-    </div>
-  </section>
-
-  <!-- Gallery -->
-  <section class="sec" id="gallery">
-    <div class="wrap">
-      <div class="sec-head">
-        <div class="kick">A glimpse inside</div>
-        <h2>Your rooms, garden and pool, just as guests find them</h2>
-      </div>
-      <div class="gal">
-        <div class="gal-frame tall has-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/63fc7af783834f2e09df57d1/691541a3-eb36-4abb-9814-b1e5047e3f50/capenelson-garden-outside-web.JPG')" aria-label="Cape Nelson garden"></div>
-        <div class="gal-frame"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>Your rooms &amp; garden photos here</div></div>
-        <div class="gal-frame has-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/63fc7af783834f2e09df57d1/1678188136492-TWNZ7MS56DBFG4MYVSCS/capenelson-breakfast2-garden-1400x1125-web.jpg')" aria-label="Garden breakfast"></div>
-        <div class="gal-frame"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>Your pool &amp; outdoor photos here</div></div>
-        <div class="gal-frame"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>Your studio &amp; kitchenette photos here</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Location -->
-  <section class="loc" id="location">
-    <div class="wrap">
-      <div>
-        <div class="kick" style="color:#ffe9c9;font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px">Where you will be</div>
-        <h2>Sea Point, between the mountain and the sea</h2>
-        <p>Cape Nelson sits in a charming, quiet and safe street in Sea Point, one of Cape Town's most loved coastal neighbourhoods. The beaches, the buzz of Main Road's cafes and restaurants, and the open-air Promenade are all within an easy stroll.</p>
-        <ul class="loc-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> A short walk to the Sea Point Promenade and Atlantic shoreline</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s2-3 5-3 5 3 5 3 2-3 5-3 5 3 5 3"/></svg> Close to Sea Point's beaches and tidal pools</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Minutes from cafes, restaurants and the V&amp;A Waterfront</li>
-        </ul>
-      </div>
-      <div class="loc-map">
-        <div class="pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <div>
-          <b>18 Mount Nelson Road</b><br>
-          <span>Sea Point, Cape Town, 8005</span>
-        </div>
-        <a class="btn btn-primary" href="#book" style="align-self:flex-start">Plan your stay</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Booking band -->
-  <section class="book-band" id="book">
-    <div class="wrap">
-      <div class="book-head">
-        <h2>Check availability &amp; enquire</h2>
-        <p>Share your dates and we will reply with the right room and the best rate. No third-party hoops, just a quick, warm reply from Cape Nelson.</p>
-      </div>
-      <form class="booking" onsubmit="return false">
-        <div class="bk-grid">
-          <div class="field">
-            <label for="checkin">Check-in</label>
-            <input type="date" id="checkin" name="checkin">
-          </div>
-          <div class="field">
-            <label for="checkout">Check-out</label>
-            <input type="date" id="checkout" name="checkout">
-          </div>
-          <div class="field">
-            <label for="guests">Guests</label>
-            <select id="guests" name="guests">
-              <option>1 guest</option>
-              <option>2 guests</option>
-              <option>3 guests</option>
-              <option>4 guests</option>
-              <option>5+ guests</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="name">Your name</label>
-            <input type="text" id="name" name="name" placeholder="First and last name">
-          </div>
-          <div class="field full">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="you@email.com">
-          </div>
-        </div>
-        <button class="btn btn-primary" type="submit">Send enquiry</button>
-        <p class="bk-note">Prefer to talk? Call us on <a href="tel:+27214390288" style="color:var(--brand-deep);font-weight:600">021 439 0288</a> or email <a href="mailto:info@capenelsonguesthouse.co.za" style="color:var(--brand-deep);font-weight:600">info@capenelsonguesthouse.co.za</a></p>
-      </form>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site">
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"><img src="assets/pool.jpg" alt="The garden and swimming pool at Cape Nelson Guest House"></div>
   <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <div class="wordmark">Cape Nelson <span style="color:var(--accent)">Guest House</span><i class="dot"></i></div>
-        <p>A warm 4-star guesthouse in quiet, safe Sea Point, moments from the beaches and the Promenade. Garden breakfast, pool, fibre wifi and solar-backed power.</p>
+    <div class="hero-inner">
+      <p class="eyebrow" style="color:var(--amber-soft)">Sea Point's secret escape</p>
+      <h1>A warm <span class="u">urban retreat</span> in the heart of Sea Point.</h1>
+      <p class="lead">A charming 4-star guesthouse moments from the beaches and the Promenade. Individually styled studios and en-suite rooms, a leafy garden, a pool, and a breakfast worth waking up for.</p>
+      <div class="stars"><span class="s">&#9733;&#9733;&#9733;&#9733;</span> 4-star graded &middot; quiet, safe and walkable</div>
+      <div class="hero-cta">
+        <a class="btn btn-amber" href="#book"><svg><use href="#i-cal"/></svg>Check availability</a>
+        <a class="btn btn-ghost" href="tel:+27214390288"><svg><use href="#i-phone"/></svg>Call +27 21 439 0288</a>
       </div>
-      <div>
-        <h4>Contact</h4>
-        <ul class="foot-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+27214390288">+27 21 439 0288</a></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><a href="mailto:info@capenelsonguesthouse.co.za">info@capenelsonguesthouse.co.za</a></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>18 Mount Nelson Road, Sea Point, Cape Town</li>
-        </ul>
-      </div>
-      <div>
-        <h4>Explore</h4>
-        <ul class="foot-list">
-          <li><a href="#rooms">Rooms &amp; Studios</a></li>
-          <li><a href="#amenities">Amenities</a></li>
-          <li><a href="#location">Location</a></li>
-          <li><a href="#book">Check availability</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <span>&copy; 2026 Cape Nelson Guest House, Sea Point, Cape Town. All rights reserved.</span>
-      <span>Concept preview by Searchly Web</span>
+      <p class="hero-foot">Book direct with us. No booking-site fees, and the best rate guaranteed.</p>
     </div>
   </div>
+</section>
+
+<!-- BOOKING BAR (fixes the "no on-site booking" weakness) -->
+<form class="bookbar" id="book" onsubmit="return false">
+  <div class="fld">
+    <label for="ci">Check in</label>
+    <input id="ci" type="date" aria-label="Check in date">
+  </div>
+  <div class="fld">
+    <label for="co">Check out</label>
+    <input id="co" type="date" aria-label="Check out date">
+  </div>
+  <div class="fld">
+    <label for="gu">Guests</label>
+    <select id="gu" aria-label="Number of guests">
+      <option>1 guest</option>
+      <option selected>2 guests</option>
+      <option>3 guests</option>
+      <option>4 guests</option>
+    </select>
+  </div>
+  <a class="btn btn-primary" href="#enquiry"><svg><use href="#i-cal"/></svg>Check availability</a>
+</form>
+<p class="bookbar-note">Real-time availability checked here, then booked direct. <b>You always pay less booking with us than through a travel site.</b></p>
+
+<!-- WELCOME -->
+<section class="welcome" id="welcome">
+  <div class="wrap">
+    <div class="ph"><img src="assets/breakfast-garden.jpg" alt="Garden breakfast at Cape Nelson Guest House"></div>
+    <div>
+      <p class="eyebrow">Welcome to Cape Nelson</p>
+      <h2>The feeling of a private home, the comfort of a fine guesthouse.</h2>
+      <p>Tucked into a quiet, leafy street in upper Sea Point, Cape Nelson is a place to slow down. Every room is individually decorated, the garden is made for long breakfasts, and the Promenade, beaches and the best of Cape Town are all a short stroll or drive away.</p>
+      <p>Whether you are here for a few nights or a few weeks, you will be looked after by people who actually live and breathe this neighbourhood.</p>
+      <p class="sig">A genuine welcome, every single stay.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PILLARS -->
+<section>
+  <div class="wrap">
+    <div class="shead center">
+      <p class="eyebrow">Why guests stay with us</p>
+      <h2>Comfort, calm and a real sense of place</h2>
+    </div>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="ic"><svg><use href="#i-leaf"/></svg></div>
+        <h3>A quiet, green sanctuary</h3>
+        <p>A garden, a pool, and birdsong instead of traffic. A calm base in one of Cape Town's safest, most walkable suburbs.</p>
+      </div>
+      <div class="pillar">
+        <div class="ic"><svg><use href="#i-bolt"/></svg></div>
+        <h3>Solar-backed, always on</h3>
+        <p>Solar power and battery backup keep the lights, wifi and hot water running through load-shedding. You will hardly notice it.</p>
+      </div>
+      <div class="pillar">
+        <div class="ic"><svg><use href="#i-desk"/></svg></div>
+        <h3>Built for work and rest</h3>
+        <p>Fast fibre wifi and private workspaces in the rooms, so a working trip still feels like a holiday.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROOMS -->
+<section class="rooms" id="rooms">
+  <div class="wrap">
+    <div class="shead center">
+      <p class="eyebrow">Where you will stay</p>
+      <h2>Rooms with their own character</h2>
+      <p>From self-catering studios to relaxed en-suite rooms, each one individually decorated and quietly comfortable.</p>
+    </div>
+    <div class="rgrid">
+      <div class="roomcard">
+        <div class="rim"><span class="rtag">Studio with kitchenette</span><img src="assets/room1-bed.jpg" alt="Studio with kitchenette at Cape Nelson"></div>
+        <div class="rb">
+          <h3>Garden Studio</h3>
+          <p>A bright, self-catering studio with its own kitchenette and a dedicated workspace. Ideal for longer stays and slow mornings.</p>
+          <div class="amen"><span>Kitchenette</span><span>Workspace</span><span>En-suite</span><span>Fibre wifi</span></div>
+          <div class="rfoot">
+            <span class="from">from<b>R1 150 / night</b></span>
+            <a class="btn btn-primary" href="#book">Check dates</a>
+          </div>
+        </div>
+      </div>
+      <div class="roomcard">
+        <div class="rim"><span class="rtag">En-suite room</span><img src="assets/room2.jpg" alt="En-suite room at Cape Nelson"></div>
+        <div class="rb">
+          <h3>Classic En-Suite</h3>
+          <p>A restful en-suite room with everything you need for a comfortable stay, steps from the garden and pool.</p>
+          <div class="amen"><span>En-suite</span><span>Garden access</span><span>Fibre wifi</span><span>Breakfast</span></div>
+          <div class="rfoot">
+            <span class="from">from<b>R1 050 / night</b></span>
+            <a class="btn btn-primary" href="#book">Check dates</a>
+          </div>
+        </div>
+      </div>
+      <div class="roomcard">
+        <div class="rim"><span class="rtag">Studio &middot; pool side</span><img src="assets/room3.jpg" alt="Pool-side studio at Cape Nelson"></div>
+        <div class="rb">
+          <h3>Poolside Studio</h3>
+          <p>A self-catering studio opening towards the pool and garden. The pick for couples who want a little extra space and light.</p>
+          <div class="amen"><span>Kitchenette</span><span>Pool view</span><span>Workspace</span><span>En-suite</span></div>
+          <div class="rfoot">
+            <span class="from">from<b>R1 250 / night</b></span>
+            <a class="btn btn-primary" href="#book">Check dates</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="rev-note">Rates shown are indicative for the concept. Your live availability and exact pricing would feed in here.</p>
+  </div>
+</section>
+
+<!-- AMENITIES -->
+<section class="amenities" id="amenities">
+  <div class="wrap">
+    <div class="shead center">
+      <p class="eyebrow" style="color:var(--amber-soft)">Everything included</p>
+      <h2>The little things, well looked after</h2>
+      <p>Thoughtful comforts that make a stay feel effortless.</p>
+    </div>
+    <div class="agrid">
+      <div class="acard"><div class="ic"><svg><use href="#i-coffee"/></svg></div><h4>Garden breakfast</h4><p>A generous breakfast served in the garden each morning.</p></div>
+      <div class="acard"><div class="ic"><svg><use href="#i-pool"/></svg></div><h4>Swimming pool</h4><p>A sparkling pool and sun-soaked terrace to unwind beside.</p></div>
+      <div class="acard"><div class="ic"><svg><use href="#i-wifi"/></svg></div><h4>Fibre wifi</h4><p>Fast, reliable fibre and private workspaces in every room.</p></div>
+      <div class="acard"><div class="ic"><svg><use href="#i-bolt"/></svg></div><h4>Solar power</h4><p>Solar and battery backup through load-shedding.</p></div>
+      <div class="acard"><div class="ic"><svg><use href="#i-car"/></svg></div><h4>Secure parking</h4><p>On-site parking, so your car is safe while you explore.</p></div>
+      <div class="acard"><div class="ic"><svg><use href="#i-key"/></svg></div><h4>Flexible check-in</h4><p>Flexible check-in and check-out to suit your travel.</p></div>
+      <div class="acard"><div class="ic"><svg><use href="#i-coffee"/></svg></div><h4>Self-catering</h4><p>Kitchenettes in the studios for stays of any length.</p></div>
+      <div class="acard"><div class="ic"><svg><use href="#i-beach"/></svg></div><h4>Beaches nearby</h4><p>Minutes from the Promenade, beaches and city.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PLACE / LOCATION -->
+<section class="place" id="place">
+  <div class="wrap">
+    <div class="ph"><img src="assets/seapoint.jpg" alt="Sea Point Promenade near Cape Nelson Guest House"></div>
+    <div>
+      <p class="eyebrow">The neighbourhood</p>
+      <h2>Sea Point, on your doorstep</h2>
+      <p>One of Cape Town's most loved suburbs. Walk the Promenade at sunset, swim at the beaches, and find a hundred cafes, restaurants and shops within a few blocks.</p>
+      <ul>
+        <li><svg><use href="#i-beach"/></svg><span><b>A short walk to the Promenade</b> and the Atlantic seaboard beaches.</span></li>
+        <li><svg><use href="#i-pin"/></svg><span><b>Minutes from the V&amp;A Waterfront, the city and Table Mountain.</b></span></li>
+        <li><svg><use href="#i-coffee"/></svg><span><b>Cafes, delis and restaurants</b> all within an easy stroll.</span></li>
+        <li><svg><use href="#i-check"/></svg><span><b>Quiet, safe and well lit,</b> a calm street to come home to.</span></li>
+      </ul>
+      <div class="hero-cta" style="margin-top:26px">
+        <a class="btn btn-primary" href="#book"><svg><use href="#i-cal"/></svg>Plan your stay</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS (fixes the "no visible reviews" weakness) -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="shead center">
+      <p class="eyebrow">In their words</p>
+      <h2>Loved by guests from around the world</h2>
+    </div>
+    <div class="rg">
+      <div class="review"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><p>"A real home away from home. The garden breakfast was a highlight and the hosts could not have been more welcoming."</p><div class="who"><span class="av">L</span><div><b>Guest review</b><span>Verified stay</span></div></div></div>
+      <div class="review"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><p>"Quiet, spotless and so well located. We walked to the Promenade every evening. The solar backup meant load-shedding never touched us."</p><div class="who"><span class="av">M</span><div><b>Guest review</b><span>Verified stay</span></div></div></div>
+      <div class="review"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><p>"Perfect for a working trip. Fast wifi, a proper desk, and the pool to switch off beside. We will be back."</p><div class="who"><span class="av">J</span><div><b>Guest review</b><span>Verified stay</span></div></div></div>
+    </div>
+    <p class="rev-note">Your real Google and Booking.com reviews would feed in here automatically. These are placeholders for the layout.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <h2>Your Sea Point escape is waiting</h2>
+    <p>Check availability and book direct for the best rate. A warm welcome is guaranteed.</p>
+    <div class="hero-cta">
+      <a class="btn btn-amber" href="#book"><svg><use href="#i-cal"/></svg>Check availability</a>
+      <a class="btn btn-ghost" href="tel:+27214390288"><svg><use href="#i-phone"/></svg>Call +27 21 439 0288</a>
+    </div>
+  </div>
+</section>
+
+<!-- ENQUIRY (on-site booking path, fixes "bookings pushed to third-party page") -->
+<section class="enquiry" id="enquiry">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Book direct</p>
+      <h2>Enquire or book your stay</h2>
+      <p class="lead">Tell us your dates and we will confirm availability and your best direct rate, usually the same day. No booking-site commission, no fuss.</p>
+      <div class="contact">
+        <a href="tel:+27214390288"><svg><use href="#i-phone"/></svg><span>+27 21 439 0288</span></a>
+        <a href="mailto:info@capenelsonguesthouse.co.za"><svg><use href="#i-mail"/></svg><span>info@capenelsonguesthouse.co.za</span></a>
+        <div><svg><use href="#i-pin"/></svg><span>18 Mount Nelson Road, Sea Point, Cape Town</span></div>
+        <div><svg><use href="#i-clock"/></svg><span>Flexible check-in and check-out</span></div>
+      </div>
+    </div>
+    <form class="form" onsubmit="return false">
+      <div class="row">
+        <div class="fld"><label for="fn">Full name</label><input id="fn" type="text" placeholder="Your name"></div>
+        <div class="fld"><label for="fe">Email</label><input id="fe" type="email" placeholder="you@email.com"></div>
+      </div>
+      <div class="row">
+        <div class="fld"><label for="fci">Check in</label><input id="fci" type="date"></div>
+        <div class="fld"><label for="fco">Check out</label><input id="fco" type="date"></div>
+      </div>
+      <div class="row">
+        <div class="fld"><label for="fg">Guests</label><select id="fg"><option>1 guest</option><option selected>2 guests</option><option>3 guests</option><option>4 guests</option></select></div>
+        <div class="fld"><label for="fr">Room type</label><select id="fr"><option>Any room</option><option>Garden Studio</option><option>Classic En-Suite</option><option>Poolside Studio</option></select></div>
+      </div>
+      <div class="fld"><label for="fm">Anything we should know?</label><textarea id="fm" placeholder="Arrival time, special requests, longer stay..."></textarea></div>
+      <button class="btn btn-primary" type="submit"><svg><use href="#i-cal"/></svg>Request my booking</button>
+      <p class="fine">We reply quickly, often the same day. Your details are kept private.</p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a href="#" class="brand"><span class="mk">CN</span><span class="bt" style="color:#fff">Cape Nelson<small>Guest House &middot; Sea Point</small></span></a>
+      <p style="margin-top:16px;font-size:.92rem">A charming 4-star urban guesthouse in Sea Point, Cape Town. Individually styled studios and rooms, a garden, a pool and a genuine welcome.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <div class="foot-links">
+        <a href="#welcome">Our House</a>
+        <a href="#rooms">Rooms &amp; Studios</a>
+        <a href="#amenities">Amenities</a>
+        <a href="#place">Sea Point</a>
+        <a href="#reviews">Reviews</a>
+      </div>
+    </div>
+    <div>
+      <h4>Book</h4>
+      <div class="foot-links">
+        <a href="#book">Check availability</a>
+        <a href="#enquiry">Enquire by email</a>
+        <a href="tel:+27214390288">Call to book</a>
+      </div>
+    </div>
+    <div>
+      <h4>Find us</h4>
+      <div class="foot-contact">
+        <div><svg><use href="#i-pin"/></svg><span>18 Mount Nelson Road<br>Sea Point, Cape Town</span></div>
+        <div><svg><use href="#i-phone"/></svg><span>+27 21 439 0288</span></div>
+        <div><svg><use href="#i-mail"/></svg><span>info@capenelsonguesthouse.co.za</span></div>
+        <div><svg><use href="#i-clock"/></svg><span>Flexible check-in &amp; check-out</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap copyright">&copy; 2026 Cape Nelson Guest House. Concept redesign by Searchly Web.</div>
 </footer>
 
-<a class="btn btn-primary float-book" href="#book">Book now</a>
+<a class="float-book" href="#book" aria-label="Book your stay"><svg><use href="#i-cal"/></svg><span>Book now</span></a>
 
 </body>
 </html>

@@ -1,0 +1,443 @@
+@font-face {
+	font-family: 'Corbel';
+	src: url(fonts/CORBEL.TTF);
+  }
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Corbel';
+}
+
+.physiotherapy-logo {
+    font-size: 4vh;
+    font-family: 'Corbel';
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+   
+}
+
+.physiotherapy-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index:-1;
+}
+
+nav {
+    height:100%; /* this height seems to solve the last link not covered by the background in older phone sizes */
+    line-height:90px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.nav {
+    height:0px;
+    visibility:collapse;
+   /* transition: height 200ms linear;*/
+    background: #000;
+    padding-bottom:0px;
+    text-align: left;
+    transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+    overflow: hidden; /* makes the content align with the menu transition and not sit outside the transition */
+    
+}
+
+nav .nav-toggler-button:hover{
+    cursor:pointer;
+}
+
+nav .nav-toggler-button {
+    height:60px;
+    width:50px;
+    padding-top: 0px;
+    margin-left: 10px;
+    background: #000;
+    border:1px solid rgb(65, 65, 65);
+    border-radius: 0.2rem;
+    text-align: center;
+    align-items: center;
+    
+}
+
+
+nav .nav-toggler-icon {
+    padding:0px;
+    margin:0px;
+    font-size: 40px;
+    color: rgb(65, 65, 65);
+}
+
+nav ul li {
+    line-height: 2rem;
+    padding:0rem;
+    width:100%;
+    border:0px solid white;
+}
+
+nav ul li a {
+    display:block; /* will make it go full with....do not use width:100% as it will make the website scroll horizontal*/
+    padding:1rem;
+    font-size: 1.1rem;
+    color: rgb(189, 189, 189);
+    line-height: 1.2rem;
+    text-decoration: none;
+    border:0px solid white;
+}
+
+nav ul li a:hover {
+    background-color: rgb(27, 27, 27);
+    color: rgb(255, 255, 255);
+}
+
+.active {
+    background-color: rgb(101, 101, 101);
+    color: rgb(255, 255, 255);
+}
+
+/*
+** makes img responsive
+*/
+img {
+    width:100%;
+    height:auto;
+    object-fit: cover;
+}
+
+/*
+** keep footer images normal
+*/
+footer img {
+    width:auto;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-height:150px;
+    color: #fff;
+    background: #000;
+    border:0px solid green;
+    padding:20px;
+    justify-content: space-between; /* will put space in between flex-items in a flexbox */
+ }
+
+ footer p {
+    display:block;
+    border:0px solid white;
+    text-align: center;
+    line-height: 1.2rem;
+    font-size: 1rem;
+    color: #fff;
+}
+
+content {
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background: #fff;
+}
+
+content div {
+ padding:15px;
+}
+
+p {
+    padding-bottom:20px;
+    line-height: 1.8rem;
+    font-size: 1.2rem;
+    color: rgb(99, 99, 99);
+    text-align: justify;
+}
+
+ul, li {
+    padding-bottom:20px;
+    line-height: 1.8rem;
+    font-size: 1.2rem;
+    color: rgb(99, 99, 99);
+    text-align: justify;
+    padding-left:1em;
+}
+
+strong {
+    font-size: 1.4rem;
+    color: rgb(188, 150, 1);
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9vw;
+    font-weight: 600;
+    letter-spacing: -1px;;
+}
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4vw;
+    font-weight: 300;
+    letter-spacing: -1px;
+    color: dimgrey;
+    padding-bottom: 2rem;
+}
+
+.physio-help-content {
+    background:#F2F2F2;
+}
+
+.physio-can-help-content {
+    background:#dddddd;
+}
+
+.cardrow {
+    display:flex;
+    flex-direction: column;
+}
+
+.card-img img {
+    width:100%;
+}
+
+
+/*
+** media queries
+*/
+@media screen and (min-width:900px){
+    html {
+        background: #555555;
+    }
+    body {
+        width:100%; /* makes the website sit in the center of the screen narrower than full width */
+        margin:0 auto;
+    }
+
+    * {
+        padding:0;
+        margin:0;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 3vw;
+        font-weight: 600;
+        letter-spacing: -1px;
+        display: block;
+        text-align: center;
+    }
+    
+    h2{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2vw;
+        font-weight: 300;
+        letter-spacing: -1px;
+        color: dimgrey;
+        padding-bottom: 2rem;
+        display: block;
+        text-align: center;
+    }
+    
+   nav{
+        display: flex;
+        flex-direction: row;
+        visibility: visible;
+        border:0px solid white;
+        width:100%;
+        height:90px;
+        line-height:90px;
+
+    }
+
+    nav div:first-of-type {
+        width:70%;
+        line-height:90px;
+    }
+
+    nav div{
+        text-align: left;
+        width:100%;
+        height:90px;
+        line-height:90px;
+        border:0px solid white;
+    }
+
+
+
+    nav div ul {
+        height:90px;
+        line-height:90px;
+        border:0px solid red;
+    }
+
+    nav div ul li {
+        height:90px;
+        line-height:90px;
+        text-align: center;
+        list-style: none;
+        display: inline-block;
+        border:0px solid red;
+    }
+
+    nav div ul li a{
+        height:100%;
+        line-height:20px;
+        padding-left: 1rem;
+        border:0px solid red;
+        padding-top:20px;
+    }
+
+    .nav{
+        display: flex;
+        flex-direction: row;
+        visibility: visible;
+        border:0px solid white;
+        width:100%;
+        height:100%;
+        overflow: visible; /* add this to show the fullscreen menu else it remains hidden */
+        line-height:90px;
+    }
+
+
+
+    .physiotherapy-logo {
+        width:250px;
+        border:0px solid red;
+        padding-left:30px;
+    }
+
+    nav .nav-toggler-button {
+       display:none;
+       visibility: collapse;
+    }
+
+    nav ul li a:hover {
+        background-color: rgb(101, 101, 101);
+        color: rgb(255, 255, 255);
+    }
+ .active {
+        background-color: rgb(101, 101, 101);
+        color: rgb(255, 255, 255);
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        min-height:150px;
+        color: #fff;
+        background: #000;
+        border:0px solid green;
+        padding:20px;
+        justify-content: space-between; /* will put space in between flex-items in a flexbox */
+     }
+    
+     footer p {
+        display:block;
+        border:0px solid white;
+        text-align: center;
+        line-height: 1.2rem;
+        font-size: 1rem;
+        color: #fff;
+    }
+
+/*
+** keep footer images normal
+*/
+footer img {
+    width:auto;
+}
+
+.cardrow {
+    display:flex;
+    flex-direction: row;
+    padding:0px;
+}
+
+.card-block {
+    width:25%;
+    border:0px solid red;
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+   
+}
+
+.card-block p {
+    color:#000;
+    line-height: 1.5rem;
+}
+
+.card-img img {
+    width:100%;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding-bottom: 0.8rem;
+
+}
+
+.physio-help-content {
+    height:auto;
+}
+
+h4 {
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding-bottom: 0.8rem;
+}
+
+.physio-services-content {
+    width:80%;
+    text-align: justify;
+    margin:0 auto;
+}
+
+
+
+.physio-services-content h2{
+    padding-top:2rem;
+    padding-bottom:1rem;
+    text-align: left;
+
+}
+
+.physio-services-content p{
+    padding-top:5px;
+    text-align: left;
+}
+
+.physio-cape-town-content img{
+   width:50%;
+}
+
+p {
+    padding-bottom:20px;
+    line-height: 1.8rem;
+    font-size: 1.2rem;
+    color: rgb(99, 99, 99);
+    text-align: justify;
+}
+
+ul, li {
+    padding-bottom:20px;
+    line-height: 1.8rem;
+    font-size: 1.2rem;
+    color: rgb(99, 99, 99);
+    text-align: justify;
+    padding-left:2em;
+}
+
+}

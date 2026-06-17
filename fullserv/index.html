@@ -10,10 +10,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
   :root {
-    --brand: #143a6b;
-    --brand-deep: #0e2b50;
-    --accent: #2f80ed;
-    --accent-soft: #eaf2fd;
+    /* FullServe true brand, sampled from their logo: cobalt blue + silver-grey */
+    --brand: #1f50a0;        /* FullServe cobalt */
+    --brand-deep: #163b78;   /* deep cobalt */
+    --accent: #2f6fd0;       /* brighter cobalt for CTAs/links */
+    --accent-soft: #e9f0fb;
+    --silver: #a9adb4;       /* the hex mark grey */
+    --silver-soft: #eef0f3;
     --wa: #25D366;
     --charcoal: #1d2430;
     --grey: #5a6577;
@@ -22,9 +25,9 @@
     --white: #ffffff;
     --radius: 16px;
     --radius-sm: 10px;
-    --shadow-sm: 0 2px 8px rgba(20, 58, 107, 0.06);
-    --shadow-md: 0 12px 32px rgba(20, 58, 107, 0.10);
-    --shadow-lg: 0 24px 60px rgba(14, 43, 80, 0.16);
+    --shadow-sm: 0 2px 8px rgba(31, 80, 160, 0.06);
+    --shadow-md: 0 12px 32px rgba(31, 80, 160, 0.10);
+    --shadow-lg: 0 24px 60px rgba(22, 59, 120, 0.16);
     --maxw: 1160px;
     --font-head: "Fraunces", Georgia, serif;
     --font-body: "Inter", system-ui, sans-serif;
@@ -94,8 +97,9 @@
   /* Hero */
   .hero {
     background:
-      radial-gradient(1100px 540px at 88% -10%, rgba(47,128,237,0.16), transparent 60%),
-      linear-gradient(170deg, #f7faff 0%, #eef4fd 100%);
+      radial-gradient(1100px 540px at 88% -10%, rgba(31,80,160,0.14), transparent 60%),
+      radial-gradient(700px 420px at 6% 110%, rgba(169,173,180,0.18), transparent 60%),
+      linear-gradient(170deg, #f8fafe 0%, #eef2f8 100%);
     padding: 56px 0 64px;
     position: relative;
   }
@@ -202,17 +206,20 @@
   .testi .who .rl { font-size: 0.8rem; color: var(--grey); }
   .placeholder-note { text-align: center; font-size: 0.8rem; color: var(--grey); margin-top: 22px; font-style: italic; }
 
-  /* Gallery */
-  .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
-  .frame {
-    border-radius: var(--radius); border: 2px dashed #c6d4ea; background: var(--accent-soft);
-    aspect-ratio: 4/3; display: flex; flex-direction: column; align-items: center; justify-content: center;
-    color: var(--accent); gap: 8px; text-align: center; padding: 12px;
+  /* Partners / accreditations strip */
+  .partners { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .partners-inner { padding: 40px 0 44px; }
+  .partners-lead { text-align: center; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey); margin-bottom: 26px; }
+  .partner-row {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+    gap: 30px 48px;
   }
-  .frame svg { width: 34px; height: 34px; opacity: 0.7; }
-  .frame span { font-size: 0.82rem; font-weight: 600; }
-  .frame.has-logo { background: var(--brand); border: none; }
-  .frame.has-logo img { max-height: 56px; width: auto; filter: brightness(0) invert(1); }
+  .partner-row img {
+    height: 46px; width: auto; opacity: 0.82;
+    filter: grayscale(100%); transition: filter .2s ease, opacity .2s ease;
+  }
+  .partner-row img:hover { filter: grayscale(0%); opacity: 1; }
+  .partner-row img.saipa { height: 40px; }
 
   /* CTA band */
   .cta-band {
@@ -298,7 +305,7 @@
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="logo" href="#">
-      <img src="https://www.fullserv.co.za/wp-content/uploads/2021/10/Logo.png" alt="FullServ Accountants" />
+      <img src="assets/logo.png" alt="FullServ Accountants" />
     </a>
     <nav class="nav">
       <a href="#services">Services</a>
@@ -508,19 +515,16 @@
   </div>
 </section>
 
-<!-- Gallery -->
-<section class="section why" style="padding-top:0;">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Your firm, your face</span>
-      <h2>Show the people behind the numbers</h2>
-      <p>Photos of your team, your Sandton office and your space build trust fast. We will drop your images straight into these frames.</p>
-    </div>
-    <div class="gallery-grid">
-      <div class="frame has-logo"><img src="https://www.fullserv.co.za/wp-content/uploads/2021/10/Logo.png" alt="FullServ Accountants" /></div>
-      <div class="frame"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Your team here</span></div>
-      <div class="frame"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Your office here</span></div>
-      <div class="frame"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Your photos here</span></div>
+<!-- Partners & accreditations (real logos from FullServe's site) -->
+<section class="partners">
+  <div class="wrap partners-inner">
+    <p class="partners-lead">Professional bodies and the software we run your finances on</p>
+    <div class="partner-row">
+      <img src="assets/saica.png" alt="SAICA, South African Institute of Chartered Accountants" />
+      <img class="saipa" src="assets/saipa.jpg" alt="SAIPA, South African Institute of Professional Accountants" />
+      <img src="assets/draftworx.png" alt="Draftworx financial statements software" />
+      <img src="assets/hubdoc.png" alt="Hubdoc document capture" />
+      <img src="assets/microsoft.png" alt="Microsoft" />
     </div>
   </div>
 </section>
@@ -572,7 +576,7 @@
   <div class="wrap">
     <div class="footer-grid">
       <div>
-        <div class="flogo"><img src="https://www.fullserv.co.za/wp-content/uploads/2021/10/Logo.png" alt="FullServ Accountants" /></div>
+        <div class="flogo"><img src="assets/logo.png" alt="FullServ Accountants" /></div>
         <p class="fblurb">Chartered accounting, tax, payroll and compliance for South African SMEs. SAICA and SAIPA members based in Sandton, Johannesburg.</p>
       </div>
       <div>

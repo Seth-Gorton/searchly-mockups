@@ -3,24 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anlo Financial Solutions | Chartered Accountants & Xero Gold Partner, Fourways</title>
-<meta name="description" content="Anlo Financial Solutions: SAICA-accredited chartered accountants and Xero Gold Partner in Fourways, Johannesburg, with a UK presence. Accounting, tax, advisory and cloud accounting. Transparent pricing from R2,400/month.">
+<title>Anlo Financial Solutions | Chartered Accountants &amp; Xero Gold Partner, Fourways</title>
+<meta name="description" content="Anlo Financial Solutions: SAICA-accredited chartered accountants and Xero Gold Partner in Fourways, Johannesburg, with a UK presence. Accounting, tax, advisory and cloud accounting. Transparent pricing from R2,400 a month.">
+<meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --brand:#b21f24;
+  /* Anlo real brand, sampled from their live logo: crimson red on white, with Xero blue + gold as honest accents */
+  --brand:#c4181a;        /* the anlo wordmark crimson */
+  --brand-dark:#9c1214;
   --accent:#e23b3b;
-  --ink:#2b2b2b;
+  --xero-blue:#13b5ea;
+  --xero-gold:#fbb800;
+  --ink:#241f1f;
+  --ink-2:#34292a;
   --white:#ffffff;
-  --soft:#f5f4f3;
-  --soft-2:#ecebe9;
-  --line:#e2e0dd;
-  --muted:#6b6764;
-  --shadow-sm:0 1px 2px rgba(43,43,43,.06),0 2px 8px rgba(43,43,43,.05);
-  --shadow-md:0 6px 24px rgba(43,43,43,.10);
-  --shadow-lg:0 20px 50px rgba(43,43,43,.16);
+  --soft:#faf6f5;
+  --soft-2:#f1eae9;
+  --line:#e7dfde;
+  --body-c:#5f5856;
+  --muted:#8a807e;
+  --shadow-sm:0 1px 2px rgba(36,31,31,.06),0 2px 8px rgba(36,31,31,.05);
+  --shadow-md:0 8px 30px rgba(36,31,31,.10);
+  --shadow-lg:0 26px 60px -20px rgba(36,31,31,.30);
   --radius:14px;
   --radius-lg:22px;
   --maxw:1180px;
@@ -29,59 +36,36 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{
-  font-family:var(--body);
-  color:var(--ink);
-  background:var(--white);
-  line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
-}
+body{font-family:var(--body);color:var(--body-c);background:var(--white);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
-h1,h2,h3,h4{font-family:var(--head);font-weight:600;line-height:1.12;letter-spacing:-.01em;color:var(--ink)}
+h1,h2,h3,h4{font-family:var(--head);font-weight:600;line-height:1.13;letter-spacing:-.01em;color:var(--ink)}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
-.eyebrow{
-  font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--brand);display:inline-flex;align-items:center;gap:.5rem;
-}
+.eyebrow{font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--brand);display:inline-flex;align-items:center;gap:.5rem}
 .eyebrow::before{content:"";width:26px;height:2px;background:var(--accent);display:inline-block}
 
 /* Concept banner */
-.concept-banner{
-  background:var(--ink);color:#f4f2f0;text-align:center;
-  font-size:.8rem;padding:9px 16px;letter-spacing:.01em;
-}
+.concept-banner{background:var(--ink);color:#f4efee;text-align:center;font-size:.8rem;padding:9px 16px;letter-spacing:.01em}
 .concept-banner strong{color:#fff;font-weight:600}
 
 /* Buttons */
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
-  font-family:var(--body);font-weight:600;font-size:.95rem;
-  padding:.85rem 1.4rem;border-radius:999px;cursor:pointer;border:none;
-  transition:transform .18s ease,box-shadow .18s ease,background .18s ease,color .18s ease;
-  white-space:nowrap;
-}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:var(--body);font-weight:600;font-size:.95rem;padding:.85rem 1.4rem;border-radius:999px;cursor:pointer;border:none;transition:transform .18s ease,box-shadow .18s ease,background .18s ease,color .18s ease;white-space:nowrap}
 .btn svg{width:18px;height:18px}
-.btn-primary{background:var(--brand);color:#fff;box-shadow:0 6px 18px rgba(178,31,36,.28)}
-.btn-primary:hover{background:var(--accent);transform:translateY(-2px);box-shadow:0 10px 26px rgba(226,59,59,.36)}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 8px 22px -6px rgba(196,24,26,.5)}
+.btn-primary:hover{background:var(--brand-dark);transform:translateY(-2px);box-shadow:0 12px 28px -6px rgba(196,24,26,.55)}
 .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
 .btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px)}
 .btn-light{background:#fff;color:var(--brand)}
 .btn-light:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
-.btn-outline-light{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5)}
+.btn-outline-light{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55)}
 .btn-outline-light:hover{border-color:#fff;background:rgba(255,255,255,.08);transform:translateY(-2px)}
 
 /* Header */
-.header{
-  position:sticky;top:0;z-index:60;background:rgba(255,255,255,.88);
-  backdrop-filter:saturate(140%) blur(12px);border-bottom:1px solid var(--line);
-}
-.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:1rem}
-.wordmark{font-family:var(--head);font-weight:700;font-size:1.55rem;letter-spacing:-.02em;color:var(--ink);display:flex;align-items:baseline;gap:.12em}
-.wordmark .dot{color:var(--brand)}
-.wordmark small{font-family:var(--body);font-size:.6rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);align-self:center;margin-left:.4rem}
-.nav{display:none;align-items:center;gap:2rem}
+.header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.9);backdrop-filter:saturate(140%) blur(12px);border-bottom:1px solid var(--line)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:74px;gap:1rem}
+.brand-logo{display:flex;align-items:center;gap:.6rem}
+.brand-logo img{height:42px;width:auto}
+.nav{display:none;align-items:center;gap:1.9rem}
 .nav a{font-size:.92rem;font-weight:500;color:var(--ink);position:relative;transition:color .15s}
 .nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--accent);transition:width .22s ease}
 .nav a:hover{color:var(--brand)}
@@ -92,151 +76,174 @@ h1,h2,h3,h4{font-family:var(--head);font-weight:600;line-height:1.12;letter-spac
 
 /* Hero */
 .hero{position:relative;background:linear-gradient(180deg,#fff 0%,var(--soft) 100%);overflow:hidden}
-.hero::before{
-  content:"";position:absolute;top:-160px;right:-160px;width:520px;height:520px;
-  background:radial-gradient(circle,rgba(226,59,59,.10),transparent 65%);border-radius:50%;
-}
-.hero-inner{padding:56px 0 64px;position:relative;z-index:2}
-.hero h1{font-size:clamp(2.3rem,7vw,4rem);font-weight:600;max-width:14ch}
+.hero::before{content:"";position:absolute;top:-160px;right:-160px;width:520px;height:520px;background:radial-gradient(circle,rgba(196,24,26,.08),transparent 65%);border-radius:50%}
+.hero-inner{padding:54px 0 60px;position:relative;z-index:2;display:grid;grid-template-columns:1fr;gap:2.4rem;align-items:center}
+.hero h1{font-size:clamp(2.3rem,6.4vw,3.85rem);font-weight:600;max-width:15ch}
 .hero h1 em{font-style:italic;color:var(--brand)}
-.hero .sub{font-size:clamp(1.02rem,2.4vw,1.18rem);color:var(--muted);max-width:54ch;margin-top:1.3rem}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
-.hero-stats{
-  display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem 1rem;margin-top:3rem;
-  padding-top:2rem;border-top:1px solid var(--line);max-width:620px;
-}
-.stat .n{font-family:var(--head);font-size:1.9rem;font-weight:700;color:var(--ink);line-height:1}
-.stat .n span{color:var(--brand)}
-.stat .l{font-size:.82rem;color:var(--muted);margin-top:.35rem}
+.hero .sub{font-size:clamp(1.02rem,2.4vw,1.16rem);color:var(--body-c);max-width:52ch;margin-top:1.25rem}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.9rem}
+.hero-reassure{font-size:.86rem;color:var(--muted);margin-top:1rem;display:flex;align-items:center;gap:.5rem}
+.hero-reassure .dot{width:9px;height:9px;border-radius:50%;background:#34c759;box-shadow:0 0 8px #34c759}
+.hero-visual{position:relative}
+.hero-visual .photo{border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/3;background:var(--soft-2)}
+.hero-visual .photo img{width:100%;height:100%;object-fit:cover;object-position:left center}
+.hero-badge{position:absolute;left:-14px;bottom:-18px;background:#fff;border-radius:16px;box-shadow:var(--shadow-md);padding:.7rem .95rem;display:flex;align-items:center;gap:.7rem}
+.hero-badge img{height:38px;width:auto}
+.hero-badge .bt{font-size:.78rem;line-height:1.25;color:var(--ink);font-weight:600}
+.hero-badge .bt span{display:block;color:var(--muted);font-weight:500;font-size:.72rem}
 
-/* Trust strip */
-.trust{background:var(--ink);color:#e8e6e4;padding:26px 0}
-.trust-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1.4rem 2.2rem;text-align:center}
-.trust-label{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#9a9491;width:100%;margin-bottom:.2rem}
-.trust-item{display:flex;align-items:center;gap:.55rem;font-weight:600;font-size:1rem;letter-spacing:.02em;color:#fff;opacity:.92}
-.trust-item svg{width:20px;height:20px;color:var(--accent)}
+/* Trust strip with real credential logos */
+.trust{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:28px 0}
+.trust-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1.4rem 2.4rem}
+.trust-label{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);width:100%;text-align:center;margin-bottom:.4rem}
+.trust img{height:46px;width:auto;object-fit:contain;filter:grayscale(1);opacity:.72;transition:.2s}
+.trust img:hover{filter:none;opacity:1}
+.trust .saica{height:40px}
+.trust .xero{height:42px}
 
 /* Sections */
-section{padding:72px 0}
+section{padding:74px 0}
 .section-head{max-width:62ch}
+.section-head.center{margin:0 auto;text-align:center}
 .section-head h2{font-size:clamp(1.9rem,4.5vw,2.7rem);margin-top:.9rem}
-.section-head p{color:var(--muted);margin-top:1rem;font-size:1.05rem}
+.section-head p{color:var(--body-c);margin-top:1rem;font-size:1.05rem}
 
-/* Services */
+/* Credentials feature band (fixes underused credentials) */
+.creds{background:var(--ink);color:#efe9e8}
+.creds .section-head h2{color:#fff}
+.creds .section-head p{color:#cdbfbe}
+.cred-grid{display:grid;grid-template-columns:1fr;gap:1.1rem;margin-top:2.6rem}
+.cred{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:1.5rem;display:flex;gap:1rem;align-items:flex-start;transition:border-color .2s,background .2s}
+.cred:hover{border-color:rgba(255,255,255,.28);background:rgba(255,255,255,.07)}
+.cred .badge{flex:0 0 auto;width:64px;height:64px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;padding:8px}
+.cred .badge img{max-width:100%;max-height:100%;width:auto;object-fit:contain}
+.cred h4{font-family:var(--body);color:#fff;font-size:1.02rem;font-weight:600}
+.cred p{color:#c6b8b7;font-size:.9rem;margin-top:.3rem}
+
+/* Services (grouped to fix the cluttered list) */
 .services{background:var(--white)}
-.cards{display:grid;grid-template-columns:1fr;gap:1.1rem;margin-top:2.6rem}
-.card{
-  background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:1.7rem;
-  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;position:relative;overflow:hidden;
-}
+.svc-group{margin-top:2.6rem}
+.svc-group .gt{display:flex;align-items:center;gap:.9rem;margin-bottom:1.2rem}
+.svc-group .gt .tag{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brand)}
+.svc-group .gt h3{font-size:1.35rem}
+.svc-group .gt .bar{flex:1;height:1px;background:var(--line)}
+.cards{display:grid;grid-template-columns:1fr;gap:1.1rem}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:1.7rem;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;position:relative;overflow:hidden}
 .card::after{content:"";position:absolute;left:0;top:0;height:3px;width:0;background:var(--accent);transition:width .3s ease}
 .card:hover{transform:translateY(-5px);box-shadow:var(--shadow-md);border-color:transparent}
 .card:hover::after{width:100%}
 .card-ic{width:50px;height:50px;border-radius:13px;background:linear-gradient(135deg,#fdecec,#fadada);display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem}
 .card-ic svg{width:24px;height:24px;color:var(--brand)}
-.card h3{font-size:1.22rem;font-weight:600}
-.card p{color:var(--muted);font-size:.95rem;margin-top:.55rem}
-.card .more{display:inline-flex;align-items:center;gap:.35rem;margin-top:1rem;font-size:.85rem;font-weight:600;color:var(--brand)}
+.card h4{font-family:var(--body);font-size:1.1rem;font-weight:600;color:var(--ink)}
+.card p{color:var(--body-c);font-size:.93rem;margin-top:.5rem}
+.card .more{display:inline-flex;align-items:center;gap:.35rem;margin-top:1rem;font-size:.84rem;font-weight:600;color:var(--brand)}
 .card .more svg{width:14px;height:14px;transition:transform .2s}
 .card:hover .more svg{transform:translateX(3px)}
 
-/* Why us band */
+/* Why us + pricing */
 .why{background:var(--soft)}
 .why-grid{display:grid;grid-template-columns:1fr;gap:2.6rem;align-items:center}
 .why-list{display:grid;gap:1.1rem;margin-top:1.8rem}
 .why-item{display:flex;gap:.9rem;align-items:flex-start}
 .why-item .tick{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:var(--brand);display:flex;align-items:center;justify-content:center;margin-top:2px}
 .why-item .tick svg{width:14px;height:14px;color:#fff}
-.why-item h4{font-family:var(--body);font-size:1rem;font-weight:600}
-.why-item p{color:var(--muted);font-size:.92rem;margin-top:.15rem}
+.why-item h4{font-family:var(--body);font-size:1rem;font-weight:600;color:var(--ink)}
+.why-item p{color:var(--body-c);font-size:.92rem;margin-top:.15rem}
 .why-card{background:var(--ink);color:#fff;border-radius:var(--radius-lg);padding:2.2rem;box-shadow:var(--shadow-lg)}
-.why-card .pricetag{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#c9c4c1}
-.why-card .price{font-family:var(--head);font-size:2.6rem;font-weight:700;margin:.5rem 0 .2rem}
-.why-card .price span{font-size:1rem;color:#cdc8c5;font-family:var(--body);font-weight:500}
-.why-card p{color:#d6d2cf;font-size:.95rem;margin-top:.8rem}
+.why-card .pricetag{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#cbbcbb}
+.why-card .price{font-family:var(--head);font-size:2.6rem;font-weight:700;margin:.5rem 0 .2rem;color:#fff}
+.why-card .price span{font-size:1rem;color:#cbbcbb;font-family:var(--body);font-weight:500}
+.why-card p{color:#d7cbca;font-size:.95rem;margin-top:.8rem}
 .why-card .btn{margin-top:1.6rem;width:100%}
-.why-card .crossborder{margin-top:1.6rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.14);display:flex;align-items:center;gap:.7rem;font-size:.86rem;color:#e3dfdc}
+.why-card .crossborder{margin-top:1.6rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.14);display:flex;align-items:center;gap:.7rem;font-size:.86rem;color:#e3dad9}
 .why-card .crossborder svg{width:20px;height:20px;color:var(--accent);flex:0 0 auto}
+
+/* Cross-border feature (fixes underused UK presence + fragmented brand) */
+.crossband{background:#fff}
+.cross-grid{display:grid;grid-template-columns:1fr;gap:2.4rem;align-items:center}
+.cross-visual{border-radius:var(--radius-lg);overflow:hidden;background:var(--soft);box-shadow:var(--shadow-md);padding:1.4rem;display:flex;align-items:center;justify-content:center}
+.cross-visual img{max-height:300px;width:auto}
+.cross-points{display:grid;gap:1rem;margin-top:1.6rem}
+.cross-points .cp{display:flex;gap:.8rem;align-items:flex-start}
+.cross-points .cp .pin{flex:0 0 auto;width:34px;height:34px;border-radius:10px;background:#fdecec;display:flex;align-items:center;justify-content:center}
+.cross-points .cp .pin svg{width:18px;height:18px;color:var(--brand)}
+.cross-points .cp b{color:var(--ink);font-family:var(--body)}
+.cross-points .cp span{display:block;color:var(--body-c);font-size:.92rem}
+
+/* Mid CTA */
+.midcta{background:var(--ink);color:#fff;padding:46px 0}
+.midcta .wrap{display:flex;flex-wrap:wrap;gap:1.4rem;align-items:center;justify-content:space-between}
+.midcta h2{color:#fff;font-size:clamp(1.5rem,4vw,2rem)}
+.midcta p{color:#cdbfbe;margin-top:.5rem;max-width:50ch}
+.midcta .acts{display:flex;flex-wrap:wrap;gap:.8rem}
 
 /* Testimonials */
 .tests{background:#fff}
+.tests .topline{display:flex;justify-content:center;margin-top:1.4rem}
+.tests .topline img{height:34px;width:auto}
 .test-grid{display:grid;grid-template-columns:1fr;gap:1.1rem;margin-top:2.6rem}
 .test{background:var(--soft);border-radius:var(--radius-lg);padding:1.8rem;border:1px solid var(--line)}
-.stars{display:flex;gap:2px;color:var(--accent);margin-bottom:.9rem}
+.stars{display:flex;gap:2px;color:var(--xero-gold);margin-bottom:.9rem}
 .stars svg{width:18px;height:18px}
 .test blockquote{font-size:1.02rem;color:var(--ink);font-weight:500}
 .test .who{display:flex;align-items:center;gap:.7rem;margin-top:1.2rem}
 .test .av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--accent));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:.95rem}
-.test .who .nm{font-weight:600;font-size:.9rem}
+.test .who .nm{font-weight:600;font-size:.9rem;color:var(--ink)}
 .test .who .rl{font-size:.8rem;color:var(--muted)}
 .placeholder-note{font-size:.78rem;color:var(--muted);font-style:italic;margin-top:1.4rem;text-align:center}
 
-/* Gallery */
-.gallery{background:var(--soft)}
-.frames{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2.4rem}
-.frame{aspect-ratio:4/3;border:2px dashed var(--line);border-radius:var(--radius);background:repeating-linear-gradient(45deg,#fff,#fff 12px,var(--soft-2) 12px,var(--soft-2) 24px);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--muted);gap:.5rem;transition:border-color .2s}
-.frame:hover{border-color:var(--accent)}
-.frame svg{width:30px;height:30px;color:var(--muted);opacity:.7}
-.frame span{font-size:.82rem;font-weight:600}
-.frame.tall{aspect-ratio:auto;grid-row:span 2}
-
-/* CTA band */
-.cta-band{background:linear-gradient(135deg,var(--brand),var(--accent));color:#fff;position:relative;overflow:hidden}
+/* CTA band with form */
+.cta-band{background:linear-gradient(135deg,var(--brand),var(--brand-dark));color:#fff;position:relative;overflow:hidden}
 .cta-band::before{content:"";position:absolute;bottom:-180px;left:-100px;width:480px;height:480px;background:radial-gradient(circle,rgba(255,255,255,.12),transparent 65%);border-radius:50%}
 .cta-grid{display:grid;grid-template-columns:1fr;gap:2.4rem;position:relative;z-index:2;align-items:center}
 .cta-copy h2{color:#fff;font-size:clamp(1.9rem,4.5vw,2.7rem)}
 .cta-copy p{color:rgba(255,255,255,.92);margin-top:1rem;font-size:1.05rem;max-width:46ch}
 .cta-direct{margin-top:1.8rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
-.cta-direct a{color:#fff;font-weight:600;display:inline-flex;align-items:center;gap:.5rem;font-size:1.05rem}
+.cta-direct a{color:#fff;font-weight:600;display:inline-flex;align-items:center;gap:.5rem;font-size:1.02rem}
 .cta-direct a svg{width:18px;height:18px}
 .form-card{background:#fff;border-radius:var(--radius-lg);padding:1.9rem;box-shadow:var(--shadow-lg);color:var(--ink)}
 .form-card h3{font-size:1.3rem}
-.form-card .lead{color:var(--muted);font-size:.92rem;margin-top:.3rem}
+.form-card .lead{color:var(--body-c);font-size:.92rem;margin-top:.3rem}
 .fld{margin-top:1rem}
 .fld label{display:block;font-size:.8rem;font-weight:600;margin-bottom:.35rem;color:var(--ink)}
 .fld input,.fld select,.fld textarea{width:100%;padding:.8rem .9rem;border:1px solid var(--line);border-radius:10px;font-family:var(--body);font-size:.95rem;color:var(--ink);background:#fff;transition:border-color .15s,box-shadow .15s}
-.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(226,59,59,.12)}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px rgba(196,24,26,.12)}
 .fld textarea{resize:vertical;min-height:84px}
 .form-card .btn{width:100%;margin-top:1.2rem}
 .form-card .reassure{font-size:.76rem;color:var(--muted);text-align:center;margin-top:.8rem}
 
 /* Footer */
-.footer{background:var(--ink);color:#cfcac7;padding:60px 0 28px;font-size:.92rem}
+.footer{background:var(--ink);color:#cfc3c2;padding:60px 0 28px;font-size:.92rem}
 .footer-grid{display:grid;grid-template-columns:1fr;gap:2.2rem}
-.footer .wordmark{color:#fff;margin-bottom:.9rem}
-.footer .wordmark small{color:#9a9491}
-.footer-about{max-width:34ch;color:#b5afac;font-size:.9rem}
+.footer-logo{height:54px;width:auto;background:#fff;border-radius:10px;padding:8px;margin-bottom:1rem}
+.footer-about{max-width:34ch;color:#b6aaa9;font-size:.9rem}
 .footer h5{font-family:var(--body);color:#fff;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1rem}
 .footer ul{list-style:none;display:grid;gap:.55rem}
-.footer ul a{color:#cfcac7;transition:color .15s}
+.footer ul a{color:#cfc3c2;transition:color .15s}
 .footer ul a:hover{color:#fff}
 .contact-row{display:flex;align-items:flex-start;gap:.6rem;margin-bottom:.7rem}
 .contact-row svg{width:17px;height:17px;color:var(--accent);flex:0 0 auto;margin-top:3px}
-.contact-row a,.contact-row span{color:#e3dfdc}
+.contact-row a,.contact-row span{color:#e3dad9}
 .contact-row a:hover{color:#fff}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:2.6rem;padding-top:1.6rem;display:flex;flex-wrap:wrap;gap:.6rem;justify-content:space-between;font-size:.8rem;color:#8f8986}
-.footer-bottom .built{color:#8f8986}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:2.6rem;padding-top:1.6rem;display:flex;flex-wrap:wrap;gap:.6rem;justify-content:space-between;font-size:.8rem;color:#928584}
 
 /* Floating call */
-.float-call{
-  position:fixed;right:18px;bottom:18px;z-index:80;display:inline-flex;align-items:center;gap:.55rem;
-  background:var(--brand);color:#fff;font-weight:600;font-size:.95rem;padding:.85rem 1.25rem;border-radius:999px;
-  box-shadow:0 10px 30px rgba(178,31,36,.4);transition:transform .2s,background .2s;
-}
+.float-call{position:fixed;right:18px;bottom:18px;z-index:80;display:inline-flex;align-items:center;gap:.55rem;background:var(--brand);color:#fff;font-weight:600;font-size:.95rem;padding:.85rem 1.25rem;border-radius:999px;box-shadow:0 12px 30px -6px rgba(196,24,26,.55);transition:transform .2s,background .2s}
 .float-call svg{width:20px;height:20px}
-.float-call:hover{background:var(--accent);transform:translateY(-3px)}
+.float-call:hover{background:var(--brand-dark);transform:translateY(-3px)}
 .float-call .lbl{display:none}
 
 /* Responsive */
 @media(min-width:560px){
-  .frames{grid-template-columns:repeat(3,1fr)}
   .float-call .lbl{display:inline}
 }
 @media(min-width:768px){
+  .hero-inner{grid-template-columns:1.05fr .95fr}
   .cards{grid-template-columns:repeat(2,1fr)}
+  .cred-grid{grid-template-columns:repeat(2,1fr)}
   .test-grid{grid-template-columns:repeat(3,1fr)}
-  .hero-stats{grid-template-columns:repeat(4,1fr)}
   .why-grid{grid-template-columns:1.15fr .85fr}
+  .cross-grid{grid-template-columns:.9fr 1.1fr}
   .cta-grid{grid-template-columns:1.05fr .95fr}
   .footer-grid{grid-template-columns:1.6fr 1fr 1.3fr}
 }
@@ -251,22 +258,24 @@ section{padding:72px 0}
 
 <!-- Concept banner -->
 <div class="concept-banner">
-  Concept preview built by <strong>Searchly Web</strong> for Anlo Financial Solutions. A draft of what your new website could look like.
+  Concept redesign by <strong>Searchly Web</strong> for Anlo Financial Solutions. Your existing site, in your own brand, made clearer and easier to act on.
 </div>
 
 <!-- Header -->
 <header class="header">
   <div class="wrap header-inner">
-    <a href="#top" class="wordmark">Anlo<span class="dot">.</span><small>Financial Solutions</small></a>
+    <a href="#top" class="brand-logo" aria-label="Anlo Financial Solutions home">
+      <img src="assets/logo.png" alt="Anlo Financial Solutions">
+    </a>
     <nav class="nav">
       <a href="#services">Services</a>
-      <a href="#why">Why Anlo</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#crossborder">SA &amp; UK</a>
       <a href="#reviews">Reviews</a>
       <a href="#pricing">Pricing</a>
-      <a href="#contact">Contact</a>
     </nav>
     <div class="header-cta">
-      <a href="tel:0116581324" class="header-phone">
+      <a href="tel:+27116581324" class="header-phone">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         011 658 1324
       </a>
@@ -279,128 +288,181 @@ section{padding:72px 0}
 <main id="top">
 <section class="hero">
   <div class="wrap hero-inner">
-    <span class="eyebrow">Chartered Accountants &amp; Xero Gold Partner</span>
-    <h1>Numbers handled. <em>Decisions</em> sharpened.</h1>
-    <p class="sub">SAICA-accredited chartered accountants in Fourways, Johannesburg, with a UK presence. Cloud-first accounting, tax and advisory that keeps you compliant, informed and one step ahead, on both sides of the world.</p>
-    <div class="hero-ctas">
-      <a href="#contact" class="btn btn-primary">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        Request a callback
-      </a>
-      <a href="tel:0116581324" class="btn btn-ghost">Call 011 658 1324</a>
+    <div>
+      <span class="eyebrow">Chartered Accountants &amp; Xero Gold Partner</span>
+      <h1>Chartered-grade accounting, <em>without</em> the cold-firm feel.</h1>
+      <p class="sub">SAICA-accredited chartered accountants in Fourways, Johannesburg, with a registered UK presence. Cloud-first accounting, tax and advisory that keeps you compliant, informed and one step ahead, on both sides of the world.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Request a callback
+        </a>
+        <a href="tel:+27116581324" class="btn btn-ghost">Call 011 658 1324</a>
+      </div>
+      <div class="hero-reassure"><span class="dot"></span> Speak to a chartered accountant, usually within one business day.</div>
     </div>
-    <div class="hero-stats">
-      <div class="stat"><div class="n"><span>Gold</span></div><div class="l">Xero Gold Partner</div></div>
-      <div class="stat"><div class="n">SAICA</div><div class="l">Accredited chartered accountants</div></div>
-      <div class="stat"><div class="n">5<span>.0</span></div><div class="l">Client review rating</div></div>
-      <div class="stat"><div class="n">R2,400<span>+</span></div><div class="l">Transparent monthly pricing</div></div>
+    <div class="hero-visual">
+      <div class="photo"><img src="assets/hero.png" alt="The Anlo Financial Solutions team"></div>
+      <div class="hero-badge">
+        <img src="assets/xero-gold.png" alt="Xero Gold Partner">
+        <div class="bt">Xero Gold Partner<span>Certified cloud accounting</span></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Trust strip -->
-<section class="trust" style="padding-top:26px;padding-bottom:26px">
+<!-- Trust strip, real credential logos -->
+<section class="trust" style="padding:30px 0">
   <div class="wrap trust-inner">
     <span class="trust-label">Accredited, registered and recognised</span>
-    <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.1L12 17l-5.5 2.3 1-6.1L3 8.9 9 8z"/></svg>SAICA</span>
-    <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.5L7 22l5-3 5 3-1.5-8.5"/></svg>Xero Gold Partner</span>
-    <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>IRBA Registered</span>
-    <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>ICAEW (UK)</span>
+    <img class="saica" src="assets/saica.png" alt="SAICA, the South African Institute of Chartered Accountants">
+    <img src="assets/irba.png" alt="IRBA, Independent Regulatory Board for Auditors">
+    <img src="assets/icaew.png" alt="ICAEW Chartered Accountants, United Kingdom">
+    <img class="xero" src="assets/xero-gold.png" alt="Xero Gold Partner">
   </div>
 </section>
 
-<!-- Services -->
+<!-- Credentials feature band (fixes underused credentials) -->
+<section class="creds" id="credentials">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow" style="color:#fff">Why this matters</span>
+      <h2>Credentials most firms only wish they had</h2>
+      <p>These are not badges in a footer. They are the assurance that your numbers are handled by a properly regulated, top-tier chartered firm, in South Africa and the UK.</p>
+    </div>
+    <div class="cred-grid">
+      <div class="cred">
+        <div class="badge"><img src="assets/saica.png" alt="SAICA"></div>
+        <div><h4>SAICA accredited</h4><p>Work overseen by chartered professionals held to the highest South African accounting standards.</p></div>
+      </div>
+      <div class="cred">
+        <div class="badge"><img src="assets/irba.png" alt="IRBA"></div>
+        <div><h4>IRBA registered</h4><p>Registered with the Independent Regulatory Board for Auditors, the mark of a properly regulated practice.</p></div>
+      </div>
+      <div class="cred">
+        <div class="badge"><img src="assets/xero-gold.png" alt="Xero Gold Partner"></div>
+        <div><h4>Xero Gold Partner</h4><p>Top-tier Xero certification for cloud set-up, migration and training, not just a logo on the website.</p></div>
+      </div>
+      <div class="cred">
+        <div class="badge"><img src="assets/icaew.png" alt="ICAEW"></div>
+        <div><h4>ICAEW registered (UK)</h4><p>A genuine cross-border practice, registered chartered accountants in the United Kingdom too.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services, grouped to fix the cluttered list -->
 <section class="services" id="services">
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">What we do</span>
       <h2>One firm for the full financial picture</h2>
-      <p>From everyday bookkeeping to cross-border advisory, Anlo gives you accurate numbers, clean compliance and clear next steps, all run on modern cloud tools.</p>
+      <p>Find what you need at a glance. We have grouped our services so you can see exactly where you fit, then reach a chartered accountant in one tap.</p>
     </div>
-    <div class="cards">
 
-      <article class="card">
-        <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
-        <h3>Accounting &amp; Bookkeeping</h3>
-        <p>Tidy, reconciled books and management accounts you can trust, kept current so you always know where the business stands.</p>
-        <span class="more">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </article>
+    <div class="svc-group">
+      <div class="gt"><span class="tag">01</span><h3>Day to day finance</h3><div class="bar"></div></div>
+      <div class="cards">
+        <article class="card">
+          <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
+          <h4>Accounting &amp; Bookkeeping</h4>
+          <p>Tidy, reconciled books and management accounts you can trust, kept current so you always know where the business stands.</p>
+          <a href="#contact" class="more">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+        <article class="card">
+          <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+          <h4>Tax Advice &amp; SARS Compliance</h4>
+          <p>Returns filed correctly and on time, plus proactive planning so you pay what is due and not a rand more. SARS handled, stress removed.</p>
+          <a href="#contact" class="more">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+        <article class="card">
+          <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></div>
+          <h4>Secretarial &amp; Statutory</h4>
+          <p>Statutory records, annual returns and company filings kept compliant and up to date, so governance never catches you out.</p>
+          <a href="#contact" class="more">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+      </div>
+    </div>
 
-      <article class="card">
-        <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
-        <h3>Tax Advice &amp; SARS Compliance</h3>
-        <p>Returns filed correctly and on time, plus proactive planning so you pay what is due and not a rand more. SARS handled, stress removed.</p>
-        <span class="more">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </article>
-
-      <article class="card">
-        <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10a6 6 0 1 0-12 0c0 2 1 3 1 5h10c0-2 1-3 1-5z"/><path d="M9 20h6M10 23h4"/></svg></div>
-        <h3>Xero Cloud Accounting &amp; Training</h3>
-        <p>Set-up, migration and hands-on training from a certified Xero Gold Partner. Real-time numbers, anywhere, with the team confident to use them.</p>
-        <span class="more">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </article>
-
-      <article class="card">
-        <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
-        <h3>Business Advisory</h3>
-        <p>Cash flow, budgeting, forecasting and growth strategy. We read the numbers with you and translate them into decisions that move the business.</p>
-        <span class="more">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </article>
-
-      <article class="card">
-        <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></div>
-        <h3>Secretarial &amp; Statutory Services</h3>
-        <p>Statutory records, annual returns and company filings kept compliant and up to date, so the governance side never catches you out.</p>
-        <span class="more">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </article>
-
-      <article class="card">
-        <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4 8 4v14"/><path d="M9 9h.01M9 13h.01M9 17h.01M13 9h.01M13 13h.01M13 17h.01"/></svg></div>
-        <h3>CIPC Company Registration</h3>
-        <p>New company set-up done properly: registration, structure and the right foundations from day one, so you start trading on solid ground.</p>
-        <span class="more">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </article>
-
+    <div class="svc-group">
+      <div class="gt"><span class="tag">02</span><h3>Cloud &amp; Xero</h3><div class="bar"></div></div>
+      <div class="cards">
+        <article class="card">
+          <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10a6 6 0 1 0-12 0c0 2 1 3 1 5h10c0-2 1-3 1-5z"/><path d="M9 20h6M10 23h4"/></svg></div>
+          <h4>Xero Cloud Accounting &amp; Training</h4>
+          <p>Set-up, migration and hands-on training from a certified Xero Gold Partner. Real-time numbers, anywhere, with your team confident to use them.</p>
+          <a href="#contact" class="more">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+        <article class="card">
+          <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+          <h4>Business Advisory</h4>
+          <p>Cash flow, budgeting, forecasting and growth strategy. We read the numbers with you and turn them into decisions that move the business.</p>
+          <a href="#contact" class="more">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+        <article class="card">
+          <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4 8 4v14"/><path d="M9 9h.01M9 13h.01M9 17h.01M13 9h.01M13 13h.01M13 17h.01"/></svg></div>
+          <h4>CIPC Company Registration</h4>
+          <p>New company set-up done properly: registration, structure and the right foundations from day one, so you start trading on solid ground.</p>
+          <a href="#contact" class="more">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Why us -->
+<!-- Why us + pricing -->
 <section class="why" id="why">
   <div class="wrap why-grid">
     <div>
       <span class="eyebrow">Why Anlo</span>
-      <h2 class="section-head" style="font-size:clamp(1.9rem,4.5vw,2.7rem);margin-top:.9rem">Credentials most firms only wish they had</h2>
-      <p style="color:var(--muted);margin-top:1rem;font-size:1.05rem;max-width:52ch">Anlo pairs serious professional accreditation with modern, tech-led delivery. You get the assurance of a registered chartered firm and the speed of a cloud-native team.</p>
+      <h2 style="font-size:clamp(1.9rem,4.5vw,2.7rem);margin-top:.9rem">Big-firm assurance, small-firm care</h2>
+      <p style="color:var(--body-c);margin-top:1rem;font-size:1.05rem;max-width:52ch">Anlo pairs serious professional accreditation with modern, tech-led delivery. You get the assurance of a registered chartered firm and the speed of a cloud-native team that actually replies.</p>
       <div class="why-list">
-        <div class="why-item"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>SAICA-accredited and IRBA registered</h4><p>Work overseen by chartered professionals held to the highest South African standards.</p></div></div>
-        <div class="why-item"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Xero Gold Partner</h4><p>Top-tier certification for cloud accounting, set-up and training, not just a logo on the website.</p></div></div>
-        <div class="why-item"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>ICAEW registered in the UK</h4><p>A genuine cross-border presence between Johannesburg and Edinburgh for SA and UK interests.</p></div></div>
-        <div class="why-item"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Prompt, accurate, plain-English guidance</h4><p>Clients consistently rate us five stars for responsiveness and advice they can actually act on.</p></div></div>
+        <div class="why-item"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Chartered, regulated, accountable</h4><p>SAICA accredited and IRBA registered. Your work is overseen by chartered professionals, not handed off.</p></div></div>
+        <div class="why-item"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Cloud-first, with Xero Gold expertise</h4><p>Top-tier Xero certification means your numbers are live, accurate and visible the moment you need them.</p></div></div>
+        <div class="why-item"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>South Africa and the UK, one team</h4><p>Registered with ICAEW in the UK, so cross-border interests are handled under one roof, not bounced between firms.</p></div></div>
+        <div class="why-item"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Prompt, plain-English advice</h4><p>Clients rate us five stars for responsiveness and guidance they can actually act on. No jargon, no chasing.</p></div></div>
       </div>
     </div>
     <aside class="why-card" id="pricing">
       <div class="pricetag">Transparent pricing</div>
-      <div class="price">R2,400<span> / month</span></div>
-      <p>Clear, fixed monthly packages from R2,400, with no surprise invoices. You know what you pay and exactly what you get.</p>
+      <div class="price">From R2,400<span> / month</span></div>
+      <p>Clear, fixed monthly packages with no surprise invoices. You know what you pay and exactly what you get, every month.</p>
       <a href="#contact" class="btn btn-light">Get your tailored quote</a>
       <div class="crossborder">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg>
-        <span>Offices in Fourways, Johannesburg and a UK presence in Edinburgh.</span>
+        <span>Offices in Fourways, Johannesburg and a registered presence in Edinburgh, UK.</span>
       </div>
     </aside>
   </div>
 </section>
 
-<!-- Mid-page CTA band (extra) -->
-<section style="background:var(--ink);color:#fff;padding:46px 0">
-  <div class="wrap" style="display:flex;flex-wrap:wrap;gap:1.4rem;align-items:center;justify-content:space-between">
+<!-- Cross-border feature (fixes underused UK presence + fragmented brand) -->
+<section class="crossband" id="crossborder">
+  <div class="wrap cross-grid">
+    <div class="cross-visual"><img src="assets/team.png" alt="Anlo serves clients across South Africa and the United Kingdom"></div>
     <div>
-      <h2 style="color:#fff;font-size:clamp(1.5rem,4vw,2rem)">Ready to hand the numbers to a firm that gets it?</h2>
-      <p style="color:#cdc8c5;margin-top:.5rem;max-width:50ch">A quick call is all it takes to see if Anlo is the right fit.</p>
+      <span class="eyebrow">South Africa &amp; the United Kingdom</span>
+      <h2 style="font-size:clamp(1.9rem,4.5vw,2.6rem);margin-top:.9rem">Both sides of the world, one accountant</h2>
+      <p style="color:var(--body-c);margin-top:1rem;font-size:1.05rem;max-width:54ch">Emigrating, investing offshore, or running a business across borders? Anlo is registered in both South Africa and the UK, so your tax and compliance stay joined up instead of falling through the gap between two firms.</p>
+      <div class="cross-points">
+        <div class="cp"><span class="pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><b>Fourways, Johannesburg</b><span>Your local SAICA-accredited chartered accountants.</span></div></div>
+        <div class="cp"><span class="pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><b>Edinburgh, United Kingdom</b><span>ICAEW-registered, for your UK tax and company affairs.</span></div></div>
+        <div class="cp"><span class="pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/><circle cx="12" cy="12" r="10"/></svg></span><div><b>One coordinated team</b><span>SA and UK obligations handled together, with no double handovers.</span></div></div>
+      </div>
     </div>
-    <div style="display:flex;flex-wrap:wrap;gap:.8rem">
-      <a href="tel:0116581324" class="btn btn-light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>011 658 1324</a>
+  </div>
+</section>
+
+<!-- Mid CTA -->
+<section class="midcta">
+  <div class="wrap">
+    <div>
+      <h2>Ready to hand the numbers to a firm that gets it?</h2>
+      <p>A quick call is all it takes to see if Anlo is the right fit. No obligation, no jargon.</p>
+    </div>
+    <div class="acts">
+      <a href="tel:+27116581324" class="btn btn-light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>011 658 1324</a>
       <a href="#contact" class="btn btn-outline-light">Request a callback</a>
     </div>
   </div>
@@ -409,8 +471,8 @@ section{padding:72px 0}
 <!-- Testimonials -->
 <section class="tests" id="reviews">
   <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Client reviews</span>
+    <div class="section-head center">
+      <span class="eyebrow" style="justify-content:center">Client reviews</span>
       <h2>Rated five stars for prompt, accurate advice</h2>
       <p>Clients tell us the same thing: Anlo replies fast, gets the detail right, and explains it in language they understand.</p>
     </div>
@@ -453,25 +515,7 @@ section{padding:72px 0}
   </div>
 </section>
 
-<!-- Gallery -->
-<section class="gallery">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Meet the team</span>
-      <h2>Put real faces to the firm</h2>
-      <p>Photos of your team, the Waterford Office Park office and the Edinburgh presence build instant trust. We will drop your images straight into these frames.</p>
-    </div>
-    <div class="frames">
-      <div class="frame tall"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg><span>Your photos here</span></div>
-      <div class="frame"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg><span>Your photos here</span></div>
-      <div class="frame"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg><span>Your photos here</span></div>
-      <div class="frame"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg><span>Your photos here</span></div>
-      <div class="frame"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg><span>Your photos here</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- Big CTA band with form -->
+<!-- CTA band with form -->
 <section class="cta-band" id="contact">
   <div class="wrap cta-grid">
     <div class="cta-copy">
@@ -479,7 +523,7 @@ section{padding:72px 0}
       <h2>Request a callback from a chartered accountant</h2>
       <p>Tell us a little about your business and we will call you back to talk through how Anlo can help. No obligation, no jargon, just a straight conversation.</p>
       <div class="cta-direct">
-        <a href="tel:0116581324"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>011 658 1324</a>
+        <a href="tel:+27116581324"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>011 658 1324</a>
         <a href="mailto:ContactUs@Anlofin.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>ContactUs@Anlofin.com</a>
       </div>
     </div>
@@ -497,6 +541,7 @@ section{padding:72px 0}
           <option>Business advisory</option>
           <option>Secretarial &amp; statutory</option>
           <option>CIPC company registration</option>
+          <option>SA &amp; UK cross-border</option>
           <option>Something else</option>
         </select>
       </div>
@@ -512,7 +557,7 @@ section{padding:72px 0}
 <footer class="footer" id="footer">
   <div class="wrap footer-grid">
     <div>
-      <a href="#top" class="wordmark">Anlo<span class="dot">.</span><small>Financial Solutions</small></a>
+      <img class="footer-logo" src="assets/logo.png" alt="Anlo Financial Solutions">
       <p class="footer-about">SAICA-accredited chartered accountants and Xero Gold Partner. Cloud-first accounting, tax and advisory across Johannesburg and the UK.</p>
     </div>
     <div>
@@ -528,7 +573,7 @@ section{padding:72px 0}
     </div>
     <div>
       <h5>Contact</h5>
-      <div class="contact-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:0116581324">011 658 1324</a></div>
+      <div class="contact-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+27116581324">011 658 1324</a></div>
       <div class="contact-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg><a href="mailto:ContactUs@Anlofin.com">ContactUs@Anlofin.com</a></div>
       <div class="contact-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Waterford Office Park, Fourways, Johannesburg</span></div>
       <div class="contact-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg><span>UK presence, Edinburgh</span></div>
@@ -536,12 +581,12 @@ section{padding:72px 0}
   </div>
   <div class="wrap footer-bottom">
     <span>&copy; 2026 Anlo Financial Solutions. All rights reserved.</span>
-    <span class="built">Concept preview built by Searchly Web.</span>
+    <span>Concept redesign by Searchly Web.</span>
   </div>
 </footer>
 
 <!-- Floating call -->
-<a href="tel:0116581324" class="float-call" aria-label="Call Anlo Financial Solutions">
+<a href="tel:+27116581324" class="float-call" aria-label="Call Anlo Financial Solutions">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
   <span class="lbl">Call us</span>
 </a>

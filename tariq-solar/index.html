@@ -10,27 +10,30 @@
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --brand:#1f3343;
+    /* Real Tariq Solar brand, sampled from the live site */
+    --brand:#253745;       /* their dark slate-teal */
     --brand-deep:#16252f;
-    --accent:#57b33e;
+    --brand-2:#2f4a5c;
+    --accent:#57b33e;      /* their green */
     --accent-dark:#469130;
+    --cyan:#1bb0ce;        /* their secondary cyan */
     --sun:#f5a623;
     --wa:#25D366;
     --wa-dark:#1da851;
     --white:#ffffff;
-    --grey-50:#f7f9fa;
+    --grey-50:#f6f9fa;
     --grey-100:#eef2f4;
     --grey-200:#dde4e8;
     --grey-400:#9aa9b2;
-    --grey-600:#566773;
+    --grey-600:#52636e;
     --ink:#16252f;
     --shadow-sm:0 1px 3px rgba(22,37,47,.08), 0 1px 2px rgba(22,37,47,.06);
     --shadow-md:0 8px 24px rgba(22,37,47,.10);
-    --shadow-lg:0 20px 48px rgba(22,37,47,.16);
+    --shadow-lg:0 20px 48px rgba(22,37,47,.18);
     --radius:14px;
     --radius-sm:10px;
     --maxw:1140px;
-    --space:clamp(64px, 9vw, 112px);
+    --space:clamp(64px, 9vw, 110px);
   }
 
   *{box-sizing:border-box;margin:0;padding:0}
@@ -69,13 +72,13 @@
     white-space:nowrap;line-height:1;
   }
   .btn svg{width:18px;height:18px;flex:none}
-  .btn-wa{background:var(--wa);color:#fff;box-shadow:0 6px 18px rgba(37,211,102,.32)}
-  .btn-wa:hover{background:var(--wa-dark);transform:translateY(-2px);box-shadow:0 10px 24px rgba(37,211,102,.4)}
+  .btn-wa{background:var(--wa);color:#fff;box-shadow:0 6px 18px rgba(37,211,102,.34)}
+  .btn-wa:hover{background:var(--wa-dark);transform:translateY(-2px);box-shadow:0 10px 24px rgba(37,211,102,.42)}
   .btn-accent{background:var(--accent);color:#fff;box-shadow:0 6px 18px rgba(87,179,62,.3)}
   .btn-accent:hover{background:var(--accent-dark);transform:translateY(-2px)}
   .btn-ghost{background:transparent;color:var(--brand);border:1.5px solid var(--grey-200)}
   .btn-ghost:hover{border-color:var(--brand);background:var(--grey-50)}
-  .btn-light{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.28)}
+  .btn-light{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.3)}
   .btn-light:hover{background:rgba(255,255,255,.2)}
   .btn-sun{background:var(--sun);color:#3a2a00}
   .btn-sun:hover{background:#e8990f;transform:translateY(-2px)}
@@ -83,13 +86,13 @@
   /* Header */
   header.site{
     position:sticky;top:0;z-index:60;
-    background:rgba(255,255,255,.9);
+    background:rgba(255,255,255,.92);
     backdrop-filter:saturate(180%) blur(12px);
     border-bottom:1px solid var(--grey-100);
   }
-  .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
-  .brandmark{display:flex;align-items:center;gap:10px;font-family:'Sora',sans-serif;font-weight:800;font-size:21px;color:var(--brand);letter-spacing:-.02em}
-  .brandmark .sun-mark{width:30px;height:30px;flex:none}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brandmark{display:flex;align-items:center;gap:11px;font-family:'Sora',sans-serif;font-weight:800;font-size:21px;color:var(--brand);letter-spacing:-.01em}
+  .brandmark .sun-mark{width:32px;height:32px;flex:none}
   .brandmark span{color:var(--accent)}
   nav.links{display:none;gap:30px;align-items:center}
   nav.links a{font-size:15px;font-weight:500;color:var(--grey-600);transition:color .15s}
@@ -98,40 +101,47 @@
   .nav-cta .btn{padding:11px 18px;font-size:14px}
   .nav-call{display:none}
 
-  /* Hero */
+  /* Hero (real solar-panel photograph behind brand-colour overlay) */
   .hero{
-    position:relative;
+    position:relative;color:#fff;overflow:hidden;
+    padding-top:clamp(56px,8vw,84px);padding-bottom:0;
+    background:var(--brand-deep);
+  }
+  .hero-bg{position:absolute;inset:0;z-index:0}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 35%}
+  .hero-bg::after{
+    content:"";position:absolute;inset:0;
     background:
-      radial-gradient(1100px 520px at 78% -10%, rgba(245,166,35,.16), transparent 60%),
-      radial-gradient(900px 600px at 8% 110%, rgba(87,179,62,.14), transparent 55%),
-      linear-gradient(160deg,var(--brand) 0%, var(--brand-deep) 100%);
-    color:#fff;overflow:hidden;padding-top:clamp(56px,8vw,88px);padding-bottom:0;
+      radial-gradient(1000px 520px at 82% -8%, rgba(245,166,35,.22), transparent 58%),
+      linear-gradient(105deg, rgba(22,37,47,.96) 0%, rgba(37,55,69,.9) 46%, rgba(37,55,69,.55) 100%);
   }
   .hero .wrap{position:relative;z-index:2}
+  .hero-inner{max-width:660px}
   .eyebrow{
     display:inline-flex;align-items:center;gap:8px;
-    background:rgba(87,179,62,.18);color:#bfe6ac;border:1px solid rgba(87,179,62,.35);
+    background:rgba(87,179,62,.2);color:#bfe6ac;border:1px solid rgba(87,179,62,.4);
     padding:7px 14px;border-radius:100px;font-size:13px;font-weight:600;letter-spacing:.02em;
     margin-bottom:22px;
   }
-  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(87,179,62,.25)}
-  .hero h1{color:#fff;font-size:clamp(34px,6vw,58px);font-weight:800;max-width:13ch}
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(87,179,62,.28)}
+  .hero h1{color:#fff;font-size:clamp(34px,6vw,57px);font-weight:800;max-width:14ch}
   .hero h1 em{font-style:normal;color:var(--sun)}
-  .hero p.lead{margin-top:20px;font-size:clamp(17px,2.2vw,20px);color:#c5d2da;max-width:46ch}
+  .hero p.lead{margin-top:20px;font-size:clamp(17px,2.2vw,20px);color:#d4dee4;max-width:48ch}
   .hero-ctas{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px}
-  .hero-note{margin-top:16px;font-size:13.5px;color:#9fb1bc;display:flex;align-items:center;gap:7px}
+  .hero-note{margin-top:16px;font-size:13.5px;color:#a9bac4;display:flex;align-items:center;gap:7px}
   .hero-note svg{width:15px;height:15px;color:var(--accent)}
 
   .stat-row{
     display:grid;grid-template-columns:repeat(2,1fr);gap:1px;
-    margin-top:48px;background:rgba(255,255,255,.1);
-    border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);overflow:hidden;
+    margin-top:46px;background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);overflow:hidden;
+    backdrop-filter:blur(2px);
   }
-  .stat{background:rgba(22,37,47,.35);padding:22px 18px}
+  .stat{background:rgba(22,37,47,.5);padding:22px 18px}
   .stat .num{font-family:'Sora',sans-serif;font-weight:800;font-size:clamp(20px,3.4vw,26px);color:#fff;letter-spacing:-.02em}
-  .stat .num.green{color:var(--accent)}
-  .stat .lbl{font-size:12.5px;color:#a8b8c2;margin-top:5px;line-height:1.35}
-  .hero-art{height:34px;margin-top:54px;background:linear-gradient(to top,rgba(22,37,47,.6),transparent);position:relative}
+  .stat .num.green{color:#7fce63}
+  .stat .lbl{font-size:12.5px;color:#aebec8;margin-top:5px;line-height:1.35}
+  .hero-art{height:30px;margin-top:50px;background:linear-gradient(to top,rgba(22,37,47,.7),transparent);position:relative}
 
   /* Trust strip */
   .trust{background:var(--grey-50);border-bottom:1px solid var(--grey-100);padding:26px 0}
@@ -141,7 +151,7 @@
   .trust-item svg{width:20px;height:20px;color:var(--accent);flex:none}
 
   /* Section heading */
-  .sec-head{max-width:600px;margin-bottom:46px}
+  .sec-head{max-width:620px;margin-bottom:46px}
   .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
   .kicker{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
   .sec-head h2{font-size:clamp(27px,4.2vw,40px);font-weight:700}
@@ -157,7 +167,7 @@
   .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--grey-200)}
   .card .ico{
     width:52px;height:52px;border-radius:13px;display:flex;align-items:center;justify-content:center;
-    background:linear-gradient(145deg,rgba(87,179,62,.14),rgba(245,166,35,.1));
+    background:linear-gradient(145deg,rgba(87,179,62,.16),rgba(27,176,206,.12));
     margin-bottom:18px;
   }
   .card .ico svg{width:26px;height:26px;color:var(--accent)}
@@ -166,17 +176,17 @@
 
   /* Why us band */
   .why{background:var(--brand);color:#fff;position:relative;overflow:hidden}
-  .why::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 380px at 90% 10%,rgba(245,166,35,.12),transparent 60%);pointer-events:none}
+  .why::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 380px at 90% 10%,rgba(245,166,35,.14),transparent 60%);pointer-events:none}
   .why .wrap{position:relative;z-index:2}
   .why .sec-head h2{color:#fff}
   .why .kicker{color:var(--sun)}
   .why-grid{display:grid;grid-template-columns:1fr;gap:36px;align-items:center}
   .why-list{display:grid;gap:18px;margin-top:8px}
   .why-list li{list-style:none;display:flex;gap:14px;align-items:flex-start}
-  .why-list .tick{width:26px;height:26px;border-radius:8px;background:rgba(87,179,62,.2);display:flex;align-items:center;justify-content:center;flex:none;margin-top:2px}
-  .why-list .tick svg{width:15px;height:15px;color:var(--accent)}
+  .why-list .tick{width:26px;height:26px;border-radius:8px;background:rgba(87,179,62,.22);display:flex;align-items:center;justify-content:center;flex:none;margin-top:2px}
+  .why-list .tick svg{width:15px;height:15px;color:#7fce63}
   .why-list h4{color:#fff;font-size:16.5px;font-weight:600;margin-bottom:3px}
-  .why-list p{color:#b4c2cb;font-size:14.5px}
+  .why-list p{color:#bcccd4;font-size:14.5px}
   .saving-card{
     background:linear-gradient(155deg,#fff,#f4f8f2);color:var(--ink);
     border-radius:18px;padding:32px 28px;box-shadow:var(--shadow-lg);
@@ -196,7 +206,7 @@
   }
   .midband .wrap{display:flex;flex-direction:column;align-items:center;gap:18px}
   .midband h2{color:#fff;font-size:clamp(24px,3.6vw,34px);max-width:18ch}
-  .midband p{color:rgba(255,255,255,.9);max-width:42ch}
+  .midband p{color:rgba(255,255,255,.92);max-width:42ch}
   .midband .grp{display:flex;flex-wrap:wrap;gap:13px;justify-content:center}
 
   /* Testimonials */
@@ -213,29 +223,32 @@
   .quote .who .nm{font-family:'Sora',sans-serif;font-weight:600;font-size:15px;color:var(--brand)}
   .quote .who .mt{font-size:13px;color:var(--grey-400)}
 
-  /* Gallery */
+  /* Gallery (real photography) */
   .gallery{background:var(--grey-50)}
   .gal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-  .frame{
-    aspect-ratio:4/3;border-radius:var(--radius-sm);
-    background:repeating-linear-gradient(45deg,#fff,#fff 14px,var(--grey-50) 14px,var(--grey-50) 28px);
-    border:1.5px dashed var(--grey-200);
-    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--grey-400);
+  .gal-grid figure{
+    margin:0;border-radius:var(--radius-sm);overflow:hidden;position:relative;
+    box-shadow:var(--shadow-sm);background:var(--grey-200);aspect-ratio:4/3;
   }
-  .frame svg{width:28px;height:28px}
-  .frame span{font-size:13px;font-weight:600;font-family:'Sora',sans-serif}
-  .frame.tall{grid-row:span 2;aspect-ratio:auto}
+  .gal-grid figure img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+  .gal-grid figure:hover img{transform:scale(1.05)}
+  .gal-grid figure.tall{grid-row:span 2;aspect-ratio:auto}
+  .gal-grid figcaption{
+    position:absolute;left:0;right:0;bottom:0;padding:12px 14px;
+    background:linear-gradient(to top,rgba(22,37,47,.78),transparent);
+    color:#fff;font-family:'Sora',sans-serif;font-weight:600;font-size:13.5px;
+  }
 
   /* Quote band w/ form */
   .quoteband{background:var(--brand-deep);color:#fff}
   .qb-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:start}
   .quoteband h2{color:#fff;font-size:clamp(27px,4.4vw,42px)}
   .quoteband .kicker{color:var(--sun)}
-  .qb-left p{color:#bcc9d1;font-size:17px;margin-top:14px;max-width:42ch}
+  .qb-left p{color:#c0cdd4;font-size:17px;margin-top:14px;max-width:42ch}
   .qb-points{margin-top:26px;display:grid;gap:14px}
   .qb-points li{list-style:none;display:flex;align-items:center;gap:12px;color:#dbe4e9;font-size:15px}
-  .qb-points svg{width:20px;height:20px;color:var(--accent);flex:none}
-  .qb-or{margin-top:30px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-wrap:wrap;gap:12px}
+  .qb-points svg{width:20px;height:20px;color:#7fce63;flex:none}
+  .qb-or{margin-top:30px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14);display:flex;flex-wrap:wrap;gap:12px}
   .form-card{background:#fff;color:var(--ink);border-radius:18px;padding:30px 26px;box-shadow:var(--shadow-lg)}
   .form-card h3{font-size:21px;font-weight:700;margin-bottom:6px}
   .form-card .sub{color:var(--grey-600);font-size:14.5px;margin-bottom:22px}
@@ -255,16 +268,16 @@
   .foot-grid{display:grid;grid-template-columns:1fr;gap:36px}
   footer .brandmark{color:#fff;margin-bottom:14px}
   footer .brandmark span{color:var(--accent)}
-  .foot-about{font-size:14.5px;color:#a8b8c2;max-width:34ch}
+  .foot-about{font-size:14.5px;color:#aebec8;max-width:34ch}
   .foot-col h4{color:#fff;font-size:14px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:16px}
-  .foot-col a, .foot-col p{display:block;color:#b4c2cb;font-size:14.5px;margin-bottom:11px;transition:color .15s}
+  .foot-col a, .foot-col p{display:block;color:#bcccd4;font-size:14.5px;margin-bottom:11px;transition:color .15s}
   .foot-col a:hover{color:var(--accent)}
   .foot-contact a, .foot-contact p{display:flex;gap:10px;align-items:flex-start}
   .foot-contact svg{width:17px;height:17px;color:var(--accent);flex:none;margin-top:3px}
   .foot-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-  .foot-badges span{font-size:11.5px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:5px 11px;border-radius:100px;color:#cdd9e0;font-weight:500}
-  .foot-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:46px;padding-top:24px;display:flex;flex-direction:column;gap:10px;font-size:13px;color:#8ea1ab}
-  .foot-bottom .made{color:#7d909b}
+  .foot-badges span{font-size:11.5px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);padding:5px 11px;border-radius:100px;color:#cdd9e0;font-weight:500}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:46px;padding-top:24px;display:flex;flex-direction:column;gap:10px;font-size:13px;color:#90a3ad}
+  .foot-bottom .made{color:#7f929d}
 
   /* Floating WhatsApp */
   .fab{
@@ -303,7 +316,7 @@
 
 <!-- Concept banner -->
 <div class="concept-banner">
-  Concept preview built by <strong>Searchly Web</strong> for Tariq Solar Installations. A draft of what your new website could look like.
+  Concept redesign by <strong>Searchly Web</strong> for Tariq Solar Installations. Your existing site, in your real brand colours, made clearer and easier to act on.
 </div>
 
 <!-- Header -->
@@ -339,38 +352,44 @@
 
 <!-- Hero -->
 <section class="hero" id="top">
+  <div class="hero-bg">
+    <img src="assets/hero-panels.jpg" alt="Solar panels installed against a clear Cape Town sky" loading="eager">
+  </div>
   <div class="wrap">
-    <span class="eyebrow"><span class="dot"></span> Northern Suburbs, Cape Town</span>
-    <h1>Cut your Eskom bill and <em>beat load-shedding</em> for good.</h1>
-    <p class="lead">Tariq Solar designs, supplies and installs solar, inverter and battery backup systems that keep the power on and pay for themselves. Certified, honest, local.</p>
-    <div class="hero-ctas">
-      <a href="https://wa.me/27792897355?text=Hi%20Tariq%20Solar%2C%20I'd%20like%20a%20free%20solar%20quote.%20My%20area%20is%20the%20Northern%20Suburbs%20and%20I'd%20like%20to%20cut%20my%20Eskom%20bill%20and%20add%20backup%20power." class="btn btn-wa" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35Z"/><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.86 9.86 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91A9.86 9.86 0 0 0 12.04 2Zm0 18.13a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.16 8.16 0 0 1-1.25-4.36c0-4.54 3.7-8.23 8.24-8.23a8.2 8.2 0 0 1 8.23 8.24c0 4.54-3.7 8.23-8.25 8.23Z"/></svg>
-        WhatsApp for a free quote
-      </a>
-      <a href="#quote" class="btn btn-light">Get a free quote</a>
-    </div>
-    <p class="hero-note">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-      No-obligation site assessment. Honest advice, no pushy sales.
-    </p>
+    <div class="hero-inner">
+      <span class="eyebrow"><span class="dot"></span> Northern Suburbs, Cape Town</span>
+      <h1>Cut your Eskom bill and <em>beat load-shedding</em> for good.</h1>
+      <p class="lead">Tariq Solar designs, supplies and installs solar, inverter and battery backup systems that keep the power on and pay for themselves. Certified, honest, local.</p>
+      <div class="hero-ctas">
+        <a href="https://wa.me/27792897355?text=Hi%20Tariq%20Solar%2C%20I'd%20like%20a%20free%20solar%20quote.%20My%20area%20is%20the%20Northern%20Suburbs%20and%20I'd%20like%20to%20cut%20my%20Eskom%20bill%20and%20add%20backup%20power." class="btn btn-wa" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35Z"/><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.86 9.86 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91A9.86 9.86 0 0 0 12.04 2Zm0 18.13a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.16 8.16 0 0 1-1.25-4.36c0-4.54 3.7-8.23 8.24-8.23a8.2 8.2 0 0 1 8.23 8.24c0 4.54-3.7 8.23-8.25 8.23Z"/></svg>
+          WhatsApp for a free quote
+        </a>
+        <a href="#quote" class="btn btn-light">Get a free quote</a>
+      </div>
+      <p class="hero-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        No-obligation site assessment. Honest advice, no pushy sales.
+      </p>
 
-    <div class="stat-row">
-      <div class="stat">
-        <div class="num">Since 2016</div>
-        <div class="lbl">Installing solar across Cape Town</div>
-      </div>
-      <div class="stat">
-        <div class="num green">PV GreenCard</div>
-        <div class="lbl">Certified, compliant installations</div>
-      </div>
-      <div class="stat">
-        <div class="num">Sunsynk</div>
-        <div class="lbl">Approved installer</div>
-      </div>
-      <div class="stat">
-        <div class="num green">R31,319</div>
-        <div class="lbl">Saved per year by a real client</div>
+      <!-- Real, working stats replace the broken 0+ counters on the live site -->
+      <div class="stat-row">
+        <div class="stat">
+          <div class="num">Since 2016</div>
+          <div class="lbl">Installing solar across Cape Town</div>
+        </div>
+        <div class="stat">
+          <div class="num green">PV GreenCard</div>
+          <div class="lbl">Certified, compliant installations</div>
+        </div>
+        <div class="stat">
+          <div class="num">Sunsynk</div>
+          <div class="lbl">Approved installer</div>
+        </div>
+        <div class="stat">
+          <div class="num green">R31,319</div>
+          <div class="lbl">Saved per year by a real client</div>
+        </div>
       </div>
     </div>
   </div>
@@ -391,7 +410,7 @@
     </div>
     <div class="trust-item">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-      Sunsynk approved
+      Sunsynk approved installer
     </div>
   </div>
 </div>
@@ -567,35 +586,31 @@
   </div>
 </section>
 
-<!-- Gallery -->
+<!-- Gallery (real photography) -->
 <section class="gallery">
   <div class="wrap">
     <div class="sec-head center">
       <span class="kicker">Our work</span>
-      <h2>Recent installations.</h2>
-      <p>We will drop in real photos of your completed jobs here, neat arrays, tidy inverter boards and happy customers.</p>
+      <h2>Solar done right, across the Northern Suburbs.</h2>
+      <p>Neat arrays, tidy inverter boards and systems sized for real savings. We will swap in photos of your own completed jobs here.</p>
     </div>
     <div class="gal-grid">
-      <div class="frame tall">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-        <span>Your photos here</span>
-      </div>
-      <div class="frame">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-        <span>Your photos here</span>
-      </div>
-      <div class="frame">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-        <span>Your photos here</span>
-      </div>
-      <div class="frame">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-        <span>Your photos here</span>
-      </div>
-      <div class="frame">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-        <span>Your photos here</span>
-      </div>
+      <figure class="tall">
+        <img src="assets/hero-panels.jpg" alt="Close-up of an installed solar panel array against a clear sky" loading="lazy">
+        <figcaption>Roof-mounted solar array</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/technician.jpg" alt="Tariq Solar technician handling a solar cell on site" loading="lazy">
+        <figcaption>Certified on-site install</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/savings.jpg" alt="Concept of saving money and energy with solar" loading="lazy">
+        <figcaption>Sized around real savings</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/sunsynk-approved.png" alt="Sunsynk approved residential installer" loading="lazy">
+        <figcaption>Sunsynk approved installer</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -716,7 +731,7 @@
 
     <div class="foot-bottom">
       <div>&copy; 2026 Tariq Solar Installations. All rights reserved.</div>
-      <div class="made">Concept preview designed and built by Searchly Web.</div>
+      <div class="made">Concept redesign designed and built by Searchly Web.</div>
     </div>
   </div>
 </footer>
