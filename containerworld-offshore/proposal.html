@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+<meta charset="UTF-8">
+<title>Searchly Web Proposal - Container World Offshore</title>
+<style>
+  @page{size:A4;margin:0}
+  :root{
+    --blue:#2e65fb; --navy:#1e3a6e; --ink:#10172a;
+    --text:#363b45; --muted:#697086; --line:#e5ebf7; --soft:#f4f7ff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Roboto","Helvetica Neue",Arial,sans-serif;color:var(--text);font-size:11px;line-height:1.62;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .page{width:210mm;min-height:297mm;padding:20mm 20mm 24mm;position:relative;page-break-after:always;background:#fff}
+  .page:last-child{page-break-after:auto}
+  h1,h2,h3,h4{color:var(--ink);font-weight:700;line-height:1.18}
+  h1{font-size:30px;letter-spacing:-.5px}
+  h2{font-size:18px;margin-bottom:9px;letter-spacing:-.3px}
+  h3{font-size:13px;margin-bottom:4px}
+  p{margin-bottom:8px}
+  strong{font-weight:700;color:var(--ink)}
+  .muted{color:var(--muted)}
+  .eyebrow{font-size:9.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+
+  .cover{background:linear-gradient(150deg,#10172a 0%,#1e3a6e 60%,#2e65fb 135%);color:#fff;display:flex;flex-direction:column;justify-content:space-between}
+  .cover h1{color:#fff}
+  .lockup{display:flex;align-items:center;gap:11px}
+  .lockup img{height:46px;width:46px;border-radius:50%;display:block}
+  .lockup .wm{font-family:"Roboto","Helvetica Neue",Arial,sans-serif;font-weight:900;font-size:30px;letter-spacing:-1.2px;line-height:1}
+  .cover .lockup .wm .s{color:#ffffff}
+  .cover .lockup .wm .w{color:#6f9bff}
+  .cover-mid h1{font-size:39px;line-height:1.1;margin-bottom:15px}
+  .cover-mid .sub{font-size:14.5px;color:#cfdcff;max-width:80%}
+  .cover .pill{display:inline-block;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.3);padding:7px 15px;border-radius:999px;font-size:10.5px;font-weight:500;margin-top:22px;color:#fff}
+  .cover-foot{display:flex;justify-content:space-between;align-items:flex-end;font-size:10.5px;color:#cfdcff}
+  .cover-foot b{color:#fff}
+
+  .accentbar{height:5px;width:54px;background:var(--blue);border-radius:3px;margin-bottom:16px}
+  .section{margin-bottom:18px}
+  .lead{font-size:12.5px;color:var(--ink);font-weight:500;margin-bottom:12px}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:6px 0 4px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:6px 0 4px}
+  .feat{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:13px 14px}
+  .feat h3{display:flex;align-items:center;gap:7px;margin-bottom:5px}
+  .tick{display:inline-flex;width:17px;height:17px;border-radius:50%;background:var(--blue);color:#fff;align-items:center;justify-content:center;font-size:10px;flex:none}
+  .feat p{font-size:10.3px;color:var(--muted);margin:0}
+
+  ul.clean{list-style:none;margin:6px 0 10px}
+  ul.clean li{position:relative;padding-left:23px;margin-bottom:7px}
+  ul.clean li::before{content:"";position:absolute;left:0;top:5px;width:13px;height:13px;border-radius:50%;background:var(--blue)}
+  ul.clean li::after{content:"";position:absolute;left:4px;top:8px;width:5px;height:3px;border-left:1.6px solid #fff;border-bottom:1.6px solid #fff;transform:rotate(-45deg)}
+
+  .pagelist{display:grid;grid-template-columns:1fr 1fr;gap:9px 18px;margin:8px 0}
+  .pageitem{display:flex;gap:10px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:9px;padding:10px 12px}
+  .pageitem .n{font-weight:700;color:var(--blue);font-size:11px;flex:none;width:18px}
+  .pageitem b{color:var(--ink);font-size:11px;display:block}
+  .pageitem span{color:var(--muted);font-size:9.6px;line-height:1.45}
+
+  .wabox{background:linear-gradient(135deg,#0c1a2b,#13314e);color:#fff;border-radius:14px;padding:18px 20px;margin:10px 0;display:flex;gap:15px;align-items:flex-start}
+  .wabox .wi{width:34px;height:34px;border-radius:9px;background:#2e65fb;flex:none;display:flex;align-items:center;justify-content:center;font-size:18px}
+  .wabox h3{color:#fff;font-size:13px;margin-bottom:3px}
+  .wabox p{color:#cfe0d8;font-size:10.3px;margin:0}
+
+  .price-box{background:var(--ink);color:#fff;border-radius:16px;padding:24px 26px;margin:6px 0 14px;position:relative;overflow:hidden}
+  .price-box::after{content:"";position:absolute;right:-40px;top:-40px;width:160px;height:160px;border-radius:50%;background:rgba(46,101,251,.35)}
+  .price-box .label{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#9db6ff;position:relative}
+  .price-box .amount{font-size:44px;font-weight:700;line-height:1;margin:6px 0 4px;position:relative}
+  .price-box .amount small{font-size:15px;font-weight:500;color:#cfdcff}
+  .price-box .terms{font-size:10.5px;color:#cfdcff;position:relative}
+
+  table.cost{width:100%;border-collapse:collapse;margin:6px 0 4px;font-size:10.5px}
+  table.cost th{text-align:left;background:var(--soft);color:var(--ink);padding:8px 12px;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;border-bottom:2px solid var(--line)}
+  table.cost td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  table.cost td.amt{text-align:right;font-weight:700;color:var(--ink);white-space:nowrap}
+  table.cost tr.total td{background:#eef3ff;font-weight:700;color:var(--ink);border-bottom:none;font-size:12px}
+
+  .pay{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:8px 0}
+  .pay .stage{border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .pay .stage .pct{font-size:30px;font-weight:700;color:var(--blue);line-height:1}
+  .pay .stage b{display:block;color:var(--ink);font-size:12px;margin:4px 0 2px}
+  .pay .stage span{color:var(--muted);font-size:10px}
+
+  .timeline{display:flex;gap:0;margin:10px 0 4px}
+  .tl{flex:1;text-align:center;position:relative;padding-top:23px}
+  .tl::before{content:"";position:absolute;top:7px;left:0;right:0;height:2px;background:var(--line)}
+  .tl:first-child::before{left:50%}
+  .tl:last-child::before{right:50%}
+  .tl .dot{position:absolute;top:0;left:50%;transform:translateX(-50%);width:15px;height:15px;border-radius:50%;background:var(--blue);border:3px solid #fff;box-shadow:0 0 0 2px var(--blue)}
+  .tl b{display:block;font-size:10.5px;color:var(--ink)}
+  .tl span{font-size:9px;color:var(--muted)}
+
+  .note{background:var(--soft);border-left:4px solid var(--blue);border-radius:0 10px 10px 0;padding:12px 15px;font-size:10.3px;margin:9px 0}
+  .note b{color:var(--ink)}
+  .seo-band{background:linear-gradient(135deg,#eef3ff,#f4f7ff);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:8px 0}
+  .seo-band h3{display:flex;align-items:center;gap:8px}
+  .seo-band img{width:26px;height:26px;border-radius:50%}
+
+  .cta{background:linear-gradient(135deg,#2e65fb,#1e3a6e);color:#fff;border-radius:14px;padding:18px 22px;display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+  .cta h3{color:#fff;font-size:14px;margin-bottom:2px}
+  .cta p{color:#dbe6ff;font-size:10px;margin:0}
+  .cta .go{background:#fff;color:var(--blue);font-weight:700;padding:11px 18px;border-radius:999px;font-size:11px;white-space:nowrap}
+
+  .foot{position:absolute;bottom:13mm;left:20mm;right:20mm;display:flex;justify-content:space-between;align-items:center;font-size:8.6px;color:var(--muted);border-top:1px solid var(--line);padding-top:7px}
+  .foot b{color:var(--navy)}
+  .foot img{height:15px;vertical-align:middle;opacity:.9}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<section class="page cover">
+  <div class="lockup"><img src="assets/searchly-mark.webp" alt="Searchly Web"><span class="wm"><span class="s">Searchly</span><span class="w">Web</span></span></div>
+  <div class="cover-mid">
+    <div class="eyebrow" style="color:#9db6ff">Website Proposal &middot; June 2026</div>
+    <h1>A new website for<br>Container World Offshore</h1>
+    <p class="sub">A fast, credible, conversion-built website for your certified offshore and marine container business, designed to turn high-value B2B buyers into qualified quote requests, with a real quote path and SEO baked in.</p>
+    <div class="pill">Prepared for the team at Container World Offshore</div>
+  </div>
+  <div class="cover-foot">
+    <div>
+      <b>Searchly Web</b><br>
+      Fast, high-converting websites for South African businesses
+    </div>
+    <div style="text-align:right">
+      Seth Gorton<br>
+      <b>sethg@searchly.co.za</b> &middot; searchlyweb.co.za
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page">
+  <div class="accentbar"></div>
+  <h2>The opportunity</h2>
+  <p class="lead">You are a substantial, 40-year offshore and marine container business. Your website does not yet say so. That gap is costing you quotes.</p>
+  <p>Container World Offshore supplies DNV 2.7-1 and EN 12079 certified offshore equipment to oil, gas and marine operators across Africa and beyond, backed by an established group operating since 1983, multiple branches, and an extensive certified product range. That is exactly the credibility an international industrial buyer is looking for.</p>
+  <p>But the current site is a thin brochure: products are reduced to one-line teasers with a "Read More", there is no real quote path (only a generic "Contact Us"), and there are no trust signals at all, no certifications shown as badges, no "since 1983", no countries served, no proof. A high-value buyer comparing certified suppliers lands, cannot self-qualify or request a quote on specific units, and leaves. This is a clear, high-leverage B2B conversion gap.</p>
+
+  <div class="section" style="margin-top:14px">
+    <h2>What we are proposing</h2>
+    <p>A complete rebuild that does two jobs at once: it <strong>presents Container World Offshore as the credible, certified, internationally-relevant supplier it actually is</strong>, and it <strong>makes requesting a quote effortless</strong>. Every page is built to lead a serious buyer toward a quote on specific units, with a persistent GET A QUOTE action as the primary route throughout the site.</p>
+  </div>
+
+  <div class="wabox">
+    <div class="wi" style="color:#fff">&#9993;</div>
+    <div>
+      <h3>A real quote path, not a generic contact form</h3>
+      <p>We build a purpose-built quote system: a prominent, persistent GET A QUOTE button in the header and on every product, leading to a quote form with the fields a buyer actually needs (product type, quantity, certification, destination port or country, hire or buy, timeline). "Contact" becomes the secondary action. This is the single biggest lever for more qualified leads, and we are leaning into it hard.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <b>You can see the direction live.</b> The concept mockup (<b style="color:#2e65fb">seth-gorton.github.io/searchly-mockups/containerworld-offshore</b>) shows the look, feel and structure, built around your blue and red brand and real product imagery. It is a concept to react to, not the finished website. Final product detail, copy and certification content are confirmed with you during the build.
+  </div>
+
+  <div class="foot"><span><b>Searchly Web</b> &middot; Website Proposal for Container World Offshore</span><span>Page 2</span></div>
+</section>
+
+<!-- PAGE 3 -->
+<section class="page">
+  <div class="accentbar"></div>
+  <h2>What we will improve</h2>
+  <p class="lead">A goal-first rebuild around GET A QUOTE: real product pages, strong trust, a buyer-led hero, clean localisation, and a faster, lighter site, all in your blue and red brand.</p>
+
+  <div class="pagelist">
+    <div class="pageitem"><span class="n">01</span><div><b>A purpose-built quote system</b><span>A persistent GET A QUOTE action everywhere, leading to a quote form built around what a buyer needs to specify, so enquiries arrive qualified.</span></div></div>
+    <div class="pageitem"><span class="n">02</span><div><b>Real product pages</b><span>Proper detail for each unit: specifications, dimensions, payloads, certification badges and photo galleries, with a "Quote this product" button on each.</span></div></div>
+    <div class="pageitem"><span class="n">03</span><div><b>Strong B2B trust and credentials</b><span>A credibility band: since 1983, DNV 2.7-1 and EN 12079 certified, branches, countries served, plus DNV and Lloyd's Register recognition surfaced as marks.</span></div></div>
+    <div class="pageitem"><span class="n">04</span><div><b>A buyer-led hero</b><span>Led by the buyer's decision criteria: certified, ex-stock in Cape Town, fast lead times, Africa-wide coverage, with the quote CTA right there.</span></div></div>
+    <div class="pageitem"><span class="n">05</span><div><b>Proper multilingual handling</b><span>Clean language switching for English, French and Portuguese, so Francophone and Lusophone buyers get a fully-translated experience, not stacked blocks on one page.</span></div></div>
+    <div class="pageitem"><span class="n">06</span><div><b>A faster, lighter rebuild</b><span>A lean, fast site that keeps your blue and red brand, replacing the heavy theme stack so pages load quickly on the connections that matter in Africa.</span></div></div>
+  </div>
+  <p class="muted" style="font-size:9.6px">Final page structure and product set are confirmed with you during the build. Pages can be added, combined or renamed to fit how Container World Offshore wants to present itself.</p>
+
+  <h3 style="margin-top:10px">Every page is built with the essentials in place</h3>
+  <div class="grid3">
+    <div class="feat"><h3><span class="tick">&#10003;</span> Quote-first</h3><p>A persistent GET A QUOTE action within reach on every page and device.</p></div>
+    <div class="feat"><h3><span class="tick">&#10003;</span> Trust built in</h3><p>Certifications, years in business and coverage shown where buyers decide.</p></div>
+    <div class="feat"><h3><span class="tick">&#10003;</span> Fast loading</h3><p>Lightweight and quick, which helps visitors and search ranking.</p></div>
+    <div class="feat"><h3><span class="tick">&#10003;</span> Credible by design</h3><p>A professional look that matches the seriousness of your equipment.</p></div>
+    <div class="feat"><h3><span class="tick">&#10003;</span> Easy to update</h3><p>Built so you can add products and edit content without a developer.</p></div>
+    <div class="feat"><h3><span class="tick">&#10003;</span> Tracking installed</h3><p>See exactly how many quote requests the site brings in.</p></div>
+  </div>
+
+  <div class="foot"><span><b>Searchly Web</b> &middot; Website Proposal for Container World Offshore</span><span>Page 3</span></div>
+</section>
+
+<!-- PAGE 4 -->
+<section class="page">
+  <div class="accentbar"></div>
+  <h2>What is included</h2>
+  <p class="lead">A complete, custom-designed, multi-page website built around your products and your branding, not an off-the-shelf template.</p>
+
+  <p>The concept shows the style on a single page. The website we deliver is a full set of custom-built pages, each designed with a clear purpose and an obvious path to a quote:</p>
+
+  <div class="pagelist">
+    <div class="pageitem"><span class="n">01</span><div><b>Home</b><span>A buyer-led hero (certified, ex-stock, fast lead times, Africa coverage), a trust band, and an immediate GET A QUOTE action.</span></div></div>
+    <div class="pageitem"><span class="n">02</span><div><b>Products overview</b><span>A clear map of the certified range: reefers, cargo baskets, gas racks, tanks, skips, deck offices, rigging lofts and more, each linking to detail.</span></div></div>
+    <div class="pageitem"><span class="n">03</span><div><b>Product detail pages</b><span>Specifications, dimensions, certification badges and galleries per unit, with a per-product "Quote this product" button (great for SEO and clarity).</span></div></div>
+    <div class="pageitem"><span class="n">04</span><div><b>About / The Company</b><span>Since 1983, the parent group, certifications, and the credibility that wins international B2B work.</span></div></div>
+    <div class="pageitem"><span class="n">05</span><div><b>Coverage</b><span>An honest "we ship across Africa from Cape Town, ex-stock" coverage view with ports and lead times, replacing the broken locations stubs.</span></div></div>
+    <div class="pageitem"><span class="n">06</span><div><b>Get a Quote</b><span>A purpose-built quote form with the right qualifying fields, a clear reply promise, plus phone and WhatsApp click-to-chat.</span></div></div>
+    <div class="pageitem"><span class="n">07</span><div><b>Contact</b><span>A single clear sales route, presented professionally on the offshore domain.</span></div></div>
+    <div class="pageitem"><span class="n">08</span><div><b>Your branding throughout</b><span>Your blue and red brand, logo and typography applied consistently across every page, with one standardised blue.</span></div></div>
+  </div>
+  <p class="muted" style="font-size:9.6px">Final page structure is confirmed with you during the build. Pages can be added, combined or renamed to fit how Container World Offshore wants to present itself.</p>
+
+  <div class="foot"><span><b>Searchly Web</b> &middot; Website Proposal for Container World Offshore</span><span>Page 4</span></div>
+</section>
+
+<!-- PAGE 5 -->
+<section class="page">
+  <div class="accentbar"></div>
+  <h2>How we build it</h2>
+  <p class="lead">Three things set our websites apart: they convert, they put a real quote path first, and they are built to be found.</p>
+
+  <div class="section">
+    <h3>Built to convert (conversion rate optimisation)</h3>
+    <p>"Conversion" means a visitor taking the action you want, in your case, requesting a quote on specific units. We design the site so a much higher share of buyers actually request a quote instead of leaving: a buyer-led message, certifications and trust shown where decisions are made, friction removed, and an obvious next step on every page. After launch we keep watching the numbers and tuning to lift that share further.</p>
+  </div>
+
+  <div class="section">
+    <h3>GET A QUOTE as the primary action</h3>
+    <p>For an industrial buyer comparing certified suppliers, the desired action is a quote on specific products and quantities, not a chat. We make GET A QUOTE impossible to miss: a persistent header button and a per-product quote button that pre-fills the form, so a serious buyer can request a quote in seconds. We keep phone and WhatsApp as supporting routes, but the quote system is the hero, not WhatsApp.</p>
+  </div>
+
+  <div class="seo-band">
+    <h3><img src="assets/searchly-mark.webp" alt="Searchly"> Built to be found: SEO fundamentals baked in</h3>
+    <p style="margin-top:6px">Searchly Web is the website arm of <strong>Searchly</strong>, a Google Ads and SEO focused agency. Search is what we do, so your website is built on solid SEO fundamentals from the very first line of code:</p>
+    <ul class="clean" style="margin-bottom:2px">
+      <li>Clean, fast, semantically structured code search engines can read easily</li>
+      <li>Substantive per-product pages targeting how buyers actually search ("DNV offshore containers", "certified cargo baskets")</li>
+      <li>Proper multilingual handling (hreflang, localised paths) for Francophone and Lusophone markets</li>
+      <li>Product and organisation schema plus a crawlable structure that give you the best foundation to rank</li>
+    </ul>
+    <p style="margin-bottom:0">This groundwork means your site is ready to perform in organic search and makes any future SEO or Google Ads work, through our sister agency Searchly, far more effective.</p>
+  </div>
+
+  <div class="section" style="margin-top:12px">
+    <h3>Built so you can see what works</h3>
+    <p>We install analytics and conversion tracking so every quote request is measured, turning your website from a brochure into a tool you can improve, and powering smarter marketing decisions later.</p>
+  </div>
+
+  <div class="foot"><span><b>Searchly Web</b> &middot; Website Proposal for Container World Offshore</span><span>Page 5</span></div>
+</section>
+
+<!-- PAGE 6 -->
+<section class="page">
+  <div class="accentbar"></div>
+  <h2>Ownership, hosting and domain</h2>
+  <p class="lead">You own your website outright. We make the technical side simple, even though hosting is not something we provide.</p>
+
+  <div class="grid2">
+    <div class="feat" style="background:#fff"><h3><span class="tick">&#10003;</span> The website is yours</h3><p style="color:var(--text)">Once the project is complete and paid, the website belongs entirely to Container World Offshore. No monthly fee to Searchly, no lock-in. It is your asset.</p></div>
+    <div class="feat" style="background:#fff"><h3><span class="tick">&#10003;</span> You stay in control</h3><p style="color:var(--text)">Your hosting and domain stay in your name with your provider. That is deliberately better for you: full ownership and never dependent on us to stay online.</p></div>
+  </div>
+
+  <div class="note" style="margin-top:14px">
+    <b>To be completely clear: Searchly Web does not provide hosting.</b> Hosting (the service that keeps your website online) and your domain (containerworldoffshore.com) are held directly with a hosting provider. They are an ongoing cost paid to that provider, not to us, and are <b>not included</b> in the build fee.
+  </div>
+
+  <h3 style="margin-top:6px">But you will not be left to figure it out</h3>
+  <p>While we do not sell hosting, <strong>we will assist you through the entire process</strong>. We will:</p>
+  <ul class="clean">
+    <li>Advise you on a suitable hosting setup, in plain language</li>
+    <li>Set your new website up on your hosting account</li>
+    <li>Point your domain correctly so your web address works as it should</li>
+    <li>Make sure the site goes live properly, securely and without downtime</li>
+  </ul>
+
+  <p>The good news on cost: hosting and a domain are not expensive, and we will confirm the exact, modest figure with you so there are no surprises.</p>
+
+  <div class="foot"><span><b>Searchly Web</b> &middot; Website Proposal for Container World Offshore</span><span>Page 6</span></div>
+</section>
+
+<!-- PAGE 7 -->
+<section class="page">
+  <div class="accentbar"></div>
+  <h2>Your investment</h2>
+
+  <div class="price-box">
+    <div class="label">Custom website, design &amp; build</div>
+    <div class="amount">R25 000 <small>once-off</small></div>
+    <div class="terms">A complete, custom, conversion-built B2B website in your branding, with real product pages, a purpose-built quote system, trust and certifications, that you own. No ongoing fee to Searchly for the build.</div>
+  </div>
+
+  <table class="cost">
+    <tr><th>Item</th><th style="text-align:right">Cost</th></tr>
+    <tr><td><strong>Custom website design &amp; build</strong><br><span class="muted">Full multi-page custom site in your branding: real product pages with specs and certification badges, a purpose-built GET A QUOTE system, B2B trust signals, clean multilingual handling, SEO fundamentals, tracking installed, set up and taken live. You own it.</span></td><td class="amt">R25 000<br><span class="muted" style="font-weight:400">once-off</span></td></tr>
+    <tr><td><strong>Hosting &amp; domain</strong> <span class="muted">(paid by you to your provider)</span><br><span class="muted">Keeps the site online and your address active. Not provided by Searchly and not included below. We assist you through the whole setup.</span></td><td class="amt">By provider<br><span class="muted" style="font-weight:400">your provider</span></td></tr>
+    <tr class="total"><td>Once-off payable to Searchly Web</td><td class="amt">R25 000</td></tr>
+  </table>
+
+  <div class="note" style="margin-top:12px">
+    <b>No VAT is added.</b> Searchly is not VAT-registered, so there is no VAT on this fee. The R25 000 above is the full, final amount payable to Searchly Web. What you see is what you pay.
+  </div>
+
+  <h3 style="margin-top:14px">Payment terms</h3>
+  <div class="pay">
+    <div class="stage"><div class="pct">50%</div><b>Deposit to begin</b><span>R12 500 up front. This confirms the project and we start the build that week.</span></div>
+    <div class="stage"><div class="pct">50%</div><b>On completion</b><span>R12 500 once the website is complete and approved, before it goes live.</span></div>
+  </div>
+
+  <h2 style="margin-top:16px">Timeline: roughly 2 to 3 weeks</h2>
+  <div class="timeline">
+    <div class="tl"><span class="dot"></span><b>Week 1</b><span>Deposit, branding, content &amp; product details gather</span></div>
+    <div class="tl"><span class="dot"></span><b>Week 1-2</b><span>Build pages, product pages &amp; quote system</span></div>
+    <div class="tl"><span class="dot"></span><b>Week 2-3</b><span>Your review &amp; refinements</span></div>
+    <div class="tl"><span class="dot"></span><b>Week 3</b><span>SEO, tracking &amp; go live</span></div>
+  </div>
+  <p class="muted" style="font-size:9.6px">A corporate B2B build with real product pages. Timeline assumes we receive your branding, product details, photos, content and access promptly after the deposit. Exact dates confirmed on go-ahead.</p>
+
+  <div class="cta">
+    <div>
+      <h3>Ready to go ahead?</h3>
+      <p>Reply to our email or message Seth, send your branding and product details, pay the 50% deposit, and we start this week.</p>
+    </div>
+    <div class="go">sethg@searchly.co.za</div>
+  </div>
+
+  <div class="foot"><span><img src="assets/searchly-mark.webp" alt=""> <b>Searchly Web</b> &middot; Fast, high-converting websites for South African businesses</span><span>Page 7</span></div>
+</section>
+
+</body>
+</html>

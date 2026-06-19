@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+<meta charset="UTF-8">
+<title>Searchly Web Proposal - Self Storage CW</title>
+<style>
+  @page{size:A4;margin:0}
+  :root{
+    --blue:#2e65fb; --navy:#1e3a6e; --ink:#10172a;
+    --text:#363b45; --muted:#697086; --line:#e5ebf7; --soft:#f4f7ff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Roboto","Helvetica Neue",Arial,sans-serif;color:var(--text);font-size:11px;line-height:1.62;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .page{width:210mm;min-height:297mm;padding:20mm 20mm 24mm;position:relative;page-break-after:always;background:#fff}
+  .page:last-child{page-break-after:auto}
+  h1,h2,h3,h4{color:var(--ink);font-weight:700;line-height:1.18}
+  h1{font-size:30px;letter-spacing:-.5px}
+  h2{font-size:18px;margin-bottom:9px;letter-spacing:-.3px}
+  h3{font-size:13px;margin-bottom:4px}
+  p{margin-bottom:8px}
+  strong{font-weight:700;color:var(--ink)}
+  .muted{color:var(--muted)}
+  .eyebrow{font-size:9.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+
+  .cover{background:linear-gradient(150deg,#10172a 0%,#1e3a6e 60%,#2e65fb 135%);color:#fff;display:flex;flex-direction:column;justify-content:space-between}
+  .cover h1{color:#fff}
+  .lockup{display:flex;align-items:center;gap:11px}
+  .lockup img{height:46px;width:46px;border-radius:50%;display:block}
+  .lockup .wm{font-family:"Roboto","Helvetica Neue",Arial,sans-serif;font-weight:900;font-size:30px;letter-spacing:-1.2px;line-height:1}
+  .cover .lockup .wm .s{color:#ffffff}
+  .cover .lockup .wm .w{color:#6f9bff}
+  .cover-mid h1{font-size:39px;line-height:1.1;margin-bottom:15px}
+  .cover-mid .sub{font-size:14.5px;color:#cfdcff;max-width:80%}
+  .cover .pill{display:inline-block;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.3);padding:7px 15px;border-radius:999px;font-size:10.5px;font-weight:500;margin-top:22px;color:#fff}
+  .cover-foot{display:flex;justify-content:space-between;align-items:flex-end;font-size:10.5px;color:#cfdcff}
+  .cover-foot b{color:#fff}
+
+  .accentbar{height:5px;width:54px;background:var(--blue);border-radius:3px;margin-bottom:16px}
+  .section{margin-bottom:18px}
+  .lead{font-size:12.5px;color:var(--ink);font-weight:500;margin-bottom:12px}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:6px 0 4px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:6px 0 4px}
+  .feat{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:13px 14px}
+  .feat h3{display:flex;align-items:center;gap:7px;margin-bottom:5px}
+  .tick{display:inline-flex;width:17px;height:17px;border-radius:50%;background:var(--blue);color:#fff;align-items:center;justify-content:center;font-size:10px;flex:none}
+  .feat p{font-size:10.3px;color:var(--muted);margin:0}
+
+  ul.clean{list-style:none;margin:6px 0 10px}
+  ul.clean li{position:relative;padding-left:23px;margin-bottom:7px}
+  ul.clean li::before{content:"";position:absolute;left:0;top:5px;width:13px;height:13px;border-radius:50%;background:var(--blue)}
+  ul.clean li::after{content:"";position:absolute;left:4px;top:8px;width:5px;height:3px;border-left:1.6px solid #fff;border-bottom:1.6px solid #fff;transform:rotate(-45deg)}
+
+  .pagelist{display:grid;grid-template-columns:1fr 1fr;gap:9px 18px;margin:8px 0}
+  .pageitem{display:flex;gap:10px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:9px;padding:10px 12px}
+  .pageitem .n{font-weight:700;color:var(--blue);font-size:11px;flex:none;width:18px}
+  .pageitem b{color:var(--ink);font-size:11px;display:block}
+  .pageitem span{color:var(--muted);font-size:9.6px;line-height:1.45}
+
+  .wabox{background:linear-gradient(135deg,#0c1a2b,#13314e);color:#fff;border-radius:14px;padding:18px 20px;margin:10px 0;display:flex;gap:15px;align-items:flex-start}
+  .wabox .wi{width:34px;height:34px;border-radius:9px;background:#2e65fb;flex:none;display:flex;align-items:center;justify-content:center;font-size:18px}
+  .wabox h3{color:#fff;font-size:13px;margin-bottom:3px}
+  .wabox p{color:#cfe0d8;font-size:10.3px;margin:0}
+
+  .price-box{background:var(--ink);color:#fff;border-radius:16px;padding:24px 26px;margin:6px 0 14px;position:relative;overflow:hidden}
+  .price-box::after{content:"";position:absolute;right:-40px;top:-40px;width:160px;height:160px;border-radius:50%;background:rgba(46,101,251,.35)}
+  .price-box .label{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#9db6ff;position:relative}
+  .price-box .amount{font-size:44px;font-weight:700;line-height:1;margin:6px 0 4px;position:relative}
+  .price-box .amount small{font-size:15px;font-weight:500;color:#cfdcff}
+  .price-box .terms{font-size:10.5px;color:#cfdcff;position:relative}
+
+  table.cost{width:100%;border-collapse:collapse;margin:6px 0 4px;font-size:10.5px}
+  table.cost th{text-align:left;background:var(--soft);color:var(--ink);padding:8px 12px;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;border-bottom:2px solid var(--line)}
+  table.cost td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  table.cost td.amt{text-align:right;font-weight:700;color:var(--ink);white-space:nowrap}
+  table.cost tr.total td{background:#eef3ff;font-weight:700;color:var(--ink);border-bottom:none;font-size:12px}
+
+  .pay{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:8px 0}
+  .pay .stage{border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .pay .stage .pct{font-size:30px;font-weight:700;color:var(--blue);line-height:1}
+  .pay .stage b{display:block;color:var(--ink);font-size:12px;margin:4px 0 2px}
+  .pay .stage span{color:var(--muted);font-size:10px}
+
+  .timeline{display:flex;gap:0;margin:10px 0 4px}
+  .tl{flex:1;text-align:center;position:relative;padding-top:23px}
+  .tl::before{content:"";position:absolute;top:7px;left:0;right:0;height:2px;background:var(--line)}
+  .tl:first-child::before{left:50%}
+  .tl:last-child::before{right:50%}
+  .tl .dot{position:absolute;top:0;left:50%;transform:translateX(-50%);width:15px;height:15px;border-radius:50%;background:var(--blue);border:3px solid #fff;box-shadow:0 0 0 2px var(--blue)}
+  .tl b{display:block;font-size:10.5px;color:var(--ink)}
+  .tl span{font-size:9px;color:var(--muted)}
+
+  .note{background:var(--soft);border-left:4px solid var(--blue);border-radius:0 10px 10px 0;padding:12px 15px;font-size:10.3px;margin:9px 0}
+  .note b{color:var(--ink)}
+  .seo-band{background:linear-gradient(135deg,#eef3ff,#f4f7ff);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:8px 0}
+  .seo-band h3{display:flex;align-items:center;gap:8px}
+  .seo-band img{width:26px;height:26px;border-radius:50%}
+
+  .cta{background:linear-gradient(135deg,#2e65fb,#1e3a6e);color:#fff;border-radius:14px;padding:18px 22px;display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+  .cta h3{color:#fff;font-size:14px;margin-bottom:2px}
+  .cta p{color:#dbe6ff;font-size:10px;margin:0}
+  .cta .go{background:#fff;color:var(--blue);font-weight:700;padding:11px 18px;border-radius:999px;font-size:11px;white-space:nowrap}
+
+  .foot{position:absolute;bottom:13mm;left:20mm;right:20mm;display:flex;justify-content:space-between;align-items:center;font-size:8.6px;color:var(--muted);border-top:1px solid var(--line);padding-top:7px}
+  .foot b{color:var(--navy)}
+  .foot img{height:15px;vertical-align:middle;opacity:.9}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<section class="page cover">
+  <div class="lockup"><img src="assets/searchly-mark.webp" alt="Searchly Web"><span class="wm"><span class="s">Searchly</span><span class="w">Web</span></span></div>
+  <div class="cover-mid">
+    <div class="eyebrow" style="color:#9db6ff">Website Proposal &middot; June 2026</div>
+    <h1>A new website for<br>Self Storage CW</h1>
+    <p class="sub">A fast, modern, multi-location website for your self-storage branches, with published pricing, a location-routed quote form, and a clear path to reserve, built to turn searchers into enquiries across all four cities.</p>
+    <div class="pill">Prepared for the team at Self Storage CW</div>
+  </div>
+  <div class="cover-foot">
+    <div>
+      <b>Searchly Web</b><br>
+      Fast, high-converting websites for South African businesses
+    </div>
+    <div style="text-align:right">
+      Seth Gorton<br>
+      <b>sethg@searchly.co.za</b> &middot; searchlyweb.co.za
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page">
+  <div class="accentbar"></div>
+  <h2>The opportunity</h2>
+  <p class="lead">Self Storage CW is a real multi-location operator, the self-storage arm of Container World, renting secure converted-container units across four cities: Durban, Polokwane, Midrand and Nelspruit. The website does not yet reflect that strength.</p>
+  <p>Today the entire public presence is a single, thin page. It does not publish what a unit costs, it runs one generic enquiry form for all four cities, it has no dedicated page per location, and it shows no reviews or trust proof at all. For a trust-led purchase like storage, where the first question is always "what does it cost and is my stuff safe?", that quietly sends ready-to-rent visitors to competitors who answer those questions on the page.</p>
+
+  <div class="section" style="margin-top:14px">
+    <h2>What we are proposing</h2>
+    <p>A complete rebuild as a <strong>fast, modern, multi-location lead-generation site</strong>: one indexable landing page per branch, transparent pricing, a quote form that routes to the right city, sticky call and WhatsApp, and a clear "how it works to reserve" path. Every page is designed to lead a serious enquirer to one action: <strong>GET A QUOTE</strong> and reserve a unit, kept in your familiar blue and red brand.</p>
+  </div>
+
+  <div class="wabox">
+    <div class="wi" style="color:#fff">&#9737;</div>
+    <div>
+      <h3>The single biggest lever: publish your pricing</h3>
+      <p>Storage shoppers compare on price first. Right now your prices (from R700 per month for top-level units, from R950 for ground-floor) are hidden away on a separate Midrand microsite. We bring them onto the main site and every location page, sitting right next to a "Get a quote" button, so visitors qualify themselves instead of bouncing to a rival who shows the number.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <b>You have already seen the direction.</b> The live concept mockup (<b style="color:#2e65fb">seth-gorton.github.io/searchly-mockups/selfstorage-cw</b>) shows the look, feel and structure. The current photos in it are your existing assets used as placeholders. As soon as we have fresh branch photography, we apply it so each location looks unmistakably like its real site. It is a concept to react to, not the finished website.
+  </div>
+
+  <div class="foot"><span><b>Searchly Web</b> &middot; Website Proposal for Self Storage CW</span><span>Page 2</span></div>
+</section>
+
+<!-- PAGE 3 -->
+<section class="page">
+  <div class="accentbar"></div>
+  <h2>What we will improve</h2>
+  <p class="lead">We audited your current site against one question: does it help a visitor get a quote and reserve a unit? These are the fixes that will move the needle most.</p>
+
+  <ul class="clean">
+    <li><strong>Publish clear pricing.</strong> A simple, honest pricing block (from R700 per month for top-level units, from R950 for ground-floor, with what is included) on the homepage and every location page, next to a reserve action.</li>
+    <li><strong>Location-routed quote form and per-location landing pages.</strong> A page for each branch (Durban, Polokwane, Midrand, Nelspruit) with its own address, map, photos, price, hours and contacts, and a form that routes the lead to the correct branch inbox. Far better local SEO and a clean message-match for Google Ads.</li>
+    <li><strong>A prominent GET A QUOTE / reserve action.</strong> An obvious primary call to action on every page and a sticky call and WhatsApp bar, so a hot lead reaches the right branch in seconds rather than hunting in the footer.</li>
+    <li><strong>How it works and a size guide.</strong> A clear 3 to 4 step "how to reserve" path and a "what fits in a unit" guide, so first-time renters can self-qualify and you receive better, more confident enquiries.</li>
+    <li><strong>Trust and security proof.</strong> We surface the things that win a trust purchase: 24-hour monitored security (CCTV, electric fencing, access control), the steel anti-vandal, watertight, vermin-proof build, the Container World heritage, and Google reviews and testimonials once gathered.</li>
+    <li><strong>A fast, modern rebuild in your brand.</strong> A lightweight, responsive site that keeps your blue and red identity, replaces the dated 2019 layout, and loads quickly for both visitors and search.</li>
+  </ul>
+
+  <div class="note">
+    <b>One quick win we will fix on day one.</b> The live site's page title currently reads "A Self Storage Experience of Trust &amp; Tafety", a visible typo ("Tafety") that hurts both credibility and search. We correct it as part of the rebuild, along with rewriting the hero to lead with the concrete promise: secure 20ft container units across four cities, from R700 per month, 24/7 monitored.
+  </div>
+
+  <div class="foot"><span><b>Searchly Web</b> &middot; Website Proposal for Self Storage CW</span><span>Page 3</span></div>
+</section>
+
+<!-- PAGE 4 -->
+<section class="page">
+  <div class="accentbar"></div>
+  <h2>What is included</h2>
+  <p class="lead">A full, custom-designed multi-location website, built around your branches and your branding, not an off-the-shelf template.</p>
+
+  <p>The concept shows the style on a single page. The website we deliver is a complete set of custom-built pages, each designed with a clear purpose and an obvious path to a quote:</p>
+
+  <div class="pagelist">
+    <div class="pageitem"><span class="n">01</span><div><b>Home</b><span>A strong first impression with the concrete promise, published pricing, instant quote and contact, and a clear overview of the offer.</span></div></div>
+    <div class="pageitem"><span class="n">02</span><div><b>Location pages (x4)</b><span>Durban, Polokwane, Midrand and Nelspruit, each its own indexable page with address, map, photos, price, hours and routed form.</span></div></div>
+    <div class="pageitem"><span class="n">03</span><div><b>How it works</b><span>A simple step-by-step reserve path ending in the primary call to action, so first-time renters know exactly what to do.</span></div></div>
+    <div class="pageitem"><span class="n">04</span><div><b>Pricing &amp; size guide</b><span>Transparent unit pricing and a "what fits in a unit" guide so visitors self-qualify before they enquire.</span></div></div>
+    <div class="pageitem"><span class="n">05</span><div><b>About / Why Self Storage CW</b><span>The Container World heritage, the build quality, and the security proof that wins a trust purchase.</span></div></div>
+    <div class="pageitem"><span class="n">06</span><div><b>FAQ</b><span>Access, lease terms, notice, security and insurance, with reassurance right at the decision point.</span></div></div>
+    <div class="pageitem"><span class="n">07</span><div><b>Get a quote / Contact</b><span>The location-routed quote form, plus call and WhatsApp per branch, all designed for action.</span></div></div>
+    <div class="pageitem"><span class="n">08</span><div><b>Your branding throughout</b><span>Your blue and red identity, logo and typography applied consistently across every page.</span></div></div>
+  </div>
+  <p class="muted" style="font-size:9.6px">Final page structure is confirmed with you during the build. Pages can be added, combined or renamed to fit how Self Storage CW wants to present each branch.</p>
+
+  <h3 style="margin-top:10px">Every page is built with the essentials in place</h3>
+  <div class="grid3">
+    <div class="feat"><h3><span class="tick">&#10003;</span> Quote-first</h3><p>A clear "Get a quote" action and sticky call/WhatsApp within reach on every page.</p></div>
+    <div class="feat"><h3><span class="tick">&#10003;</span> Mobile-first</h3><p>Looks sharp and works perfectly on phones and tablets.</p></div>
+    <div class="feat"><h3><span class="tick">&#10003;</span> Fast loading</h3><p>Lightweight and quick, which helps visitors and search ranking.</p></div>
+    <div class="feat"><h3><span class="tick">&#10003;</span> Local SEO ready</h3><p>A page per city with the right signals to show up locally.</p></div>
+    <div class="feat"><h3><span class="tick">&#10003;</span> Easy to update</h3><p>Built so you can update prices and branch details without a developer.</p></div>
+    <div class="feat"><h3><span class="tick">&#10003;</span> Tracking installed</h3><p>See exactly how many quotes the site brings in, per branch.</p></div>
+  </div>
+
+  <div class="foot"><span><b>Searchly Web</b> &middot; Website Proposal for Self Storage CW</span><span>Page 4</span></div>
+</section>
+
+<!-- PAGE 5 -->
+<section class="page">
+  <div class="accentbar"></div>
+  <h2>How we build it</h2>
+  <p class="lead">Three things set our websites apart: they convert, they make getting a quote effortless, and they are built to be found.</p>
+
+  <div class="section">
+    <h3>Built to convert (conversion rate optimisation)</h3>
+    <p>"Conversion" means a visitor taking the action you want, in your case, getting a quote to reserve a unit. We design the site so a much higher share of visitors actually enquire instead of leaving: published pricing, the right trust signals, friction removed, and an obvious next step on every page. After launch we keep watching the numbers, per branch, and tuning to lift that share further.</p>
+  </div>
+
+  <div class="section">
+    <h3>Get a quote as the primary action</h3>
+    <p>The whole site points to one thing: a quick, easy quote. We make the "Get a quote" button impossible to miss and back it with a sticky call and WhatsApp bar, with the right branch contact for the visitor's city. WhatsApp and a quick call are how South African storage enquirers prefer to reach a business, so we make both effortless, while the quote form stays the clear primary path that captures the lead and routes it correctly.</p>
+  </div>
+
+  <div class="seo-band">
+    <h3><img src="assets/searchly-mark.webp" alt="Searchly"> Built to be found: SEO fundamentals baked in</h3>
+    <p style="margin-top:6px">Searchly Web is the website arm of <strong>Searchly</strong>, a Google Ads and SEO focused agency. Search is what we do, so your website is built on solid SEO fundamentals from the very first line of code:</p>
+    <ul class="clean" style="margin-bottom:2px">
+      <li>A dedicated, indexable landing page per city, the single biggest local-SEO win for a four-branch operator</li>
+      <li>Pages targeting how people actually search ("self storage Durban", "container storage Midrand", and each city)</li>
+      <li>LocalBusiness structured data and a clean, crawlable structure so each branch can rank in its area</li>
+      <li>Fast, lightweight code that supports both organic ranking and Google Ads Quality Score</li>
+    </ul>
+    <p style="margin-bottom:0">This groundwork means the site is ready to perform in organic search and makes any future SEO or Google Ads work far more effective.</p>
+  </div>
+
+  <div class="section" style="margin-top:12px">
+    <h3>Tracking that earns its place (important for your Ads spend)</h3>
+    <p>Much of your traffic is likely Google Ads driven, so clean measurement is not optional. We install GA4 and conversion tracking on the quote form so every enquiry is counted, and tagged to the right branch and campaign. That turns your website into a tool you can improve, and means each city's Ads spend is guided by real data rather than guesswork.</p>
+  </div>
+
+  <div class="foot"><span><b>Searchly Web</b> &middot; Website Proposal for Self Storage CW</span><span>Page 5</span></div>
+</section>
+
+<!-- PAGE 6 -->
+<section class="page">
+  <div class="accentbar"></div>
+  <h2>Ownership, hosting and domain</h2>
+  <p class="lead">You own your website outright. We make the technical side simple, even though hosting is not something we provide.</p>
+
+  <div class="grid2">
+    <div class="feat" style="background:#fff"><h3><span class="tick">&#10003;</span> The website is yours</h3><p style="color:var(--text)">Once the project is complete and paid, the website belongs entirely to Self Storage CW. No monthly fee to Searchly, no lock-in. It is your asset.</p></div>
+    <div class="feat" style="background:#fff"><h3><span class="tick">&#10003;</span> You stay in control</h3><p style="color:var(--text)">Your hosting and domain stay in your name with your provider. That is deliberately better for you: full ownership and never dependent on us to stay online.</p></div>
+  </div>
+
+  <div class="note" style="margin-top:14px">
+    <b>To be completely clear: Searchly Web does not provide hosting.</b> Hosting (the service that keeps your website online) and your domain (your web address, selfstoragecw.co.za) are held directly with a hosting provider. They are an ongoing cost paid to that provider, not to us, and are <b>not included</b> in the build fee.
+  </div>
+
+  <h3 style="margin-top:6px">But you will not be left to figure it out</h3>
+  <p>While we do not sell hosting, <strong>we will assist you through the entire process</strong>. We will:</p>
+  <ul class="clean">
+    <li>Advise you on a suitable hosting setup, in plain language</li>
+    <li>Set your new website up on your hosting account</li>
+    <li>Point your domain correctly so your web address works as it should</li>
+    <li>Make sure the site goes live properly, securely and without downtime</li>
+  </ul>
+
+  <p>The good news on cost: hosting and a domain are not expensive, typically around <strong>R1 000 a year</strong>, and we will confirm the exact, modest figure with you so there are no surprises.</p>
+
+  <div class="foot"><span><b>Searchly Web</b> &middot; Website Proposal for Self Storage CW</span><span>Page 6</span></div>
+</section>
+
+<!-- PAGE 7 -->
+<section class="page">
+  <div class="accentbar"></div>
+  <h2>Your investment</h2>
+
+  <div class="price-box">
+    <div class="label">Custom website, design &amp; build</div>
+    <div class="amount">R20 000 <small>once-off</small></div>
+    <div class="terms">A complete, custom, conversion-focused multi-location website in your branding, that you own. Delivered in roughly one to two weeks. No ongoing fee to Searchly for the build.</div>
+  </div>
+
+  <div class="note" style="margin-top:0;margin-bottom:12px">
+    <b>No VAT is added.</b> Searchly is <b>not VAT-registered</b>, so the price you see is the price you pay. The R20 000 is the full amount, with no VAT on top.
+  </div>
+
+  <table class="cost">
+    <tr><th>Item</th><th style="text-align:right">Cost</th></tr>
+    <tr><td><strong>Custom website design &amp; build</strong><br><span class="muted">Full multi-location custom site in your branding: per-city landing pages, published pricing, location-routed quote form, how-it-works and size guide, trust and security proof, SEO fundamentals, tracking installed, set up and taken live. You own it.</span></td><td class="amt">R20 000<br><span class="muted" style="font-weight:400">once-off</span></td></tr>
+    <tr><td><strong>Hosting &amp; domain</strong> <span class="muted">(paid by you to your provider)</span><br><span class="muted">Keeps the site online and your address active. Not provided by Searchly and not included below. We assist you through the whole setup.</span></td><td class="amt">~R1 000<br><span class="muted" style="font-weight:400">per year, your provider</span></td></tr>
+    <tr class="total"><td>Once-off payable to Searchly Web (no VAT added)</td><td class="amt">R20 000</td></tr>
+  </table>
+
+  <h3 style="margin-top:14px">Payment terms</h3>
+  <div class="pay">
+    <div class="stage"><div class="pct">50%</div><b>Deposit to begin</b><span>R10 000 up front. This confirms the project and we start the build that week.</span></div>
+    <div class="stage"><div class="pct">50%</div><b>On completion</b><span>R10 000 once the website is complete and approved, before it goes live.</span></div>
+  </div>
+
+  <h2 style="margin-top:16px">Timeline: roughly one to two weeks</h2>
+  <div class="timeline">
+    <div class="tl"><span class="dot"></span><b>Days 1-2</b><span>Deposit, branding, branch content &amp; photos</span></div>
+    <div class="tl"><span class="dot"></span><b>Days 3-6</b><span>Build the pages &amp; location landing pages</span></div>
+    <div class="tl"><span class="dot"></span><b>Days 7-9</b><span>Your review &amp; refinements</span></div>
+    <div class="tl"><span class="dot"></span><b>Days 10-14</b><span>SEO, tracking &amp; go live</span></div>
+  </div>
+  <p class="muted" style="font-size:9.6px">Timeline assumes we receive your branding, photos, branch details and access promptly after the deposit. Exact dates confirmed on go-ahead.</p>
+
+  <div class="cta">
+    <div>
+      <h3>Ready to go ahead?</h3>
+      <p>Reply to our email or message Seth, send your branding and branch details, pay the 50% deposit, and we start this week.</p>
+    </div>
+    <div class="go">sethg@searchly.co.za</div>
+  </div>
+
+  <div class="foot"><span><img src="assets/searchly-mark.webp" alt=""> <b>Searchly Web</b> &middot; Fast, high-converting websites for South African businesses</span><span>Page 7</span></div>
+</section>
+
+</body>
+</html>
