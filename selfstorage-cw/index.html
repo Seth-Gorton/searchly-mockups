@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Self Storage CW | Secure Container Self Storage in Durban, Polokwane, Midrand &amp; Nelspruit, from R700/month</title>
+<meta name="description" content="Secure, converted-container self storage units across Durban, Polokwane, Midrand and Nelspruit. Month-to-month, 24/7 monitored, from R700 per month. Part of Container World since 1983. Get a quote.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* Self Storage CW, real brand: blue #1289ca + red #e31618. Trust-led, secure, conversion-focused. Primary CTA = GET A QUOTE / RESERVE A UNIT. */
+  :root{
+    --blue:#1289ca; --blue-dark:#075da8; --red:#e31618; --red-dark:#c02b0a;
+    --ink:#27292a; --slate:#2f3437; --slate-2:#3a3f43; --body:#525a61; --muted:#8a929a;
+    --line:#e3e7ea; --bg:#ffffff; --soft:#f4f7f9; --soft-2:#eaf2f8;
+    --radius:12px; --maxw:1200px; --shadow:0 20px 44px -22px rgba(30,34,38,.45);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Inter",system-ui,sans-serif;color:var(--body);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:"Archivo",sans-serif;color:var(--ink);line-height:1.08;font-weight:800;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  section{padding:80px 0}
+  .eyebrow{font-family:"Archivo";font-weight:700;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin-bottom:14px}
+
+  .concept{background:var(--slate);color:#d7dde2;text-align:center;font-size:.82rem;padding:9px 16px}
+  .concept b{color:#fff}
+
+  .btn{display:inline-flex;align-items:center;gap:9px;font-family:"Archivo";font-weight:700;font-size:.92rem;letter-spacing:.02em;text-transform:uppercase;padding:14px 26px;border-radius:7px;transition:transform .15s,box-shadow .15s,background .15s;white-space:nowrap;cursor:pointer;border:none}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-quote{background:var(--red);color:#fff;box-shadow:0 12px 26px -10px rgba(227,22,24,.6)}
+  .btn-quote:hover{background:var(--red-dark)}
+  .btn-blue{background:var(--blue);color:#fff}
+  .btn-blue:hover{background:var(--blue-dark)}
+  .btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55)}
+  .btn-outline{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+  .btn svg{width:17px;height:17px;fill:currentColor}
+
+  /* Top bar */
+  .topbar{background:var(--ink);color:#c4ccd2;font-size:.82rem}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:42px;gap:18px}
+  .topbar .tb-l{display:flex;gap:22px;align-items:center}
+  .topbar .tb-l span{display:inline-flex;gap:7px;align-items:center}
+  .topbar a{color:#c4ccd2}
+  .topbar svg{width:14px;height:14px;fill:var(--blue)}
+  .topbar .tb-r{color:#fff;font-weight:600;letter-spacing:.02em}
+
+  /* Header */
+  header.site{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:80px;gap:20px}
+  .nav .logo{height:50px;width:auto}
+  .nav-links{display:flex;gap:22px;font-family:"Archivo";font-weight:600;font-size:.84rem;letter-spacing:.02em;text-transform:uppercase;color:var(--ink)}
+  .nav-links a:hover{color:var(--red)}
+  .nav-cta{display:flex;align-items:center;gap:14px}
+  .nav-cta .tel{font-family:"Archivo";font-weight:700;color:var(--ink);font-size:.9rem;display:inline-flex;gap:7px;align-items:center}
+  .nav-cta .tel svg{width:16px;height:16px;fill:var(--blue)}
+
+  /* Hero */
+  .hero{position:relative;color:#fff;overflow:hidden;background:var(--slate)}
+  .hero-bg{position:absolute;inset:0}
+  .hero-bg img{width:100%;height:100%;object-fit:cover}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(15,32,48,.94) 0%,rgba(15,32,48,.82) 44%,rgba(15,32,48,.5) 100%)}
+  .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:78px 24px 84px}
+  .hero .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(18,137,202,.22);border:1px solid rgba(18,137,202,.55);color:#9fd6f5;padding:6px 14px;border-radius:999px;font-family:"Archivo";font-weight:600;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:20px}
+  .hero h1{color:#fff;font-size:clamp(2.4rem,5vw,3.9rem);font-weight:900;line-height:1.04}
+  .hero h1 .r{color:var(--red)}.hero h1 .b{color:var(--blue)}
+  .hero p.lead{font-size:1.15rem;margin:20px 0 28px;color:#d7dde2;max-width:540px}
+  .hero-cta{display:flex;gap:13px;flex-wrap:wrap}
+  .hero-stats{display:flex;gap:32px;margin-top:34px;flex-wrap:wrap}
+  .hero-stats b{font-family:"Archivo";font-size:1.9rem;font-weight:800;color:#fff;display:block;line-height:1}
+  .hero-stats span{font-size:.82rem;color:#aeb6bd}
+
+  /* Quote card */
+  .qcard{background:#fff;border-radius:14px;padding:28px;box-shadow:var(--shadow);color:var(--body)}
+  .qcard h3{font-size:1.4rem;color:var(--ink);margin-bottom:4px}
+  .qcard .sub{font-size:.88rem;color:var(--muted);margin-bottom:18px}
+  .qcard label{font-family:"Archivo";font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--slate);display:block;margin-bottom:5px}
+  .qcard input,.qcard select{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:8px;font-family:inherit;font-size:.92rem;margin-bottom:12px;color:var(--ink);background:var(--soft)}
+  .qcard .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .qcard .btn-quote{width:100%;justify-content:center;padding:15px}
+  .qcard .fnote{text-align:center;font-size:.78rem;color:var(--muted);margin-top:10px}
+
+  /* Proof bar */
+  .proof{background:var(--ink);color:#fff;padding:22px 0}
+  .proof-inner{display:flex;align-items:center;justify-content:center;gap:14px 34px;flex-wrap:wrap;font-family:"Archivo";font-weight:600;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:#c4ccd2}
+  .proof b{color:#fff}
+  .proof .sep{width:5px;height:5px;border-radius:50%;background:var(--red)}
+
+  /* Section heads */
+  .shead{max-width:680px;margin-bottom:46px}
+  .shead.center{margin-left:auto;margin-right:auto;text-align:center}
+  .shead h2{font-size:clamp(2rem,3.6vw,2.7rem)}
+  .shead p{color:var(--body);font-size:1.05rem;margin-top:12px}
+
+  /* Locations row */
+  .locs{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .loc{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+  .loc:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .loc .li{height:120px;overflow:hidden}
+  .loc .li img{width:100%;height:100%;object-fit:cover}
+  .loc .lb{padding:18px 18px 20px;flex:1;display:flex;flex-direction:column}
+  .loc h3{font-size:1.18rem;display:flex;align-items:center;gap:7px}
+  .loc h3 svg{width:17px;height:17px;fill:var(--blue)}
+  .loc .lp{font-size:.86rem;color:var(--body);margin:6px 0 4px}
+  .loc .lt{font-family:"Archivo";font-weight:700;font-size:.9rem;color:var(--ink);margin-bottom:14px}
+  .loc .lt a{color:var(--blue-dark)}
+  .loc .btn{margin-top:auto;width:100%;justify-content:center;font-size:.8rem;padding:11px}
+
+  /* Pricing */
+  .pricing{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:880px;margin:0 auto}
+  .ptier{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px 30px;position:relative;overflow:hidden}
+  .ptier.feat{border:2px solid var(--blue);box-shadow:var(--shadow)}
+  .ptier .tag{position:absolute;top:0;right:0;background:var(--blue);color:#fff;font-family:"Archivo";font-weight:700;font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;padding:6px 14px;border-bottom-left-radius:10px}
+  .ptier h3{font-size:1.3rem}
+  .ptier .price{font-family:"Archivo";font-weight:900;font-size:2.6rem;color:var(--ink);margin:10px 0 2px;line-height:1}
+  .ptier .price small{font-size:1rem;font-weight:700;color:var(--muted)}
+  .ptier .pm{font-size:.84rem;color:var(--muted);margin-bottom:18px}
+  .ptier ul{list-style:none;margin:0 0 22px}
+  .ptier li{position:relative;padding-left:26px;margin-bottom:9px;font-size:.93rem;color:var(--ink)}
+  .ptier li::before{content:"";position:absolute;left:0;top:4px;width:16px;height:16px;border-radius:50%;background:var(--blue)}
+  .ptier li::after{content:"";position:absolute;left:5px;top:7px;width:5px;height:3px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg)}
+  .ptier .btn{width:100%;justify-content:center}
+  .pnote{text-align:center;margin-top:24px;font-size:.9rem;color:var(--muted)}
+
+  /* How it works */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;position:relative}
+  .step .n{font-family:"Archivo";font-weight:900;font-size:2.4rem;color:var(--soft-2);line-height:1;margin-bottom:8px}
+  .step.alt .n{color:#fde3e3}
+  .step h3{font-size:1.2rem;margin-bottom:8px}
+  .step p{font-size:.93rem}
+
+  /* Size guide */
+  .sguide{display:grid;grid-template-columns:.95fr 1.05fr;gap:54px;align-items:center}
+  .sguide-img img{border-radius:var(--radius);width:100%;aspect-ratio:4/3;object-fit:cover;box-shadow:var(--shadow)}
+  .fits{list-style:none;margin:18px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:10px 22px}
+  .fits li{position:relative;padding-left:28px;color:var(--ink);font-weight:500;font-size:.95rem}
+  .fits li::before{content:"";position:absolute;left:0;top:2px;width:18px;height:18px;border-radius:5px;background:var(--soft-2)}
+  .fits li::after{content:"";position:absolute;left:5px;top:6px;width:6px;height:3px;border-left:2px solid var(--blue);border-bottom:2px solid var(--blue);transform:rotate(-45deg)}
+  .specbar{display:flex;gap:30px;flex-wrap:wrap;margin-top:24px;padding:18px 22px;background:var(--soft);border-radius:var(--radius)}
+  .specbar b{font-family:"Archivo";font-size:1.3rem;color:var(--ink);display:block;line-height:1.1}
+  .specbar span{font-size:.8rem;color:var(--muted)}
+
+  /* Split */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+  .split.flip .split-img{order:2}
+  .split-img img{border-radius:var(--radius);width:100%;aspect-ratio:4/3;object-fit:cover;box-shadow:var(--shadow)}
+  .split h2{font-size:clamp(2rem,3.4vw,2.6rem)}
+  .split p{margin-top:14px}
+  .tick{list-style:none;margin:18px 0 0}
+  .tick li{position:relative;padding-left:30px;margin-bottom:11px;color:var(--ink);font-weight:500}
+  .tick li::before{content:"";position:absolute;left:0;top:3px;width:19px;height:19px;border-radius:50%;background:var(--blue)}
+  .tick li::after{content:"";position:absolute;left:6px;top:7px;width:6px;height:3px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg)}
+
+  /* Security band */
+  .secband{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+  .secband-bg{position:absolute;inset:0}
+  .secband-bg img{width:100%;height:100%;object-fit:cover;opacity:.16}
+  .secband .wrap{position:relative;z-index:1}
+  .secband h2{color:#fff}
+  .secband .shead p{color:#c4ccd2}
+  .secgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .sec{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:26px 22px}
+  .sec .ic{width:46px;height:46px;border-radius:11px;background:var(--blue);display:flex;align-items:center;justify-content:center;margin-bottom:15px}
+  .sec .ic svg{width:24px;height:24px;fill:#fff}
+  .sec h3{color:#fff;font-size:1.1rem;margin-bottom:6px}
+  .sec p{font-size:.9rem;color:#aeb6bd}
+
+  /* Quote band */
+  .qband{position:relative;overflow:hidden;background:var(--slate)}
+  .qband-bg{position:absolute;inset:0}
+  .qband-bg img{width:100%;height:100%;object-fit:cover;opacity:.2}
+  .qband .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .qband h2{color:#fff;font-size:clamp(2.1rem,4vw,2.9rem)}
+  .qband p{color:#d7dde2;font-size:1.08rem;margin:14px 0 24px}
+  .qband .reassure{display:grid;gap:14px;margin-top:8px}
+  .qband .reassure div{display:flex;gap:12px;align-items:flex-start;color:#e3e9ee;font-size:.96rem}
+  .qband .reassure svg{width:20px;height:20px;fill:var(--blue);flex:none;margin-top:2px}
+  .qband .reassure b{color:#fff}
+
+  /* Footer */
+  footer.site{background:var(--ink);color:#aab2b9;padding:58px 0 26px}
+  .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.1fr;gap:36px}
+  footer.site h4{color:#fff;font-family:"Archivo";font-size:.95rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:15px}
+  footer.site a:hover{color:#fff}
+  .foot-links a{display:block;color:#aab2b9;padding:4px 0;font-size:.9rem}
+  .foot-logo{height:54px;margin-bottom:14px;background:#fff;padding:8px 10px;border-radius:8px}
+  .foot-c div{display:flex;gap:10px;align-items:flex-start;margin-bottom:11px;font-size:.9rem}
+  .foot-c svg{width:16px;height:16px;fill:var(--blue);flex:none;margin-top:3px}
+  .copyright{border-top:1px solid rgba(255,255,255,.1);margin-top:38px;padding-top:22px;text-align:center;font-size:.82rem;color:#7c858c}
+
+  /* Floating Get a quote */
+  .float-q{position:fixed;right:20px;bottom:20px;z-index:60;background:var(--red);color:#fff;display:flex;align-items:center;gap:9px;padding:14px 22px;border-radius:8px;font-family:"Archivo";font-weight:700;text-transform:uppercase;font-size:.84rem;letter-spacing:.04em;box-shadow:0 16px 32px -10px rgba(227,22,24,.6);transition:transform .15s}
+  .float-q:hover{transform:scale(1.05);background:var(--red-dark)}
+  .float-q svg{width:18px;height:18px;fill:#fff}
+
+  @media(max-width:980px){
+    .nav-links{display:none}
+    .hero .wrap,.split,.qband .wrap,.sguide{grid-template-columns:1fr;gap:30px}
+    .split.flip .split-img{order:0}
+    .locs,.secgrid{grid-template-columns:1fr 1fr}
+    .steps{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr 1fr}
+    .fits{grid-template-columns:1fr}
+  }
+  @media(max-width:600px){
+    section{padding:56px 0}.topbar{display:none}
+    .locs,.secgrid,.pricing,.foot-grid{grid-template-columns:1fr}
+    .qcard .row{grid-template-columns:1fr}
+    .float-q span{display:none}.float-q{padding:15px}
+  }
+</style>
+</head>
+<body>
+
+<svg style="display:none" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M9 2h6l5 5v13a2 2 0 01-2 2H9zM8 6H6a2 2 0 00-2 2v12a2 2 0 002 2h2zM13 8h4l-4-4z"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M12 2l9 4.5v11L12 22 3 17.5v-11zm0 2.3L5.6 7.5 12 10.6l6.4-3.1zM5 9.2v7.1l6 3v-7.1zm14 0l-6 3v7.1l6-3z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><path d="M12 1a5 5 0 00-5 5v3H5v13h14V9h-2V6a5 5 0 00-5-5zm3 8H9V6a3 3 0 016 0z"/></symbol>
+  <symbol id="i-cam" viewBox="0 0 24 24"><path d="M9 2l-1.5 2H4a2 2 0 00-2 2v13a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2h-3.5L15 2zm3 5a6 6 0 110 12 6 6 0 010-12zm0 2.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"/></symbol>
+  <symbol id="i-fence" viewBox="0 0 24 24"><path d="M11 2h2v3l3 2v-2h2v3l3 2v12h-3v-5h-2v5h-2v-5h-2v5h-2v-5H9v5H6v-5H4v5H1V10l3-2V5h2v2l3-2z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 11h-4v-2h2V7h2z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.25 3.84 10.17 9 11 5.16-.83 9-5.75 9-11V5zm-1 14l-4-4 1.4-1.4L11 12.2l4.6-4.6L17 9z"/></symbol>
+</svg>
+
+<div class="concept">Concept redesign by <b>Searchly Web</b> for Self Storage CW. A modern, quote-focused draft in your own brand, for you to review.</div>
+
+<!-- TOP BAR -->
+<div class="topbar"><div class="wrap">
+  <div class="tb-l">
+    <span><svg><use href="#i-phone"/></svg> Durban 031 825 6641</span>
+    <span><svg><use href="#i-phone"/></svg> Midrand 011 392 1284</span>
+    <span><svg><use href="#i-pin"/></svg> Durban &middot; Polokwane &middot; Midrand &middot; Nelspruit</span>
+  </div>
+  <div class="tb-r">Part of Container World, since 1983</div>
+</div></div>
+
+<!-- HEADER -->
+<header class="site"><div class="wrap nav">
+  <a href="index.html"><img class="logo" src="assets/logo-self-storage.png" alt="Self Storage CW"></a>
+  <nav class="nav-links">
+    <a href="#locations">Locations</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#how">How it works</a>
+    <a href="#size">Size guide</a>
+    <a href="#security">Security</a>
+    <a href="#about">About</a>
+  </nav>
+  <div class="nav-cta">
+    <a class="tel" href="tel:0318256641"><svg><use href="#i-phone"/></svg>031 825 6641</a>
+    <a class="btn btn-quote" href="#quote"><svg><use href="#i-doc"/></svg>Get a Quote</a>
+  </div>
+</div></header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"><img src="assets/hero-header.jpg" alt="Secure container self storage units"></div>
+  <div class="wrap">
+    <div>
+      <span class="badge">Backed by Container World &middot; Since 1983</span>
+      <h1>Secure <span class="b">self storage</span> you can <span class="r">trust</span>.</h1>
+      <p class="lead">Strong, watertight converted-container units across Durban, Polokwane, Midrand and Nelspruit. Month-to-month, 24/7 monitored, from R700 per month. Get a quote and reserve your unit fast.</p>
+      <div class="hero-cta">
+        <a class="btn btn-quote" href="#quote"><svg><use href="#i-doc"/></svg>Get my quote</a>
+        <a class="btn btn-ghost" href="tel:0318256641"><svg><use href="#i-phone"/></svg>Call a branch</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>From R700</b><span>Per month, top level</span></div>
+        <div><b>24/7</b><span>On-site monitored security</span></div>
+        <div><b>4 cities</b><span>DBN, PBG, JHB, Nelspruit</span></div>
+      </div>
+    </div>
+    <form class="qcard" onsubmit="return false">
+      <h3>Get a fast quote</h3>
+      <p class="sub">Tell us where and what you need. Your nearest branch comes back to you, usually same day.</p>
+      <label>Name</label><input type="text" placeholder="Your name">
+      <div class="row">
+        <div><label>Phone</label><input type="tel" placeholder="082 000 0000"></div>
+        <div><label>Email</label><input type="email" placeholder="you@email.com"></div>
+      </div>
+      <div class="row">
+        <div><label>Location</label><select><option>Durban</option><option>Polokwane</option><option>Midrand (JHB)</option><option>Nelspruit</option></select></div>
+        <div><label>Unit size</label><select><option>One 20ft unit</option><option>More than one unit</option><option>Not sure, help me size it</option></select></div>
+      </div>
+      <label>Preferred move-in date</label><input type="date">
+      <button class="btn btn-quote"><svg><use href="#i-doc"/></svg>Get my quote</button>
+      <p class="fnote">No obligation. A real person from your branch will call you back.</p>
+    </form>
+  </div>
+</section>
+
+<!-- PROOF -->
+<div class="proof"><div class="wrap proof-inner">
+  <span><b>Since 1983</b> Container World heritage</span><span class="sep"></span>
+  <span><b>24/7</b> monitored &amp; floodlit</span><span class="sep"></span>
+  <span><b>Anti-vandal</b> steel units</span><span class="sep"></span>
+  <span><b>Month-to-month</b> no lock-in</span><span class="sep"></span>
+  <span><b>4 branches</b> nationwide</span>
+</div></div>
+
+<!-- LOCATIONS -->
+<section id="locations">
+  <div class="wrap">
+    <div class="shead center">
+      <p class="eyebrow">Find your branch</p>
+      <h2>Storage near you, in four cities</h2>
+      <p>Pick your city and get a quote for that branch. Real units, real prices, ready to reserve.</p>
+    </div>
+    <div class="locs">
+      <article class="loc">
+        <div class="li"><img src="assets/yard.png" alt="Self Storage CW Durban"></div>
+        <div class="lb">
+          <h3><svg><use href="#i-pin"/></svg>Durban</h3>
+          <p class="lp">Secure container units in Durban, from R700/month.</p>
+          <p class="lt"><a href="tel:0318256641">031 825 6641</a></p>
+          <a class="btn btn-quote" href="#quote">Get a Durban quote</a>
+        </div>
+      </article>
+      <article class="loc">
+        <div class="li"><img src="assets/man-units.jpg" alt="Self Storage CW Polokwane"></div>
+        <div class="lb">
+          <h3><svg><use href="#i-pin"/></svg>Polokwane</h3>
+          <p class="lp">Secure container units in Polokwane, from R700/month.</p>
+          <p class="lt"><a href="tel:0152989118">015 298 9118</a></p>
+          <a class="btn btn-quote" href="#quote">Get a Polokwane quote</a>
+        </div>
+      </article>
+      <article class="loc">
+        <div class="li"><img src="assets/mid-slider.jpg" alt="Self Storage CW Midrand"></div>
+        <div class="lb">
+          <h3><svg><use href="#i-pin"/></svg>Midrand (JHB)</h3>
+          <p class="lp">Cnr Hooker St &amp; Chloor Rd, Chloorkop, from R700/month.</p>
+          <p class="lt"><a href="tel:0113921284">011 392 1284</a></p>
+          <a class="btn btn-quote" href="#quote">Get a Midrand quote</a>
+        </div>
+      </article>
+      <article class="loc">
+        <div class="li"><img src="assets/pushing.jpg" alt="Self Storage CW Nelspruit"></div>
+        <div class="lb">
+          <h3><svg><use href="#i-pin"/></svg>Nelspruit</h3>
+          <p class="lp">Secure container units in Nelspruit, from R700/month.</p>
+          <p class="lt"><a href="tel:0137551719">013 755 1719</a></p>
+          <a class="btn btn-quote" href="#quote">Get a Nelspruit quote</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" style="background:var(--soft)">
+  <div class="wrap">
+    <div class="shead center">
+      <p class="eyebrow">Simple, honest pricing</p>
+      <h2>One unit size, two clear prices</h2>
+      <p>Every unit is a full 20ft converted container, the same secure, watertight steel box. The only difference is whether it sits on the top level or the ground floor.</p>
+    </div>
+    <div class="pricing">
+      <div class="ptier">
+        <h3>Top-level unit</h3>
+        <div class="price">R700<small> /month</small></div>
+        <p class="pm">excl VAT, month-to-month</p>
+        <ul>
+          <li>Full 20ft secure container unit</li>
+          <li>Anti-vandal steel, watertight, vermin proof</li>
+          <li>Hardwood floor, easy-opening door</li>
+          <li>24/7 monitored, floodlit yard</li>
+        </ul>
+        <a class="btn btn-outline" href="#quote">Reserve a top-level unit</a>
+      </div>
+      <div class="ptier feat">
+        <span class="tag">Easiest access</span>
+        <h3>Ground-floor unit</h3>
+        <div class="price">R950<small> /month</small></div>
+        <p class="pm">excl VAT, month-to-month</p>
+        <ul>
+          <li>Full 20ft secure container unit</li>
+          <li>Drive-up, ground-level loading</li>
+          <li>Easiest for heavy or bulky goods</li>
+          <li>Same 24/7 monitored security</li>
+        </ul>
+        <a class="btn btn-quote" href="#quote">Reserve a ground-floor unit</a>
+      </div>
+    </div>
+    <p class="pnote">Prices from, excluding VAT. No long lock-in: month-to-month with 10 days' written notice to leave. You arrange your own insurance and bring your own goods.</p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="wrap">
+    <div class="shead center">
+      <p class="eyebrow">How it works</p>
+      <h2>Reserve your unit in 3 simple steps</h2>
+      <p>No accounts, no admin maze. From enquiry to moving your goods in, it is quick.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="n">1</div>
+        <h3>Get a quote</h3>
+        <p>Send the short form or call your nearest branch. Tell us your city and roughly what you need to store. We confirm price and availability, usually the same day.</p>
+      </div>
+      <div class="step alt">
+        <div class="n">2</div>
+        <h3>Reserve your unit</h3>
+        <p>Pick top-level or ground-floor, sign a simple month-to-month lease and pay your first month. No long contracts, cancel any time with 10 days' notice.</p>
+      </div>
+      <div class="step">
+        <div class="n">3</div>
+        <h3>Move in fast</h3>
+        <p>Collect your access, load your goods and lock up. Access weekdays 08:00 to 17:00, with after-hours by arrangement. Your goods, your key, your peace of mind.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:38px"><a class="btn btn-quote" href="#quote"><svg><use href="#i-doc"/></svg>Start with a quote</a></div>
+  </div>
+</section>
+
+<!-- SIZE GUIDE -->
+<section id="size" style="background:var(--soft)">
+  <div class="wrap sguide">
+    <div class="sguide-img"><img src="assets/box-girl.jpg" alt="Packing a storage unit"></div>
+    <div>
+      <p class="eyebrow">Size guide</p>
+      <h2>What fits in a unit?</h2>
+      <p>Each unit is a standard 20ft container: 6.05m long, 2.44m wide and 2.59m high, roughly 14.8 square metres of secure, dry floor space. That is plenty for a home move or a growing business. As a rough guide, one unit comfortably holds:</p>
+      <ul class="fits">
+        <li>The contents of a 2 to 3 bedroom home</li>
+        <li>A full lounge, beds and appliances</li>
+        <li>Business stock, files and equipment</li>
+        <li>Garden tools, bikes and outdoor gear</li>
+        <li>Furniture during a move or renovation</li>
+        <li>Seasonal and overflow storage</li>
+      </ul>
+      <div class="specbar">
+        <div><b>6.05m</b><span>Length</span></div>
+        <div><b>2.44m</b><span>Width</span></div>
+        <div><b>2.59m</b><span>Height</span></div>
+        <div><b>~14.8m&sup2;</b><span>Floor space</span></div>
+      </div>
+      <div style="margin-top:24px"><a class="btn btn-blue" href="#quote"><svg><use href="#i-box"/></svg>Not sure? We will help you size it</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECURITY BAND -->
+<section id="security" class="secband">
+  <div class="secband-bg"><img src="assets/yard.png" alt="Monitored container yard"></div>
+  <div class="wrap">
+    <div class="shead center">
+      <p class="eyebrow" style="color:#9fd6f5">Built for safety</p>
+      <h2>Your goods, properly protected</h2>
+      <p>Storage is a trust purchase. We treat it like one. Every branch is built and monitored to keep what matters to you secure, day and night.</p>
+    </div>
+    <div class="secgrid">
+      <div class="sec"><div class="ic"><svg><use href="#i-cam"/></svg></div><h3>24/7 CCTV monitoring</h3><p>On-site security and camera coverage around the clock, with floodlit, paved access areas.</p></div>
+      <div class="sec"><div class="ic"><svg><use href="#i-fence"/></svg></div><h3>Electric fencing</h3><p>Secured, fenced perimeters with controlled access, so only the right people get in.</p></div>
+      <div class="sec"><div class="ic"><svg><use href="#i-lock"/></svg></div><h3>Anti-vandal steel units</h3><p>New, watertight, vermin-proof steel containers with a patented easy-opening door and your own lock.</p></div>
+      <div class="sec"><div class="ic"><svg><use href="#i-shield"/></svg></div><h3>Fire protection</h3><p>Fire protection across the yard, plus strict no-hazardous-goods rules to keep every unit safe.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT split -->
+<section id="about">
+  <div class="wrap split">
+    <div class="split-img"><img src="assets/solutions-2.jpg" alt="Container World heritage"></div>
+    <div>
+      <p class="eyebrow">Why Self Storage CW</p>
+      <h2>Heritage you can lean on</h2>
+      <p>Self Storage CW is the self-storage arm of Container World, one of South Africa's most established container companies, in business since 1983. The units you store in are the same strong, anti-vandal converted containers Container World has built for over four decades, now run as secure, affordable self storage for households and businesses.</p>
+      <ul class="tick">
+        <li>Backed by Container World, in business since 1983</li>
+        <li>New, watertight, vermin-proof steel units</li>
+        <li>Month-to-month leases, with no long lock-in</li>
+        <li>Friendly branches in four cities, with real local people</li>
+      </ul>
+      <div style="margin-top:26px"><a class="btn btn-quote" href="#quote"><svg><use href="#i-doc"/></svg>Get a Quote</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE split -->
+<section style="background:var(--soft)">
+  <div class="wrap split flip">
+    <div class="split-img"><img src="assets/solutions-3.jpg" alt="Easy access storage units"></div>
+    <div>
+      <p class="eyebrow">Convenient by design</p>
+      <h2>Easy to use, easy to leave</h2>
+      <p>Storage should make your life simpler, not tie you down. Our units are conveniently located, simple to access and flexible by the month, so you only pay for the time you actually need.</p>
+      <ul class="tick">
+        <li>Conveniently located, easy-to-reach branches</li>
+        <li>Patented easy-opening access door</li>
+        <li>Affordable from R700 per month, excl VAT</li>
+        <li>Leave any time with just 10 days' notice</li>
+      </ul>
+      <div style="margin-top:26px"><a class="btn btn-blue" href="#quote"><svg><use href="#i-box"/></svg>Reserve a unit</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE BAND -->
+<section id="quote" class="qband">
+  <div class="qband-bg"><img src="assets/hero-header.jpg" alt="Container storage units"></div>
+  <div class="wrap">
+    <div>
+      <p class="eyebrow" style="color:#9fd6f5">Get a quote</p>
+      <h2>Reserve your unit today.</h2>
+      <p>One short form and your nearest branch comes back to you, usually the same business day. No obligation, no long lock-in.</p>
+      <div class="reassure">
+        <div><svg><use href="#i-check"/></svg><span><b>No long lock-in.</b> Month-to-month, leave with 10 days' written notice.</span></div>
+        <div><svg><use href="#i-check"/></svg><span><b>24/7 monitored.</b> CCTV, electric fencing and floodlit, fire-protected yards.</span></div>
+        <div><svg><use href="#i-check"/></svg><span><b>Move in fast.</b> Reserve, sign and load in, often within days.</span></div>
+        <div><svg><use href="#i-check"/></svg><span><b>Limited units per branch.</b> Reserve yours before it goes.</span></div>
+      </div>
+    </div>
+    <form class="qcard" onsubmit="return false">
+      <h3>Request your quote</h3>
+      <p class="sub">Quick, free and no obligation.</p>
+      <label>Name</label><input type="text" placeholder="Your name">
+      <div class="row">
+        <div><label>Phone</label><input type="tel" placeholder="082 000 0000"></div>
+        <div><label>Email</label><input type="email" placeholder="you@email.com"></div>
+      </div>
+      <div class="row">
+        <div><label>Location</label><select><option>Durban</option><option>Polokwane</option><option>Midrand (JHB)</option><option>Nelspruit</option></select></div>
+        <div><label>Unit size</label><select><option>One 20ft unit</option><option>More than one unit</option><option>Not sure, help me size it</option></select></div>
+      </div>
+      <label>Preferred move-in date</label><input type="date">
+      <button class="btn btn-quote"><svg><use href="#i-doc"/></svg>Get my quote</button>
+      <p class="fnote">A real person from your branch will call you back.</p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img class="foot-logo" src="assets/logo-self-storage.png" alt="Self Storage CW">
+        <p style="font-size:.9rem">Secure, affordable container self storage for households and businesses in Durban, Polokwane, Midrand and Nelspruit. The self-storage arm of Container World, since 1983.</p>
+        <img src="assets/logo-container-world.png" alt="Container World" style="height:34px;margin-top:16px;background:#fff;padding:6px 8px;border-radius:6px">
+      </div>
+      <div>
+        <h4>Storage</h4>
+        <div class="foot-links">
+          <a href="#pricing">Pricing</a>
+          <a href="#size">Size guide</a>
+          <a href="#how">How it works</a>
+          <a href="#security">Security</a>
+          <a href="#quote">Get a quote</a>
+        </div>
+      </div>
+      <div>
+        <h4>Branches</h4>
+        <div class="foot-links">
+          <a href="tel:0318256641">Durban &middot; 031 825 6641</a>
+          <a href="tel:0152989118">Polokwane &middot; 015 298 9118</a>
+          <a href="tel:0113921284">Midrand &middot; 011 392 1284</a>
+          <a href="tel:0137551719">Nelspruit &middot; 013 755 1719</a>
+        </div>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <div class="foot-c">
+          <div><svg><use href="#i-mail"/></svg><span>dbn@selfstoragecw.co.za</span></div>
+          <div><svg><use href="#i-mail"/></svg><span>jhb@selfstoragecw.co.za</span></div>
+          <div><svg><use href="#i-pin"/></svg><span>Midrand: Cnr Hooker St &amp; Chloor Rd, Chloorkop, Edenvale, 1622</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">&copy; 2026 Self Storage CW, part of Container World. Concept redesign by Searchly Web. Phone numbers and figures shown are placeholders to confirm.</div>
+  </div>
+</footer>
+
+<a class="float-q" href="#quote" aria-label="Get a quote"><svg><use href="#i-doc"/></svg><span>Get a Quote</span></a>
+
+</body>
+</html>

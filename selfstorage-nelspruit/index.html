@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Self Storage Nelspruit | Secure Container Self Storage in Mbombela, from R700 / month</title>
+<meta name="description" content="Secure, affordable container self storage in Nelspruit (Mbombela). New steel, anti-vandal, watertight units from R700 per month. 24/7 monitored, month-to-month, backed by Container World since 1983. Reserve your unit.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* Self Storage CW, Nelspruit. Real brand: blue #1289ca + red #e31618. Primary CTA = GET A QUOTE / RESERVE YOUR UNIT. */
+  :root{
+    --blue:#1289ca; --blue-dark:#075da8; --red:#e31618; --red-dark:#c02b0a;
+    --ink:#27292a; --slate:#3c3c3b; --slate-2:#33373b; --body:#525a61; --muted:#8a929a;
+    --line:#e3e7ea; --bg:#ffffff; --soft:#f4f6f8; --soft-2:#eef2f5;
+    --radius:12px; --maxw:1200px; --shadow:0 20px 44px -22px rgba(30,34,38,.45);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Inter",system-ui,sans-serif;color:var(--body);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:"Archivo",sans-serif;color:var(--ink);line-height:1.08;font-weight:800;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  section{padding:80px 0}
+  .eyebrow{font-family:"Archivo";font-weight:700;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin-bottom:14px}
+
+  .concept{background:var(--slate);color:#d7dde2;text-align:center;font-size:.82rem;padding:9px 16px}
+  .concept b{color:#fff}
+
+  .btn{display:inline-flex;align-items:center;gap:9px;font-family:"Archivo";font-weight:700;font-size:.92rem;letter-spacing:.02em;text-transform:uppercase;padding:14px 26px;border-radius:7px;transition:transform .15s,box-shadow .15s,background .15s;white-space:nowrap;cursor:pointer;border:none}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-quote{background:var(--red);color:#fff;box-shadow:0 12px 26px -10px rgba(227,22,24,.6)}
+  .btn-quote:hover{background:var(--red-dark)}
+  .btn-blue{background:var(--blue);color:#fff}
+  .btn-blue:hover{background:var(--blue-dark)}
+  .btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55)}
+  .btn-outline{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+  .btn svg{width:17px;height:17px;fill:currentColor}
+
+  /* Top bar */
+  .topbar{background:var(--ink);color:#c4ccd2;font-size:.82rem}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:42px;gap:18px}
+  .topbar .tb-l{display:flex;gap:22px;align-items:center}
+  .topbar .tb-l span{display:inline-flex;gap:7px;align-items:center}
+  .topbar a{color:#c4ccd2}
+  .topbar svg{width:14px;height:14px;fill:var(--blue)}
+  .topbar .tb-r{color:#fff;font-weight:600;letter-spacing:.02em}
+
+  /* Header */
+  header.site{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:80px;gap:20px}
+  .nav .logo{height:50px;width:auto}
+  .nav-links{display:flex;gap:22px;font-family:"Archivo";font-weight:600;font-size:.84rem;letter-spacing:.02em;text-transform:uppercase;color:var(--ink)}
+  .nav-links a:hover{color:var(--red)}
+  .nav-cta{display:flex;align-items:center;gap:14px}
+  .nav-cta .tel{font-family:"Archivo";font-weight:700;color:var(--ink);font-size:.9rem;display:inline-flex;gap:7px;align-items:center}
+  .nav-cta .tel svg{width:16px;height:16px;fill:var(--blue)}
+
+  /* Hero */
+  .hero{position:relative;color:#fff;overflow:hidden;background:var(--slate)}
+  .hero-bg{position:absolute;inset:0}
+  .hero-bg img{width:100%;height:100%;object-fit:cover}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(7,93,168,.92) 0%,rgba(20,23,26,.82) 46%,rgba(20,23,26,.5) 100%)}
+  .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:78px 24px 84px}
+  .hero .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(18,137,202,.22);border:1px solid rgba(18,137,202,.6);color:#9fd6f5;padding:6px 14px;border-radius:999px;font-family:"Archivo";font-weight:600;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:20px}
+  .hero h1{color:#fff;font-size:clamp(2.4rem,5vw,3.9rem);font-weight:900;line-height:1.04}
+  .hero h1 .r{color:#ff8a8b}.hero h1 .b{color:#9fd6f5}
+  .hero p.lead{font-size:1.15rem;margin:20px 0 28px;color:#dfe6ec;max-width:540px}
+  .hero-cta{display:flex;gap:13px;flex-wrap:wrap}
+  .hero-stats{display:flex;gap:32px;margin-top:34px;flex-wrap:wrap}
+  .hero-stats b{font-family:"Archivo";font-size:1.9rem;font-weight:800;color:#fff;display:block;line-height:1}
+  .hero-stats span{font-size:.82rem;color:#bcc4cb}
+
+  /* Quote card */
+  .qcard{background:#fff;border-radius:14px;padding:28px;box-shadow:var(--shadow);color:var(--body)}
+  .qcard h3{font-size:1.4rem;color:var(--ink);margin-bottom:4px}
+  .qcard .sub{font-size:.88rem;color:var(--muted);margin-bottom:18px}
+  .qcard label{font-family:"Archivo";font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--slate);display:block;margin-bottom:5px}
+  .qcard input,.qcard select{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:8px;font-family:inherit;font-size:.92rem;margin-bottom:12px;color:var(--ink);background:var(--soft)}
+  .qcard .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .qcard .btn-quote{width:100%;justify-content:center;padding:15px}
+  .qcard .fnote{text-align:center;font-size:.78rem;color:var(--muted);margin-top:10px}
+
+  /* Proof bar */
+  .proof{background:var(--ink);color:#fff;padding:22px 0}
+  .proof-inner{display:flex;align-items:center;justify-content:center;gap:14px 34px;flex-wrap:wrap;font-family:"Archivo";font-weight:600;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:#c4ccd2}
+  .proof b{color:#fff}
+  .proof .sep{width:5px;height:5px;border-radius:50%;background:var(--red)}
+
+  /* Section heads */
+  .shead{max-width:680px;margin-bottom:46px}
+  .shead.center{margin-left:auto;margin-right:auto;text-align:center}
+  .shead h2{font-size:clamp(2rem,3.6vw,2.7rem)}
+  .shead p{color:var(--body);font-size:1.05rem;margin-top:12px}
+
+  /* Pricing */
+  .price-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:840px;margin:0 auto}
+  .price{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px 30px;text-align:center;position:relative;transition:transform .2s,box-shadow .2s}
+  .price:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .price.feature{border:2px solid var(--blue)}
+  .price .tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--blue);color:#fff;font-family:"Archivo";font-weight:700;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;padding:5px 14px;border-radius:999px}
+  .price h3{font-size:1.25rem;margin-bottom:6px}
+  .price .from{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-family:"Archivo";font-weight:700}
+  .price .amt{font-family:"Archivo";font-weight:900;color:var(--ink);font-size:2.7rem;line-height:1;margin:6px 0 2px}
+  .price .amt span{font-size:1rem;font-weight:700;color:var(--body)}
+  .price .vat{font-size:.78rem;color:var(--muted);margin-bottom:18px}
+  .price ul{list-style:none;text-align:left;margin:0 0 22px}
+  .price ul li{position:relative;padding-left:26px;margin-bottom:9px;font-size:.92rem;color:var(--ink)}
+  .price ul li::before{content:"";position:absolute;left:0;top:2px;width:17px;height:17px;border-radius:50%;background:var(--blue)}
+  .price ul li::after{content:"";position:absolute;left:5px;top:6px;width:6px;height:3px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg)}
+  .price .btn{width:100%;justify-content:center}
+  .price-note{text-align:center;color:var(--muted);font-size:.88rem;margin-top:24px}
+
+  /* What fits cards */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column}
+  .card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .card .ci{height:190px;overflow:hidden;position:relative}
+  .card .ci img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+  .card:hover .ci img{transform:scale(1.06)}
+  .card .cb{padding:22px 22px 24px;flex:1;display:flex;flex-direction:column}
+  .card h3{font-size:1.25rem;margin-bottom:7px}
+  .card .meta{font-family:"Archivo";font-weight:700;font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+  .card p{font-size:.93rem;color:var(--body);flex:1}
+
+  /* Steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;position:relative}
+  .step .num{font-family:"Archivo";font-weight:900;font-size:2.4rem;color:var(--blue);opacity:.25;line-height:1}
+  .step h3{font-size:1.2rem;margin:10px 0 8px}
+  .step p{font-size:.93rem}
+
+  /* Split */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+  .split.flip .split-img{order:2}
+  .split-img img{border-radius:var(--radius);width:100%;aspect-ratio:4/3;object-fit:cover;box-shadow:var(--shadow)}
+  .split h2{font-size:clamp(2rem,3.4vw,2.6rem)}
+  .split p{margin-top:14px}
+  .tick{list-style:none;margin:18px 0 0}
+  .tick li{position:relative;padding-left:30px;margin-bottom:11px;color:var(--ink);font-weight:500}
+  .tick li::before{content:"";position:absolute;left:0;top:3px;width:19px;height:19px;border-radius:50%;background:var(--blue)}
+  .tick li::after{content:"";position:absolute;left:6px;top:7px;width:6px;height:3px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg)}
+
+  /* Trust band */
+  .trust{background:var(--blue-dark);color:#fff;position:relative;overflow:hidden}
+  .trust .wrap{position:relative;z-index:1}
+  .trust .shead h2{color:#fff}
+  .trust .shead p{color:#d3e6f4}
+  .tgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:10px}
+  .tcell{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius);padding:26px 22px}
+  .tcell b{font-family:"Archivo";font-weight:800;font-size:1.7rem;color:#fff;display:block;line-height:1.05;margin-bottom:8px}
+  .tcell p{font-size:.92rem;color:#d3e6f4}
+
+  /* Quote band */
+  .qband{position:relative;overflow:hidden;background:var(--slate)}
+  .qband-bg{position:absolute;inset:0}
+  .qband-bg img{width:100%;height:100%;object-fit:cover;opacity:.2}
+  .qband .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .qband h2{color:#fff;font-size:clamp(2.1rem,4vw,2.9rem)}
+  .qband p{color:#d7dde2;font-size:1.08rem;margin:14px 0 24px}
+  .qband .reassure{display:flex;gap:22px;flex-wrap:wrap;margin-top:8px;font-size:.9rem;color:#aeb6bd}
+
+  /* Map */
+  .map-wrap{padding:0}
+  .map-wrap iframe{width:100%;height:360px;border:0;display:block;filter:grayscale(.15)}
+
+  /* Footer */
+  footer.site{background:var(--ink);color:#aab2b9;padding:58px 0 26px}
+  .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.1fr;gap:36px}
+  footer.site h4{color:#fff;font-family:"Archivo";font-size:.95rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:15px}
+  footer.site a:hover{color:#fff}
+  .foot-links a{display:block;color:#aab2b9;padding:4px 0;font-size:.9rem}
+  .foot-logo{height:54px;margin-bottom:14px;background:#fff;padding:8px 12px;border-radius:8px}
+  .foot-c div{display:flex;gap:10px;align-items:flex-start;margin-bottom:11px;font-size:.9rem}
+  .foot-c svg{width:16px;height:16px;fill:var(--blue);flex:none;margin-top:3px}
+  .copyright{border-top:1px solid rgba(255,255,255,.1);margin-top:38px;padding-top:22px;text-align:center;font-size:.82rem;color:#7c858c}
+
+  /* Floating Get a quote */
+  .float-q{position:fixed;right:20px;bottom:20px;z-index:60;background:var(--red);color:#fff;display:flex;align-items:center;gap:9px;padding:14px 22px;border-radius:8px;font-family:"Archivo";font-weight:700;text-transform:uppercase;font-size:.84rem;letter-spacing:.04em;box-shadow:0 16px 32px -10px rgba(227,22,24,.6);transition:transform .15s}
+  .float-q:hover{transform:scale(1.05);background:var(--red-dark)}
+  .float-q svg{width:18px;height:18px;fill:#fff}
+
+  @media(max-width:980px){
+    .nav-links{display:none}
+    .hero .wrap,.split,.qband .wrap{grid-template-columns:1fr;gap:30px}
+    .split.flip .split-img{order:0}
+    .cards,.steps{grid-template-columns:1fr 1fr}
+    .tgrid,.foot-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:600px){
+    section{padding:56px 0}.topbar{display:none}
+    .cards,.steps,.price-grid,.tgrid,.foot-grid{grid-template-columns:1fr}
+    .qcard .row{grid-template-columns:1fr}
+    .float-q span{display:none}.float-q{padding:15px}
+  }
+</style>
+</head>
+<body>
+
+<svg style="display:none" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M9 2h6l5 5v13a2 2 0 01-2 2H9zM8 6H6a2 2 0 00-2 2v12a2 2 0 002 2h2zM13 8h4l-4-4z"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M12 2l9 4.5v11L12 22 3 17.5v-11zm0 2.3L5.6 7.5 12 10.6l6.4-3.1zM5 9.2v7.1l6 3v-7.1zm14 0l-6 3v7.1l6-3z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.4 9.3-8 11-4.6-1.7-8-6-8-11V5zm-1.2 13.2l5.8-5.8-1.4-1.4-4.4 4.4-2-2L7.4 12z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 11V6h-2v8l6 3 1-1.7z"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><path d="M14 6a4 4 0 11-3.9 5H8v3H5v3H2v-3.5L9 9.1A4 4 0 0114 6zm1 2a1 1 0 100 2 1 1 0 000-2z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></symbol>
+</svg>
+
+<div class="concept">Concept site by <b>Searchly Web</b> for Self Storage CW Nelspruit. A modern, quote-focused draft in your own brand, for you to review.</div>
+
+<!-- TOP BAR -->
+<div class="topbar"><div class="wrap">
+  <div class="tb-l">
+    <span><svg><use href="#i-phone"/></svg> 013 000 0000</span>
+    <span><svg><use href="#i-mail"/></svg> info.ns@containerworld.co.za</span>
+    <span><svg><use href="#i-pin"/></svg> Nelspruit, Mbombela, Mpumalanga</span>
+  </div>
+  <div class="tb-r">Access weekdays 08:00 to 17:00, after-hours by arrangement</div>
+</div></div>
+
+<!-- HEADER -->
+<header class="site"><div class="wrap nav">
+  <a href="index.html"><img class="logo" src="assets/logo-self-storage.png" alt="Self Storage CW Nelspruit"></a>
+  <nav class="nav-links">
+    <a href="#pricing">Pricing</a>
+    <a href="#fits">What fits</a>
+    <a href="#how">How it works</a>
+    <a href="#security">Security</a>
+    <a href="#quote">Reserve</a>
+  </nav>
+  <div class="nav-cta">
+    <a class="tel" href="tel:+27130000000"><svg><use href="#i-phone"/></svg>013 000 0000</a>
+    <a class="btn btn-quote" href="#quote"><svg><use href="#i-doc"/></svg>Get a Quote</a>
+  </div>
+</div></header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"><img src="assets/hero-header.jpg" alt="Secure container self storage units in Nelspruit"></div>
+  <div class="wrap">
+    <div>
+      <span class="badge"><svg style="width:13px;height:13px;fill:#9fd6f5"><use href="#i-shield"/></svg> Backed by Container World &middot; Since 1983</span>
+      <h1>Secure self storage in <span class="b">Nelspruit</span>, from <span class="r">R700</span> per month.</h1>
+      <p class="lead">New steel, anti-vandal, watertight storage units in Mbombela, monitored 24/7. Month-to-month, no long lock-in, move in fast. Personal or business, short or long term.</p>
+      <div class="hero-cta">
+        <a class="btn btn-quote" href="#quote"><svg><use href="#i-doc"/></svg>Reserve your unit</a>
+        <a class="btn btn-ghost" href="tel:+27130000000"><svg><use href="#i-phone"/></svg>Call 013 000 0000</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>R700</b><span>From, per month</span></div>
+        <div><b>24/7</b><span>Monitored security</span></div>
+        <div><b>40+</b><span>Years of CW heritage</span></div>
+      </div>
+    </div>
+    <form class="qcard" onsubmit="return false">
+      <h3>Reserve your unit</h3>
+      <p class="sub">Tell us what you need to store and we will come back to you, usually same day.</p>
+      <label>Name</label><input type="text" placeholder="Your name">
+      <div class="row">
+        <div><label>Phone</label><input type="tel" placeholder="082 000 0000"></div>
+        <div><label>Email</label><input type="email" placeholder="you@email.com"></div>
+      </div>
+      <div class="row">
+        <div><label>Unit size</label><select><option>20ft unit (6.05m x 2.44m)</option><option>Top floor, from R700</option><option>Ground floor, from R950</option><option>Not sure, advise me</option></select></div>
+        <div><label>Move-in date</label><input type="date"></div>
+      </div>
+      <button class="btn btn-quote"><svg><use href="#i-doc"/></svg>Get my quote</button>
+      <p class="fnote">No obligation. A real person in Nelspruit will call you back.</p>
+    </form>
+  </div>
+</section>
+
+<!-- PROOF -->
+<div class="proof"><div class="wrap proof-inner">
+  <span><b>Since 1983</b></span><span class="sep"></span>
+  <span><b>24/7</b> monitored</span><span class="sep"></span>
+  <span><b>Electric fencing &amp; CCTV</b></span><span class="sep"></span>
+  <span><b>Month-to-month</b></span><span class="sep"></span>
+  <span><b>10-day</b> notice to leave</span>
+</div></div>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="shead center">
+      <p class="eyebrow">Transparent pricing</p>
+      <h2>One clear price, no surprises</h2>
+      <p>Every unit is a full 20ft container (6.05m x 2.44m x 2.59m), new steel, anti-vandal, watertight and vermin-proof, with a patented easy-opening door and hardwood floor. Choose by floor level.</p>
+    </div>
+    <div class="price-grid">
+      <div class="price feature">
+        <span class="tag">Best value</span>
+        <h3>Top-floor unit</h3>
+        <p class="from">From</p>
+        <div class="amt">R700<span> /month</span></div>
+        <p class="vat">Excl. VAT, month-to-month</p>
+        <ul>
+          <li>Full 20ft container unit</li>
+          <li>Steel, anti-vandal, watertight</li>
+          <li>Hardwood floor, easy-opening door</li>
+          <li>24/7 monitored, floodlit, paved</li>
+        </ul>
+        <a class="btn btn-quote" href="#quote">Reserve from R700</a>
+      </div>
+      <div class="price">
+        <h3>Ground-floor unit</h3>
+        <p class="from">From</p>
+        <div class="amt">R950<span> /month</span></div>
+        <p class="vat">Excl. VAT, month-to-month</p>
+        <ul>
+          <li>Full 20ft container unit</li>
+          <li>Drive-up, no stairs, easiest loading</li>
+          <li>Steel, anti-vandal, watertight</li>
+          <li>24/7 monitored, floodlit, paved</li>
+        </ul>
+        <a class="btn btn-blue" href="#quote">Reserve from R950</a>
+      </div>
+    </div>
+    <p class="price-note">Lease auto-renews on the 1st of each month. You arrange your own goods insurance. No explosives, flammables, hazardous goods or gas bottles stored.</p>
+  </div>
+</section>
+
+<!-- WHAT FITS -->
+<section id="fits" style="background:var(--soft)">
+  <div class="wrap">
+    <div class="shead center">
+      <p class="eyebrow">Size guide</p>
+      <h2>What fits in a unit?</h2>
+      <p>Each unit is a full 20ft container, roughly 14 square metres of secure, dry, lockable space. Here is what our Nelspruit tenants typically store.</p>
+    </div>
+    <div class="cards">
+      <article class="card"><div class="ci"><img src="assets/box-girl.jpg" alt="Household move boxes"></div><div class="cb"><span class="meta">Home &amp; move</span><h3>A 2 to 3 bedroom home</h3><p>Beds, lounge suite, appliances, boxes and more while you move, renovate or travel. Keep it for a month or a year.</p></div></article>
+      <article class="card"><div class="ci"><img src="assets/man-units.jpg" alt="Business stock and equipment storage"></div><div class="cb"><span class="meta">Business</span><h3>Stock, tools &amp; records</h3><p>Overflow stock, seasonal inventory, tools, equipment and files. A practical, low-cost store-room for Mbombela businesses.</p></div></article>
+      <article class="card"><div class="ci"><img src="assets/pushing.jpg" alt="Furniture and bulky items storage"></div><div class="cb"><span class="meta">Bulky items</span><h3>Furniture &amp; gear</h3><p>Spare furniture, garden and camping gear, a trailer or bike, that golf bag you keep tripping over. Out of the way, easy to reach.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="wrap">
+    <div class="shead center">
+      <p class="eyebrow">How it works</p>
+      <h2>Reserve your unit in 3 simple steps</h2>
+      <p>No queues, no paperwork mountain. Most Nelspruit tenants are moved in within a day or two of enquiring.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Get a quote</h3>
+        <p>Send the short form or call us. Tell us roughly what you are storing and your move-in date, and we confirm a unit and price.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>Sign &amp; secure it</h3>
+        <p>Sign a simple month-to-month lease, pay your first month, and the unit is yours. You bring your own lock and the only key.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Move in &amp; access</h3>
+        <p>Move your goods in on the day. Access weekdays 08:00 to 17:00, after-hours by arrangement, on a 24/7 monitored, floodlit site.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px"><a class="btn btn-quote" href="#quote"><svg><use href="#i-doc"/></svg>Start with a quote</a></div>
+  </div>
+</section>
+
+<!-- ABOUT / WHY split -->
+<section style="background:var(--soft)">
+  <div class="wrap split">
+    <div class="split-img"><img src="assets/yard.png" alt="Self Storage CW Nelspruit facility"></div>
+    <div>
+      <p class="eyebrow">Why Self Storage CW Nelspruit</p>
+      <h2>Storage you can actually trust</h2>
+      <p>Self Storage CW is the storage arm of Container World, a South African container specialist operating since 1983. Our Nelspruit units are purpose-built from new shipping containers, so your goods stay dry, secure and out of reach.</p>
+      <ul class="tick">
+        <li>Complete steel, anti-vandal construction</li>
+        <li>Watertight, durable and vermin-proof</li>
+        <li>Patented easy-opening access door</li>
+        <li>Hardwood flooring, conveniently located in Mbombela</li>
+        <li>You hold the only key to your unit</li>
+      </ul>
+      <div style="margin-top:26px"><a class="btn btn-quote" href="#quote"><svg><use href="#i-doc"/></svg>Reserve your unit</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECURITY feature split -->
+<section>
+  <div class="wrap split flip">
+    <div class="split-img"><img src="assets/mid-slider.jpg" alt="Secure monitored storage facility"></div>
+    <div>
+      <p class="eyebrow">Security &amp; access</p>
+      <h2>Monitored around the clock</h2>
+      <p>Storage is a trust purchase, so we treat security as the product. The Nelspruit site is watched and protected day and night, on top of the steel of the units themselves.</p>
+      <ul class="tick">
+        <li>24-hour on-site security</li>
+        <li>Electric fencing and CCTV</li>
+        <li>Floodlit, paved access areas</li>
+        <li>Fire protection on site</li>
+        <li>Month-to-month, just 10-day notice to vacate</li>
+      </ul>
+      <div style="margin-top:26px"><a class="btn btn-blue" href="tel:+27130000000"><svg><use href="#i-phone"/></svg>Call our Nelspruit team</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAND -->
+<section id="security" class="trust">
+  <div class="wrap">
+    <div class="shead center">
+      <p class="eyebrow" style="color:#9fd6f5">Heritage &amp; peace of mind</p>
+      <h2>Four decades behind every unit</h2>
+      <p>You are not storing with strangers. You are storing with a national container company that has been building and securing steel for over 40 years.</p>
+    </div>
+    <div class="tgrid">
+      <div class="tcell"><b>Since 1983</b><p>Backed by Container World, a trusted South African container specialist.</p></div>
+      <div class="tcell"><b>24/7</b><p>Monitored, fenced, floodlit and CCTV-protected, every hour of every day.</p></div>
+      <div class="tcell"><b>Month-to-month</b><p>No long lock-in. Stay as long as you need, leave on 10-day notice.</p></div>
+      <div class="tcell"><b>New steel units</b><p>Watertight, vermin-proof, anti-vandal containers with hardwood floors.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE BAND -->
+<section id="quote" class="qband">
+  <div class="qband-bg"><img src="assets/solutions-2.jpg" alt="Storage units"></div>
+  <div class="wrap">
+    <div>
+      <p class="eyebrow" style="color:#9fd6f5">Reserve your unit</p>
+      <h2>Tell us what you need to store. We will quote you fast.</h2>
+      <p>One short form and our Nelspruit team comes back to you, usually the same business day. No obligation, and a real person to talk you through it.</p>
+      <div class="reassure">
+        <span>&#10003; Same-day response</span>
+        <span>&#10003; From R700 per month</span>
+        <span>&#10003; Move in within a day or two</span>
+      </div>
+    </div>
+    <form class="qcard" onsubmit="return false">
+      <h3>Get your quote</h3>
+      <p class="sub">Quick, free and no obligation.</p>
+      <label>Name</label><input type="text" placeholder="Your name">
+      <div class="row">
+        <div><label>Phone</label><input type="tel" placeholder="082 000 0000"></div>
+        <div><label>Email</label><input type="email" placeholder="you@email.com"></div>
+      </div>
+      <div class="row">
+        <div><label>Unit size</label><select><option>20ft unit (6.05m x 2.44m)</option><option>Top floor, from R700</option><option>Ground floor, from R950</option><option>Not sure, advise me</option></select></div>
+        <div><label>Move-in date</label><input type="date"></div>
+      </div>
+      <button class="btn btn-quote"><svg><use href="#i-doc"/></svg>Get my quote</button>
+      <p class="fnote">A real person in Nelspruit will call you back.</p>
+    </form>
+  </div>
+</section>
+
+<!-- MAP -->
+<div class="map-wrap">
+  <iframe src="https://www.google.com/maps?q=Self%20Storage%20Nelspruit&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Self Storage CW Nelspruit location"></iframe>
+</div>
+
+<!-- FOOTER -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img class="foot-logo" src="assets/logo-self-storage.png" alt="Self Storage CW">
+        <p style="font-size:.9rem">Secure container self storage in Nelspruit (Mbombela), backed by Container World since 1983. New steel units, 24/7 monitored, month-to-month, from R700 per month.</p>
+      </div>
+      <div>
+        <h4>Storage</h4>
+        <div class="foot-links">
+          <a href="#pricing">Pricing</a>
+          <a href="#fits">What fits</a>
+          <a href="#how">How it works</a>
+          <a href="#security">Security</a>
+          <a href="#quote">Reserve a unit</a>
+        </div>
+      </div>
+      <div>
+        <h4>Self Storage CW</h4>
+        <div class="foot-links">
+          <a href="#security">About</a>
+          <a href="#quote">Get a quote</a>
+          <a href="tel:+27130000000">Call us</a>
+          <a href="#">Durban &middot; Polokwane &middot; Midrand &middot; Nelspruit</a>
+        </div>
+      </div>
+      <div>
+        <h4>Nelspruit branch</h4>
+        <div class="foot-c">
+          <div><svg><use href="#i-phone"/></svg><span>013 000 0000</span></div>
+          <div><svg><use href="#i-mail"/></svg><span>info.ns@containerworld.co.za</span></div>
+          <div><svg><use href="#i-pin"/></svg><span>Nelspruit, Mbombela, Mpumalanga. Exact address to confirm.</span></div>
+          <div><svg><use href="#i-clock"/></svg><span>Access weekdays 08:00 to 17:00, after-hours by arrangement.</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">&copy; 2026 Self Storage CW, part of Container World. Concept site by Searchly Web. Phone number and exact address shown are placeholders to confirm.</div>
+  </div>
+</footer>
+
+<a class="float-q" href="#quote" aria-label="Get a quote"><svg><use href="#i-doc"/></svg><span>Get a Quote</span></a>
+
+</body>
+</html>
