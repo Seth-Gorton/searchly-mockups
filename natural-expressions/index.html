@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Natural Expressions | Luxury Day Spa &amp; Skin Wellness, Parkmore, Johannesburg</title>
+<meta name="description" content="A luxury day spa in Parkmore, Johannesburg. Facials, massage, laser, nails and men's grooming, with nearly 30 years of expertise. Book on WhatsApp.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ===== Natural Expressions real brand: warm taupe-brown + cream, elegant spa ===== */
+  :root{
+    --brand:#8a6f52; --brand-dark:#5f4a34; --brand-deep:#473526;
+    --gold:#c2a06b; --gold-soft:#d8be95;
+    --ink:#3a2f25; --body:#6a5d50; --muted:#988b7c; --line:#e7ddcf;
+    --bg:#ffffff; --cream:#f7f1e8; --cream-2:#f1e8da;
+    --wa:#8a6f52; /* WhatsApp action in THEIR brown, not green, per brief */
+    --radius:14px; --maxw:1180px; --shadow:0 22px 48px -24px rgba(71,53,38,.45);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Jost",system-ui,sans-serif;color:var(--body);background:var(--bg);line-height:1.7;font-weight:300;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:"Cormorant Garamond",Georgia,serif;color:var(--ink);line-height:1.12;font-weight:600;letter-spacing:.01em}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  section{padding:88px 0}
+  .eyebrow{font-family:"Jost";font-weight:500;font-size:.74rem;letter-spacing:.32em;text-transform:uppercase;color:var(--brand);margin-bottom:16px}
+
+  .concept{background:var(--brand-deep);color:#ece2d3;text-align:center;font-size:.82rem;padding:9px 16px}
+  .concept b{color:var(--gold-soft)}
+
+  .btn{display:inline-flex;align-items:center;gap:9px;font-family:"Jost";font-weight:500;font-size:.95rem;letter-spacing:.02em;padding:14px 26px;border-radius:999px;transition:transform .15s,box-shadow .15s,background .15s;white-space:nowrap;cursor:pointer;border:none}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-wa{background:var(--brand);color:#fff;box-shadow:0 12px 26px -12px rgba(95,74,52,.7)}
+  .btn-wa:hover{background:var(--brand-dark)}
+  .btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.6)}
+  .btn-outline{background:transparent;color:var(--brand-dark);border:1px solid var(--brand)}
+  .btn svg{width:18px;height:18px;fill:currentColor}
+
+  /* Top bar */
+  .topbar{background:var(--brand-deep);color:#d9cdbb;font-size:.8rem}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:42px;gap:18px}
+  .topbar .tb-l{display:flex;gap:22px;align-items:center}
+  .topbar .tb-l span{display:inline-flex;align-items:center;gap:7px}
+  .topbar svg{width:14px;height:14px;fill:var(--gold-soft)}
+  .topbar .tb-r{color:#ece2d3;letter-spacing:.04em}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:84px;gap:20px}
+  .brand{display:flex;flex-direction:column;line-height:1}
+  .brand .bn{font-family:"Cormorant Garamond";font-weight:600;font-size:1.7rem;color:var(--brand-dark);letter-spacing:.02em}
+  .brand .bt{font-family:"Jost";font-weight:400;font-size:.62rem;letter-spacing:.36em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+  .nav-links{display:flex;gap:26px;font-family:"Jost";font-weight:400;font-size:.86rem;letter-spacing:.04em;color:var(--ink);text-transform:uppercase}
+  .nav-links a:hover{color:var(--brand)}
+  .nav-cta .btn{padding:11px 20px;font-size:.82rem}
+
+  /* Hero */
+  .hero{position:relative;color:#fff;overflow:hidden;background:var(--brand-deep)}
+  .hero-bg{position:absolute;inset:0}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(45,33,23,.86) 0%,rgba(71,53,38,.74) 46%,rgba(95,74,52,.4) 100%)}
+  .hero-inner{position:relative;z-index:1;padding:118px 0 124px;max-width:660px}
+  .hero h1{color:#fff;font-size:clamp(2.8rem,5.6vw,4.6rem);font-weight:600;line-height:1.05}
+  .hero h1 .u{font-style:italic;color:var(--gold-soft)}
+  .hero p.lead{font-size:1.18rem;margin:24px 0 32px;color:#efe7da;max-width:540px;font-weight:300}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-foot{margin-top:30px;font-size:.85rem;color:#d9cdbb;letter-spacing:.04em}
+
+  /* Trust strip */
+  .trust{background:var(--cream);border-bottom:1px solid var(--line);padding:26px 0}
+  .trust-inner{display:flex;align-items:center;justify-content:center;gap:18px 40px;flex-wrap:wrap;font-family:"Jost";font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .trust b{color:var(--brand-dark);font-weight:500}
+  .trust .sep{width:5px;height:5px;border-radius:50%;background:var(--gold)}
+
+  /* Section heads */
+  .shead{max-width:640px;margin:0 auto 52px;text-align:center}
+  .shead h2{font-size:clamp(2.2rem,4vw,3rem)}
+  .shead p{color:var(--muted);font-size:1.06rem;margin-top:14px;font-weight:300}
+
+  /* Services */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column}
+  .card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .card .ci{height:200px;overflow:hidden}
+  .card .ci img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+  .card:hover .ci img{transform:scale(1.06)}
+  .card .cb{padding:24px 24px 26px;flex:1;display:flex;flex-direction:column}
+  .card h3{font-size:1.5rem;margin-bottom:8px}
+  .card p{font-size:.95rem;color:var(--body);flex:1}
+  .card .lk{margin-top:16px;font-family:"Jost";font-weight:500;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--brand);display:inline-flex;gap:7px;align-items:center}
+
+  /* About split */
+  .about{background:var(--cream)}
+  .about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .about .imgs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .about .imgs img{border-radius:12px;height:100%;object-fit:cover;aspect-ratio:3/4}
+  .about .imgs img:first-child{margin-top:28px}
+  .about h2{font-size:clamp(2rem,3.6vw,2.7rem)}
+  .about p{margin-top:16px}
+  .about .stats{display:flex;gap:34px;margin-top:26px}
+  .about .stats b{font-family:"Cormorant Garamond";font-size:2.4rem;color:var(--brand);font-weight:600;display:block;line-height:1}
+  .about .stats span{font-size:.82rem;color:var(--muted);letter-spacing:.06em}
+
+  /* Brands */
+  .brands{text-align:center}
+  .brands .row{display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap;margin-top:8px}
+  .brands .row .bz{font-family:"Cormorant Garamond";font-size:1.9rem;color:var(--brand-dark);letter-spacing:.04em}
+  .brands img{height:54px;opacity:.85}
+
+  /* Gallery */
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:12px}
+  .gallery a{overflow:hidden;border-radius:10px}
+  .gallery img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+  .gallery a:hover img{transform:scale(1.07)}
+  .gallery .tall{grid-row:span 2}
+  .gallery .wide{grid-column:span 2}
+
+  /* Booking CTA */
+  .booking{position:relative;color:#fff;overflow:hidden;background:var(--brand-deep)}
+  .booking-bg{position:absolute;inset:0}
+  .booking-bg img{width:100%;height:100%;object-fit:cover}
+  .booking-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(45,33,23,.9),rgba(71,53,38,.86))}
+  .booking .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .booking h2{color:#fff;font-size:clamp(2.1rem,4vw,2.9rem)}
+  .booking p{color:#efe7da;font-size:1.1rem;margin:16px 0 26px;font-weight:300}
+  .bcard{background:#fff;border-radius:18px;padding:30px;box-shadow:var(--shadow)}
+  .bcard label{font-family:"Jost";font-size:.78rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--brand-dark);display:block;margin-bottom:6px}
+  .bcard input,.bcard select{width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:10px;font-family:inherit;font-size:.95rem;margin-bottom:15px;color:var(--ink);background:var(--cream)}
+  .bcard .btn-wa{width:100%;justify-content:center;padding:16px}
+  .bcard .fnote{text-align:center;font-size:.8rem;color:var(--muted);margin-top:10px}
+
+  /* Hours + location */
+  .info{background:var(--cream)}
+  .info .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+  .hours table{width:100%;border-collapse:collapse;margin-top:8px}
+  .hours td{padding:10px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+  .hours td:last-child{text-align:right;color:var(--brand-dark);font-weight:400}
+  .loc p{margin-bottom:8px;display:flex;gap:11px;align-items:flex-start}
+  .loc svg{width:18px;height:18px;fill:var(--brand);flex:none;margin-top:4px}
+
+  /* Footer */
+  footer{background:var(--brand-deep);color:#cdbfac;padding:58px 0 28px}
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1.2fr;gap:40px}
+  footer h4{color:#fff;font-family:"Cormorant Garamond";font-size:1.4rem;margin-bottom:14px;font-weight:600}
+  footer a:hover{color:var(--gold-soft)}
+  .foot-links a{display:block;color:#cdbfac;padding:4px 0;font-size:.9rem;text-transform:uppercase;letter-spacing:.06em}
+  .foot-c div{display:flex;gap:11px;align-items:flex-start;margin-bottom:12px;font-size:.92rem}
+  .foot-c svg{width:17px;height:17px;fill:var(--gold-soft);flex:none;margin-top:3px}
+  .copyright{border-top:1px solid rgba(255,255,255,.12);margin-top:42px;padding-top:22px;text-align:center;font-size:.82rem;color:#9c8d79}
+
+  /* Floating WhatsApp (in brand brown, not green) */
+  .float-wa{position:fixed;right:20px;bottom:20px;z-index:60;background:var(--brand);color:#fff;display:flex;align-items:center;gap:10px;padding:14px 22px;border-radius:999px;font-family:"Jost";font-weight:500;font-size:.9rem;letter-spacing:.03em;box-shadow:0 16px 32px -10px rgba(71,53,38,.7);transition:transform .15s}
+  .float-wa:hover{transform:scale(1.05);background:var(--brand-dark)}
+  .float-wa svg{width:23px;height:23px;fill:#fff}
+
+  @media(max-width:900px){
+    .nav-links{display:none}
+    .cards{grid-template-columns:1fr 1fr}
+    .about .wrap,.booking .wrap,.info .wrap{grid-template-columns:1fr;gap:30px}
+    .gallery{grid-template-columns:1fr 1fr}
+    .foot-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:600px){
+    section{padding:60px 0}
+    .topbar{display:none}
+    .cards,.foot-grid{grid-template-columns:1fr}
+    .float-wa span{display:none}.float-wa{padding:16px}
+  }
+</style>
+</head>
+<body>
+
+<svg style="display:none" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.207zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 11h-5v-2h3V6h2z"/></symbol>
+  <symbol id="i-face" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-3.5 8a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm7 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM12 18c-2.3 0-4.3-1.4-5-3.5h10c-.7 2.1-2.7 3.5-5 3.5z"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.2 3.8 21.7l1.9.7.5-1.4C11 19 16 17 17 8zm.5-5C14 3 11 5 9 8c5 0 8 2 8.5 8C20 12 21 7 17.5 3z"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 2l1.8 5.2L19 9l-5.2 1.8L12 16l-1.8-5.2L5 9l5.2-1.8z"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24"><path d="M7 11V6a2 2 0 014 0v4h1V4a2 2 0 014 0v7h1V7a2 2 0 014 0v8a7 7 0 01-7 7h-2a7 7 0 01-7-7v-1a2 2 0 014 0z"/></symbol>
+  <symbol id="i-laser" viewBox="0 0 24 24"><path d="M11 2h2v6h-2zm0 14h2v6h-2zM2 11h6v2H2zm14 0h6v2h-6zm-1.5-6.9l1.4 1.4-3 3-1.4-1.4zM6.1 14.5l1.4 1.4-3 3-1.4-1.4z"/></symbol>
+  <symbol id="i-man" viewBox="0 0 24 24"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-4 0-8 2-8 5v3h16v-3c0-3-4-5-8-5z"/></symbol>
+</svg>
+
+<div class="concept">Concept redesign by <b>Searchly Web</b> for Natural Expressions. A modern draft of your existing site, in your own colours.</div>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="tb-l">
+      <span><svg><use href="#i-phone"/></svg> 011 783 0270</span>
+      <span><svg><use href="#i-pin"/></svg> 114, 11th Street, Parkmore, Johannesburg</span>
+    </div>
+    <div class="tb-r">Mon to Sat by appointment</div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="wrap nav">
+    <a href="#" class="brand"><span class="bn">Natural Expressions</span><span class="bt">Total Body Wellness</span></a>
+    <nav class="nav-links">
+      <a href="#services">Treatments</a>
+      <a href="#about">About</a>
+      <a href="#brands">Products</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-wa" href="https://wa.me/27718606973?text=Hi%20Natural%20Expressions%2C%20I%27d%20like%20to%20book%20a%20treatment."><svg><use href="#i-wa"/></svg>Book on WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"><img src="assets/bg3.jpg" alt="Natural Expressions day spa"></div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <p class="eyebrow" style="color:var(--gold-soft)">Luxury day spa &middot; Parkmore, Johannesburg</p>
+      <h1>More beautiful <span class="u">in your skin</span>.</h1>
+      <p class="lead">Advanced skin and body treatments delivered through deep relaxation and expert hands, with nearly 30 years of care behind every appointment.</p>
+      <div class="hero-cta">
+        <a class="btn btn-wa" href="https://wa.me/27718606973?text=Hi%20Natural%20Expressions%2C%20I%27d%20like%20to%20book%20a%20treatment."><svg><use href="#i-wa"/></svg>Book on WhatsApp</a>
+        <a class="btn btn-ghost" href="tel:+27117830270"><svg><use href="#i-phone"/></svg>Call the spa</a>
+      </div>
+      <p class="hero-foot">Facials &middot; Massage &middot; Laser &middot; Nails &middot; Men's grooming</p>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<div class="trust">
+  <div class="wrap trust-inner">
+    <span><b>Nearly 30 years</b> of expertise</span><span class="sep"></span>
+    <span><b>Guinot</b></span><span class="sep"></span>
+    <span><b>Dermalogica</b></span><span class="sep"></span>
+    <span><b>RegimA</b></span><span class="sep"></span>
+    <span><b>Parkmore</b>, Johannesburg</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="shead">
+      <p class="eyebrow">What we do for you</p>
+      <h2>Treatments for total body wellness</h2>
+      <p>A full menu of face, body and beauty care, each tailored to you and delivered in calm, private comfort.</p>
+    </div>
+    <div class="cards">
+      <article class="card"><div class="ci"><img src="assets/banner4pic1.jpg" alt="Facials and skincare"></div><div class="cb"><h3>Face Care</h3><p>Results-driven facials and skin treatments using Guinot, Dermalogica and RegimA, matched to your skin.</p><a class="lk" href="https://wa.me/27718606973?text=Hi%2C%20I%27d%20like%20to%20book%20a%20facial.">Book a facial &rarr;</a></div></article>
+      <article class="card"><div class="ci"><img src="assets/banner4pic2.jpg" alt="Massage and body care"></div><div class="cb"><h3>Massage &amp; Body</h3><p>Soothing massage and body therapies to release tension and restore total body wellness.</p><a class="lk" href="https://wa.me/27718606973?text=Hi%2C%20I%27d%20like%20to%20book%20a%20massage.">Book a massage &rarr;</a></div></article>
+      <article class="card"><div class="ci"><img src="assets/banner4pic3.jpg" alt="Manicures and pedicures"></div><div class="cb"><h3>Nails</h3><p>Manicures and pedicures with an extensive colour selection, finished to perfection.</p><a class="lk" href="https://wa.me/27718606973?text=Hi%2C%20I%27d%20like%20to%20book%20nails.">Book nails &rarr;</a></div></article>
+      <article class="card"><div class="ci"><img src="assets/banner4pic4.jpg" alt="Laser treatments"></div><div class="cb"><h3>Laser</h3><p>Advanced laser treatments for smooth, lasting results, with expert guidance throughout.</p><a class="lk" href="https://wa.me/27718606973?text=Hi%2C%20I%27d%20like%20to%20ask%20about%20laser.">Enquire about laser &rarr;</a></div></article>
+      <article class="card"><div class="ci"><img src="assets/banner4pic5.jpg" alt="Waxing and electrolysis"></div><div class="cb"><h3>Waxing &amp; Slimming</h3><p>Waxing, electrolysis and slimming treatments for a confident, cared-for you.</p><a class="lk" href="https://wa.me/27718606973?text=Hi%2C%20I%27d%20like%20to%20book%20waxing%20or%20slimming.">Book now &rarr;</a></div></article>
+      <article class="card"><div class="ci"><img src="assets/banner4pic6.jpg" alt="Men's grooming, the Gentleman's Club"></div><div class="cb"><h3>Gentleman's Club</h3><p>A dedicated grooming menu for men, from skincare to massage, in a relaxed setting.</p><a class="lk" href="https://wa.me/27718606973?text=Hi%2C%20I%27d%20like%20to%20book%20a%20men%27s%20treatment.">Book now &rarr;</a></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <div class="wrap">
+    <div class="imgs">
+      <img src="assets/slide2.jpg" alt="The Natural Expressions spa">
+      <img src="assets/washhands02.jpg" alt="Treatment at Natural Expressions">
+    </div>
+    <div>
+      <p class="eyebrow">Expert hands, extraordinary passion</p>
+      <h2>Age-old wisdom, advanced technology</h2>
+      <p>For nearly 30 years, Natural Expressions has combined the experience of advanced skin and body treatments with the perfect atmosphere in which to relax and renew. We pair age-old wisdom with the finest equipment and therapies, so every treatment is as effective as it is restful.</p>
+      <p>Step into our Parkmore home, with its garden, birdsong and running water, and let our team take care of the rest.</p>
+      <div class="stats">
+        <div><b>30</b><span>Years of care</span></div>
+        <div><b>3</b><span>Premium skincare houses</span></div>
+        <div><b>1</b><span>Calm, private sanctuary</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<section id="brands" class="brands">
+  <div class="wrap">
+    <div class="shead">
+      <p class="eyebrow">Products we trust</p>
+      <h2>Professional skincare, only the best</h2>
+      <p>We treat and prescribe with three of the world's most respected professional skincare houses.</p>
+    </div>
+    <div class="row">
+      <span class="bz">Guinot</span>
+      <span class="bz">Dermalogica</span>
+      <span class="bz">RegimA</span>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" style="padding-top:0">
+  <div class="wrap">
+    <div class="gallery">
+      <a class="tall" href="assets/banner4pic2.jpg"><img src="assets/banner4pic2.jpg" alt="Spa treatment"></a>
+      <a class="wide" href="assets/banner4pic1.jpg"><img src="assets/banner4pic1.jpg" alt="Facial"></a>
+      <a href="assets/banner4pic3.jpg"><img src="assets/banner4pic3.jpg" alt="Nails"></a>
+      <a href="assets/banner4pic5.jpg"><img src="assets/banner4pic5.jpg" alt="Body care"></a>
+      <a class="wide" href="assets/washhands02.jpg"><img src="assets/washhands02.jpg" alt="Treatment"></a>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="book" class="booking">
+  <div class="booking-bg"><img src="assets/banner4pic4.jpg" alt="Spa"></div>
+  <div class="wrap">
+    <div>
+      <p class="eyebrow" style="color:var(--gold-soft)">Book your escape</p>
+      <h2>Ready to feel beautiful in your skin?</h2>
+      <p>Booking is effortless. Message us on WhatsApp and we will confirm your treatment and time, or leave your details and we will come back to you.</p>
+      <div class="hero-cta">
+        <a class="btn btn-wa" href="https://wa.me/27718606973?text=Hi%20Natural%20Expressions%2C%20I%27d%20like%20to%20book%20a%20treatment."><svg><use href="#i-wa"/></svg>Book on WhatsApp</a>
+        <a class="btn btn-ghost" href="tel:+27117830270"><svg><use href="#i-phone"/></svg>011 783 0270</a>
+      </div>
+    </div>
+    <form class="bcard" onsubmit="return false">
+      <label>Your name</label><input type="text" placeholder="e.g. Lerato M">
+      <label>Phone / WhatsApp</label><input type="tel" placeholder="071 000 0000">
+      <label>Treatment</label>
+      <select><option>Facial / skin treatment</option><option>Massage &amp; body</option><option>Manicure / pedicure</option><option>Laser</option><option>Waxing / slimming</option><option>Gentleman's Club</option></select>
+      <label>Preferred day</label><input type="text" placeholder="e.g. Saturday morning">
+      <button class="btn btn-wa"><svg><use href="#i-wa"/></svg>Request my booking</button>
+      <p class="fnote">We reply during salon hours, usually within a few hours.</p>
+    </form>
+  </div>
+</section>
+
+<!-- INFO -->
+<section id="visit" class="info">
+  <div class="wrap">
+    <div class="hours">
+      <p class="eyebrow">Opening times</p>
+      <h2 style="font-size:2rem">When to visit</h2>
+      <table>
+        <tr><td>Monday to Friday</td><td>9:00 to 18:00</td></tr>
+        <tr><td>Saturday</td><td>8:00 to 15:00</td></tr>
+        <tr><td>Sunday &amp; public holidays</td><td>Closed</td></tr>
+      </table>
+      <p style="margin-top:14px;font-size:.9rem;color:var(--muted)">Hours shown are a placeholder, we will set your exact times.</p>
+    </div>
+    <div class="loc">
+      <p class="eyebrow">Find us</p>
+      <h2 style="font-size:2rem">Visit the spa</h2>
+      <p style="margin-top:14px"><svg><use href="#i-pin"/></svg><span>114, 11th Street, Parkmore, Johannesburg</span></p>
+      <p><svg><use href="#i-phone"/></svg><span>011 783 0270 &middot; 071 860 6973</span></p>
+      <p><svg><use href="#i-mail"/></svg><span>info@naturalexpressions.co.za</span></p>
+      <div style="margin-top:18px"><a class="btn btn-outline" href="https://wa.me/27718606973?text=Hi%2C%20I%27d%20like%20to%20book%20a%20treatment."><svg><use href="#i-wa"/></svg>Book on WhatsApp</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <h4>Natural Expressions</h4>
+      <p style="font-size:.92rem">A luxury day spa in Parkmore, Johannesburg. Advanced skin and body treatments, delivered through relaxation and nearly 30 years of expertise.</p>
+    </div>
+    <div>
+      <h4>Treatments</h4>
+      <div class="foot-links">
+        <a href="#services">Face Care</a>
+        <a href="#services">Massage &amp; Body</a>
+        <a href="#services">Nails</a>
+        <a href="#services">Laser</a>
+        <a href="#services">Gentleman's Club</a>
+      </div>
+    </div>
+    <div>
+      <h4>Visit us</h4>
+      <div class="foot-c">
+        <div><svg><use href="#i-pin"/></svg><span>114, 11th Street, Parkmore, Johannesburg</span></div>
+        <div><svg><use href="#i-phone"/></svg><span>011 783 0270 &middot; 071 860 6973</span></div>
+        <div><svg><use href="#i-mail"/></svg><span>info@naturalexpressions.co.za</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap copyright">&copy; 2026 Natural Expressions. Concept redesign by Searchly Web.</div>
+</footer>
+
+<a class="float-wa" href="https://wa.me/27718606973?text=Hi%20Natural%20Expressions%2C%20I%27d%20like%20to%20book%20a%20treatment." aria-label="Book on WhatsApp"><svg><use href="#i-wa"/></svg><span>Book on WhatsApp</span></a>
+
+</body>
+</html>
