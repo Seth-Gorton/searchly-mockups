@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NCCA | National Contract Cleaners Association, The Voice of the Cleaning Industry</title>
+<meta name="description" content="The National Contract Cleaners Association, representing, accrediting and supporting South Africa's contract cleaning companies since 1989. Apply for membership today.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* NCCA real brand: blue #00a8dd + navy #071c3d. Primary action = Apply for Membership. */
+  :root{
+    --blue:#00a8dd; --blue-dark:#0090bf; --navy:#071c3d; --navy-2:#0e2a52;
+    --ink:#13233f; --body:#4c586b; --muted:#8893a3; --line:#e2e9f1;
+    --bg:#ffffff; --soft:#f2f7fb; --soft-2:#e9f3fa;
+    --radius:14px; --maxw:1200px; --shadow:0 20px 46px -22px rgba(7,28,61,.4);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Manrope",system-ui,sans-serif;color:var(--body);background:var(--bg);line-height:1.65;font-weight:400;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:"Manrope",sans-serif;color:var(--ink);line-height:1.12;font-weight:800;letter-spacing:-.02em}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  section{padding:82px 0}
+  .eyebrow{font-weight:700;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:14px}
+
+  .concept{background:var(--navy);color:#cdd9ea;text-align:center;font-size:.82rem;padding:9px 16px}
+  .concept b{color:#fff}
+
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:.95rem;padding:14px 26px;border-radius:8px;transition:transform .15s,box-shadow .15s,background .15s;white-space:nowrap;cursor:pointer;border:none}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-apply{background:var(--blue);color:#fff;box-shadow:0 12px 26px -10px rgba(0,168,221,.6)}
+  .btn-apply:hover{background:var(--blue-dark)}
+  .btn-navy{background:var(--navy);color:#fff}
+  .btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55)}
+  .btn-outline{background:transparent;color:var(--navy);border:1.5px solid var(--line)}
+  .btn svg{width:17px;height:17px;fill:currentColor}
+
+  /* Top bar */
+  .topbar{background:var(--navy);color:#aebdd2;font-size:.82rem}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:42px;gap:18px}
+  .topbar .tb-l{display:flex;gap:22px;align-items:center}
+  .topbar .tb-l span{display:inline-flex;gap:7px;align-items:center}
+  .topbar a{color:#aebdd2}.topbar a:hover{color:#fff}
+  .topbar svg{width:14px;height:14px;fill:var(--blue)}
+  .topbar .tb-r a{color:#fff;font-weight:600}
+
+  /* Header + nav */
+  header.site{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:82px;gap:18px}
+  .nav .logo{height:50px;width:auto}
+  .nav-links{display:flex;gap:24px;font-weight:600;font-size:.9rem;color:var(--ink)}
+  .nav-links a:hover{color:var(--blue)}
+  .nav-cta{display:flex;align-items:center;gap:12px}
+  .navtog{display:none}
+  .burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:46px;height:46px;cursor:pointer;background:none;border:none;margin-left:auto}
+  .burger span{display:block;height:2px;width:24px;background:var(--navy);border-radius:2px;transition:.25s}
+
+  /* Hero */
+  .hero{position:relative;color:#fff;overflow:hidden;background:var(--navy)}
+  .hero-bg{position:absolute;inset:0}
+  .hero-bg img{width:100%;height:100%;object-fit:cover}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(7,20,40,.93) 0%,rgba(7,28,61,.82) 46%,rgba(0,90,130,.45) 100%)}
+  .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:46px;align-items:center;padding:84px 24px 88px}
+  .hero .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,168,221,.18);border:1px solid rgba(0,168,221,.5);color:#9fe0f5;padding:6px 14px;border-radius:999px;font-weight:600;font-size:.76rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:20px}
+  .hero h1{color:#fff;font-size:clamp(2.4rem,5vw,3.7rem);font-weight:800;line-height:1.05}
+  .hero h1 .u{color:var(--blue)}
+  .hero p.lead{font-size:1.16rem;margin:20px 0 28px;color:#d3deec;max-width:540px}
+  .hero-cta{display:flex;gap:13px;flex-wrap:wrap}
+  .hero-stats{display:flex;gap:30px;margin-top:34px;flex-wrap:wrap}
+  .hero-stats b{font-size:1.9rem;font-weight:800;color:#fff;display:block;line-height:1}
+  .hero-stats span{font-size:.82rem;color:#9fb0c6}
+
+  /* Apply card */
+  .acard{background:#fff;border-radius:14px;padding:28px;box-shadow:var(--shadow);color:var(--body)}
+  .acard h3{font-size:1.35rem;color:var(--ink);margin-bottom:4px}
+  .acard .sub{font-size:.88rem;color:var(--muted);margin-bottom:18px}
+  .acard label{font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--navy);display:block;margin-bottom:5px}
+  .acard input,.acard select{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:8px;font-family:inherit;font-size:.92rem;margin-bottom:12px;color:var(--ink);background:var(--soft)}
+  .acard .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .acard .btn-apply{width:100%;justify-content:center;padding:15px}
+  .acard .fnote{text-align:center;font-size:.78rem;color:var(--muted);margin-top:10px}
+
+  /* Trust */
+  .trust{background:var(--navy);color:#fff;padding:22px 0}
+  .trust-inner{display:flex;align-items:center;justify-content:center;gap:14px 34px;flex-wrap:wrap;font-weight:600;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:#aebdd2}
+  .trust b{color:#fff}
+  .trust .sep{width:5px;height:5px;border-radius:50%;background:var(--blue)}
+
+  /* Two audiences */
+  .paths{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .path{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+  .path .pi{height:170px;overflow:hidden}
+  .path .pi img{width:100%;height:100%;object-fit:cover}
+  .path .pb{padding:26px 26px 28px}
+  .path h3{font-size:1.45rem;margin-bottom:8px}
+  .path p{font-size:.96rem;margin-bottom:16px}
+  .path.primary{border-color:var(--blue);box-shadow:var(--shadow)}
+  .path .tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+
+  /* Section heads */
+  .shead{max-width:640px;margin:0 auto 48px;text-align:center}
+  .shead.left{margin-left:0;text-align:left}
+  .shead h2{font-size:clamp(2rem,3.6vw,2.7rem)}
+  .shead p{color:var(--body);font-size:1.05rem;margin-top:12px}
+
+  /* Benefits */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;transition:transform .2s,box-shadow .2s}
+  .card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+  .card .ic{width:52px;height:52px;border-radius:12px;background:var(--soft-2);display:grid;place-items:center;margin-bottom:16px}
+  .card .ic svg{width:26px;height:26px;fill:var(--blue)}
+  .card h3{font-size:1.22rem;margin-bottom:7px}
+  .card p{font-size:.95rem}
+
+  /* Steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:s}
+  .step{position:relative;padding-top:8px}
+  .step .n{width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:800;font-size:1.2rem;margin-bottom:16px}
+  .step h3{font-size:1.18rem;margin-bottom:6px}
+  .step p{font-size:.95rem}
+
+  /* Directory teaser */
+  .dir{background:var(--soft)}
+  .dirbar{display:flex;gap:12px;flex-wrap:wrap;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;box-shadow:var(--shadow);max-width:780px;margin:0 auto}
+  .dirbar select,.dirbar input{flex:1;min-width:160px;padding:13px 14px;border:1px solid var(--line);border-radius:8px;font-family:inherit;font-size:.94rem;color:var(--ink);background:var(--soft)}
+  .dirbar .btn-apply{flex:none}
+
+  /* Split */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+  .split-img img{border-radius:var(--radius);width:100%;aspect-ratio:4/3;object-fit:cover;box-shadow:var(--shadow)}
+  .split h2{font-size:clamp(1.9rem,3.4vw,2.5rem)}
+  .split p{margin-top:14px}
+  .tick{list-style:none;margin:18px 0 0}
+  .tick li{position:relative;padding-left:30px;margin-bottom:11px;color:var(--ink);font-weight:500}
+  .tick li::before{content:"";position:absolute;left:0;top:3px;width:19px;height:19px;border-radius:50%;background:var(--blue)}
+  .tick li::after{content:"";position:absolute;left:6px;top:7px;width:6px;height:3px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg)}
+
+  /* Partners */
+  .partners{text-align:center}
+  .partner-row{display:flex;align-items:center;justify-content:center;gap:44px;flex-wrap:wrap;margin-top:8px}
+  .partner-row img{height:52px;opacity:.85;filter:grayscale(.2)}
+  .partner-row .pz{font-weight:800;color:var(--navy);font-size:1.4rem;letter-spacing:.02em}
+
+  /* Apply band */
+  .applyband{position:relative;overflow:hidden;background:var(--navy)}
+  .applyband-bg{position:absolute;inset:0}
+  .applyband-bg img{width:100%;height:100%;object-fit:cover;opacity:.2}
+  .applyband .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .applyband h2{color:#fff;font-size:clamp(2rem,3.8vw,2.7rem)}
+  .applyband p{color:#d3deec;font-size:1.08rem;margin:14px 0 22px}
+  .applyband .reassure{display:flex;gap:22px;flex-wrap:wrap;font-size:.9rem;color:#9fb0c6}
+
+  /* Footer */
+  footer.site{background:var(--navy);color:#a7b4c7;padding:56px 0 26px}
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:36px}
+  footer.site h4{color:#fff;font-size:.95rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px}
+  footer.site a:hover{color:#fff}
+  .foot-links a{display:block;color:#a7b4c7;padding:4px 0;font-size:.9rem}
+  .foot-logo{height:52px;margin-bottom:14px;background:#fff;padding:8px 10px;border-radius:8px}
+  .foot-c div{display:flex;gap:10px;align-items:flex-start;margin-bottom:11px;font-size:.9rem}
+  .foot-c svg{width:16px;height:16px;fill:var(--blue);flex:none;margin-top:3px}
+  .copyright{border-top:1px solid rgba(255,255,255,.12);margin-top:38px;padding-top:22px;text-align:center;font-size:.82rem;color:#7888a0}
+
+  /* Floating apply */
+  .float-q{position:fixed;right:20px;bottom:20px;z-index:60;background:var(--blue);color:#fff;display:flex;align-items:center;gap:9px;padding:14px 22px;border-radius:8px;font-weight:700;font-size:.9rem;box-shadow:0 16px 32px -10px rgba(0,168,221,.6);transition:transform .15s}
+  .float-q:hover{transform:scale(1.05);background:var(--blue-dark)}
+  .float-q svg{width:18px;height:18px;fill:#fff}
+
+  @media(max-width:980px){
+    .burger{display:flex}
+    .nav-cta{display:none}
+    .nav-links{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 18px 32px -18px rgba(7,28,61,.4);max-height:0;overflow:hidden;padding:0 24px;transition:max-height .3s ease}
+    .navtog:checked ~ .nav-links{max-height:460px;padding:6px 24px 16px}
+    .nav-links a{padding:13px 2px;border-bottom:1px solid var(--line)}
+    .nav-links a:last-child{border-bottom:none}
+    .navtog:checked ~ .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .navtog:checked ~ .burger span:nth-child(2){opacity:0}
+    .navtog:checked ~ .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .hero .wrap,.split,.applyband .wrap{grid-template-columns:1fr;gap:30px}
+    .paths,.cards,.steps,.foot-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:600px){
+    section{padding:58px 0}.topbar{display:none}
+    .paths,.cards,.steps,.foot-grid{grid-template-columns:1fr}
+    .acard .row{grid-template-columns:1fr}
+    .hero h1{font-size:2.3rem}
+    .float-q span{display:none}.float-q{padding:15px}
+  }
+</style>
+</head>
+<body>
+
+<svg style="display:none" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-4 0-8 2-8 5v1h16v-1c0-3-4-5-8-5z"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><path d="M21 20l-5.6-5.6a7 7 0 10-1.4 1.4L20 21zM5 10.5a5.5 5.5 0 1111 0 5.5 5.5 0 01-11 0z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.4 9.7-8 11-4.6-1.3-8-6-8-11V5zm0 4.7l-4 1.5V11c0 3 1.9 5.8 4 6.7 2.1-.9 4-3.7 4-6.7V8.2z"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M9 2h6l5 5v13a2 2 0 01-2 2H9zM8 6H6a2 2 0 00-2 2v12a2 2 0 002 2h2zM13 8h4l-4-4z"/></symbol>
+  <symbol id="i-net" viewBox="0 0 24 24"><path d="M12 2a4 4 0 014 4 4 4 0 01-3 3.86V11h5a2 2 0 012 2v1.14A4 4 0 0122 18a4 4 0 11-7-2.65V13h-6v2.35A4 4 0 112 18a4 4 0 013-3.86V13a2 2 0 012-2h4V9.86A4 4 0 018 6a4 4 0 014-4z"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.9V17h2V9zM5 13.2V17c0 1.1 3.1 3 7 3s7-1.9 7-3v-3.8l-7 3.8z"/></symbol>
+  <symbol id="i-mega" viewBox="0 0 24 24"><path d="M3 10v4a1 1 0 001 1h2l4 4V5L6 9H4a1 1 0 00-1 1zm10-3.5v11a5 5 0 000-11zm3-2.2v15.4a8 8 0 000-15.4z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></symbol>
+</svg>
+
+<div class="concept">Concept redesign by <b>Searchly Web</b> for the NCCA. A modern, membership-focused draft in your own brand, for you to review.</div>
+
+<!-- TOP BAR -->
+<div class="topbar"><div class="wrap">
+  <div class="tb-l">
+    <span><svg><use href="#i-phone"/></svg> 0861 105 881</span>
+    <span><svg><use href="#i-mail"/></svg> national@ncca.co.za</span>
+    <span><svg><use href="#i-pin"/></svg> Germiston, Gauteng</span>
+  </div>
+  <div class="tb-r"><a href="#"><svg><use href="#i-user"/></svg> Member Login</a></div>
+</div></div>
+
+<!-- HEADER -->
+<header class="site"><div class="wrap nav">
+  <a href="#" class="brand"><img class="logo" src="assets/logo.png" alt="NCCA, National Contract Cleaners Association"></a>
+  <input type="checkbox" id="navtog" class="navtog"><label for="navtog" class="burger" aria-label="Open menu"><span></span><span></span><span></span></label>
+  <nav class="nav-links">
+    <a href="#about">About</a>
+    <a href="#benefits">Membership</a>
+    <a href="#directory">Find a Member</a>
+    <a href="#designations">Designations</a>
+    <a href="#apply">Contact</a>
+  </nav>
+  <div class="nav-cta"><a class="btn btn-apply" href="#apply"><svg><use href="#i-doc"/></svg>Apply for Membership</a></div>
+</div></header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"><img src="assets/hero-bg.png" alt="Professional contract cleaning"></div>
+  <div class="wrap">
+    <div>
+      <span class="badge">The Voice of the Cleaning Industry &middot; Since 1989</span>
+      <h1>Grow your cleaning business as an <span class="u">accredited NCCA member</span>.</h1>
+      <p class="lead">Join South Africa's recognised body for contract cleaning. Accreditation that wins contracts, compliance support that protects you, and a network that moves the industry forward.</p>
+      <div class="hero-cta">
+        <a class="btn btn-apply" href="#apply"><svg><use href="#i-doc"/></svg>Apply for Membership</a>
+        <a class="btn btn-ghost" href="#directory"><svg><use href="#i-search"/></svg>Find an accredited cleaner</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>1989</b><span>Established</span></div>
+        <div><b>9</b><span>Provinces represented</span></div>
+        <div><b>Registered</b><span>Professional body</span></div>
+      </div>
+    </div>
+    <form class="acard" onsubmit="return false">
+      <h3>Enquire about membership</h3>
+      <p class="sub">Tell us about your company and we will be in touch with the right membership path.</p>
+      <label>Contact name</label><input type="text" placeholder="Your name">
+      <div class="row">
+        <div><label>Company</label><input type="text" placeholder="Company name"></div>
+        <div><label>Phone</label><input type="tel" placeholder="082 000 0000"></div>
+      </div>
+      <label>Email</label><input type="email" placeholder="you@company.co.za">
+      <label>I am a</label><select><option>Contract cleaning company</option><option>Supplier to the industry</option><option>Looking for an accredited cleaner</option></select>
+      <button class="btn btn-apply"><svg><use href="#i-doc"/></svg>Enquire about membership</button>
+      <p class="fnote">No obligation. A real person will get back to you.</p>
+    </form>
+  </div>
+</section>
+
+<!-- TRUST -->
+<div class="trust"><div class="wrap trust-inner">
+  <span><b>Since 1989</b></span><span class="sep"></span>
+  <span><b>Registered</b> professional body</span><span class="sep"></span>
+  <span><b>Dept of Labour</b> recognised</span><span class="sep"></span>
+  <span><b>National</b> footprint</span><span class="sep"></span>
+  <span><b>Industry</b> designations &amp; standards</span>
+</div></div>
+
+<!-- TWO AUDIENCES -->
+<section>
+  <div class="wrap">
+    <div class="shead">
+      <p class="eyebrow">How can we help?</p>
+      <h2>Two ways the NCCA works for you</h2>
+      <p>Whether you run a cleaning business or you are looking to appoint one, start here.</p>
+    </div>
+    <div class="paths">
+      <div class="path primary">
+        <div class="pi"><img src="assets/image-1.jpg" alt="Contract cleaning company"></div>
+        <div class="pb">
+          <span class="tag">For cleaning companies &amp; suppliers</span>
+          <h3>Become an NCCA member</h3>
+          <p>Gain accreditation, compliance support, training and a powerful industry network that helps you win and keep contracts.</p>
+          <a class="btn btn-apply" href="#apply"><svg><use href="#i-doc"/></svg>Apply for Membership</a>
+        </div>
+      </div>
+      <div class="path">
+        <div class="pi"><img src="assets/image-2.jpg" alt="Find an accredited cleaner"></div>
+        <div class="pb">
+          <span class="tag">For businesses &amp; buyers</span>
+          <h3>Find an accredited cleaner</h3>
+          <p>Appoint with confidence. Search our directory of vetted, accredited contract cleaning companies and suppliers near you.</p>
+          <a class="btn btn-outline" href="#directory"><svg><use href="#i-search"/></svg>Search the directory</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section id="benefits" style="background:var(--soft)">
+  <div class="wrap">
+    <div class="shead">
+      <p class="eyebrow">Why join</p>
+      <h2>Membership that earns its keep</h2>
+      <p>The NCCA upholds standards in contract cleaning, and gives members the credibility and support to grow.</p>
+    </div>
+    <div class="cards">
+      <article class="card"><div class="ic"><svg><use href="#i-shield"/></svg></div><h3>Accreditation &amp; credibility</h3><p>The NCCA mark tells clients you meet recognised industry standards, a real edge when tendering.</p></article>
+      <article class="card"><div class="ic"><svg><use href="#i-doc"/></svg></div><h3>Compliance &amp; legislation</h3><p>Stay on the right side of labour law and industry regulation, with guidance when you need it.</p></article>
+      <article class="card"><div class="ic"><svg><use href="#i-net"/></svg></div><h3>Networking &amp; contracts</h3><p>Connect with peers, suppliers and buyers, and get found by clients looking for accredited companies.</p></article>
+      <article class="card"><div class="ic"><svg><use href="#i-cap"/></svg></div><h3>Training &amp; standards</h3><p>Access to training and best practice that lifts the quality and safety of your service.</p></article>
+      <article class="card"><div class="ic"><svg><use href="#i-mega"/></svg></div><h3>A voice for the industry</h3><p>The NCCA represents contract cleaning at a national level, so your interests are heard.</p></article>
+      <article class="card"><div class="ic"><svg><use href="#i-user"/></svg></div><h3>Professional designations</h3><p>Recognised designations for individuals and companies that set members apart.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO JOIN -->
+<section>
+  <div class="wrap">
+    <div class="shead"><p class="eyebrow">Joining is simple</p><h2>Become a member in three steps</h2></div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Apply</h3><p>Complete a short application and tell us about your company or supply business.</p></div>
+      <div class="step"><div class="n">2</div><h3>Get vetted &amp; accredited</h3><p>We confirm you meet the standards and welcome you into the right membership category.</p></div>
+      <div class="step"><div class="n">3</div><h3>Grow</h3><p>Use your NCCA accreditation, network and support to win work and raise your game.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:40px"><a class="btn btn-apply" href="#apply"><svg><use href="#i-doc"/></svg>Start your application</a></div>
+  </div>
+</section>
+
+<!-- DESIGNATIONS / split -->
+<section id="designations" style="background:var(--soft)">
+  <div class="wrap split">
+    <div class="split-img"><img src="assets/image-3.jpg" alt="NCCA standards and designations"></div>
+    <div>
+      <p class="eyebrow">Standards that mean something</p>
+      <h2>Designations, compliance and trust</h2>
+      <p>As a recognised professional body, the NCCA sets and upholds the standards that clients rely on. Membership is a signal of quality, compliance and accountability across the contract cleaning industry.</p>
+      <ul class="tick">
+        <li>Recognised professional designations</li>
+        <li>Compliance and legislative guidance</li>
+        <li>Industry codes and best practice</li>
+        <li>A trusted mark for tenders and clients</li>
+      </ul>
+      <div style="margin-top:24px"><a class="btn btn-navy" href="#apply">Enquire about membership</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- DIRECTORY teaser -->
+<section id="directory" class="dir">
+  <div class="wrap">
+    <div class="shead"><p class="eyebrow">Member directory</p><h2>Find an accredited cleaner or supplier</h2><p>Appoint a vetted NCCA member with confidence. Search by service and region.</p></div>
+    <form class="dirbar" onsubmit="return false">
+      <select><option>Contract cleaning companies</option><option>Suppliers</option></select>
+      <select><option>All provinces</option><option>Gauteng</option><option>Western Cape</option><option>KwaZulu-Natal</option><option>Eastern Cape</option><option>Free State</option><option>Mpumalanga</option><option>Limpopo</option><option>North West</option><option>Northern Cape</option></select>
+      <input type="text" placeholder="Town or city">
+      <button class="btn btn-apply"><svg><use href="#i-search"/></svg>Search</button>
+    </form>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="partners">
+  <div class="wrap">
+    <div class="shead"><p class="eyebrow">In good company</p><h2>Partners &amp; industry bodies</h2><p>Working with leading partners to advance standards across the cleaning industry.</p></div>
+    <div class="partner-row">
+      <span class="pz">ISSA</span>
+      <img src="assets/cleantex-2026.png" alt="Cleantex">
+      <span class="pz">Cleaning</span>
+    </div>
+  </div>
+</section>
+
+<!-- APPLY BAND -->
+<section id="apply" class="applyband">
+  <div class="applyband-bg"><img src="assets/image-1.jpg" alt="Contract cleaning"></div>
+  <div class="wrap">
+    <div>
+      <p class="eyebrow" style="color:#9fe0f5">Join the NCCA</p>
+      <h2>Ready to grow with the industry behind you?</h2>
+      <p>Apply for membership or ask us a question. Tell us about your business and we will guide you to the right membership path.</p>
+      <div class="reassure">
+        <span>&#10003; Recognised since 1989</span>
+        <span>&#10003; National footprint</span>
+        <span>&#10003; Real support, real people</span>
+      </div>
+    </div>
+    <form class="acard" onsubmit="return false">
+      <h3>Apply for membership</h3>
+      <p class="sub">Quick, free and no obligation.</p>
+      <label>Contact name</label><input type="text" placeholder="Your name">
+      <div class="row">
+        <div><label>Company</label><input type="text" placeholder="Company name"></div>
+        <div><label>Phone</label><input type="tel" placeholder="082 000 0000"></div>
+      </div>
+      <label>Email</label><input type="email" placeholder="you@company.co.za">
+      <label>Membership type</label><select><option>Contract cleaning company</option><option>Supplier member</option><option>Not sure, please advise</option></select>
+      <button class="btn btn-apply"><svg><use href="#i-doc"/></svg>Submit application</button>
+      <p class="fnote">We will be in touch within one business day.</p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img class="foot-logo" src="assets/logo.png" alt="NCCA">
+        <p style="font-size:.9rem">The National Contract Cleaners Association, representing, accrediting and supporting South Africa's contract cleaning industry since 1989.</p>
+      </div>
+      <div>
+        <h4>Membership</h4>
+        <div class="foot-links">
+          <a href="#benefits">Why join</a>
+          <a href="#apply">Apply</a>
+          <a href="#designations">Designations</a>
+          <a href="#">Member login</a>
+        </div>
+      </div>
+      <div>
+        <h4>Directory</h4>
+        <div class="foot-links">
+          <a href="#directory">Find a cleaner</a>
+          <a href="#directory">Find a supplier</a>
+          <a href="#about">About the NCCA</a>
+          <a href="#apply">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <div class="foot-c">
+          <div><svg><use href="#i-phone"/></svg><span>0861 105 881</span></div>
+          <div><svg><use href="#i-mail"/></svg><span>national@ncca.co.za</span></div>
+          <div><svg><use href="#i-pin"/></svg><span>Helvetia House, 3rd Floor, 80 Greenvale Road, Germiston</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">&copy; 2026 National Contract Cleaners Association. Concept redesign by Searchly Web.</div>
+  </div>
+</footer>
+
+<a class="float-q" href="#apply" aria-label="Apply for membership"><svg><use href="#i-doc"/></svg><span>Apply for Membership</span></a>
+
+</body>
+</html>
