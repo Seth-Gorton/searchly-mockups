@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+<meta charset="UTF-8">
+<title>Searchly Web Proposal - NCCA</title>
+<style>
+  @page{size:A4;margin:0}
+  :root{
+    --blue:#2e65fb; --navy:#1e3a6e; --ink:#10172a;
+    --text:#363b45; --muted:#697086; --line:#e5ebf7; --soft:#f4f7ff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Roboto","Helvetica Neue",Arial,sans-serif;color:var(--text);font-size:11px;line-height:1.62;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .page{width:210mm;min-height:297mm;padding:20mm 20mm 24mm;position:relative;page-break-after:always;background:#fff}
+  .page:last-child{page-break-after:auto}
+  h1,h2,h3,h4{color:var(--ink);font-weight:700;line-height:1.18}
+  h1{font-size:30px;letter-spacing:-.5px}
+  h2{font-size:18px;margin-bottom:9px;letter-spacing:-.3px}
+  h3{font-size:13px;margin-bottom:4px}
+  p{margin-bottom:8px}
+  strong{font-weight:700;color:var(--ink)}
+  .muted{color:var(--muted)}
+  .eyebrow{font-size:9.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+
+  .cover{background:linear-gradient(150deg,#10172a 0%,#1e3a6e 60%,#2e65fb 135%);color:#fff;display:flex;flex-direction:column;justify-content:space-between}
+  .cover h1{color:#fff}
+  .lockup{display:flex;align-items:center;gap:11px}
+  .lockup img{height:46px;width:46px;border-radius:50%;display:block}
+  .lockup .wm{font-family:"Roboto","Helvetica Neue",Arial,sans-serif;font-weight:900;font-size:30px;letter-spacing:-1.2px;line-height:1}
+  .cover .lockup .wm .s{color:#ffffff}
+  .cover .lockup .wm .w{color:#6f9bff}
+  .cover-mid h1{font-size:39px;line-height:1.1;margin-bottom:15px}
+  .cover-mid .sub{font-size:14.5px;color:#cfdcff;max-width:80%}
+  .cover .pill{display:inline-block;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.3);padding:7px 15px;border-radius:999px;font-size:10.5px;font-weight:500;margin-top:22px;color:#fff}
+  .cover-foot{display:flex;justify-content:space-between;align-items:flex-end;font-size:10.5px;color:#cfdcff}
+  .cover-foot b{color:#fff}
+
+  .accentbar{height:5px;width:54px;background:var(--blue);border-radius:3px;margin-bottom:16px}
+  .section{margin-bottom:18px}
+  .lead{font-size:12.5px;color:var(--ink);font-weight:500;margin-bottom:12px}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:6px 0 4px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:6px 0 4px}
+  .feat{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:13px 14px}
+  .feat h3{display:flex;align-items:center;gap:7px;margin-bottom:5px}
+  .tick{display:inline-flex;width:17px;height:17px;border-radius:50%;background:var(--blue);color:#fff;align-items:center;justify-content:center;font-size:10px;flex:none}
+  .feat p{font-size:10.3px;color:var(--muted);margin:0}
+
+  ul.clean{list-style:none;margin:6px 0 10px}
+  ul.clean li{position:relative;padding-left:23px;margin-bottom:7px}
+  ul.clean li::before{content:"";position:absolute;left:0;top:5px;width:13px;height:13px;border-radius:50%;background:var(--blue)}
+  ul.clean li::after{content:"";position:absolute;left:4px;top:8px;width:5px;height:3px;border-left:1.6px solid #fff;border-bottom:1.6px solid #fff;transform:rotate(-45deg)}
+
+  .pagelist{display:grid;grid-template-columns:1fr 1fr;gap:9px 18px;margin:8px 0}
+  .pageitem{display:flex;gap:10px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:9px;padding:10px 12px}
+  .pageitem .n{font-weight:700;color:var(--blue);font-size:11px;flex:none;width:18px}
+  .pageitem b{color:var(--ink);font-size:11px;display:block}
+  .pageitem span{color:var(--muted);font-size:9.6px;line-height:1.45}
+
+  .wabox{background:linear-gradient(135deg,#0c1a2b,#13314e);color:#fff;border-radius:14px;padding:18px 20px;margin:10px 0;display:flex;gap:15px;align-items:flex-start}
+  .wabox .wi{width:34px;height:34px;border-radius:9px;background:#2e65fb;flex:none;display:flex;align-items:center;justify-content:center;font-size:18px}
+  .wabox h3{color:#fff;font-size:13px;margin-bottom:3px}
+  .wabox p{color:#cfe0d8;font-size:10.3px;margin:0}
+
+  .price-box{background:var(--ink);color:#fff;border-radius:16px;padding:24px 26px;margin:6px 0 14px;position:relative;overflow:hidden}
+  .price-box::after{content:"";position:absolute;right:-40px;top:-40px;width:160px;height:160px;border-radius:50%;background:rgba(46,101,251,.35)}
+  .price-box .label{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#9db6ff;position:relative}
+  .price-box .amount{font-size:44px;font-weight:700;line-height:1;margin:6px 0 4px;position:relative}
+  .price-box .amount small{font-size:15px;font-weight:500;color:#cfdcff}
+  .price-box .terms{font-size:10.5px;color:#cfdcff;position:relative}
+
+  table.cost{width:100%;border-collapse:collapse;margin:6px 0 4px;font-size:10.5px}
+  table.cost th{text-align:left;background:var(--soft);color:var(--ink);padding:8px 12px;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;border-bottom:2px solid var(--line)}
+  table.cost td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  table.cost td.amt{text-align:right;font-weight:700;color:var(--ink);white-space:nowrap}
+  table.cost tr.total td{background:#eef3ff;font-weight:700;color:var(--ink);border-bottom:none;font-size:12px}
+
+  .pay{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:8px 0}
+  .pay .stage{border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .pay .stage .pct{font-size:30px;font-weight:700;color:var(--blue);line-height:1}
+  .pay .stage b{display:block;color:var(--ink);font-size:12px;margin:4px 0 2px}
+  .pay .stage span{color:var(--muted);font-size:10px}
+
+  .timeline{display:flex;gap:0;margin:10px 0 4px}
+  .tl{flex:1;text-align:center;position:relative;padding-top:23px}
+  .tl::before{content:"";position:absolute;top:7px;left:0;right:0;height:2px;background:var(--line)}
+  .tl:first-child::before{left:50%}
+  .tl:last-child::before{right:50%}
+  .tl .dot{position:absolute;top:0;left:50%;transform:translateX(-50%);width:15px;height:15px;border-radius:50%;background:var(--blue);border:3px solid #fff;box-shadow:0 0 0 2px var(--blue)}
+  .tl b{display:block;font-size:10.5px;color:var(--ink)}
+  .tl span{font-size:9px;color:var(--muted)}
+
+  .note{background:var(--soft);border-left:4px solid var(--blue);border-radius:0 10px 10px 0;padding:12px 15px;font-size:10.3px;margin:9px 0}
+  .note b{color:var(--ink)}
+  .seo-band{background:linear-gradient(135deg,#eef3ff,#f4f7ff);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:8px 0}
+  .seo-band h3{display:flex;align-items:center;gap:8px}
+  .seo-band img{width:26px;height:26px;border-radius:50%}
+
+  .cta{background:linear-gradient(135deg,#2e65fb,#1e3a6e);color:#fff;border-radius:14px;padding:18px 22px;display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+  .cta h3{color:#fff;font-size:14px;margin-bottom:2px}
+  .cta p{color:#dbe6ff;font-size:10px;margin:0}
+  .cta .go{background:#fff;color:var(--blue);font-weight:700;padding:11px 18px;border-radius:999px;font-size:11px;white-space:nowrap}
+
+  .foot{position:absolute;bottom:13mm;left:20mm;right:20mm;display:flex;justify-content:space-between;align-items:center;font-size:8.6px;color:var(--muted);border-top:1px solid var(--line);padding-top:7px}
+  .foot b{color:var(--navy)}
+  .foot img{height:15px;vertical-align:middle;opacity:.9}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<section class="page cover">
+  <div class="lockup"><img src="assets/searchly-mark.webp" alt="Searchly Web"><span class="wm"><span class="s">Searchly</span><span class="w">Web</span></span></div>
+  <div class="cover-mid">
+    <div class="eyebrow" style="color:#9db6ff">Website Proposal &middot; June 2026</div>
+    <h1>A new website for<br>the NCCA</h1>
+    <p class="sub">A faster, sharper website for the National Contract Cleaners Association, built around one clear goal: turn the right cleaning companies and suppliers into members, with the value of joining made obvious from the first screen.</p>
+    <div class="pill">Prepared for the National Contract Cleaners Association</div>
+  </div>
+  <div class="cover-foot">
+    <div>
+      <b>Searchly Web</b><br>
+      Fast, high-converting websites for South African businesses
+    </div>
+    <div style="text-align:right">
+      Seth Gorton<br>
+      <b>sethg@searchly.co.za</b> &middot; searchlyweb.co.za
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page">
+  <div class="accentbar"></div>
+  <h2>The opportunity</h2>
+  <p class="lead">The NCCA is the recognised voice of contract cleaning in South Africa, and has been since 1989. The current website does not do that standing justice, and more importantly, it buries the one action the site exists to drive: membership.</p>
+  <p>Membership is the primary goal, yet on the current site it competes for attention with several equal-weight cards (member login, search a cleaner, search a supplier). The value proposition is vague and inward-looking ("The Voice of the Cleaning Industry") and never answers the question a prospective member actually asks: <strong>what does joining the NCCA do for my business?</strong></p>
+  <p>On top of that, the things that would close the sale are hidden. Membership cost, categories and the application process sit inside downloadable PDFs. There is no proof near the call to action: no member count, no "since 1989", no Department of Labour recognition, no designations surfaced where a prospect decides. And the site itself is slow, image-heavy and dated, which quietly costs you applications, especially on mobile.</p>
+
+  <div class="section" style="margin-top:14px">
+    <h2>What we are proposing</h2>
+    <p>A complete rebuild of the NCCA website around a single, focused job: <strong>get qualified cleaning companies and suppliers to apply for membership</strong>. Everything else on the site serves that goal. We keep your blue and navy brand, surface the credibility you have already earned, make the value of membership impossible to miss, and rebuild the site so it is fast, modern and easy to find in search.</p>
+  </div>
+
+  <div class="wabox">
+    <div class="wi" style="color:#fff">&#9745;</div>
+    <div>
+      <h3>One dominant action: Apply for Membership</h3>
+      <p>Today the membership goal shares the stage with login and search utilities. We make "Apply for Membership" the single, dominant call to action in the hero and repeated at the end of every key section, and demote the utility actions (login, search a cleaner, search a supplier) to a slimmer secondary row. One clear path, far more applications.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <b>You can see the direction already.</b> The live concept mockup (<b style="color:#2e65fb">seth-gorton.github.io/searchly-mockups/ncca/</b>) shows the look, feel and structure we are recommending. It is a concept to react to, built on your existing blue and navy brand, not the finished website. We refine it with you, then build the full site.
+  </div>
+
+  <div class="foot"><span><b>Searchly Web</b> &middot; Website Proposal for the NCCA</span><span>Page 2</span></div>
+</section>
+
+<!-- PAGE 3 -->
+<section class="page">
+  <div class="accentbar"></div>
+  <h2>What we will improve</h2>
+  <p class="lead">We audited the current site against one measure: does it turn the right visitors into members? These are the specific changes that will move that number.</p>
+
+  <ul class="clean">
+    <li><strong>One dominant "Apply for Membership" call to action.</strong> Made the hero of the site and repeated through the page, with login and search demoted to a slim secondary row so they no longer split attention.</li>
+    <li><strong>An outcome-led hero.</strong> We replace "The Voice of the Cleaning Industry" with a headline about what membership delivers, win more contracts, prove compliance, protect your business, backed by three to four concrete member benefits above the fold.</li>
+    <li><strong>A trust band near the action.</strong> Established since 1989, registered professional body, recognised by the Department of Labour as an employers' association, national footprint across provinces, and the designations you award, all surfaced where a prospect decides, not buried in the nav.</li>
+    <li><strong>Transparent membership categories and a simple "how to join".</strong> Clear member categories on the page (no PDF hunting) and a 3-step "how to join" section, because pricing and process transparency removes the biggest objection.</li>
+    <li><strong>An inline enquiry form instead of a gated PDF.</strong> A short "request membership info / start your application" form (name, company, email, phone, province) captures the lead first, then delivers the full pack, so interested companies are never lost.</li>
+    <li><strong>A proper, filterable member directory.</strong> The asset that makes membership worth paying for, rebuilt from a basic map into a filterable, profile-rich listing (by service, region and designation badge) that clients actually want to use.</li>
+    <li><strong>Designations and compliance, surfaced.</strong> Your real differentiators promoted to a homepage trust pillar, with partner and accreditation logos (ISSA, Cleantex) properly labelled.</li>
+    <li><strong>A faster, lighter, SEO-friendly rebuild.</strong> Compressed hero imagery, fewer fonts, no legacy or unused code, semantic structure and schema, all on a clean foundation that keeps your blue and navy brand.</li>
+  </ul>
+
+  <div class="foot"><span><b>Searchly Web</b> &middot; Website Proposal for the NCCA</span><span>Page 3</span></div>
+</section>
+
+<!-- PAGE 4 -->
+<section class="page">
+  <div class="accentbar"></div>
+  <h2>What is included</h2>
+  <p class="lead">A full rebuild of the association site, designed around membership and built to your brand, not an off-the-shelf template.</p>
+
+  <div class="pagelist">
+    <div class="pageitem"><span class="n">01</span><div><b>Home</b><span>An outcome-led hero, one dominant "Apply for Membership" action, the trust band and member benefits front and centre.</span></div></div>
+    <div class="pageitem"><span class="n">02</span><div><b>Membership &amp; How to Join</b><span>Transparent categories, a 3-step join process and an inline enquiry form that captures the lead.</span></div></div>
+    <div class="pageitem"><span class="n">03</span><div><b>Professional Body / About</b><span>Since 1989, Department of Labour recognition, professional-body status and what the NCCA stands for.</span></div></div>
+    <div class="pageitem"><span class="n">04</span><div><b>Member Directory</b><span>A filterable, profile-rich listing of members by service, region and designation, the reason membership is valuable.</span></div></div>
+    <div class="pageitem"><span class="n">05</span><div><b>Designations &amp; Compliance</b><span>Your differentiators surfaced as proof, with accreditations and partners properly framed.</span></div></div>
+    <div class="pageitem"><span class="n">06</span><div><b>Branches</b><span>The national footprint across provinces, clean and easy to navigate.</span></div></div>
+    <div class="pageitem"><span class="n">07</span><div><b>Articles &amp; Events</b><span>News and upcoming events that auto-hide once past, used to route interested non-members toward membership.</span></div></div>
+    <div class="pageitem"><span class="n">08</span><div><b>Contact &amp; FAQs</b><span>Easy to reach the office, plus member FAQs, all designed to support the membership decision.</span></div></div>
+  </div>
+  <p class="muted" style="font-size:9.6px">Final page structure is confirmed with you during the build. Pages can be added, combined or renamed to fit how the NCCA wants to present itself.</p>
+
+  <h3 style="margin-top:10px">Every page is built with the essentials in place</h3>
+  <div class="grid3">
+    <div class="feat"><h3><span class="tick">&#10003;</span> Membership-first</h3><p>One clear "Apply for Membership" path, always within reach.</p></div>
+    <div class="feat"><h3><span class="tick">&#10003;</span> Mobile-first</h3><p>Looks sharp and works perfectly on phones and tablets.</p></div>
+    <div class="feat"><h3><span class="tick">&#10003;</span> Fast loading</h3><p>Lightweight and quick, which helps visitors and search ranking.</p></div>
+    <div class="feat"><h3><span class="tick">&#10003;</span> Credible by design</h3><p>Your earned credibility surfaced where it counts.</p></div>
+    <div class="feat"><h3><span class="tick">&#10003;</span> Easy to update</h3><p>Built so your team can add members and events without a developer.</p></div>
+    <div class="feat"><h3><span class="tick">&#10003;</span> Tracking installed</h3><p>See exactly how many membership enquiries the site brings in.</p></div>
+  </div>
+
+  <div class="foot"><span><b>Searchly Web</b> &middot; Website Proposal for the NCCA</span><span>Page 4</span></div>
+</section>
+
+<!-- PAGE 5 -->
+<section class="page">
+  <div class="accentbar"></div>
+  <h2>How we build it</h2>
+  <p class="lead">Three things set our websites apart: they are built to convert, they are built to be found, and you can see exactly what they do.</p>
+
+  <div class="section">
+    <h3>Built to convert (conversion rate optimisation)</h3>
+    <p>"Conversion" means a visitor taking the action you want. For the NCCA, that is applying for or enquiring about membership. We design the whole site so a much higher share of the right visitors actually apply instead of leaving: one dominant <strong>Apply for Membership</strong> action, an outcome-led message, the right trust signals near the decision, transparent categories and process, and friction removed at every step. After launch we keep watching the numbers and tuning to lift that share further.</p>
+  </div>
+
+  <div class="seo-band">
+    <h3><img src="assets/searchly-mark.webp" alt="Searchly"> Built to be found: SEO fundamentals baked in</h3>
+    <p style="margin-top:6px">Searchly Web is the website arm of <strong>Searchly</strong>, a Google Ads and SEO focused agency. Search is what we do, so your website is built on solid SEO fundamentals from the very first line of code:</p>
+    <ul class="clean" style="margin-bottom:2px">
+      <li>Clean, fast, semantically structured code search engines can read easily</li>
+      <li>Pages targeting how people actually search ("contract cleaning association South Africa", "is my cleaner NCCA accredited")</li>
+      <li>Local and national signals so the NCCA shows up across provinces</li>
+      <li>Organization schema and a crawlable structure that give you the best foundation to rank</li>
+    </ul>
+    <p style="margin-bottom:0">This groundwork means the site is ready to perform in organic search and makes any future SEO or Google Ads work far more effective.</p>
+  </div>
+
+  <div class="section" style="margin-top:12px">
+    <h3>Built so you can see what works</h3>
+    <p>We install analytics and conversion tracking focused on the thing that matters: <strong>membership enquiries</strong>. Every enquiry and application is measured, turning the website from a brochure into a tool you can improve, and powering smarter marketing decisions later.</p>
+  </div>
+
+  <div class="foot"><span><b>Searchly Web</b> &middot; Website Proposal for the NCCA</span><span>Page 5</span></div>
+</section>
+
+<!-- PAGE 6 -->
+<section class="page">
+  <div class="accentbar"></div>
+  <h2>Ownership, hosting and domain</h2>
+  <p class="lead">The NCCA owns the site outright. We make the technical side simple, even though hosting is not something we provide.</p>
+
+  <div class="grid2">
+    <div class="feat" style="background:#fff"><h3><span class="tick">&#10003;</span> The website is yours</h3><p style="color:var(--text)">Once the project is complete and paid, the website belongs entirely to the NCCA. No monthly fee to Searchly, no lock-in. It is your asset.</p></div>
+    <div class="feat" style="background:#fff"><h3><span class="tick">&#10003;</span> You stay in control</h3><p style="color:var(--text)">Your hosting and domain (ncca.co.za) stay in the NCCA's name with your provider. That is deliberately better for you: full ownership, and never dependent on us to stay online.</p></div>
+  </div>
+
+  <div class="note" style="margin-top:14px">
+    <b>To be completely clear: Searchly does not provide hosting.</b> Hosting (the service that keeps the website online) and your domain (your web address, ncca.co.za) are held directly with a hosting provider, as an ongoing cost paid to them, not to us. They are <b>not included</b> in the build fee.
+  </div>
+
+  <h3 style="margin-top:6px">But you will not be left to figure it out</h3>
+  <p>While we do not sell hosting, <strong>we assist you through the entire setup</strong>. We will:</p>
+  <ul class="clean">
+    <li>Advise on a suitable hosting setup, in plain language</li>
+    <li>Set the new website up on your hosting account</li>
+    <li>Point your domain correctly so your web address works as it should</li>
+    <li>Make sure the site goes live properly, securely and without downtime</li>
+  </ul>
+  <p>Hosting and a domain are not expensive, and we will confirm the exact, modest figure with you so there are no surprises.</p>
+
+  <div class="foot"><span><b>Searchly Web</b> &middot; Website Proposal for the NCCA</span><span>Page 6</span></div>
+</section>
+
+<!-- PAGE 7 -->
+<section class="page">
+  <div class="accentbar"></div>
+  <h2>Your investment</h2>
+
+  <div class="price-box">
+    <div class="label">Website design &amp; build, once-off</div>
+    <div class="amount">R20 000 <small>once-off</small></div>
+    <div class="terms">A complete rebuild of the NCCA website, designed around membership and built to your brand, that you own. No VAT added (see below). No ongoing fee to Searchly for the build.</div>
+  </div>
+
+  <div class="note" style="border-left-color:#2e65fb">
+    <b>No VAT is added to this price.</b> Searchly is not a VAT-registered business, so the R20 000 is the full and final amount payable for the design and build. There is no VAT, and no hidden extras.
+  </div>
+
+  <table class="cost">
+    <tr><th>Item</th><th style="text-align:right">Cost</th></tr>
+    <tr><td><strong>Website design &amp; build</strong><br><span class="muted">Full rebuild around the membership goal: conversion-focused structure, trust band, transparent membership categories and 3-step join, inline enquiry form, filterable member directory, designations and compliance surfaced, fast and SEO-friendly, in your blue and navy brand, with tracking installed. You own it.</span></td><td class="amt">R20 000<br><span class="muted" style="font-weight:400">once-off</span></td></tr>
+    <tr><td><strong>Hosting &amp; domain</strong> <span class="muted">(paid by you to your provider)</span><br><span class="muted">Keeps the site online and your address active. Not provided by Searchly and not included below. We assist you through the whole setup.</span></td><td class="amt">your provider<br><span class="muted" style="font-weight:400">modest annual cost</span></td></tr>
+    <tr class="total"><td>Once-off payable to Searchly Web (no VAT)</td><td class="amt">R20 000</td></tr>
+  </table>
+
+  <h3 style="margin-top:14px">Payment terms</h3>
+  <div class="pay">
+    <div class="stage"><div class="pct">50%</div><b>Deposit to begin</b><span>R10 000 up front. This confirms the project and we start the build.</span></div>
+    <div class="stage"><div class="pct">50%</div><b>On completion</b><span>R10 000 once the website is complete and approved, before it goes live.</span></div>
+  </div>
+
+  <h2 style="margin-top:16px">Timeline: roughly 1 to 2 weeks</h2>
+  <div class="timeline">
+    <div class="tl"><span class="dot"></span><b>Days 1-2</b><span>Deposit, brand &amp; content gather</span></div>
+    <div class="tl"><span class="dot"></span><b>Days 3-6</b><span>Build the pages &amp; directory</span></div>
+    <div class="tl"><span class="dot"></span><b>Days 7-9</b><span>Your review &amp; refinements</span></div>
+    <div class="tl"><span class="dot"></span><b>Days 10-12</b><span>SEO, tracking &amp; go live</span></div>
+  </div>
+  <p class="muted" style="font-size:9.6px">Timeline assumes we receive your content, member data, photos and access promptly after the deposit. Exact dates confirmed on go-ahead.</p>
+
+  <div class="cta">
+    <div>
+      <h3>Ready to go ahead?</h3>
+      <p>See the live concept at seth-gorton.github.io/searchly-mockups/ncca/, reply to our email, pay the 50% deposit, and we start the rebuild.</p>
+    </div>
+    <div class="go">sethg@searchly.co.za</div>
+  </div>
+
+  <div class="foot"><span><img src="assets/searchly-mark.webp" alt=""> <b>Searchly Web</b> &middot; Fast, high-converting websites for South African businesses</span><span>Page 7</span></div>
+</section>
+
+</body>
+</html>
