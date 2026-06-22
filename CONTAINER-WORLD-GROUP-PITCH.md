@@ -12,15 +12,15 @@ Base mockup URL: https://seth-gorton.github.io/searchly-mockups/ (repo Seth-Gort
 
 | Site | Slug | Price | Type | Mockup | Brand colours |
 |---|---|---|---|---|---|
-| Container World | containerworld | R25,000 | Redesign (flagship) | /containerworld/ | red #E41513 + blue #008BD2 |
-| Container World Offshore | containerworld-offshore | R25,000 | Redesign (B2B offshore) | /containerworld-offshore/ | blue #158acb + red #e21f26 |
-| Self Storage CW | selfstorage-cw | R20,000 | Redesign (multi-location) | /selfstorage-cw/ | blue #1289ca + red #e31618 |
-| Self Storage CW Midrand | selfstorage-cw-midrand | R20,000 | Redesign (single page) | /selfstorage-cw-midrand/ | blue #008AD1 + red #E31513 |
-| Self Storage CW Durban | selfstorage-durban | R20,000 | NEW build | /selfstorage-durban/ | Self Storage CW brand |
-| Self Storage CW Nelspruit | selfstorage-nelspruit | R20,000 | NEW build | /selfstorage-nelspruit/ | Self Storage CW brand |
-| Self Storage CW Polokwane | selfstorage-polokwane | R20,000 | NEW build | /selfstorage-polokwane/ | Self Storage CW brand |
+| Container World | containerworld | R35,000 | Redesign (flagship) | /containerworld/ | red #E41513 + blue #008BD2 |
+| Container World Offshore | containerworld-offshore | R30,000 | Redesign (B2B offshore) | /containerworld-offshore/ | blue #158acb + red #e21f26 |
+| Self Storage CW | selfstorage-cw | R5,000 | Redesign (multi-location) | /selfstorage-cw/ | blue #1289ca + red #e31618 |
+| Self Storage CW Midrand | selfstorage-cw-midrand | R5,000 | Redesign (single page) | /selfstorage-cw-midrand/ | blue #008AD1 + red #E31513 |
+| Self Storage CW Durban | selfstorage-durban | R5,000 | NEW build | /selfstorage-durban/ | Self Storage CW brand |
+| Self Storage CW Nelspruit | selfstorage-nelspruit | R5,000 | NEW build | /selfstorage-nelspruit/ | Self Storage CW brand |
+| Self Storage CW Polokwane | selfstorage-polokwane | R5,000 | NEW build | /selfstorage-polokwane/ | Self Storage CW brand |
 
-**Total: R150,000, no VAT.** (Bigger = the two corporate Container World sites at R25k; storage/new at R20k.)
+**Total: R90,000, no VAT.** (Updated 2026-06-22: Container World overhaul R35k, Offshore overhaul R30k, every storage landing page R5k each, existing or new.)
 
 ## Conversion audits (why the redesigns) — full detail in each NOTES.md
 - **Container World:** no hero value prop/H1, quote form buried on inner pages, weak imagery + grey wall, no above-the-fold service paths, scattered trust signals (ISO 9001, SAOGA, CSTA, BIC, 40 yrs, 13 branches), buried phone, dated heavy Elementor. ~13 branches, multi-division.
