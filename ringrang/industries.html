@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ring Rang | Business Phone System for Estate Agents, Restaurants &amp; SMEs in South Africa</title>
+<meta name="description" content="Ring Rang is a cloud business phone system built for South African SMEs: estate agencies, restaurants, retail, professional services, startups and remote teams. Never miss a lead, work from anywhere, no PBX hardware.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<svg style="display:none" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></symbol>
+  <symbol id="i-msg" viewBox="0 0 24 24"><path d="M20 2H4a2 2 0 00-2 2v18l4-4h14a2 2 0 002-2V4a2 2 0 00-2-2z"/></symbol>
+  <symbol id="i-voicemail" viewBox="0 0 24 24"><path d="M16.5 7A4.5 4.5 0 0014 15h-4a4.5 4.5 0 10-1-1h6a4.5 4.5 0 101.5-7zM5.5 13a2.5 2.5 0 110-5 2.5 2.5 0 010 5zm13 0a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><path d="M6 3a3 3 0 00-1 5.83V12a4 4 0 004 4h2v3.17a3 3 0 102 0V16a4 4 0 014-4h1.17A3 3 0 1018 9.17V8a2 2 0 00-2-2h-4a2 2 0 00-2 2v.17A3 3 0 006 3z"/></symbol>
+  <symbol id="i-mobile" viewBox="0 0 24 24"><path d="M7 2h10a2 2 0 012 2v16a2 2 0 01-2 2H7a2 2 0 01-2-2V4a2 2 0 012-2zm5 17a1 1 0 100 2 1 1 0 000-2zM8 5v11h8V5z"/></symbol>
+  <symbol id="i-inbox" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 10h-4a4 4 0 01-8 0H4V6h16z"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 13h2v8H3zm6-6h2v14H9zm6 3h2v11h-2zm6-7h2v18h-2z"/></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M19 18H6a4 4 0 01-.9-7.9 5.5 5.5 0 0110.6-1.6A4.5 4.5 0 0119 18z"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><path d="M12 14a3 3 0 003-3V5a3 3 0 00-6 0v6a3 3 0 003 3zm5-3a5 5 0 01-10 0H5a7 7 0 006 6.9V21h2v-3.1A7 7 0 0019 11z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 11h-5v-2h3V6h2z"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L4.5 13.5H11l-1 8.5L19.5 10H13z"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M12 3l9 8h-3v9h-4v-6h-4v6H6v-9H3z"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><path d="M7 18a2 2 0 100 4 2 2 0 000-4zm10 0a2 2 0 100 4 2 2 0 000-4zM7.2 14h9.5l3-9H5.4L4.7 3H1v2h2.3l2.4 9.6L4 17h16v-2H7.5z"/></symbol>
+  <symbol id="i-shop" viewBox="0 0 24 24"><path d="M4 4h16l1 5a3 3 0 01-6 0 3 3 0 01-6 0 3 3 0 01-6 0zM4 11a4 4 0 004-1 4 4 0 008 0 4 4 0 004 1v9H4z"/></symbol>
+  <symbol id="i-brief" viewBox="0 0 24 24"><path d="M9 4h6a2 2 0 012 2v1h3a2 2 0 012 2v9a2 2 0 01-2 2H4a2 2 0 01-2-2V9a2 2 0 012-2h3V6a2 2 0 012-2zm0 3h6V6H9z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.207zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01z"/></symbol>
+</svg>
+
+<div class="concept">Concept by <b>Searchly Web</b> for Ring Rang. A fresh, modern direction in blue, for you to review.</div>
+
+<!-- HEADER -->
+<header class="site"><div class="wrap nav">
+  <a href="index.html" class="logo">ring<span class="r2">rang</span><span class="dot">.</span></a>
+  <input type="checkbox" id="navtog" class="navtog"><label for="navtog" class="burger" aria-label="Open menu"><span></span><span></span><span></span></label>
+  <nav class="nav-links">
+    <a href="features.html">Features</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="devices.html">Devices</a>
+    <a href="industries.html" class="active">Industries</a>
+    <a href="get-started.html">Contact</a>
+  </nav>
+  <div class="nav-right">
+    <a class="login" href="#">Log in</a>
+    <a class="btn btn-primary" href="get-started.html">Get Started</a>
+  </div>
+</div></header>
+
+<!-- PAGE HERO -->
+<section>
+  <div class="wrap narrow center">
+    <p class="eyebrow">Industries</p>
+    <h1>Built for businesses that run on calls</h1>
+    <p class="lead">Whether you sell homes, take bookings, advise clients or run a remote team, the phone is still where deals are won and lost. Ring Rang keeps you reachable across South Africa, on any device, with no PBX hardware and no contracts.</p>
+    <div class="hero-cta center">
+      <a class="btn btn-primary btn-lg" href="get-started.html">Get Started</a>
+      <a class="btn btn-ghost btn-lg" href="pricing.html">View pricing</a>
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW GRID -->
+<section class="bg-surface">
+  <div class="wrap">
+    <div class="shead"><p class="eyebrow">Who we serve</p><h2>Six kinds of business, one phone system</h2><p>Each has its own pressure point. Ring Rang solves the same thing for all of them: never miss the call that matters.</p></div>
+    <div class="indgrid">
+      <div class="ind"><div class="ic"><svg><use href="#i-home"/></svg></div><h3>Estate agencies</h3><p class="pain">Every missed call is a lost listing or buyer.</p><p class="ans">Ring agents wherever they are and route leads to the right person, even mid-viewing.</p></div>
+      <div class="ind"><div class="ic"><svg><use href="#i-shop"/></svg></div><h3>Restaurants &amp; hospitality</h3><p class="pain">A busy floor means missed bookings and orders.</p><p class="ans">A digital receptionist takes the load, with after-hours messages so no booking slips away.</p></div>
+      <div class="ind"><div class="ic"><svg><use href="#i-cart"/></svg></div><h3>Retail stores</h3><p class="pain">Calls go unanswered when the shop is full.</p><p class="ans">Ring the floor and the back office at once, and capture stock and price questions after hours.</p></div>
+      <div class="ind"><div class="ic"><svg><use href="#i-brief"/></svg></div><h3>Professional services</h3><p class="pain">Clients expect a polished, prompt response.</p><p class="ans">Greetings, call groups and recordings make a one-person firm sound established.</p></div>
+      <div class="ind"><div class="ic"><svg><use href="#i-bolt"/></svg></div><h3>Startups</h3><p class="pain">You need to look bigger than you are.</p><p class="ans">A professional business number and app for the whole team, with no hardware to buy.</p></div>
+      <div class="ind"><div class="ic"><svg><use href="#i-cloud"/></svg></div><h3>Remote teams &amp; small offices</h3><p class="pain">Everyone is in a different place.</p><p class="ans">One business line that follows your team across phones and laptops, anywhere.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ESTATE AGENCIES -->
+<section>
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">Estate agencies</p>
+      <h2>Catch every lead, even from the show house</h2>
+      <p>In South African property, the buyer who phones about a listing will phone the next agent if you do not answer. Your agents are rarely at a desk, they are at viewings, on the road or between appointments, so calls slip through and listings go cold.</p>
+      <p>Ring Rang rings agents on their own phones with the agency number, routes each enquiry to the right person or branch, and captures after-hours voicemail as a transcript, so a 7pm enquiry is followed up first thing.</p>
+      <ul class="tick">
+        <li><svg><use href="#i-check"/></svg> Calls follow agents to their mobiles, with a private personal number kept separate</li>
+        <li><svg><use href="#i-check"/></svg> Route buyers by area or branch so the right agent picks up</li>
+        <li><svg><use href="#i-check"/></svg> After-hours and weekend enquiries captured and transcribed, never lost</li>
+      </ul>
+      <a class="btn btn-primary" href="get-started.html">Get Started</a>
+    </div>
+    <div class="split-media">
+      <div class="app-card">
+        <div class="ah"><span class="av"><svg><use href="#i-home"/></svg></span><div><b>New buyer enquiry</b><br><span>Routed to the listing agent</span></div></div>
+        <div class="app-row"><span class="ic b"><svg><use href="#i-phone"/></svg></span><div><b>Call about 3-bed in Bryanston</b><span>Ringing Thabo on his mobile</span></div><span class="t">now</span></div>
+        <div class="app-row"><span class="ic g"><svg><use href="#i-voicemail"/></svg></span><div><b>After-hours voicemail</b><span>"Still available? Call me back"</span></div><span class="t">9:42pm</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESTAURANTS & HOSPITALITY -->
+<section class="bg-surface">
+  <div class="wrap split flip">
+    <div>
+      <p class="eyebrow">Restaurants &amp; hospitality</p>
+      <h2>Keep taking bookings when the floor is packed</h2>
+      <p>Diners still phone to book, ask about specials or place a collection order, and they expect an answer. When the floor is full, the phone rings out, the table goes to a walk-in, and the booking goes to the restaurant down the road.</p>
+      <p>Ring Rang answers with a professional greeting, sends callers to the right line, and takes after-hours and overflow calls as messages or voicemail. Your hosts deal with guests in front of them while no booking is missed behind them.</p>
+      <ul class="tick">
+        <li><svg><use href="#i-check"/></svg> A digital receptionist greets callers and points them to bookings, orders or events</li>
+        <li><svg><use href="#i-check"/></svg> Overflow and busy-time calls captured, so a full floor never costs you a table</li>
+        <li><svg><use href="#i-check"/></svg> After-hours messages and set opening hours, so closed-time calls still convert</li>
+      </ul>
+      <a class="btn btn-primary" href="get-started.html">Get Started</a>
+    </div>
+    <div class="split-media">
+      <div class="app-card">
+        <div class="ah"><span class="av"><svg><use href="#i-shop"/></svg></span><div><b>Front of house</b><br><span>One line, no missed bookings</span></div></div>
+        <div class="app-row"><span class="ic b"><svg><use href="#i-msg"/></svg></span><div><b>Table for 6, Friday 7pm</b><span>Taken while the floor was full</span></div><span class="t">now</span></div>
+        <div class="app-row"><span class="ic g"><svg><use href="#i-clock"/></svg></span><div><b>After-hours order query</b><span>Greeting played, message saved</span></div><span class="t">11pm</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROFESSIONAL SERVICES -->
+<section>
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">Professional services</p>
+      <h2>Sound like an established firm from day one</h2>
+      <p>For law, accounting and medical practices, the first phone call sets the tone. Clients judge you on how the phone is answered, and a missed or fumbled call costs trust before you have said a word. Small practices often sound smaller than they are.</p>
+      <p>Ring Rang gives you a polished greeting, call groups so the right person answers, and call recording for accuracy and compliance. A solo practitioner sounds like a full firm, and a growing practice keeps that standard as it scales.</p>
+      <ul class="tick">
+        <li><svg><use href="#i-check"/></svg> Professional greeting and digital receptionist on every call</li>
+        <li><svg><use href="#i-check"/></svg> Call groups route clients to the right adviser, with nobody left on hold</li>
+        <li><svg><use href="#i-check"/></svg> Call recording for accuracy, training and a clear record, POPIA-aware</li>
+      </ul>
+      <a class="btn btn-primary" href="get-started.html">Get Started</a>
+    </div>
+    <div class="split-media">
+      <div class="app-card">
+        <div class="ah"><span class="av"><svg><use href="#i-brief"/></svg></span><div><b>Reception, sorted</b><br><span>Every client reaches the right adviser</span></div></div>
+        <div class="app-row"><span class="ic b"><svg><use href="#i-route"/></svg></span><div><b>New client call</b><span>Routed to the accounts team</span></div><span class="t">now</span></div>
+        <div class="app-row"><span class="ic g"><svg><use href="#i-mic"/></svg></span><div><b>Call recorded</b><span>Saved for the client file</span></div><span class="t">10:15am</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SMALLER VERTICALS / CARDS -->
+<section class="bg-surface">
+  <div class="wrap">
+    <div class="shead"><p class="eyebrow">And growing teams</p><h2>Retail, startups and remote teams</h2><p>The same system flexes to fit lean, modern businesses that do not want a box on the wall.</p></div>
+    <div class="cards">
+      <article class="card"><div class="ic"><svg><use href="#i-cart"/></svg></div><h3>Retail stores</h3><p>When the shop floor is full, calls go to voicemail and a sale walks out. Ring Rang rings the floor and the back office together and captures price, stock and hours questions after closing, so every enquiry is followed up. One number works across multiple branches.</p></article>
+      <article class="card"><div class="ic"><svg><use href="#i-bolt"/></svg></div><h3>Startups</h3><p>You are competing with bigger players on a smaller budget, and a cell number does not inspire confidence. Ring Rang gives you a proper business number, app and greeting for the whole team in minutes, with no hardware to buy and no contract to sign. Add people as you grow.</p></article>
+      <article class="card"><div class="ic"><svg><use href="#i-cloud"/></svg></div><h3>Remote teams &amp; small offices</h3><p>Your team is spread across homes, co-working spaces and cities, but customers should reach one business line. Ring Rang follows your people across phones and laptops, rings the whole team at once, and keeps working through load-shedding wherever someone has a connection.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- COMMON THREAD -->
+<section>
+  <div class="wrap">
+    <div class="shead"><p class="eyebrow">Built for South Africa</p><h2>Whatever you do, the call still matters</h2><p>The mindset is the same across every one of these businesses.</p></div>
+    <div class="cards">
+      <article class="card"><div class="ic"><svg><use href="#i-route"/></svg></div><h3>After-hours leads, captured</h3><p>South Africans phone outside office hours, and a missed call is a missed customer. Greetings, voicemail and transcripts make sure none slips through.</p></article>
+      <article class="card"><div class="ic"><svg><use href="#i-mobile"/></svg></div><h3>Built for mobile teams</h3><p>People on the road, at viewings or working from home all answer the same business number, with their personal number kept private.</p></article>
+      <article class="card"><div class="ic"><svg><use href="#i-cloud"/></svg></div><h3>Load-shedding resilient</h3><p>Cloud based, so as long as a team member has mobile data or backup power, your phones keep ringing through the dark.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section style="padding-bottom:0">
+  <div class="ctaband rounded" style="padding:64px 24px">
+    <div class="wrap">
+      <h2>Find your industry. Find your phone system.</h2>
+      <p>If your business runs on phone calls, Ring Rang keeps you reachable. Live in minutes, no hardware, no contracts.</p>
+      <div class="hero-cta">
+        <a class="btn btn-white btn-lg" href="get-started.html">Get Started</a>
+        <a class="btn btn-onnavy btn-lg" href="pricing.html">View pricing</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="index.html" class="logo light">ring<span class="r2">rang</span><span class="dot" style="color:var(--cyan)">.</span></a>
+        <p style="margin-top:14px;font-size:.9rem">A simple business communication platform for South African teams. Professional business calling without the complexity.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <div class="foot-links">
+          <a href="features.html">Features</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="devices.html">Devices</a>
+          <a href="industries.html">Industries</a>
+        </div>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <div class="foot-links">
+          <a href="get-started.html">Get Started</a>
+          <a href="#">Log in</a>
+          <a href="get-started.html">Contact</a>
+          <a href="#">Support</a>
+        </div>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <div class="foot-c">
+          <div><svg><use href="#i-phone"/></svg><span>010 880 7207</span></div>
+          <div><svg><use href="#i-mail"/></svg><span>info@ringrang.co.za</span></div>
+          <div><svg><use href="#i-wa"/></svg><span><a href="https://wa.me/27108807207">Chat on WhatsApp</a></span></div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">&copy; 2026 Ring Rang. Concept by Searchly Web.</div>
+  </div>
+</footer>
+
+<a class="float-cta" href="get-started.html" aria-label="Get Started"><svg><use href="#i-phone"/></svg><span>Get Started</span></a>
+
+</body>
+</html>
